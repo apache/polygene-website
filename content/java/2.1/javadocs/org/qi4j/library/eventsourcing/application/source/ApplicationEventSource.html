@@ -1,0 +1,249 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>ApplicationEventSource (Apache Zest™ (Java Edition) SDK 2.1)</title>
+<link rel="stylesheet" type="text/css" href="../../../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="ApplicationEventSource (Apache Zest\u2122 (Java Edition) SDK 2.1)";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../../../org/qi4j/library/eventsourcing/application/source/AbstractApplicationEventStoreMixin.html" title="class in org.qi4j.library.eventsourcing.application.source"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../../org/qi4j/library/eventsourcing/application/source/ApplicationEventStore.html" title="interface in org.qi4j.library.eventsourcing.application.source"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../../index.html?org/qi4j/library/eventsourcing/application/source/ApplicationEventSource.html" target="_top">Frames</a></li>
+<li><a href="ApplicationEventSource.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">org.qi4j.library.eventsourcing.application.source</div>
+<h2 title="Interface ApplicationEventSource" class="title">Interface ApplicationEventSource</h2>
+</div>
+<div class="contentContainer">
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl>
+<dt>All Known Subinterfaces:</dt>
+<dd><a href="../../../../../../org/qi4j/library/eventsourcing/application/source/memory/MemoryApplicationEventStoreService.html" title="interface in org.qi4j.library.eventsourcing.application.source.memory">MemoryApplicationEventStoreService</a></dd>
+</dl>
+<dl>
+<dt>All Known Implementing Classes:</dt>
+<dd><a href="../../../../../../org/qi4j/library/eventsourcing/application/source/memory/MemoryApplicationEventStoreService.MemoryStoreMixin.html" title="class in org.qi4j.library.eventsourcing.application.source.memory">MemoryApplicationEventStoreService.MemoryStoreMixin</a></dd>
+</dl>
+<hr>
+<br>
+<pre>public interface <span class="strong">ApplicationEventSource</span></pre>
+<div class="block">An ApplicationEventSource is a source of application events that can be pulled in chunks. Events are grouped in the transactions in which they were created.</div>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../org/qi4j/io/Input.html" title="interface in org.qi4j.io">Input</a>&lt;<a href="../../../../../../org/qi4j/library/eventsourcing/application/api/TransactionApplicationEvents.html" title="interface in org.qi4j.library.eventsourcing.application.api">TransactionApplicationEvents</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/qi4j/library/eventsourcing/application/source/ApplicationEventSource.html#transactionsAfter(long,%20long)">transactionsAfter</a></strong>(long&nbsp;afterTimestamp,
+                 long&nbsp;maxTransactions)</code>
+<div class="block">Get list of event transactions after the given timestamp.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../org/qi4j/io/Input.html" title="interface in org.qi4j.io">Input</a>&lt;<a href="../../../../../../org/qi4j/library/eventsourcing/application/api/TransactionApplicationEvents.html" title="interface in org.qi4j.library.eventsourcing.application.api">TransactionApplicationEvents</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/qi4j/library/eventsourcing/application/source/ApplicationEventSource.html#transactionsBefore(long,%20long)">transactionsBefore</a></strong>(long&nbsp;beforeTimestamp,
+                  long&nbsp;maxTransactions)</code>
+<div class="block">Get list of event transactions before the given timestamp.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="transactionsAfter(long, long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>transactionsAfter</h4>
+<pre><a href="../../../../../../org/qi4j/io/Input.html" title="interface in org.qi4j.io">Input</a>&lt;<a href="../../../../../../org/qi4j/library/eventsourcing/application/api/TransactionApplicationEvents.html" title="interface in org.qi4j.library.eventsourcing.application.api">TransactionApplicationEvents</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>&gt;&nbsp;transactionsAfter(long&nbsp;afterTimestamp,
+                                                                long&nbsp;maxTransactions)</pre>
+<div class="block">Get list of event transactions after the given timestamp.
+ <p>
+ If they are on the exact same timestamp, they will not be included.
+ <p>
+ The method uses the visitor pattern, so a visitor is sent in which is given each transaction, one at a time.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>afterTimestamp</code> - timestamp of transactions</dd><dd><code>maxTransactions</code> - maximum transactions</dd>
+<dt><span class="strong">Returns:</span></dt><dd>list of event transactions</dd></dl>
+</li>
+</ul>
+<a name="transactionsBefore(long, long)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>transactionsBefore</h4>
+<pre><a href="../../../../../../org/qi4j/io/Input.html" title="interface in org.qi4j.io">Input</a>&lt;<a href="../../../../../../org/qi4j/library/eventsourcing/application/api/TransactionApplicationEvents.html" title="interface in org.qi4j.library.eventsourcing.application.api">TransactionApplicationEvents</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>&gt;&nbsp;transactionsBefore(long&nbsp;beforeTimestamp,
+                                                                 long&nbsp;maxTransactions)</pre>
+<div class="block">Get list of event transactions before the given timestamp.
+ <p>
+ If they are on the exact same timestamp, they will not be included.
+ <p>
+ The method uses the visitor pattern, so a visitor is sent in which is given each transaction, one at a time.
+ <p>
+ The transactions are sent to the visitor with the latest transaction first, i.e. walking backwards in the stream.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>beforeTimestamp</code> - timestamp of transactions</dd><dd><code>maxTransactions</code> - maximum transactions</dd>
+<dt><span class="strong">Returns:</span></dt><dd>list of event transactions</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../../../org/qi4j/library/eventsourcing/application/source/AbstractApplicationEventStoreMixin.html" title="class in org.qi4j.library.eventsourcing.application.source"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../../org/qi4j/library/eventsourcing/application/source/ApplicationEventStore.html" title="interface in org.qi4j.library.eventsourcing.application.source"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../../index.html?org/qi4j/library/eventsourcing/application/source/ApplicationEventSource.html" target="_top">Frames</a></li>
+<li><a href="ApplicationEventSource.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+</body>
+</html>
