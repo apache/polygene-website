@@ -1,0 +1,8 @@
+
+# Apache Polygene Releases
+# Releases with no announcement are not rendered
+
+- version: 3.0
+  // announcement: 2017/12/31/apache-polygene-java-3.0
+  signer: Paul Merlin
+  pgpId: 7D0391AC

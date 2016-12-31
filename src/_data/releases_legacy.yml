@@ -1,0 +1,32 @@
+
+# Qi4j Legacy Releases
+
+- version: '2.0'
+  signer: Paul Merlin
+  pgpId: CF734618
+  artifactId: org.qi4j
+
+- version: '1.4.1'
+  signer: Niclas Hedhman
+  pgpId: 33D70FC3
+  artifactId: org.qi4j
+
+- version: '1.4'
+  signer: Niclas Hedhman
+  pgpId: 33D70FC3
+  artifactId: org.qi4j
+
+- version: '1.3'
+  signer: Niclas Hedhman
+  pgpId: 33D70FC3
+  artifactId: org.qi4j
+
+- version: '1.2'
+  signer: Niclas Hedhman
+  pgpId: 33D70FC3
+  artifactId: qi4j-sdk
+
+- version: '1.0'
+  signer: Niclas Hedhman
+  pgpId: 33D70FC3
+  artifactId: qi4j-sdk

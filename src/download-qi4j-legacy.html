@@ -1,0 +1,77 @@
+---
+title: Download Qi4j Legacy 
+layout: default
+---
+<div class="page-header">
+    <h1>Download Qi4j™ Legacy</h1>
+</div>
+
+<div class="row-fluid">
+    <div class="span2"></div>
+    <div class="span8">
+
+        <h2>Qi4j™ SDK Releases</h2>
+
+        <p class="lead">
+            Qi4j™ SDK Releases found below are <strong>not official Apache releases</strong> and were built before Qi4j™ enter the Apache Polygene™ project.
+        </p>
+
+        {% if site.data.releases[0].announcement %}
+        <div class="alert alert-success">
+            <strong>Apache Polygene™ (Java Edition) {{ site.data.releases[0].version }} is out!</strong>
+            <br/>
+            If you are not working with legacy Qi4j™ applications you should <a href="download.html">download Apache Polygene™ (Java Edition)</a> instead.
+        </div>
+        {% endif %}
+
+        <p>
+            Qi4j™ source distributions contains the whole Qi4j™ SDK source tree.
+        </p>
+        <p>
+            Qi4j™ binary distributions contains Qi4j™ artifacts (classes, javadocs and sources jars), samples and
+            tutorials sources plus a local copy of the whole documentation website.
+        </p>
+        <p>
+            The binary distributions contains Qi4j™ artifacts only to keep the download size small.
+            Each Qi4j™ artifact comes with a file prefixed <code>..-runtime-deps.txt</code> that contains the list of
+            its dependencies.
+            Moreover, at the SDK root you'll find a <a href="http://en.wikipedia.org/wiki/Metalink">Metalink</a> file
+            named <code>qi4j-sdk-runtime-deps.metalink</code> that you can use to download all needed dependencies
+            jars. Metalink files can be downloaded using curl, aria2 and a lot of other download tools. Support in wget
+            is coming.
+        </p>
+
+        {% for release in site.data.releases_legacy %}
+        <h3>Qi4j™ SDK {{ release.version }}</h3>
+        <p>Signed by {{ release.signer }}, PGP ID: <code>{{ release.pgpId }}</code></p>
+        <table class="table table-striped">
+            <tr>
+                <td><a href="https://repository-qi4j.forge.cloudbees.com/release/org/org.qi4j/{{ release.version }}/{{ release.artifactId }}-{{ release.version }}-bin.zip"><i class="icon-download"></i> {{ release.artifactId }}-{{ release.version }}-bin.zip</a></td>
+                <td><a href="https://repository-qi4j.forge.cloudbees.com/release/org/org.qi4j/{{ release.version }}/{{ release.artifactId }}-{{ release.version }}-bin.zip.md5"><small>(md5)</small></a></td>
+                <td><a href="https://repository-qi4j.forge.cloudbees.com/release/org/org.qi4j/{{ release.version }}/{{ release.artifactId }}-{{ release.version }}-bin.zip.sha1"><small>(sha1)</small></a></td>
+                <td><a href="https://repository-qi4j.forge.cloudbees.com/release/org/org.qi4j/{{ release.version }}/{{ release.artifactId }}-{{ release.version }}-bin.zip.asc"><small>(asc)</small></a></td>
+            </tr>
+            <tr>
+                <td><a href="https://repository-qi4j.forge.cloudbees.com/release/org/org.qi4j/{{ release.version }}/{{ release.artifactId }}-{{ release.version }}-bin.tgz"><i class="icon-download"></i> {{ release.artifactId }}-{{ release.version }}-bin.tgz</a></td>
+                <td><a href="https://repository-qi4j.forge.cloudbees.com/release/org/org.qi4j/{{ release.version }}/{{ release.artifactId }}-{{ release.version }}-bin.tgz.md5"><small>(md5)</small></a></td>
+                <td><a href="https://repository-qi4j.forge.cloudbees.com/release/org/org.qi4j/{{ release.version }}/{{ release.artifactId }}-{{ release.version }}-bin.tgz.sha1"><small>(sha1)</small></a></td>
+                <td><a href="https://repository-qi4j.forge.cloudbees.com/release/org/org.qi4j/{{ release.version }}/{{ release.artifactId }}-{{ release.version }}-bin.tgz.asc"><small>(asc)</small></a></td>
+            </tr>
+            <tr>
+                <td><a href="https://repository-qi4j.forge.cloudbees.com/release/org/org.qi4j/{{ release.version }}/{{ release.artifactId }}-{{ release.version }}-src.zip"><i class="icon-download"></i> {{ release.artifactId }}-{{ release.version }}-src.zip</a></td>
+                <td><a href="https://repository-qi4j.forge.cloudbees.com/release/org/org.qi4j/{{ release.version }}/{{ release.artifactId }}-{{ release.version }}-src.zip.md5"><small>(md5)</small></a></td>
+                <td><a href="https://repository-qi4j.forge.cloudbees.com/release/org/org.qi4j/{{ release.version }}/{{ release.artifactId }}-{{ release.version }}-src.zip.sha1"><small>(sha1)</small></a></td>
+                <td><a href="https://repository-qi4j.forge.cloudbees.com/release/org/org.qi4j/{{ release.version }}/{{ release.artifactId }}-{{ release.version }}-src.zip.asc"><small>(asc)</small></a></td>
+            </tr>
+            <tr>
+                <td><a href="https://repository-qi4j.forge.cloudbees.com/release/org/org.qi4j/{{ release.version }}/{{ release.artifactId }}-{{ release.version }}-src.tgz"><i class="icon-download"></i> {{ release.artifactId }}-{{ release.version }}-src.tgz</a></td>
+                <td><a href="https://repository-qi4j.forge.cloudbees.com/release/org/org.qi4j/{{ release.version }}/{{ release.artifactId }}-{{ release.version }}-src.tgz.md5"><small>(md5)</small></a></td>
+                <td><a href="https://repository-qi4j.forge.cloudbees.com/release/org/org.qi4j/{{ release.version }}/{{ release.artifactId }}-{{ release.version }}-src.tgz.sha1"><small>(sha1)</small></a></td>
+                <td><a href="https://repository-qi4j.forge.cloudbees.com/release/org/org.qi4j/{{ release.version }}/{{ release.artifactId }}-{{ release.version }}-src.tgz.asc"><small>(asc)</small></a></td>
+            </tr>
+        </table>
+        {% endfor %}
+
+    </div>
+    <div class="span2"></div>
+</div>

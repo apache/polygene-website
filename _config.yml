@@ -1,0 +1,24 @@
+# See https://github.com/mojombo/jekyll/wiki/Configuration
+
+source:      src
+destination: content
+keep_files:  [ schemas, java ]
+
+safe:        true
+url:         https://polygene.apache.org
+production_url: https://polygene.apache.org
+
+future:      true
+lsi:         false
+highlighter: rouge
+markdown:    kramdown
+permalink:   date
+
+
+kramdown:
+  auto_ids:       true
+  footnote_nr:    1
+  entity_output:  as_char
+  toc_levels:     1..6
+  smart_quotes:   lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false

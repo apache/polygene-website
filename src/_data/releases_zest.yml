@@ -1,0 +1,14 @@
+
+# Apache Zest Releases
+# Releases with no announcement are not rendered
+
+- version: 2.1
+  announcement: 2015/07/31/apache-zest-java-2.1
+  signer: Paul Merlin
+  pgpId: 7D0391AC
+  warning: >
+    <strong>Apache Zest (Java Edition) 2.1</strong> is the first release of the Qi4j codebase under the Apache
+    Software Foundation umbrella.<br/>
+    To keep backward compatiblity, this version still use <code>org.qi4j.*</code> Java packages and Maven
+    coordinates.<br/>
+    <strong>Please note that this will change in 3.0.</strong>
