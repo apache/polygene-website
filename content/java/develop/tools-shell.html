@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Polygene Shell</title><link rel="stylesheet" type="text/css" href="css/style.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.76.1" /><link rel="home" href="index.html" title="" /><link rel="up" href="tools.html" title="Tools" /><link rel="prev" href="tools.html" title="Tools" /><link rel="next" href="tools-envisage.html" title="Envisage" />
+
+
+<!-- favicon -->
+
+<link rel="shortcut icon" href="http://polygene.apache.org/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="icon" href="http://polygene.apache.org/favicon.ico" type="image/x-icon" />
+
+<!-- style -->
+
+<link href="css/shCore.css" rel="stylesheet" type="text/css" />
+<link href="css/shCoreEclipse.css" rel="stylesheet" type="text/css" />
+<link href="css/shThemeEclipse.css" rel="stylesheet" type="text/css" />
+<link href="css/polygene.css" rel="stylesheet" type="text/css" />
+
+<!-- Syntax Highlighter -->
+
+<script type="text/javascript" src="js/shCore.js"></script>
+<script type="text/javascript" src="js/shBrushJava.js"></script>
+<script type="text/javascript" src="js/shBrushScala.js"></script>
+<script type="text/javascript" src="js/shBrushJScript.js"></script>
+<script type="text/javascript" src="js/shBrushBash.js"></script>
+<script type="text/javascript" src="js/shBrushPlain.js"></script>
+<script type="text/javascript" src="js/shBrushXml.js"></script>
+<script type="text/javascript" src="js/shBrushGroovy.js"></script>
+<script type="text/javascript" src="js/shBrushPython.js"></script>
+<script type="text/javascript" src="js/shBrushRuby.js"></script>
+<script type="text/javascript" src="js/shBrushCSharp.js"></script>
+
+<script type="text/javascript">
+  SyntaxHighlighter.defaults['tab-size'] = 4;
+  SyntaxHighlighter.defaults['gutter'] = false;
+  SyntaxHighlighter.defaults['toolbar'] = false;
+  SyntaxHighlighter.all()
+</script>
+
+<!-- JQuery -->
+
+<script type="text/javascript" src="js/jquery-1.6.4.min.js"></script>
+
+<!-- Image Scaler -->
+
+<script type="text/javascript" src="js/imagescaler.js"></script>
+
+<!-- Table Styler -->
+
+<script type="text/javascript" src="js/tablestyler.js"></script>
+
+<!-- Apache Polygene WebSite Progressive Enhancement -->
+
+<link href="css/progressive-enhancement.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.scrollTo-1.4.2.js"></script>
+<script type="text/javascript" src="js/progressive-enhancement.js"></script>
+
+<!-- Analytics -->
+ <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-62007352-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+ </script>
+
+  </head><body><div xmlns="" xmlns:exsl="http://exslt.org/common" class="logo"><a href="index.html"><img src="images/logo-standard.png" /></a></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="top-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl><dt><span class="section"><a href="index.html#home">Polygene™</a></span></dt><dt><span class="section"><a href="intro.html">Introduction</a></span></dt><dt><span class="section"><a href="tutorials.html">Tutorials</a></span></dt><dt><span class="section"><a href="javadocs.html">Javadoc</a></span></dt><dt><span class="section"><a href="samples.html">Samples</a></span></dt><dt><span class="section"><a href="core.html">Core</a></span></dt><dt><span class="section"><a href="libraries.html">Libraries</a></span></dt><dt><span class="section"><a href="extensions.html">Extensions</a></span></dt><dt><span class="section"><span xmlns="" href="tools.html">Tools</span></span></dt><dt><span class="section"><a href="glossary.html">Glossary </a></span></dt></dl></div></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="sub-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl><dt><span class="section"><a href="tools.html#_overview_8">Overview</a></span></dt><dt><span class="section"><span xmlns="" href="tools-shell.html">Polygene Shell</span></span></dt><dt><span class="section"><a href="tools-envisage.html">Envisage</a></span></dt></dl></div></div><div class="section" title="Polygene Shell"><div class="titlepage"><div><div><h3 class="title"><a id="tools-shell"></a>Polygene Shell</h3></div></div></div><p>If you have installed the Polygene SDK, there is a <code class="literal">bin/polygene</code> command line script,
+which has sub-functions in it. This list of commands will slowly grow
+for various purposes of doing software development with Apache Polygene.</p><p>The current list of commands are;</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
+<a class="xref" href="tools-shell.html#tools-shell-create-project" title="Create Project">Create Project Script</a>
+</li></ul></div><div class="section" title="Create Project"><div class="titlepage"><div><div><h4 class="title"><a id="tools-shell-create-project"></a>Create Project</h4></div></div></div><p>This command creates a brand new project, in current directory, with a name
+provided. There are more than one template of the type of project that one
+might want to create. Full list of types to follow below. The command
+takes at least 3 additional arguments;</p><pre class="screen">polygene create-project type name package</pre><p>A directory called <span class="emphasis"><em>name</em></span> will be created in the current directory, and all
+the necessary structure for a Polygene project using Gradle will be created.</p><p>The exact layout of the project depends on the <span class="emphasis"><em>type</em></span> argument and currently the
+following types exists;</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
+<a class="xref" href="tools-shell.html#tools-shell-create-project-null" title="Create Null Project Template">Create Null Project</a> - Creates the build system and directory structure.
+</li><li class="listitem">
+<a class="xref" href="tools-shell.html#tools-shell-create-project-singleton" title="Create Singleton Project Template">Create Singleton Project</a> - Creates a small application around the <code class="literal">SingletonAssembler</code>
+</li><li class="listitem">
+<a class="xref" href="tools-shell.html#tools-shell-create-project-default" title="Create Default Project Template">Create Default Project</a> - Creates a 4 layer, Configuration, Infrastructure, Domain and Connectivity, command line application.
+</li><li class="listitem">
+<a class="xref" href="tools-shell.html#tools-shell-create-project-restapp" title="Create Rest Application Project Template">Create Rest Application Project</a> - Creates the same 4 layer application as <span class="emphasis"><em>default</em></span>, but also sets it up as a Restful application, ready to deploy on a web application container.
+</li></ul></div><p>The <span class="emphasis"><em>package</em></span> defines the root package name to be used, e.g. <code class="literal">org.apache.polygene.coolapp</code>. The <code class="literal">create-project</code> program
+will create additional packages under this, according to its template.</p><div class="section" title="Create Null Project Template"><div class="titlepage"><div><div><h5 class="title"><a id="tools-shell-create-project-null"></a>Create Null Project Template</h5></div></div></div><p>This templates only creates the build system for a single module application. Neither Java files nor other resources
+are created, and the developer has to set everything up from scratch.</p></div><div class="section" title="Create Singleton Project Template"><div class="titlepage"><div><div><h5 class="title"><a id="tools-shell-create-project-singleton"></a>Create Singleton Project Template</h5></div></div></div><p>This template creates a so called Singleton application. That is an application with a single Layer and a single
+Module in that layer. In Polygene, all applications must have at least one Layer and one Module.</p><p>This is useful for really small applications or demos, not expected to become large in the future. It is
+also currently required that the infrastructure is configuration free, otherwise it is not possible to set up.</p><p>The template will configure the File EntityStore and RDF Indexing subsystems, hardcoded to the <code class="literal">polygene/store</code> and
+<code class="literal">polygene/index</code> respectively in the current directory where the application is started. This may not be suitable, in
+which case you should look at the <a class="xref" href="tools-shell.html#tools-shell-create-project-default" title="Create Default Project Template">Create Default Project</a> template.</p></div><div class="section" title="Create Default Project Template"><div class="titlepage"><div><div><h5 class="title"><a id="tools-shell-create-project-default"></a>Create Default Project Template</h5></div></div></div><p>This template sets up a 4 layer, Configuration, Infrastructure, Domain, Connectivity, command line application.</p><p>The template includes a small sample domain model, <code class="literal">Order</code>, <code class="literal">OrderItem</code>, <code class="literal">Customer</code>, but there is no functionality
+added to it.</p><p>A <code class="literal">SecurityRepository</code> is also created, with a simple hardcoded implementation (<code class="literal">HardCodedSecurityRepositoryMixin</code>).</p></div><div class="section" title="Create Rest Application Project Template"><div class="titlepage"><div><div><h5 class="title"><a id="tools-shell-create-project-restapp"></a>Create Rest Application Project Template</h5></div></div></div><p>This template sets up a 4 layer, Configuration, Infrastructure, Domain, Connectivity, restful application. This
+application will use the <a class="xref" href="library-restlet.html" title="Restlet Support"> Restlet Library</a> to create a full web application, ready to deploy on a servlet
+container, such as Tomcat or Jetty.</p><p>The template includes a small sample domain model, <code class="literal">Order</code>, <code class="literal">OrderItem</code>, <code class="literal">Customer</code>, and have the CRUD operations
+for these already wired up to the restful <code class="literal">EndPoint</code>. Full HATEOAS is provided, so clients don’t need to construct
+URLs, but simply follow links and use forms.</p><p>The template also creates a simple SecurityRepository and attaches the mechanisms in the underlying Restlet
+implementation to do Authentication and Authorization (see SimpleEnroler and SimpleVerifier). There are two
+hardcoded users with two hardcoded roles.</p><pre class="screen"># name     password     roles
+  user       123        user
+  admin     secret      admin</pre></div></div></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="footer"><p>
+        Copyright © 2015 The Apache Software Foundation, Licensed under the <a href="http://www.apache.org/licenses/" target="_blank">Apache License, Version 2.0</a>.
+        <br /><small>
+            Apache Polygene, Polygene, Apache, the Apache feather logo, and the Apache Polygene project logo are trademarks of The Apache Software Foundation.<br />
+            All other marks mentioned may be trademarks or registered trademarks of their respective owners.
+        </small></p></div></body></html>
