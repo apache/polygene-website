@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Apache Polygene</title>
+        <title>Qi4j SDK Release 2.0</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Apache Polygene™ is a community based effort exploring Composite Oriented Programming for domain centric application development. This includes evolved concepts from Aspect Oriented Programming, Dependency Injection and Domain Driven Design.
 Composite Oriented Programming allows developers to work with 'fragments', smaller than classes, and 'compose' fragments into larger 'composites' which acts like the regular objects. Apache Polygene™ also tackles the enforcement of application composition, i.e. composites are declared in modules, modules are contained in layers and access between layers are controlled/enforced.
@@ -17,11 +17,6 @@ Composite Oriented Programming allows developers to work with 'fragments', small
             body {
                 padding-top: 70px;
                 padding-bottom: 40px;
-            }
-            #home-logo p {
-                margin-top: 0.75em;
-                font-size: 2.5em;
-                font-weight: lighter;
             }
         </style>
         <link href="/landing-resources/css/bootstrap-responsive.min.css" rel="stylesheet">
@@ -73,7 +68,7 @@ Composite Oriented Programming allows developers to work with 'fragments', small
                                     <li role="menuitem"><a href="/java/2.0/index.html"><i class="icon-caret-right"></i> 2.0</a></li>
                                     <li role="menuitem"><a href="/java/1.4/index.html"><i class="icon-caret-right"></i> &lt;=1.4.x</a></li>
                                     <li class="divider"></li>
-                                    <li role="menuitem"><a href="/java/develop/index.html"><i class="icon-caret-right"></i> develop branch</a></li>
+                                    <li role="menuitem"><a href="/java/develop/index.html"><i class="icon-caret-right"></i> Develop branch</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown">
@@ -109,108 +104,90 @@ Composite Oriented Programming allows developers to work with 'fragments', small
         <div id="content" class="container-fluid">
 
 <div class="row-fluid">
-    <div id="home-logo" class="span3" style="text-align: center; padding-bottom: 32px">
-        <img src="graphics/Qi4j-Logo-Symbol.png"/>
-        <p>apache<strong>polygene</strong></p>
-    </div>
-    <div class="span9">
-        <div class="row-fluid">
-            <div class="span9">
-                <div class="well">
-                    <h2>What is Apache Polygene™?</h2>
-                    <p>
-                        The short answer is that <strong>Apache Polygene™</strong> is a community based effort exploring Composite Oriented Programming for domain centric application development. This includes evolved concepts from <a href="https://en.wikipedia.org/wiki/Aspect-oriented_programming">Aspect Oriented Programming</a>, <a href="https://en.wikipedia.org/wiki/Dependency_injection">Dependency Injection</a> and <a href="https://en.wikipedia.org/wiki/Domain-driven_design">Domain Driven Design</a>.
-                    </p>
-                    <p>
-                        <strong>Composite Oriented Programming</strong> allows developers to work with 'fragments', smaller than classes, and 'compose' fragments into larger 'composites' which acts like the regular objects. Apache Polygene™ also tackles the enforcement of application composition, i.e. composites are declared in modules, modules are contained in layers and access between layers are controlled/enforced.
-                    </p>
-                    <p>
-                        <strong>Apache Polygene™ (Java Edition)</strong>, first Apache Polygene sub-project, is an implementation of Composite Oriented Programming, using the standard Java platform, without the use of any pre-processors or new language elements. Everything you know from Java still applies and you can leverage both your experience and toolkits to become more productive with Composite Oriented Programming today.
-                    </p>
-                    <p>
-                        The Apache Polygene™ community welcomes any effort exploring Composite Oriented Programming for domain centric application development using any technology.
-                    </p>
-<!--
-                    <p>Let's create an example application. Open a terminal/console and type;</p>
-                    <code><pre>
-polygene create-project restapp Order my.domain.order
-./gradlew assemble jettyRun
-                    </pre>
-                    </code>
-                    <p>Open <a href="http://localhost:8080/app/api/">http://localhost:8080/app/api/</a> in browser. You will get the REST API root endpoint, showing Customers and Orders.</p>
-                    <p>We can navigate to Customers <a href="http://localhost:8080/app/api/customers/">http://localhost:8080/app/api/customers/</a></p>
-                    <p>There are no Customers, but instructions how to create one.</p>
-                    <p>Open a new terminal and let's create a Customer.</p>
-                    <code><pre>
-curl -u admin:secret -d name="Niclas Hedhman" http://localhost:8080/app/api/customers/create
-                    </pre></code>
-                    <p>We get back a confirmation that the Customer was created and the location of </p>
-                    <code><pre>
-$ echo '{ "name": "Niclas Hedhman",
-          "address": "Canary Residence",
-          "city": "Cheras",
-          "country": "Malaysia",
-          "phone": "" }' | curl http://localhost:8080/app/api
-                    </pre>
-                    </code>
-                    <p>
-                        The simple Order domain model is found in <code>Order/model/src/main/java/my/domain/order/model/orders</code>
-                        and we can see <code>Customer.java</code>, <code>Order.java</code> and <code>OrderItem.java</code>
-                    </p>
-                    <code><pre>
-public interface Order extends Identity
-{
-    Property&lt;String&gt; orderNumber();
-    Association&lt;Customer&gt; customer();
-    ManyAssociation&lt;OrderItem&gt; items();
-    Property&lt;ZonedDateTime&gt; registered();
-    @Optional Property&lt;ZonedDateTimeOpti shipped();
-}
-                    </pre></code>
-                    <code><pre>
-public interface OrderItem extends Identity
-{
-    Property&lt;String&gt; partNumber();
-    Property&lt;BigDecimal&gt; unitPrice();
-    Property&lt;Integer&gt; units();
-    Property&lt;BigDecimal&gt; discount();
-}
-                        </pre></code>
--->
-                </div>
-            </div>
-            <div class="span3">
-                <a href="http://www.apache.org" target="_blank"><img src="landing-resources/img/asf_logo.png"/></a>
-                <h3><i class="icon-group"></i> Get Help</h3>
-                <p>Join the <a href="https://www.apache.org/foundation/mailinglists.html" target="_blank">dev@polygene.apache.org</a> mailing list to discuss and get help<!--, or help others on <a href="http://stackoverflow.com/questions/tagged/apache-polygene">Stackoverflow</a>-->.</p>
-                You can also subscribe from here: <a href="mailto:dev-subscribe@polygene.apache.org" title="Click to subscribe to this list" style="margin: 0 auto" class="btn btn-primary">Subscribe</a>
-            </div>
-        </div>
-        <div class="row-fluid">
-            <div class="span6">
-                <h3><i class="icon-briefcase"></i> Learn more</h3>
-                <p><a href="java/latest/intro.html">Learn more</a> about problems Apache Polygene™ (Java Edition) tries to solve thanks to Composite Oriented Programming and how you can confidently develop domain centric applications with it.</p>
-            </div><!--/span-->
-            <div class="span6">
-                <h3><i class="icon-download"></i> Download</h3>
-                <p><a href="download.html">Download</a> the Apache Polygene™ (Java Edition) SDK binaries and sources, learn how to <a href="java/latest/howto-depend-on-qi4j.html">depend on Apache Polygene™ (Java Edition) in your build</a> or simply get the <a href="community/codebase.html">source</a>.</p>
-            </div><!--/span-->
-        </div><!--/row-->
-        <div class="row-fluid">
-            <div class="span6">
-                <h3><i class="icon-time"></i> Get started</h3>
-                <p>Get a grasp on Apache Polygene™ (Java Edition) in 42 minutes and then, get real through the first steps needed to get a complete application up and running. From there, work through the fundamentals of Apache Polygene™ (Java Edition) development with in-depth tutorials.</p>
-                <p><a href="java/latest/tutorials.html"><i class="icon-time"></i> View details &raquo;</a></p>
-            </div><!--/span-->
-            <div class="span6">
-                <h3><i class="icon-book"></i> Read the docs</h3>
-                <p>Everything you need to know about internals and how to use Apache Polygene™ (Java Edition). Runable samples, comprehensive documentation of the Apache Polygene™ (Java Edition) Core, Libraries, Extensions and Tools.</p>
-                <p><a class="" href="java/latest/index.html"><i class="icon-book"></i> View details &raquo;</a></p>
-            </div><!--/span-->
-        </div><!--/row-->
-    </div>
-</div><!--/row-->
+    <div class="span2"></div>
+    <div class="span8">
+April 28, 2013
+<h2 id="qi4j-sdk-release-20">Qi4j SDK Release 2.0</h2>
 
+<p>28 Apr 2013 - Montpellier/France &amp; Shanghai/China - Qi4j Release 2.0</p>
+
+<p>After nearly 2 years of hard work, the Qi4j Community today launched
+its second generation Composite Oriented Programming framework.</p>
+
+<p>Qi4j is Composite Oriented Programming for the Java platform. It is a
+top-down approach to write business applications in a maintainable
+and efficient manner. Qi4j let you focus on the business domain,
+removing most impedance mismatches in software development, such as
+object-relation mapping, overlapping concerns and testability.</p>
+
+<p>Qi4j’s main areas of excellence are its enforcement of application
+layering and modularization, the typed and generic AOP approach,
+affinity based dependency injection, persistence management, indexing
+and query subsystems, but there are much more.</p>
+
+<p>The 2.0 release is practically a re-write of the entire runtime,
+according to co-founder Niclas Hedhman; “Although we are breaking
+compatibility in many select areas, most 1.4 applications can be
+converted with relatively few changes.”. He continues; “These changes
+are necessary for the next set of planned features, including full
+Scala integration, the upcoming JDK8 and Event Sourcing integrated
+into the persistence model.”</p>
+
+<p>“It has been a bumpy ride to get this release out the door.”, said
+Paul Merlin, the 2.0 Release Manager, “but we are determined that
+Qi4j represents the best technological platform for Java to create
+applications with high business value.”
+Not only has the community re-crafted a remarkable codebase, but also
+created a brand new website, fully integrated with the new Gradle
+build process.</p>
+
+<p>“The new website keeps the documentation in sync with the releases.”,
+Paul added. “All the samples in documentation are actual code being
+executed in our test suite. I am very proud of the work that has gone
+into the new site.”</p>
+
+<p>We asked Niclas, “The community calls the Release 2.0 “Reductionism”.
+What does that mean?”</p>
+
+<p>“We wanted to make all the necessary changes, which breaks
+compatibility, as quickly as possible and get the leanest possible
+Qi4j out the door. Many advanced features that are planned had to
+wait. We simply wanted the base platform to be available first.”,
+says Niclas on the topic.</p>
+
+<p>So what is really New?</p>
+
+<p>“Everything”, says Niclas. “For Qi4j Core, the most important change
+is the introduction of functional paradigm in the internal runtime.
+This creates cleaner code, and we’ll be able to leverage JDK8 very
+effectively when it will be available.
+The second big thing is to reduce the Qi4j Core and increase the
+Extensions concept to more areas than persistence and indexing. We
+have now added metrics and value serialization, others to come.”</p>
+
+<p>And what is Next?</p>
+
+<p>“Our main focus will be developper productivity. We have things such
+as TimeSeries, Event Sourcing support in Core, easier Assembly of
+Application Stacks in sight for future releases.We aim at constantly
+enriching the whole SDK (libraries, extensions, samples and tools)
+and its documentation. Another objective is to grow the core
+community through more open participation.”, says Paul. “Yes, there
+is much visionary work ahead.”, adds Niclas.</p>
+
+<p>Find more information at http://qi4j.org and http://qi4j.org/java/2.0/</p>
+
+<p>The Qi4j Community is a set of loosely coupled developers working
+hard to create the most exciting domain oriented application
+framework for the Java platform. Qi4j is licensed under the very
+liberal Apache License 2.0.</p>
+
+<p>–  Qi4j Core Team</p>
+
+
+    </div>
+    <div class="span2"></div>
+</div>
 
         </div>
         <div class="container-fluid">

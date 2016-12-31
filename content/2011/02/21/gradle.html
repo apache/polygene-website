@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Apache Polygene</title>
+        <title>Qi4j moves to Gradle</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Apache Polygene™ is a community based effort exploring Composite Oriented Programming for domain centric application development. This includes evolved concepts from Aspect Oriented Programming, Dependency Injection and Domain Driven Design.
 Composite Oriented Programming allows developers to work with 'fragments', smaller than classes, and 'compose' fragments into larger 'composites' which acts like the regular objects. Apache Polygene™ also tackles the enforcement of application composition, i.e. composites are declared in modules, modules are contained in layers and access between layers are controlled/enforced.
@@ -17,11 +17,6 @@ Composite Oriented Programming allows developers to work with 'fragments', small
             body {
                 padding-top: 70px;
                 padding-bottom: 40px;
-            }
-            #home-logo p {
-                margin-top: 0.75em;
-                font-size: 2.5em;
-                font-weight: lighter;
             }
         </style>
         <link href="/landing-resources/css/bootstrap-responsive.min.css" rel="stylesheet">
@@ -73,7 +68,7 @@ Composite Oriented Programming allows developers to work with 'fragments', small
                                     <li role="menuitem"><a href="/java/2.0/index.html"><i class="icon-caret-right"></i> 2.0</a></li>
                                     <li role="menuitem"><a href="/java/1.4/index.html"><i class="icon-caret-right"></i> &lt;=1.4.x</a></li>
                                     <li class="divider"></li>
-                                    <li role="menuitem"><a href="/java/develop/index.html"><i class="icon-caret-right"></i> develop branch</a></li>
+                                    <li role="menuitem"><a href="/java/develop/index.html"><i class="icon-caret-right"></i> Develop branch</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown">
@@ -109,108 +104,58 @@ Composite Oriented Programming allows developers to work with 'fragments', small
         <div id="content" class="container-fluid">
 
 <div class="row-fluid">
-    <div id="home-logo" class="span3" style="text-align: center; padding-bottom: 32px">
-        <img src="graphics/Qi4j-Logo-Symbol.png"/>
-        <p>apache<strong>polygene</strong></p>
-    </div>
-    <div class="span9">
-        <div class="row-fluid">
-            <div class="span9">
-                <div class="well">
-                    <h2>What is Apache Polygene™?</h2>
-                    <p>
-                        The short answer is that <strong>Apache Polygene™</strong> is a community based effort exploring Composite Oriented Programming for domain centric application development. This includes evolved concepts from <a href="https://en.wikipedia.org/wiki/Aspect-oriented_programming">Aspect Oriented Programming</a>, <a href="https://en.wikipedia.org/wiki/Dependency_injection">Dependency Injection</a> and <a href="https://en.wikipedia.org/wiki/Domain-driven_design">Domain Driven Design</a>.
-                    </p>
-                    <p>
-                        <strong>Composite Oriented Programming</strong> allows developers to work with 'fragments', smaller than classes, and 'compose' fragments into larger 'composites' which acts like the regular objects. Apache Polygene™ also tackles the enforcement of application composition, i.e. composites are declared in modules, modules are contained in layers and access between layers are controlled/enforced.
-                    </p>
-                    <p>
-                        <strong>Apache Polygene™ (Java Edition)</strong>, first Apache Polygene sub-project, is an implementation of Composite Oriented Programming, using the standard Java platform, without the use of any pre-processors or new language elements. Everything you know from Java still applies and you can leverage both your experience and toolkits to become more productive with Composite Oriented Programming today.
-                    </p>
-                    <p>
-                        The Apache Polygene™ community welcomes any effort exploring Composite Oriented Programming for domain centric application development using any technology.
-                    </p>
-<!--
-                    <p>Let's create an example application. Open a terminal/console and type;</p>
-                    <code><pre>
-polygene create-project restapp Order my.domain.order
-./gradlew assemble jettyRun
-                    </pre>
-                    </code>
-                    <p>Open <a href="http://localhost:8080/app/api/">http://localhost:8080/app/api/</a> in browser. You will get the REST API root endpoint, showing Customers and Orders.</p>
-                    <p>We can navigate to Customers <a href="http://localhost:8080/app/api/customers/">http://localhost:8080/app/api/customers/</a></p>
-                    <p>There are no Customers, but instructions how to create one.</p>
-                    <p>Open a new terminal and let's create a Customer.</p>
-                    <code><pre>
-curl -u admin:secret -d name="Niclas Hedhman" http://localhost:8080/app/api/customers/create
-                    </pre></code>
-                    <p>We get back a confirmation that the Customer was created and the location of </p>
-                    <code><pre>
-$ echo '{ "name": "Niclas Hedhman",
-          "address": "Canary Residence",
-          "city": "Cheras",
-          "country": "Malaysia",
-          "phone": "" }' | curl http://localhost:8080/app/api
-                    </pre>
-                    </code>
-                    <p>
-                        The simple Order domain model is found in <code>Order/model/src/main/java/my/domain/order/model/orders</code>
-                        and we can see <code>Customer.java</code>, <code>Order.java</code> and <code>OrderItem.java</code>
-                    </p>
-                    <code><pre>
-public interface Order extends Identity
-{
-    Property&lt;String&gt; orderNumber();
-    Association&lt;Customer&gt; customer();
-    ManyAssociation&lt;OrderItem&gt; items();
-    Property&lt;ZonedDateTime&gt; registered();
-    @Optional Property&lt;ZonedDateTimeOpti shipped();
-}
-                    </pre></code>
-                    <code><pre>
-public interface OrderItem extends Identity
-{
-    Property&lt;String&gt; partNumber();
-    Property&lt;BigDecimal&gt; unitPrice();
-    Property&lt;Integer&gt; units();
-    Property&lt;BigDecimal&gt; discount();
-}
-                        </pre></code>
--->
-                </div>
-            </div>
-            <div class="span3">
-                <a href="http://www.apache.org" target="_blank"><img src="landing-resources/img/asf_logo.png"/></a>
-                <h3><i class="icon-group"></i> Get Help</h3>
-                <p>Join the <a href="https://www.apache.org/foundation/mailinglists.html" target="_blank">dev@polygene.apache.org</a> mailing list to discuss and get help<!--, or help others on <a href="http://stackoverflow.com/questions/tagged/apache-polygene">Stackoverflow</a>-->.</p>
-                You can also subscribe from here: <a href="mailto:dev-subscribe@polygene.apache.org" title="Click to subscribe to this list" style="margin: 0 auto" class="btn btn-primary">Subscribe</a>
-            </div>
-        </div>
-        <div class="row-fluid">
-            <div class="span6">
-                <h3><i class="icon-briefcase"></i> Learn more</h3>
-                <p><a href="java/latest/intro.html">Learn more</a> about problems Apache Polygene™ (Java Edition) tries to solve thanks to Composite Oriented Programming and how you can confidently develop domain centric applications with it.</p>
-            </div><!--/span-->
-            <div class="span6">
-                <h3><i class="icon-download"></i> Download</h3>
-                <p><a href="download.html">Download</a> the Apache Polygene™ (Java Edition) SDK binaries and sources, learn how to <a href="java/latest/howto-depend-on-qi4j.html">depend on Apache Polygene™ (Java Edition) in your build</a> or simply get the <a href="community/codebase.html">source</a>.</p>
-            </div><!--/span-->
-        </div><!--/row-->
-        <div class="row-fluid">
-            <div class="span6">
-                <h3><i class="icon-time"></i> Get started</h3>
-                <p>Get a grasp on Apache Polygene™ (Java Edition) in 42 minutes and then, get real through the first steps needed to get a complete application up and running. From there, work through the fundamentals of Apache Polygene™ (Java Edition) development with in-depth tutorials.</p>
-                <p><a href="java/latest/tutorials.html"><i class="icon-time"></i> View details &raquo;</a></p>
-            </div><!--/span-->
-            <div class="span6">
-                <h3><i class="icon-book"></i> Read the docs</h3>
-                <p>Everything you need to know about internals and how to use Apache Polygene™ (Java Edition). Runable samples, comprehensive documentation of the Apache Polygene™ (Java Edition) Core, Libraries, Extensions and Tools.</p>
-                <p><a class="" href="java/latest/index.html"><i class="icon-book"></i> View details &raquo;</a></p>
-            </div><!--/span-->
-        </div><!--/row-->
-    </div>
-</div><!--/row-->
+    <div class="span2"></div>
+    <div class="span8">
+February 21, 2011
+<h2 id="qi4j-moves-to-gradle">Qi4j moves to Gradle</h2>
 
+<p>The Qi4j project has discontinued its use of Maven and introduced Gradle as its build system.</p>
+
+<p>After fighting the Maven build system for years, and constantly looking for alternatives, the Qi4j community has finally decided to grab the bull by its horn and throw it out of the arena. Maven imposes a very rigid model on how to define your project, but has a weak internal model on how a build is executed. We therefor often see conflicts between plugins, plugins make too much assumptions and ignoring settings that are actually provided formally, and not to even mention the fundamentally flawed versioning system.</p>
+
+<p>After a few evaluations of alternatives (Gradle &amp; Buildr were the strong contenders), we have finally settled for Gradle (http://www.gradle.org and http://gradle.codehaus.org). Contrary to Maven, Gradle provides a strong internal model for build systems, but a flexible way to establish that model. In essence, in Maven, the declaration is static and the execution is ill-defined, and in Gradle the model is established programmatically and the execution is done off the model.</p>
+
+<p>This allows for a great deal more flexibility. Gradle also have nice integration with Ant and Ivy, so Gradle’s dependency system is handled by Ivy (without Ivy’s XML) and it is easy to use any build tool that provides an Ant task, again programmatically.</p>
+
+<p>The absence of XML is refreshing. So instead of;</p>
+
+<pre><code>&lt;dependencies&gt;
+  &lt;dependency&gt;
+    &lt;groupId&gt;org.qi4j.core.runtime&lt;/groupId&gt;
+    &lt;artifactId&gt;qi4j-core-api&lt;/artifactId&gt;
+    &lt;version&gt;1.3&lt;/version&gt;
+  &lt;/dependency&gt;
+  &lt;dependency&gt;
+    &lt;groupId&gt;org.qi4j.core.runtime&lt;/groupId&gt;
+    &lt;artifactId&gt;qi4j-core-runtime&lt;/artifactId&gt;
+    &lt;version&gt;1.3&lt;/version&gt;
+    &lt;scope&gt;test&lt;/scope&gt;
+  &lt;/dependency&gt;
+&lt;/dependencies&gt;
+</code></pre>
+
+<p>The declaration of a dependency is done programmatically in Groovy code, so it can even be conditional and so forth, but the normal way is;</p>
+
+<pre><code>dependencies {
+    compile "org.qi4j.core:qi4j-core-api:1.2"
+    testRuntime "org.qi4j.core:qi4j-core-runtime:1.2"
+}
+</code></pre>
+
+<p>And YES, there is a difference between testCompile and testRuntime. 1 line instead of Maven’s 5-6 lines per dependency. And in true Ivy fashion, one can create one’s own scopes, although I doubt we need that in the near future.</p>
+
+<p>The dependency system is worth mentioning; Since Gradle understand multi module projects very well, again unlike Maven, it resolves the build order according to the tasks needed. This means that an upstream module’s tests can depend on a downstream module’s output. And even if the build is executed in the upstream module, the downstream module will be recompiled if any changes happened in it. You never need to worry about “Oh, I forgot to recompile X” again…</p>
+
+<p>Gradle does not need an installation. The Qi4j SDK project comes with a Gradle bootstrapper, so it will install itself. Very nice.</p>
+
+<p>Qi4j is still committed to produce Maven artifacts for publishing to Maven repositories, and the upcoming 1.3 release will be the first one using Gradle for this.</p>
+
+<p>We hope that this will make Qi4j development more enjoyable.</p>
+
+
+    </div>
+    <div class="span2"></div>
+</div>
 
         </div>
         <div class="container-fluid">

@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Apache Polygene</title>
+        <title>Qi4j SDK Release 1.3</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Apache Polygene™ is a community based effort exploring Composite Oriented Programming for domain centric application development. This includes evolved concepts from Aspect Oriented Programming, Dependency Injection and Domain Driven Design.
 Composite Oriented Programming allows developers to work with 'fragments', smaller than classes, and 'compose' fragments into larger 'composites' which acts like the regular objects. Apache Polygene™ also tackles the enforcement of application composition, i.e. composites are declared in modules, modules are contained in layers and access between layers are controlled/enforced.
@@ -17,11 +17,6 @@ Composite Oriented Programming allows developers to work with 'fragments', small
             body {
                 padding-top: 70px;
                 padding-bottom: 40px;
-            }
-            #home-logo p {
-                margin-top: 0.75em;
-                font-size: 2.5em;
-                font-weight: lighter;
             }
         </style>
         <link href="/landing-resources/css/bootstrap-responsive.min.css" rel="stylesheet">
@@ -73,7 +68,7 @@ Composite Oriented Programming allows developers to work with 'fragments', small
                                     <li role="menuitem"><a href="/java/2.0/index.html"><i class="icon-caret-right"></i> 2.0</a></li>
                                     <li role="menuitem"><a href="/java/1.4/index.html"><i class="icon-caret-right"></i> &lt;=1.4.x</a></li>
                                     <li class="divider"></li>
-                                    <li role="menuitem"><a href="/java/develop/index.html"><i class="icon-caret-right"></i> develop branch</a></li>
+                                    <li role="menuitem"><a href="/java/develop/index.html"><i class="icon-caret-right"></i> Develop branch</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown">
@@ -109,108 +104,124 @@ Composite Oriented Programming allows developers to work with 'fragments', small
         <div id="content" class="container-fluid">
 
 <div class="row-fluid">
-    <div id="home-logo" class="span3" style="text-align: center; padding-bottom: 32px">
-        <img src="graphics/Qi4j-Logo-Symbol.png"/>
-        <p>apache<strong>polygene</strong></p>
-    </div>
-    <div class="span9">
-        <div class="row-fluid">
-            <div class="span9">
-                <div class="well">
-                    <h2>What is Apache Polygene™?</h2>
-                    <p>
-                        The short answer is that <strong>Apache Polygene™</strong> is a community based effort exploring Composite Oriented Programming for domain centric application development. This includes evolved concepts from <a href="https://en.wikipedia.org/wiki/Aspect-oriented_programming">Aspect Oriented Programming</a>, <a href="https://en.wikipedia.org/wiki/Dependency_injection">Dependency Injection</a> and <a href="https://en.wikipedia.org/wiki/Domain-driven_design">Domain Driven Design</a>.
-                    </p>
-                    <p>
-                        <strong>Composite Oriented Programming</strong> allows developers to work with 'fragments', smaller than classes, and 'compose' fragments into larger 'composites' which acts like the regular objects. Apache Polygene™ also tackles the enforcement of application composition, i.e. composites are declared in modules, modules are contained in layers and access between layers are controlled/enforced.
-                    </p>
-                    <p>
-                        <strong>Apache Polygene™ (Java Edition)</strong>, first Apache Polygene sub-project, is an implementation of Composite Oriented Programming, using the standard Java platform, without the use of any pre-processors or new language elements. Everything you know from Java still applies and you can leverage both your experience and toolkits to become more productive with Composite Oriented Programming today.
-                    </p>
-                    <p>
-                        The Apache Polygene™ community welcomes any effort exploring Composite Oriented Programming for domain centric application development using any technology.
-                    </p>
-<!--
-                    <p>Let's create an example application. Open a terminal/console and type;</p>
-                    <code><pre>
-polygene create-project restapp Order my.domain.order
-./gradlew assemble jettyRun
-                    </pre>
-                    </code>
-                    <p>Open <a href="http://localhost:8080/app/api/">http://localhost:8080/app/api/</a> in browser. You will get the REST API root endpoint, showing Customers and Orders.</p>
-                    <p>We can navigate to Customers <a href="http://localhost:8080/app/api/customers/">http://localhost:8080/app/api/customers/</a></p>
-                    <p>There are no Customers, but instructions how to create one.</p>
-                    <p>Open a new terminal and let's create a Customer.</p>
-                    <code><pre>
-curl -u admin:secret -d name="Niclas Hedhman" http://localhost:8080/app/api/customers/create
-                    </pre></code>
-                    <p>We get back a confirmation that the Customer was created and the location of </p>
-                    <code><pre>
-$ echo '{ "name": "Niclas Hedhman",
-          "address": "Canary Residence",
-          "city": "Cheras",
-          "country": "Malaysia",
-          "phone": "" }' | curl http://localhost:8080/app/api
-                    </pre>
-                    </code>
-                    <p>
-                        The simple Order domain model is found in <code>Order/model/src/main/java/my/domain/order/model/orders</code>
-                        and we can see <code>Customer.java</code>, <code>Order.java</code> and <code>OrderItem.java</code>
-                    </p>
-                    <code><pre>
-public interface Order extends Identity
-{
-    Property&lt;String&gt; orderNumber();
-    Association&lt;Customer&gt; customer();
-    ManyAssociation&lt;OrderItem&gt; items();
-    Property&lt;ZonedDateTime&gt; registered();
-    @Optional Property&lt;ZonedDateTimeOpti shipped();
-}
-                    </pre></code>
-                    <code><pre>
-public interface OrderItem extends Identity
-{
-    Property&lt;String&gt; partNumber();
-    Property&lt;BigDecimal&gt; unitPrice();
-    Property&lt;Integer&gt; units();
-    Property&lt;BigDecimal&gt; discount();
-}
-                        </pre></code>
--->
-                </div>
-            </div>
-            <div class="span3">
-                <a href="http://www.apache.org" target="_blank"><img src="landing-resources/img/asf_logo.png"/></a>
-                <h3><i class="icon-group"></i> Get Help</h3>
-                <p>Join the <a href="https://www.apache.org/foundation/mailinglists.html" target="_blank">dev@polygene.apache.org</a> mailing list to discuss and get help<!--, or help others on <a href="http://stackoverflow.com/questions/tagged/apache-polygene">Stackoverflow</a>-->.</p>
-                You can also subscribe from here: <a href="mailto:dev-subscribe@polygene.apache.org" title="Click to subscribe to this list" style="margin: 0 auto" class="btn btn-primary">Subscribe</a>
-            </div>
-        </div>
-        <div class="row-fluid">
-            <div class="span6">
-                <h3><i class="icon-briefcase"></i> Learn more</h3>
-                <p><a href="java/latest/intro.html">Learn more</a> about problems Apache Polygene™ (Java Edition) tries to solve thanks to Composite Oriented Programming and how you can confidently develop domain centric applications with it.</p>
-            </div><!--/span-->
-            <div class="span6">
-                <h3><i class="icon-download"></i> Download</h3>
-                <p><a href="download.html">Download</a> the Apache Polygene™ (Java Edition) SDK binaries and sources, learn how to <a href="java/latest/howto-depend-on-qi4j.html">depend on Apache Polygene™ (Java Edition) in your build</a> or simply get the <a href="community/codebase.html">source</a>.</p>
-            </div><!--/span-->
-        </div><!--/row-->
-        <div class="row-fluid">
-            <div class="span6">
-                <h3><i class="icon-time"></i> Get started</h3>
-                <p>Get a grasp on Apache Polygene™ (Java Edition) in 42 minutes and then, get real through the first steps needed to get a complete application up and running. From there, work through the fundamentals of Apache Polygene™ (Java Edition) development with in-depth tutorials.</p>
-                <p><a href="java/latest/tutorials.html"><i class="icon-time"></i> View details &raquo;</a></p>
-            </div><!--/span-->
-            <div class="span6">
-                <h3><i class="icon-book"></i> Read the docs</h3>
-                <p>Everything you need to know about internals and how to use Apache Polygene™ (Java Edition). Runable samples, comprehensive documentation of the Apache Polygene™ (Java Edition) Core, Libraries, Extensions and Tools.</p>
-                <p><a class="" href="java/latest/index.html"><i class="icon-book"></i> View details &raquo;</a></p>
-            </div><!--/span-->
-        </div><!--/row-->
-    </div>
-</div><!--/row-->
+    <div class="span2"></div>
+    <div class="span8">
+April 15, 2011
+<h2 id="qi4j-sdk-release-13">Qi4j SDK Release 1.3</h2>
 
+<p>Kuala Lumpur, 15 April 2011 - The Qi4j community today announced Release 1.3 of the innovative Java framework, Qi4j. This release is significant for several customers, moving to deploy Qi4j in business critical 24/7 systems. “We now feel that the core features of Qi4j are as stable as software systems ever get. Qi4j is now being deployed at a major investment bank in the risk pricing domain.”, said Niclas Hedhman, co-inventor of Qi4j together with Rickard Öberg, who added “Qi4j has really proved itself in StreamFlow, and I am convinced that many of our paradigms will stand the test of time.”</p>
+
+<p>This release sports many new features, such as Solr Indexing, JMX integration, Circuit-breaker library, innovative API for dealing with I/O, functional paradigms and much more, but an important focus was to stabilize the many libraries and extensions.</p>
+
+<p>The main new features are listed below. The community now sets its eyes ahead towards the next release(s), which will include an industrial automation alarm system, JMX aggregation for the cloud, Entity Viewers via the Rest API and a whole lot more documentation and test coverage. We all look forward to this and many other things to come from Qi4j, the most exciting, technology challenging project in the Open Source Java world.</p>
+
+<h3 id="io-api">I/O API</h3>
+
+<p>Rickard Öberg is once again inventing new ways to do common things. The I/O API correctly separates the concerns of reading, writing, exception handling, transformation and filtering. This resulted in a DSL like way of writing stream handling code. The I/O API is completely independent of everything in Qi4j and may be used separately. We may release it as a separate artifact in the future.</p>
+
+<h3 id="jmx-integration">JMX Integration</h3>
+
+<p>By addding a single line of code, you will get the application structure represented in your JMX “tree view”. Starting with a “Qi4j” node, under which each Qi4j Application is listed, followed by Layers, Modules and the Composites. All Services’ configuration instances are exposed and can be changed via JMX, as can services be stopped, started and restarted.</p>
+
+<h3 id="osgi-integration">OSGi Integration</h3>
+
+<p>All of Qi4j is now OSGi-compliant. That means that all jars are OSGi bundles, with imports and exports. On top of that, this release also contains the beginning of a OSGi-specific library, which allows Qi4j Services to be exported as OSGi services and vice versa. This library is still in beta.</p>
+
+<h3 id="circuit-breaker">Circuit Breaker</h3>
+
+<p>The CircuitBreaker library allows external resources to be monitored for health and taken offline when facing trouble. This is also signalled via JMX for human intervention.</p>
+
+<h3 id="solr-indexing">Solr Indexing</h3>
+
+<p>To allow free-text searches of content in entities, Qi4j now has integrated Solr via the Qi4j Indexing/Query extension mechanism. It is not possible to do generic queries via this extension, but it leveraging the Named Query feature. Free-text search enable your data in existing entitystores by using the Reindexer extension.</p>
+
+<h3 id="unitofwork-retry">UnitOfWork Retry</h3>
+
+<p>The UnitOfWorkConcern now handles an optional UnitOfWorkRetry annotation, allowing full re-runs of work. Literally a single annotation allows developers to add retry logic (or remove the complex retry logic already in place).</p>
+
+<h3 id="json-format-now-handles-maps">JSON format now handles Maps</h3>
+
+<p>The JSON serializer/deserializer has been equipped to handle Maps, by named properties instead of a java serialized map as was preveiously the case. The new deserializer logic is still compatible with the old format.</p>
+
+<h3 id="job-scheduler">Job Scheduler</h3>
+
+<p>A new library, org.qi4j.library.scheduler, can now launch jobs according to CRON formatted schedules.</p>
+
+<h3 id="specifications-in-assembly">Specifications in Assembly</h3>
+
+<p>The ModuleAssembly system has been revised heavily, to allow different parts of the application to apply assembly information to composites. This allows for near functional programming style of setting up composites.</p>
+
+<h3 id="iterables-utility">Iterables Utility</h3>
+
+<p>Qi4j is innovating again, with a utility to do functional programming style in Java for Iterables. In this first release, the utility only contains the most basic operations, but will be extended over time.</p>
+
+<h3 id="release-notes---qi4j---version-13">Release Notes - Qi4j - Version 1.3</h3>
+
+<p><em>New Features</em></p>
+
+<ul>
+  <li>QI-277 - JMX services</li>
+  <li>QI-281 - Solr query/indexing</li>
+  <li>QI-284 - Circuit breaker library</li>
+  <li>QI-285 - Active → Available</li>
+  <li>QI-288 - Add a concern for handling retry on ConcurentModification</li>
+  <li>QI-289 - Create a library for a job scheduler</li>
+  <li>QI-291 - New API for doing I/O</li>
+  <li>QI-295 - Exporter of Qi4j Services to OSGi</li>
+  <li>QI-296 - Importer of OSGi services into the Qi4j world.</li>
+  <li>QI-300 - Add test helper for scenarios</li>
+  <li>QI-309 - Concern to handle ConcurentEntityModificationException and retry the UnitOfWork</li>
+  <li>QI-320 - Maps in JSON format</li>
+  <li>QI-321 - Specification driven assembly</li>
+  <li>QI-341 - Support JodaTime natively in the toJSON() system.</li>
+</ul>
+
+<p><em>Improvements</em></p>
+
+<ul>
+  <li>QI-275 - Enhance the community documentation to spell out the trust issues in Core.</li>
+  <li>QI-297 - Capture NullPointerException slightly more gracefully in ValueBuilderFactory</li>
+  <li>QI-299 - Replace ServiceQualifier method with Specification</li>
+  <li>QI-302 - Capture which class is declared final</li>
+  <li>QI-305 - ObjectDescriptor in ModuleSPI</li>
+  <li>QI-312 - Patch for Gradle build system</li>
+  <li>QI-313 - Upgrade Neo4j extension to ver 1.2</li>
+  <li>QI-317 - Obscure Exception can be improved.</li>
+  <li>QI-326 - Cobertura reports in the build.</li>
+  <li>QI-339 - Add support for variables in RDF named queries</li>
+</ul>
+
+<p><em>Bug</em></p>
+
+<ul>
+  <li>QI-272 - Changing properties in Lifecycle sometimes doesn’t work</li>
+  <li>QI-292 - ServiceLoader mechanism for Qi4j Runtime implementation is really awkward.</li>
+  <li>QI-294 - qi4j-libraries: rdf/src/main/java/org/qi4j/library/rdf/model/ApplicationVisitor.java is not compilable</li>
+  <li>QI-303 - Incorrect generics type for imported services.</li>
+  <li>QI-304 - Composite extends Serializable</li>
+  <li>QI-306 - Exception thrown when @Using on complex generic types</li>
+  <li>QI-308 - The @UnitOfWorkDiscardOn annotation does not have runtime Retention</li>
+  <li>QI-331 - BuildVersion class is in wrong package.</li>
+  <li>QI-332 - Generated POMs doesn’t include the &lt;repository&gt; sections needed.</li>
+  <li>QI-333 - Qi4j Runtime needs a way to bootstrap in OSGi</li>
+  <li>QI-334 - Maven source jars are not generated and uploaded.</li>
+  <li>QI-335 - Maven javadoc jars are not generated and uploaded</li>
+  <li>QI-337 - Package org.qi4j.api.specification is imported more than once in Core Runtime OSGi bundle declaration.</li>
+  <li>QI-340 - NPE in ModuleUnitOfWork which should be a informative Exception</li>
+</ul>
+
+<p><em>Task</em></p>
+
+<ul>
+  <li>QI-314 - Creation of proper SDK</li>
+  <li>QI-315 - Define binary tarball layout</li>
+  <li>QI-316 - Define source tarball layout</li>
+</ul>
+
+
+    </div>
+    <div class="span2"></div>
+</div>
 
         </div>
         <div class="container-fluid">
