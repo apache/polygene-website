@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Event Sourcing</title><link rel="stylesheet" type="text/css" href="css/style.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.76.1" /><link rel="home" href="index.html" title="" /><link rel="up" href="libraries.html" title="Libraries" /><link rel="prev" href="library-conversion.html" title="Conversion - DEPRECATED" /><link rel="next" href="library-fileconfig.html" title="FileConfig" />
+
+
+<!-- favicon -->
+
+<link rel="shortcut icon" href="http://qi4j.org/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="icon" href="http://qi4j.org/favicon.ico" type="image/x-icon" />
+
+<!-- style -->
+
+<link href="css/shCore.css" rel="stylesheet" type="text/css" />
+<link href="css/shCoreEclipse.css" rel="stylesheet" type="text/css" />
+<link href="css/shThemeEclipse.css" rel="stylesheet" type="text/css" />
+<link href="css/qi4j.css" rel="stylesheet" type="text/css" />
+
+<!-- Syntax Highlighter -->
+
+<script type="text/javascript" src="js/shCore.js"></script>
+<script type="text/javascript" src="js/shBrushJava.js"></script>
+<script type="text/javascript" src="js/shBrushScala.js"></script>
+<script type="text/javascript" src="js/shBrushJScript.js"></script>
+<script type="text/javascript" src="js/shBrushBash.js"></script>
+<script type="text/javascript" src="js/shBrushPlain.js"></script>
+<script type="text/javascript" src="js/shBrushXml.js"></script>
+<script type="text/javascript" src="js/shBrushGroovy.js"></script>
+<script type="text/javascript" src="js/shBrushPython.js"></script>
+<script type="text/javascript" src="js/shBrushRuby.js"></script>
+<script type="text/javascript" src="js/shBrushCSharp.js"></script>
+
+<script type="text/javascript">
+  SyntaxHighlighter.defaults['tab-size'] = 4;
+  SyntaxHighlighter.defaults['gutter'] = false;
+  SyntaxHighlighter.defaults['toolbar'] = false;
+  SyntaxHighlighter.all()
+</script>
+
+<!-- JQuery -->
+
+<script type="text/javascript" src="js/jquery-1.6.4.min.js"></script>
+
+<!-- Image Scaler -->
+
+<script type="text/javascript" src="js/imagescaler.js"></script>
+
+<!-- Table Styler -->
+
+<script type="text/javascript" src="js/tablestyler.js"></script>
+
+<!-- Qi4j WebSite Progressive Enhancement -->
+
+<link href="css/progressive-enhancement.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.scrollTo-1.4.2.js"></script>
+<script type="text/javascript" src="js/progressive-enhancement.js"></script>
+
+<!-- Analytics -->
+ <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-62007352-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+ </script>
+
+  </head><body><div xmlns="" xmlns:exsl="http://exslt.org/common" class="logo"><a href="index.html"><img src="images/logo-standard.png" /></a></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="top-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl><dt><span class="section"><a href="index.html#home">Zest™</a></span></dt><dt><span class="section"><a href="intro.html">Introduction</a></span></dt><dt><span class="section"><a href="tutorials.html">Tutorials</a></span></dt><dt><span class="section"><a href="javadocs.html">Javadoc</a></span></dt><dt><span class="section"><a href="samples.html">Samples</a></span></dt><dt><span class="section"><a href="core.html">Core</a></span></dt><dt><span class="section"><span xmlns="" href="libraries.html">Libraries</span></span></dt><dt><span class="section"><a href="extensions.html">Extensions</a></span></dt><dt><span class="section"><a href="tools.html">Tools</a></span></dt><dt><span class="section"><a href="glossary.html">Glossary </a></span></dt></dl></div></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="sub-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl><dt><span class="section"><a href="libraries.html#_overview_5">Overview</a></span></dt><dt><span class="section"><a href="lang-groovy.html">Groovy Scripting</a></span></dt><dt><span class="section"><a href="lang-javascript.html">Javascript Scripting</a></span></dt><dt><span class="section"><a href="lang-scala.html">Scala Support</a></span></dt><dt><span class="section"><a href="library-alarm.html">Alarms</a></span></dt><dt><span class="section"><a href="library-circuitbreaker.html">Circuit Breaker</a></span></dt><dt><span class="section"><a href="library-constraints.html">Constraints</a></span></dt><dt><span class="section"><a href="library-conversion.html">Conversion - DEPRECATED</a></span></dt><dt><span class="section"><span xmlns="" href="library-eventsourcing.html">Event Sourcing</span></span></dt><dt><span class="section"><a href="library-fileconfig.html">FileConfig</a></span></dt><dt><span class="section"><a href="library-http.html">HTTP</a></span></dt><dt><span class="section"><a href="library-invocation-cache.html">Invocation Cache</a></span></dt><dt><span class="section"><a href="library-jmx.html">JMX</a></span></dt><dt><span class="section"><a href="library-locking.html">Locking</a></span></dt><dt><span class="section"><a href="library-logging.html">Logging</a></span></dt><dt><span class="section"><a href="library-metrics.html">Metrics Library</a></span></dt><dt><span class="section"><a href="library-osgi.html">OSGi</a></span></dt><dt><span class="section"><a href="library-rdf.html">RDF</a></span></dt><dt><span class="section"><a href="library-rest-client.html">ReST Client</a></span></dt><dt><span class="section"><a href="library-rest-client-primer.html">ReST - HATEOAS Primer</a></span></dt><dt><span class="section"><a href="library-rest-common.html">ReST Common</a></span></dt><dt><span class="section"><a href="library-rest-server.html">ReST Server</a></span></dt><dt><span class="section"><a href="library-scheduler.html">Scheduler</a></span></dt><dt><span class="section"><a href="library-servlet.html">Servlet</a></span></dt><dt><span class="section"><a href="library-shiro.html">Shiro Security</a></span></dt><dt><span class="section"><a href="library-shiro-web.html">Shiro Web Security</a></span></dt><dt><span class="section"><a href="library-spring.html">Spring Integration</a></span></dt><dt><span class="section"><a href="library-sql.html">SQL</a></span></dt><dt><span class="section"><a href="library-uid.html">UID</a></span></dt><dt><span class="section"><a href="library-uowfile.html">UoWFile</a></span></dt></dl></div></div><div class="section" title="Event Sourcing"><div class="titlepage"><div><div><h3 class="title"><a id="library-eventsourcing"></a>Event Sourcing</h3></div></div></div><p class="remark"><em><span class="comment"></span></em></p><p class="devstatus-code-beta">code</p><p class="devstatus-docs-brief">docs</p><p class="devstatus-tests-some">tests</p><p>The Event Sourcing Library supports generating, storing and replaying two types of events: application-events and domain-events.</p><p>Application events are bound to Usecase and are produced by execution of specific methods (ones with <code class="literal">ApplicationEvent</code> as their first parameter).
+Each application event holds information about Usecase, method name and JSON serialized values of method parameters.</p><p>Domain events are bound to entity instances and are produced by execution of annotated (see <code class="literal">@DomainEvent</code>) methods that belongs to <code class="literal">EntityComposite</code>.
+Each domain event (see <code class="literal">DomainEventValue</code>) holds information about entity type, identity, method name and JSON serialized values of method parameters.</p><p>Both application and domain events are captured during <code class="literal">UnitOfWork</code> lifetime and are stored in <code class="literal">EventStore</code> after successfully completed <code class="literal">UnitOfWork</code> as collection together (see <code class="literal">UnitOfWorkDomainEventsValue</code> and <code class="literal">TransactionApplicationEvents</code>).</p><p>There is support for replaying events.
+When events are replayed the same code is executed but no new events are generated.</p><p>There are helper classes that enables a service to easily track events feed, and for domain events there is <code class="literal">EventRouter</code> that allow to specify specification→receiver routes.</p><div class="table"><a id="idm371116013472"></a><p class="title"><strong>Table 29. Artifact</strong></p><div class="table-contents"><table summary="Artifact" border="1"><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /></colgroup><thead><tr><th align="left" valign="top">Group ID</th><th align="left" valign="top">Artifact ID</th><th align="left" valign="top">Version</th></tr></thead><tbody><tr><td align="left" valign="top"><p>org.qi4j.library</p></td><td align="left" valign="top"><p>org.qi4j.library.eventsourcing</p></td><td align="left" valign="top"><p>2.1</p></td></tr></tbody></table></div></div><br class="table-break" /><p><span class="strong"><strong>JDBM backed store</strong></span></p><p>EventStore supports indexed and streamed access to events feed.
+There is in-memory and JDBM backed implementations.</p><p class="remark"><em><span class="comment"></span></em></p><p class="devstatus-code-beta">code</p><p class="devstatus-docs-brief">docs</p><p class="devstatus-tests-some">tests</p><div class="table"><a id="idm371115998368"></a><p class="title"><strong>Table 30. Artifact</strong></p><div class="table-contents"><table summary="Artifact" border="1"><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /></colgroup><thead><tr><th align="left" valign="top">Group ID</th><th align="left" valign="top">Artifact ID</th><th align="left" valign="top">Version</th></tr></thead><tbody><tr><td align="left" valign="top"><p>org.qi4j.library</p></td><td align="left" valign="top"><p>org.qi4j.library.eventsourcing-jdbm</p></td><td align="left" valign="top"><p>2.1</p></td></tr></tbody></table></div></div><br class="table-break" /><p><span class="strong"><strong>REST access</strong></span></p><p>For remote access to feed there is <code class="literal">eventsourcing-rest</code> library that exposes events as Atom feeds.</p><p class="remark"><em><span class="comment"></span></em></p><p class="devstatus-code-beta">code</p><p class="devstatus-docs-brief">docs</p><p class="devstatus-tests-some">tests</p><div class="table"><a id="idm371115982768"></a><p class="title"><strong>Table 31. Artifact</strong></p><div class="table-contents"><table summary="Artifact" border="1"><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /></colgroup><thead><tr><th align="left" valign="top">Group ID</th><th align="left" valign="top">Artifact ID</th><th align="left" valign="top">Version</th></tr></thead><tbody><tr><td align="left" valign="top"><p>org.qi4j.library</p></td><td align="left" valign="top"><p>org.qi4j.library.eventsourcing-rest</p></td><td align="left" valign="top"><p>2.1</p></td></tr></tbody></table></div></div><br class="table-break" /><div class="section" title="Application Events"><div class="titlepage"><div><div><h4 class="title"><a id="_application_events"></a>Application Events</h4></div></div></div><p>Assembly is done as follows:</p><pre class="programlisting brush: java">new EventsourcingAssembler()
+        .withApplicationEvents()
+        .withCurrentUserFromUOWPrincipal()
+        .assemble(module);
+</pre><p>Configure application events store:</p><pre class="programlisting brush: java">module.services( MemoryApplicationEventStoreService.class );
+</pre><p>Actual method on composite which execution emits application event.
+First parameter is <code class="literal">null</code> on "normal" execution.
+If it is not <code class="literal">null</code>, then the method call is a replay of previously created events.</p><pre class="programlisting brush: java">@Mixins( Users.Mixin.class )
+public interface Users extends TransientComposite
+{
+    void signup( @Optional ApplicationEvent evt, String username, List&lt;String&gt; mailinglists );
+</pre><p>To enable execution capturing, you have to configure composite with concern:</p><pre class="programlisting brush: java">module.transients( Users.class ).withConcerns( ApplicationEventCreationConcern.class );
+</pre></div><div class="section" title="Domain Events"><div class="titlepage"><div><div><h4 class="title"><a id="_domain_events"></a>Domain Events</h4></div></div></div><p>Assembly:</p><pre class="programlisting brush: java">new EventsourcingAssembler()
+        .withDomainEvents()
+        .withCurrentUserFromUOWPrincipal()
+        .assemble(module);
+</pre><p>Configure domain events store:</p><pre class="programlisting brush: java">module.services( MemoryEventStoreService.class );
+</pre><p>Annotate your entity state changing methods.
+Event methods may only change state.
+They may not fail or thrown exceptions:</p><pre class="programlisting brush: java">@Mixins( TestEntity.Mixin.class )
+public interface TestEntity
+    extends EntityComposite
+{
+    @UseDefaults
+    Property&lt;String&gt; description();
+
+    @DomainEvent
+    void changedDescription( String newName );
+
+    abstract class Mixin
+        implements TestEntity
+    {
+        public void changedDescription( String newName )
+        {
+            description().set( newName );
+        }
+    }
+}
+</pre><p>To enable method execution capturing, you have to configure entity with concern:</p><pre class="programlisting brush: java">module.entities( TestEntity.class ).withConcerns(DomainEventCreationConcern.class);
+</pre></div></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="footer"><p>
+        Copyright © 2015 The Apache Software Foundation, Licensed under the <a href="http://www.apache.org/licenses/" target="_blank">Apache License, Version 2.0</a>.
+        <br /><small>
+            Apache Zest, Zest, Apache, the Apache feather logo, and the Apache Zest project logo are trademarks of The Apache Software Foundation.<br />
+            All other marks mentioned may be trademarks or registered trademarks of their respective owners.
+        </small></p></div></body></html>
