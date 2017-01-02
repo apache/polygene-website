@@ -46,6 +46,10 @@ layout: default
             It is recommended that (when possible) a <a href="https://www.apache.org/dev/release-signing#web-of-trust">web of trust</a> is used to confirm the identity of these keys.
         </div>
 
+        {% if !site.data.releases %}
+        <h3>Apache Polygene™ (Java Edition)</h3>
+        <p>The Apache Polygene™ project has not released any version with its new name yet.</p>
+        {% endif %}
         {% for release in site.data.releases %}
         {% if release.announcement %}
         <h3>Apache Polygene™ (Java Edition) {{ release.version }}</h3>
@@ -122,19 +126,16 @@ layout: default
         {% endif %}
         {% endfor %}
 
+        <p class="alert alert-info">
+            If you are looking for legacy Qi4j™ downloads, please see the dedicated page: <a href="download-qi4j-legacy.html">Download Qi4j™ Legacy</a>.
+        </p>
+
     </div>
     <div class="span2"></div>
 </div>
 <div class="row-fluid">
     <div class="span2"></div>
     <div class="span8">
-
-        {% unless site.data.releases[0].announcement %}
-        <p class="alert alert-warning">
-            The Apache Polygene™ project has not released any version yet.
-            Until then, download a <a href="download-qi4j-legacy.html">legacy Qi4j™ version</a>.
-        </p>
-        {% endunless %}
 
         <h2>Versioning</h2>
 
@@ -154,12 +155,6 @@ layout: default
             For instance, a change between 1.1 and 1.2 was that CGLib was dropped and replaced by ASM
             as a new dependency.
         </p>
-
-        {% if site.data.releases[0].announcement %}
-        <p class="alert alert-info">
-            If you are looking for legacy Qi4j™ downloads, please see the dedicated page: <a href="download-qi4j-legacy.html">Download Qi4j™ Legacy</a>.
-        </p>
-        {% endif %}
 
     </div>
     <div class="span2"></div>
