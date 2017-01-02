@@ -16,7 +16,6 @@ https://polygene.apache.org/community/participate.html
 https://polygene.apache.org/community/playing_field.html
 https://polygene.apache.org/sitemap.txt
 
-https://polygene.apache.org/2017/12/31/2017-12-31-apache-polygene-java-3.0.html
 https://polygene.apache.org/2015/07/31/apache-zest-java-2.1.html
 https://polygene.apache.org/2013/04/28/qi4j-2.0.html
 https://polygene.apache.org/2013/04/15/qi4j-2.0-rc2.html
