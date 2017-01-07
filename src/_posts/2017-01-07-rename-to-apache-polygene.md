@@ -1,8 +1,8 @@
 ---
 layout: posts
-title: New Name - Apache Polygene
+title: Apache® Zest™ Renamed to Apache® Polygene™
 ---
-## New Name - Apache Polygene
+## Apache® Zest™ Renamed to Apache® Polygene™
 
 Apache Zest is changing name to **Apache Polygene**. The change has been carried out
 for the most part, and we are still in the process of encuring all naming is accurate
