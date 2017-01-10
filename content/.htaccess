@@ -8,3 +8,5 @@ Redirect 301 /2.1/ /java/2.1/
 Redirect 301 /latest/ /java/latest/
 Redirect 301 /develop/ /java/develop/
 
+Redirect 307 /java/latest/ /java/develop/
+
