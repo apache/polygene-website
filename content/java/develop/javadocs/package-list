@@ -39,6 +39,8 @@ org.apache.polygene.bootstrap.unitofwork
 org.apache.polygene.cache.ehcache
 org.apache.polygene.cache.ehcache.assembly
 org.apache.polygene.cache.memcache
+org.apache.polygene.entitystore.cassandra
+org.apache.polygene.entitystore.cassandra.assembly
 org.apache.polygene.entitystore.file
 org.apache.polygene.entitystore.file.assembly
 org.apache.polygene.entitystore.geode
@@ -217,14 +219,6 @@ org.apache.polygene.test.util
 org.apache.polygene.test.value
 org.apache.polygene.tools.model.descriptor
 org.apache.polygene.tools.model.util
-org.apache.polygene.tools.shell
-org.apache.polygene.tools.shell.create
-org.apache.polygene.tools.shell.create.project
-org.apache.polygene.tools.shell.create.project.common
-org.apache.polygene.tools.shell.create.project.defaultp
-org.apache.polygene.tools.shell.create.project.restapp
-org.apache.polygene.tools.shell.create.project.singleton
-org.apache.polygene.tools.shell.help
 org.apache.polygene.valueserialization.jackson
 org.apache.polygene.valueserialization.orgjson
 org.apache.polygene.valueserialization.stax

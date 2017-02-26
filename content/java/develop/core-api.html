@@ -56,7 +56,7 @@
 <!-- Analytics -->
  <script type="text/javascript">
   var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-89723617-1']);
+  _gaq.push(['_setAccount', 'UA-62007352-1']);
   _gaq.push(['_trackPageview']);
 
   (function() {
@@ -423,9 +423,17 @@ public MyDemoService locateImportantService()
 Store and is therefor runtime modifiable and not static in properties or XML files as in most other dependency
 injection frameworks.</p><p>The Configuration system itself will handle all the details with interfacing with reading and writing the configuration.
 The normal UnitOfWork management is used, but handled internally by the configuration system.</p><p>In Polygene, Configuration are strongly typed and refactoring-friendly. Configuration is read from the entity store, but if
-it can not be found, then it will try to bootstrap it from a properties file, with the same name as the
+it can not be found, then it will try to bootstrap it from the file system, with the same name as the
 ServiceDescriptor.identifiedBy(), which is set during <a class="xref" href="core-bootstrap-assembly.html" title="Core Bootstrap">Assembly</a> and defaults to the fully qualified
-classname of the <a class="xref" href="core-api.html#core-api-service" title="Service Composite">ServiceComposite</a> type.</p><div class="section" title="Defining a Configuration Type"><div class="titlepage"><div><div><h5 class="title"><a id="_defining_a_configuration_type"></a>Defining a Configuration Type</h5></div></div></div><p>The Configuration type is simply listing the properties that are available. The standard rules on @UseDefaults and
+classname of the <a class="xref" href="core-api.html#core-api-service" title="Service Composite">ServiceComposite</a> type, followed by an extension dependent on the file type.</p><p>The following file types for default configuration is supported (listed in read priority order);</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
+Java Properties
+</li><li class="listitem">
+JSON
+</li><li class="listitem">
+YAML
+</li><li class="listitem">
+XML
+</li></ol></div><div class="section" title="Defining a Configuration Type"><div class="titlepage"><div><div><h5 class="title"><a id="_defining_a_configuration_type"></a>Defining a Configuration Type</h5></div></div></div><p>The Configuration type is simply listing the properties that are available. The standard rules on @UseDefaults and
 @Optional applies.
 Example;</p><pre class="programlisting brush: java">public interface MailServiceConfiguration extends ConfigurationComposite
 {
@@ -433,7 +441,16 @@ Example;</p><pre class="programlisting brush: java">public interface MailService
 
     Property&lt;Integer&gt; port();
 }
-</pre></div><div class="section" title="Using a Configuration Type"><div class="titlepage"><div><div><h5 class="title"><a id="_using_a_configuration_type"></a>Using a Configuration Type</h5></div></div></div><p>It is important to remember that Configuration is not static values that are set prior to application start-up and
+</pre></div><div class="section" title="Default Configuration formats"><div class="titlepage"><div><div><h5 class="title"><a id="_default_configuration_formats"></a>Default Configuration formats</h5></div></div></div><p>The default configuration read will happen if the Entity Store backing the Configuration system does not contain the
+identifiable configuration. That will trigger the reading attempts of the supported configuration formats. Once the
+configuration is parsed from the file system it is written to the Entity Store, and if the Entity Store is not
+ephemeral, then on the next start, any changes to the configuration will NOT be detected, and will simply be ignored.</p><p>To be able to read JSON, YAML and XML configuration, you must configure a ValueSerialization system that supports
+the configuration format that you want to use.</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
+extension/valueserialization-jackson supports JSON
+</li><li class="listitem">
+extension/valueserialization-stax supports XML
+</li></ul></div></div><div class="section" title="Support for Complex Types"><div class="titlepage"><div><div><h5 class="title"><a id="_support_for_complex_types"></a>Support for Complex Types</h5></div></div></div><p>Since the regular Value Serialization platform is used, for JSON, YAML and XML, the configuration can contain
+arbitrary composite types. This is not true for the Java properties file format.</p></div><div class="section" title="Using a Configuration Type"><div class="titlepage"><div><div><h5 class="title"><a id="_using_a_configuration_type"></a>Using a Configuration Type</h5></div></div></div><p>It is important to remember that Configuration is not static values that are set prior to application start-up and
 therefor applications should not cache the values retrieved forever, but consciously know when the configuration should
 be re-read.</p><p>Configuration is injected via the @This injection scope. One reasonable strategy is to read the configuration on service
 activation, so by deactivating/reactivating a service, the user have a well-defined behavior to know how configuration
@@ -893,41 +910,43 @@ private MetricsProvider provider;
 application need to provide the implementation of the <span class="emphasis"><em>value()</em></span> method. Gauges are genericized for type-safe value
 handling.</p><p>A Gauge can represent anything, for instance, thread pool levels, queue sizes and other resource allocations. It is
 useful to have separate gauges for percentage (%) and absolute numbers of the same resource. Operations are mainly
-interested in being alerted when threshold are reach as a percentage, as it is otherwise too many numbers to keep
+interested in being alerted when threshold are reached as a percentage, as it is otherwise too many numbers to keep
 track of.</p><p>To create a Gauge, you do something like;</p><pre class="programlisting brush: java">final BlockingQueue queue = new LinkedBlockingQueue( 20 );
   [...snip...]
 
 MetricsGaugeFactory gaugeFactory = provider.createFactory( MetricsGaugeFactory.class );
-MetricsGauge&lt;Integer&gt; gauge = gaugeFactory.registerGauge( "Sample Gauge", new MetricsGauge&lt;Integer&gt;()
-{
-    @Override
-    public Integer value()
-    {
-        return queue.size();
-    }
-} );
-</pre></div><div class="section" title="Counter"><div class="titlepage"><div><div><h5 class="title"><a id="_counter"></a>Counter</h5></div></div></div><pre class="programlisting brush: java">MetricsCounterFactory counterFactory = provider.createFactory( MetricsCounterFactory.class );
+MetricsGauge&lt;Integer&gt; gauge = gaugeFactory.registerGauge( "Sample Gauge", () -&gt; queue.size() );
+</pre></div><div class="section" title="Counter"><div class="titlepage"><div><div><h5 class="title"><a id="_counter"></a>Counter</h5></div></div></div><p>Often we want to track the many counters in a system. This might be "number of HTTP requests" or
+"filesystem access frequency". By creating a <span class="emphasis"><em>Counter</em></span> metrics, it is simply a matter of calling the <span class="emphasis"><em>increment</em></span>
+or <span class="emphasis"><em>decrement</em></span> on that metric. This will track both number of counts/steps as well as the rate (per second), and
+many visualization platforms. such as Kibana, Graphite and Grafana, are made to handle this particular metric very well.</p><pre class="programlisting brush: java">MetricsCounterFactory counterFactory = provider.createFactory( MetricsCounterFactory.class );
 MetricsCounter counter = counterFactory.createCounter( "Sample Counter" );
-</pre></div><div class="section" title="Histogram"><div class="titlepage"><div><div><h5 class="title"><a id="_histogram"></a>Histogram</h5></div></div></div><pre class="programlisting brush: java">MetricsHistogramFactory histoFactory = provider.createFactory( MetricsHistogramFactory.class );
+</pre></div><div class="section" title="Histogram"><div class="titlepage"><div><div><h5 class="title"><a id="_histogram"></a>Histogram</h5></div></div></div><p>Histograms is about computing the running standard deviations and variances. Please see
+<a class="ulink" href="http://www.johndcook.com/standard_deviation.html" target="_top">"Accurately computing running variance"</a> for more detailed information.</p><pre class="programlisting brush: java">MetricsHistogramFactory histoFactory = provider.createFactory( MetricsHistogramFactory.class );
 MetricsHistogram histogram = histoFactory.createHistogram( "Sample Histogram" );
-</pre></div><div class="section" title="Meter"><div class="titlepage"><div><div><h5 class="title"><a id="_meter"></a>Meter</h5></div></div></div><pre class="programlisting brush: java">MetricsMeterFactory meterFactory = provider.createFactory( MetricsMeterFactory.class );
+</pre></div><div class="section" title="Meter"><div class="titlepage"><div><div><h5 class="title"><a id="_meter"></a>Meter</h5></div></div></div><p>The <span class="emphasis"><em>Meter</em></span> is a more advanced <span class="emphasis"><em>Counter</em></span>, which measures mean throughput and one-, five-, and fifteen-minute
+exponentially-weighted moving average throughputs.</p><p>Wikipedia has a section
+<a class="ulink" href="http://en.wikipedia.org/wiki/Moving_average#Exponential_moving_average" target="_top">"Exponential moving average"</a> in the
+"Moving Average" article.</p><pre class="programlisting brush: java">MetricsMeterFactory meterFactory = provider.createFactory( MetricsMeterFactory.class );
 MetricsMeter meter = meterFactory.createMeter( "Sample Meter" );
 </pre></div><div class="section" title="Timer"><div class="titlepage"><div><div><h5 class="title"><a id="_timer"></a>Timer</h5></div></div></div><p>Timers capture both the length of some execution as well as rate of calls. They can be used to time method calls, or
 critical sections, or even HTTP requests duration and similar.</p><pre class="programlisting brush: java">MetricsTimerFactory timerFactory = provider.createFactory( MetricsTimerFactory.class );
 MetricsTimer timer = timerFactory.createTimer( "Sample Timer" );
-</pre></div><div class="section" title="HealthCheck"><div class="titlepage"><div><div><h5 class="title"><a id="_healthcheck"></a>HealthCheck</h5></div></div></div><pre class="programlisting brush: java">MetricsHealthCheckFactory healthFactory = provider.createFactory( MetricsHealthCheckFactory.class );
-MetricsHealthCheck healthCheck = healthFactory.registerHealthCheck(
-    "Sample Healthcheck",
-    new MetricsHealthCheck()
+</pre></div><div class="section" title="HealthCheck"><div class="titlepage"><div><div><h5 class="title"><a id="_healthcheck"></a>HealthCheck</h5></div></div></div><p>HealthCheck is a metric to report the health of a system or component. The HealthCheck metric will be called upon
+regularly to report its status, which is then forwarded to the monitoring system.</p><pre class="programlisting brush: java">MetricsHealthCheckFactory healthFactory = provider.createFactory( MetricsHealthCheckFactory.class );
+MetricsHealthCheck healthCheck = healthFactory.registerHealthCheck( "Sample Healthcheck", () -&gt;
+{
+    ServiceStatus status = pingMyService();
+    if( status.isOk() )
+        return MetricsHealthCheck.Result.healthOk();
+    String message = status.getErrorMessage();
+    Exception error = status.getException();
+    if( error != null )
     {
-        @Override
-        public Result check()
-            throws Exception
-        {
-            ServiceStatus status = pingMyService();
-            return new Result( status.isOk(), status.getErrorMessage(), status.getException() );
-        }
-    } );
+        return MetricsHealthCheck.Result.exception(message, error);
+    }
+    return MetricsHealthCheck.Result.unhealthy(message);
+} );
 </pre></div></div></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="footer"><p>
         Copyright © 2015 The Apache Software Foundation, Licensed under the <a href="http://www.apache.org/licenses/" target="_blank">Apache License, Version 2.0</a>.
         <br /><small>

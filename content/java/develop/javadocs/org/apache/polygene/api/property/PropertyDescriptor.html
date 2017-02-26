@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6};
+var methods = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -130,8 +130,8 @@ extends <a href="../../../../../org/apache/polygene/api/structure/MetaInfoHolder
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/apache/polygene/api/property/PropertyDescriptor.html#accessor--">accessor</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
-<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/apache/polygene/api/property/PropertyDescriptor.html#initialValue-org.apache.polygene.api.structure.ModuleDescriptor-">initialValue</a></span>(<a href="../../../../../org/apache/polygene/api/structure/ModuleDescriptor.html" title="interface in org.apache.polygene.api.structure">ModuleDescriptor</a>&nbsp;module)</code>&nbsp;</td>
+<td class="colFirst"><code><a href="../../../../../org/apache/polygene/api/property/InitialValueProvider.html" title="interface in org.apache.polygene.api.property">InitialValueProvider</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/apache/polygene/api/property/PropertyDescriptor.html#initialValueProvider--">initialValueProvider</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
@@ -151,12 +151,16 @@ extends <a href="../../../../../org/apache/polygene/api/structure/MetaInfoHolder
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/apache/polygene/api/property/PropertyDescriptor.html#queryable--">queryable</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i5" class="rowColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/apache/polygene/api/property/PropertyDescriptor.html#resolveInitialValue-org.apache.polygene.api.structure.ModuleDescriptor-">resolveInitialValue</a></span>(<a href="../../../../../org/apache/polygene/api/structure/ModuleDescriptor.html" title="interface in org.apache.polygene.api.structure">ModuleDescriptor</a>&nbsp;moduleDescriptor)</code>&nbsp;</td>
+</tr>
+<tr id="i6" class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Type.html?is-external=true" title="class or interface in java.lang.reflect">Type</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/apache/polygene/api/property/PropertyDescriptor.html#type--">type</a></span>()</code>
 <div class="block">Get the type of the property.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/polygene/api/type/ValueType.html" title="class in org.apache.polygene.api.type">ValueType</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/apache/polygene/api/property/PropertyDescriptor.html#valueType--">valueType</a></span>()</code>&nbsp;</td>
 </tr>
@@ -232,13 +236,22 @@ extends <a href="../../../../../org/apache/polygene/api/structure/MetaInfoHolder
 <pre><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AccessibleObject.html?is-external=true" title="class or interface in java.lang.reflect">AccessibleObject</a>&nbsp;accessor()</pre>
 </li>
 </ul>
-<a name="initialValue-org.apache.polygene.api.structure.ModuleDescriptor-">
+<a name="initialValueProvider--">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>initialValue</h4>
-<pre><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;initialValue(<a href="../../../../../org/apache/polygene/api/structure/ModuleDescriptor.html" title="interface in org.apache.polygene.api.structure">ModuleDescriptor</a>&nbsp;module)</pre>
+<h4>initialValueProvider</h4>
+<pre><a href="../../../../../org/apache/polygene/api/property/InitialValueProvider.html" title="interface in org.apache.polygene.api.property">InitialValueProvider</a>&nbsp;initialValueProvider()</pre>
+</li>
+</ul>
+<a name="resolveInitialValue-org.apache.polygene.api.structure.ModuleDescriptor-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>resolveInitialValue</h4>
+<pre><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;resolveInitialValue(<a href="../../../../../org/apache/polygene/api/structure/ModuleDescriptor.html" title="interface in org.apache.polygene.api.structure">ModuleDescriptor</a>&nbsp;moduleDescriptor)</pre>
 </li>
 </ul>
 <a name="valueType--">

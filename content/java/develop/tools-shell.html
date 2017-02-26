@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Polygene Shell</title><link rel="stylesheet" type="text/css" href="css/style.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.76.1" /><link rel="home" href="index.html" title="" /><link rel="up" href="tools.html" title="Tools" /><link rel="prev" href="tools.html" title="Tools" /><link rel="next" href="tools-envisage.html" title="Envisage" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Polygene Generator</title><link rel="stylesheet" type="text/css" href="css/style.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.76.1" /><link rel="home" href="index.html" title="" /><link rel="up" href="tools.html" title="Tools" /><link rel="prev" href="tools.html" title="Tools" /><link rel="next" href="tools-envisage.html" title="Envisage" />
 
 
 <!-- favicon -->
@@ -56,7 +56,7 @@
 <!-- Analytics -->
  <script type="text/javascript">
   var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-89723617-1']);
+  _gaq.push(['_setAccount', 'UA-62007352-1']);
   _gaq.push(['_trackPageview']);
 
   (function() {
@@ -66,14 +66,12 @@
   })();
  </script>
 
-  </head><body><div xmlns="" xmlns:exsl="http://exslt.org/common" class="logo"><a href="index.html"><img src="images/logo-standard.png" /></a></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="top-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl><dt><span class="section"><a href="index.html#home">Polygene™</a></span></dt><dt><span class="section"><a href="intro.html">Introduction</a></span></dt><dt><span class="section"><a href="tutorials.html">Tutorials</a></span></dt><dt><span class="section"><a href="javadocs.html">Javadoc</a></span></dt><dt><span class="section"><a href="samples.html">Samples</a></span></dt><dt><span class="section"><a href="core.html">Core</a></span></dt><dt><span class="section"><a href="libraries.html">Libraries</a></span></dt><dt><span class="section"><a href="extensions.html">Extensions</a></span></dt><dt><span class="section"><span xmlns="" href="tools.html">Tools</span></span></dt><dt><span class="section"><a href="glossary.html">Glossary </a></span></dt></dl></div></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="sub-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl><dt><span class="section"><a href="tools.html#_overview_8">Overview</a></span></dt><dt><span class="section"><span xmlns="" href="tools-shell.html">Polygene Shell</span></span></dt><dt><span class="section"><a href="tools-envisage.html">Envisage</a></span></dt></dl></div></div><div class="section" title="Polygene Shell"><div class="titlepage"><div><div><h3 class="title"><a id="tools-shell"></a>Polygene Shell</h3></div></div></div><p>If you have installed the Polygene SDK, there is a <code class="literal">bin/polygene</code> command line script,
-which has sub-functions in it. This list of commands will slowly grow
-for various purposes of doing software development with Apache Polygene.</p><p>The current list of commands are;</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
-<a class="xref" href="tools-shell.html#tools-shell-create-project" title="Create Project">Create Project Script</a>
-</li></ul></div><div class="section" title="Create Project"><div class="titlepage"><div><div><h4 class="title"><a id="tools-shell-create-project"></a>Create Project</h4></div></div></div><p>This command creates a brand new project, in current directory, with a name
-provided. There are more than one template of the type of project that one
-might want to create. Full list of types to follow below. The command
-takes at least 3 additional arguments;</p><pre class="screen">polygene create-project type name package</pre><p>A directory called <span class="emphasis"><em>name</em></span> will be created in the current directory, and all
+  </head><body><div xmlns="" xmlns:exsl="http://exslt.org/common" class="logo"><a href="index.html"><img src="images/logo-standard.png" /></a></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="top-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl><dt><span class="section"><a href="index.html#home">Polygene™</a></span></dt><dt><span class="section"><a href="intro.html">Introduction</a></span></dt><dt><span class="section"><a href="tutorials.html">Tutorials</a></span></dt><dt><span class="section"><a href="javadocs.html">Javadoc</a></span></dt><dt><span class="section"><a href="samples.html">Samples</a></span></dt><dt><span class="section"><a href="core.html">Core</a></span></dt><dt><span class="section"><a href="libraries.html">Libraries</a></span></dt><dt><span class="section"><a href="extensions.html">Extensions</a></span></dt><dt><span class="section"><span xmlns="" href="tools.html">Tools</span></span></dt><dt><span class="section"><a href="glossary.html">Glossary </a></span></dt></dl></div></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="sub-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl><dt><span class="section"><a href="tools.html#_overview_8">Overview</a></span></dt><dt><span class="section"><span xmlns="" href="tools-shell.html">Polygene Generator</span></span></dt><dt><span class="section"><a href="tools-envisage.html">Envisage</a></span></dt></dl></div></div><div class="section" title="Polygene Generator"><div class="titlepage"><div><div><h3 class="title"><a id="tools-shell"></a>Polygene Generator</h3></div></div></div><p>Apache Polygene comes with a Yeoman code generator, to quickly set up a development
+environment for Polygene applications.</p><p>The current list of commands are;</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
+<a class="xref" href="tools-shell.html#tools-yeoman-create-project" title="Create Project">Create Project Script</a>
+</li></ul></div><div class="section" title="Create Project"><div class="titlepage"><div><div><h4 class="title"><a id="tools-yeoman-create-project"></a>Create Project</h4></div></div></div><p>This command creates a brand new project, in current directory. The generator
+will ask a lot of questions. If you are new to Polygene and only want to try
+it out, it is safe to hit ENTER on all questions.</p><pre class="screen">yo polygene create-project</pre><p>A directory called <span class="emphasis"><em>name</em></span> will be created in the current directory, and all
 the necessary structure for a Polygene project using Gradle will be created.</p><p>The exact layout of the project depends on the <span class="emphasis"><em>type</em></span> argument and currently the
 following types exists;</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
 <a class="xref" href="tools-shell.html#tools-shell-create-project-null" title="Create Null Project Template">Create Null Project</a> - Creates the build system and directory structure.

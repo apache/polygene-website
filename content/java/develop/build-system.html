@@ -56,7 +56,7 @@
 <!-- Analytics -->
  <script type="text/javascript">
   var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-89723617-1']);
+  _gaq.push(['_setAccount', 'UA-62007352-1']);
   _gaq.push(['_trackPageview']);
 
   (function() {
@@ -70,24 +70,24 @@
 It describe the Polygene™ SDK Build System from compilation to publication of artifacts for consumption by other
 applications.</p><p>If instead you want to setup your project build system to depend on modules of the Polygene™ SDK see the
 <a class="link" href="howto-depend-on-polygene.html" title="Depend on Polygene™">dedicated tutorial</a>.</p><div class="section" title="Gradle"><div class="titlepage"><div><div><h4 class="title"><a id="_gradle"></a>Gradle</h4></div></div></div><div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>All major Java IDEs have great Gradle support.
-Visit the <a class="ulink" href="http://www.gradle.org/tooling" target="_top">Gradle Tooling</a> page to learn how to import the Polygene™ SDK build into your
+Visit the <a class="ulink" href="https://www.gradle.org/resources" target="_top">Gradle</a> website to learn how to import the Polygene™ SDK build into your
 favorite IDE.</p></div><p>Polygene™ community migrated away from Maven after several years of frustration, especially around release management,
 versioning and cross-module dependency resolution issues, in Feb 2011.
 The tool of choice is now Gradle, and it doesn’t require any installation, there are <code class="literal">gradlew</code> and <code class="literal">gradlew.bat</code> in
-the root folder of the Polygene™ SDK that will bootstrap Gradle if not done so already.</p><p>If you are new to Gradle, you should keep the <a class="ulink" href="http://www.gradle.org/documentation" target="_top">documentation</a> at hands.</p><p>Build System configuration is done through Gradle properties.
+the root folder of the Polygene™ SDK that will bootstrap Gradle if not done so already.</p><p>If you are new to Gradle, you should keep the <a class="ulink" href="https://gradle.org/docs" target="_top">documentation</a> at hands.</p><p>Build System configuration is done through Gradle properties.
 This can be done in many ways, see
-<a class="ulink" href="http://gradle.org/docs/current/userguide/tutorial_this_and_that.html#sec:gradle_properties_and_system_properties" target="_top">Gradle properties and system properties</a>.</p></div><div class="section" title="Main tasks"><div class="titlepage"><div><div><h4 class="title"><a id="_main_tasks"></a>Main tasks</h4></div></div></div><p>The Polygene™ SDK project has tasks that work with the whole SDK.</p><div class="variablelist"><dl><dt><span class="term">
-downloadDependencies
-</span></dt><dd>Resolve, download and cache all needed dependencies.
-Useful to go offline.</dd></dl></div><p title="/gradlew::"><strong>/gradlew:: </strong>+</p><p>The default build, triggered when running gradle without any command line arguments, compiles the code and run the
-tests, but nothing else. A quick way to check that nothing broke.</p><p title="/gradlew clean::"><strong>/gradlew clean:: </strong>+</p><p>Clean up of all build output and restore the code base to a fresh state.</p><p title="/gradlew assemble::"><strong>/gradlew assemble:: </strong>+</p><p>Produces all the archives, javadocs, manuals and website content.
-Global output is generated into <code class="literal">distributions/build</code>.</p><p title="/gradlew check::"><strong>/gradlew check:: </strong>+</p><p>Run the tests and other checks like checkstyle.
-Global reports are generated in <code class="literal">reports/build/reports</code>.</p><p title="/gradlew build::"><strong>/gradlew build:: </strong>+</p><p>Equivalent to <code class="literal">./gradlew assemble check</code></p><p title="/gradlew checkDistributions::"><strong>/gradlew checkDistributions:: </strong>+</p><p>Run global checks against the assembled distributions.
-Can take a while.</p><div class="variablelist"><dl><dt><span class="term">
-install
-</span></dt><dd>Is roughly the same as Maven’s install goal.
+<a class="ulink" href="https://docs.gradle.org/current/userguide/build_environment.html#sec:gradle_properties_and_system_properties" target="_top">Gradle properties and system properties</a>.</p></div><div class="section" title="Main tasks"><div class="titlepage"><div><div><h4 class="title"><a id="_main_tasks"></a>Main tasks</h4></div></div></div><p>The Polygene™ SDK project has tasks that work with the whole SDK.</p><div class="variablelist"><dl><dt><span class="term">
+<code class="literal">./gradlew downloadDependencies</code>
+</span></dt><dd></dd></dl></div><p>Resolve, download and cache all needed dependencies.
+Useful to go offline.</p><div class="variablelist"><dl><dt><span class="term">
+<code class="literal">./gradlew</code>
+</span></dt><dd></dd></dl></div><p>The default build, triggered when running gradle without any command line arguments, compiles the code and run the
+tests, but nothing else. A quick way to check that nothing broke.</p><p>Clean up of all build output and restore the code base to a fresh state.</p><p>Produces all the archives, javadocs, manuals and website content.
+Global output is generated into <code class="literal">distributions/build</code>.</p><p>Run the tests and other checks like checkstyle.
+Global reports are generated in <code class="literal">reports/build/reports</code>.</p><p>Equivalent to <code class="literal">./gradlew assemble check</code></p><p>Run global checks against the assembled distributions.
+Can take a while.</p><p>Is roughly the same as Maven’s install goal.
 It produces the test reports, javadocs and installs all the Jars into the local disk repository, for consumption
-by other applications.</dd></dl></div></div><div class="section" title="Other tasks"><div class="titlepage"><div><div><h4 class="title"><a id="_other_tasks"></a>Other tasks</h4></div></div></div><p>In addition to that, some submodules have specific tasks.
+by other applications.</p></div><div class="section" title="Other tasks"><div class="titlepage"><div><div><h4 class="title"><a id="_other_tasks"></a>Other tasks</h4></div></div></div><p>In addition to that, some submodules have specific tasks.
 To see all available tasks, issue the following command:</p><pre class="programlisting brush: bash">./gradlew tasks</pre><p>All available tasks from all modules of the SDK are shown.
 If you want to narrow your exploration to submodules use the following:</p><pre class="programlisting brush: bash">./gradlew :test:performance:tasks
 ./gradlew :release:tasks</pre><p>These examples will respectively output all gradle tasks available in the <code class="literal">:tests:performance</code> module where you should find
@@ -99,21 +99,13 @@ This is in our opinion a delayed decision.
 To build a particular version, you specify a <code class="literal">version</code> property on the command-line, like</p><pre class="programlisting brush: bash">./gradlew -Dversion=2.0-FLAVOUR install</pre><p>If a <code class="literal">version</code> property is not defined, the build system will refuse to make a release and upload.
 It will also try hard to do less and not get in your way.</p></div><div class="section" title="Tests"><div class="titlepage"><div><div><h4 class="title"><a id="_tests"></a>Tests</h4></div></div></div><div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>See the <a class="ulink" href="https://builds.apache.org/view/P/view/Polygene/" target="_top">Polygene™ Continuous Integration</a> for current tests results</p></div><p>Unit and integration tests are located near the code under test.
 You’ll find theses tests across the whole SDK.</p><div class="section" title="Unit tests requiring external services"><div class="titlepage"><div><div><h5 class="title"><a id="_unit_tests_requiring_external_services"></a>Unit tests requiring external services</h5></div></div></div><p>Among unit tests, some require an external service to be run.
-For example, the MongoDB EntityStore extension requires an actual MongoDB server to run its tests.</p><div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>The HTML test reports generated by Gradle shows skipped tests.</p></div><p>All thoses tests should be part of the default build and check if the service is available at its default location
-on <code class="literal">localhost</code> and skip if not.
-This is easily achieved using <a class="ulink" href="http://junit.sourceforge.net/javadoc/org/junit/Assume.html" target="_top">JUnit assumptions</a>.</p><p>We’ll list here services that the unit tests will use if available.</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
-Memcached, ASCII protocol, no authentication on <code class="literal">localhost:4444</code> for <code class="literal">extensions/cache-memcache</code>
-</li><li class="listitem">
-MongoDB without authentication on <code class="literal">localhost:27017</code> for <code class="literal">extensions/entitystore-mongodb</code>
-</li><li class="listitem">
-Riak without authentication on <code class="literal">localhost:8087</code> for <code class="literal">extensions/entitystore-riak</code>
-</li><li class="listitem">
-Redis without authentication on <code class="literal">localhost:4444</code> for <code class="literal">extensions/entitystore-redis</code>
-</li><li class="listitem">
-PostgreSQL for <code class="literal">extensions/entitystore-sql</code> and <code class="literal">extensions/indexing-sql</code> (need setup, see test source)
-</li><li class="listitem">
-MySQL for <code class="literal">extensions/entitystore-sql</code> (need setup, see test source)
-</li></ul></div></div><div class="section" title="Performance tests"><div class="titlepage"><div><div><h5 class="title"><a id="_performance_tests"></a>Performance tests</h5></div></div></div><p>Performance tests provide performance mesurements for typical Polygene™ use cases.
+For example, the Redis EntityStore extension requires an actual Redis server to run its tests.</p><div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>The HTML test reports generated by Gradle shows skipped tests.</p></div><p>Testing against external services is automated using Docker and is enabled automatically if a running Docker service
+is reachable.
+The build creates the necessary Docker images and start/stop containers around the tests.</p><p>On Linux it should work out of the box.</p><p>The simplest way to get this running on other systems (macOS and Windows) is to use <code class="literal">docker-machine</code> to create a
+development Docker virtual machine where all images will be built and containers started:</p><pre class="programlisting brush: bash">docker-machine create dev
+docker-machine start dev
+eval $(docker-machine env dev)</pre><p>The last stanza set environment variables for Docker to use the newly created Docker virtual machine.</p><p>If you want to run the Docker containers in a remote machine, simply set the <code class="literal">DOCKER_HOST</code> and <code class="literal">DOCKER_CERT_PATH</code>
+environment variables to something sensible for your setup.</p></div><div class="section" title="Performance tests"><div class="titlepage"><div><div><h5 class="title"><a id="_performance_tests"></a>Performance tests</h5></div></div></div><p>Performance tests provide performance measurements for typical Polygene™ use cases.
 They are not part of the default build and are located in the <code class="literal">tests/performance</code> directory of the SDK.</p><p>They can be run with the following Gradle command:</p><pre class="programlisting brush: bash">./gradlew :tests:performance:performanceTest</pre><p>Results will then be available in the test reports.</p></div></div><div class="section" title="Documentation generation"><div class="titlepage"><div><div><h4 class="title"><a id="_documentation_generation"></a>Documentation generation</h4></div></div></div><p>The build generates a documentation minisite:</p><pre class="programlisting brush: bash">./gradlew :manual:assemble</pre><p>Output is in <code class="literal">~/manual/build/docs/website</code>.</p><p>You’ll need Asciidoc and docbook-xsl installed.</p></div><div class="section" title="Build for releases"><div class="titlepage"><div><div><h4 class="title"><a id="_build_for_releases"></a>Build for releases</h4></div></div></div><div class="important" title="Important" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Important</h3><p>Remember that if a <code class="literal">version</code> property is not defined, the build system will refuse to make a release and upload.</p></div><p>The Polygene™ SDK build system is setup for an easy release process.
 This is very useful to the Polygene™ Core Team but can also be useful to third parties that want to cut a in-house release.
 In this regard, we try to make every aspect of the release process usable for such cases.</p><p>The following sections describe various aspects of the release process.
@@ -133,7 +125,7 @@ Used Wagon can be overriden by setting the <code class="literal">uploadWagon</co
 Target repository can be overriden by setting the <code class="literal">uploadRepository</code> property.</p><p>No username/password is provided by default.
 If needed set them using the <code class="literal">uploadUsername</code> and <code class="literal">uploadPassword</code> properties.</p><p>For example here is how to deploy all artifacts as unsigned SNAPSHOTs to a given repository:</p><pre class="programlisting brush: bash">./gradlew uploadArchives -Dversion=3.2.1-SNAPSHOT -PuploadReleaseSpec=false \
     -PuploadWagon=what:ever:wagon -PuploadRepository=http://what.ever.repository/url \
-    -PuploadUsername=foo -PuploadPassword=bar</pre><p>And here is how to deploy a signed release to the local filesystem:</p><pre class="programlisting brush: bash">./gradlew uploadArchives -Dversion=3.2.1 -PuploadRepository=file:///path/to/local/repository</pre><p>See the <a class="ulink" href="http://www.gradle.org/docs/current/userguide/maven_plugin.html#wagonLibs" target="_top">Gradle documentation</a> about
+    -PuploadUsername=foo -PuploadPassword=bar</pre><p>And here is how to deploy a signed release to the local filesystem:</p><pre class="programlisting brush: bash">./gradlew uploadArchives -Dversion=3.2.1 -PuploadRepository=file:///path/to/local/repository</pre><p>See the <a class="ulink" href="https://docs.gradle.org/current/userguide/maven_plugin.html#wagonLibs" target="_top">Gradle documentation</a> about
 supported protocols.</p></div></div></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="footer"><p>
         Copyright © 2015 The Apache Software Foundation, Licensed under the <a href="http://www.apache.org/licenses/" target="_blank">Apache License, Version 2.0</a>.
         <br /><small>

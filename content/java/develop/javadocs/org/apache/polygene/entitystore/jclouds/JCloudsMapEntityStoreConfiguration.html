@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6};
+var methods = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -167,15 +167,21 @@ extends <a href="../../../../../org/apache/polygene/api/configuration/Configurat
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/polygene/api/property/Property.html" title="interface in org.apache.polygene.api.property">Property</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/apache/polygene/entitystore/jclouds/JCloudsMapEntityStoreConfiguration.html#identifier--">identifier</a></span>()</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/apache/polygene/entitystore/jclouds/JCloudsMapEntityStoreConfiguration.html#endpoint--">endpoint</a></span>()</code>
+<div class="block">Endpoint for the BlobStore provider.</div>
+</td>
 </tr>
 <tr id="i3" class="rowColor">
+<td class="colFirst"><code><a href="../../../../../org/apache/polygene/api/property/Property.html" title="interface in org.apache.polygene.api.property">Property</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/apache/polygene/entitystore/jclouds/JCloudsMapEntityStoreConfiguration.html#identifier--">identifier</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i4" class="altColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/polygene/api/property/Property.html" title="interface in org.apache.polygene.api.property">Property</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/apache/polygene/entitystore/jclouds/JCloudsMapEntityStoreConfiguration.html#properties--">properties</a></span>()</code>
 <div class="block">Use this to fine tune your provider implementation according to JClouds documentation.</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../org/apache/polygene/api/property/Property.html" title="interface in org.apache.polygene.api.property">Property</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/apache/polygene/entitystore/jclouds/JCloudsMapEntityStoreConfiguration.html#provider--">provider</a></span>()</code>
 <div class="block">Name of the JClouds provider to use.</div>
@@ -248,12 +254,23 @@ extends <a href="../../../../../org/apache/polygene/api/configuration/Configurat
 <a name="container--">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>container</h4>
 <pre><a href="../../../../../org/apache/polygene/api/common/Optional.html" title="annotation in org.apache.polygene.api.common">@Optional</a>
 <a href="../../../../../org/apache/polygene/api/property/Property.html" title="interface in org.apache.polygene.api.property">Property</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;container()</pre>
 <div class="block">Name of the JClouds container to use. Defaults to 'polygene-entities'.</div>
+</li>
+</ul>
+<a name="endpoint--">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>endpoint</h4>
+<pre><a href="../../../../../org/apache/polygene/api/common/Optional.html" title="annotation in org.apache.polygene.api.common">@Optional</a>
+<a href="../../../../../org/apache/polygene/api/property/Property.html" title="interface in org.apache.polygene.api.property">Property</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;endpoint()</pre>
+<div class="block">Endpoint for the BlobStore provider.</div>
 </li>
 </ul>
 </li>

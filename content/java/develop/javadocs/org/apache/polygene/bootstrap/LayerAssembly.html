@@ -18,8 +18,8 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6,"i9":6,"i10":6,"i11":6,"i12":6,"i13":6};
-var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"]};
+var methods = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6,"i9":6,"i10":6,"i11":6,"i12":38,"i13":6};
+var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],32:["t6","Deprecated Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
@@ -115,7 +115,7 @@ var activeTableTab = "activeTableTab";
 </a>
 <h3>Method Summary</h3>
 <table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
-<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t3" class="tableTab"><span><a href="javascript:show(4);">Abstract Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
+<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t3" class="tableTab"><span><a href="javascript:show(4);">Abstract Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t6" class="tableTab"><span><a href="javascript:show(32);">Deprecated Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
 <th class="colLast" scope="col">Method and Description</th>
@@ -164,11 +164,15 @@ var activeTableTab = "activeTableTab";
 </tr>
 <tr id="i7" class="rowColor">
 <td class="colFirst"><code><a href="../../../../org/apache/polygene/bootstrap/LayerAssembly.html" title="interface in org.apache.polygene.bootstrap">LayerAssembly</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/apache/polygene/bootstrap/LayerAssembly.html#setMetaInfo-java.lang.Object-">setMetaInfo</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;info)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/apache/polygene/bootstrap/LayerAssembly.html#setMetaInfo-java.lang.Object-">setMetaInfo</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;info)</code>
+<div class="block">Set metadata for the <code>Layer</code>.</div>
+</td>
 </tr>
 <tr id="i8" class="altColor">
 <td class="colFirst"><code><a href="../../../../org/apache/polygene/bootstrap/LayerAssembly.html" title="interface in org.apache.polygene.bootstrap">LayerAssembly</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/apache/polygene/bootstrap/LayerAssembly.html#setName-java.lang.String-">setName</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/apache/polygene/bootstrap/LayerAssembly.html#setName-java.lang.String-">setName</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
+<div class="block">Sets the name of the <code>Layer</code> being assembled.</div>
+</td>
 </tr>
 <tr id="i9" class="rowColor">
 <td class="colFirst"><code><a href="../../../../org/apache/polygene/bootstrap/TransientDeclaration.html" title="interface in org.apache.polygene.bootstrap">TransientDeclaration</a></code></td>
@@ -179,7 +183,9 @@ var activeTableTab = "activeTableTab";
 </tr>
 <tr id="i10" class="altColor">
 <td class="colFirst"><code><a href="../../../../org/apache/polygene/bootstrap/LayerAssembly.html" title="interface in org.apache.polygene.bootstrap">LayerAssembly</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/apache/polygene/bootstrap/LayerAssembly.html#uses-org.apache.polygene.bootstrap.LayerAssembly...-">uses</a></span>(<a href="../../../../org/apache/polygene/bootstrap/LayerAssembly.html" title="interface in org.apache.polygene.bootstrap">LayerAssembly</a>...&nbsp;layerAssembly)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/apache/polygene/bootstrap/LayerAssembly.html#uses-org.apache.polygene.bootstrap.LayerAssembly...-">uses</a></span>(<a href="../../../../org/apache/polygene/bootstrap/LayerAssembly.html" title="interface in org.apache.polygene.bootstrap">LayerAssembly</a>...&nbsp;layerAssembly)</code>
+<div class="block">Declaration of which other <code>Layers</code> that this <code>Layer</code> is able to use.</div>
+</td>
 </tr>
 <tr id="i11" class="rowColor">
 <td class="colFirst"><code><a href="../../../../org/apache/polygene/bootstrap/ValueDeclaration.html" title="interface in org.apache.polygene.bootstrap">ValueDeclaration</a></code></td>
@@ -190,7 +196,11 @@ var activeTableTab = "activeTableTab";
 </tr>
 <tr id="i12" class="altColor">
 <td class="colFirst"><code>&lt;ThrowableType extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&gt;<br>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/apache/polygene/bootstrap/LayerAssembly.html#visit-org.apache.polygene.bootstrap.AssemblyVisitor-">visit</a></span>(<a href="../../../../org/apache/polygene/bootstrap/AssemblyVisitor.html" title="interface in org.apache.polygene.bootstrap">AssemblyVisitor</a>&lt;ThrowableType&gt;&nbsp;visitor)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/apache/polygene/bootstrap/LayerAssembly.html#visit-org.apache.polygene.bootstrap.AssemblyVisitor-">visit</a></span>(<a href="../../../../org/apache/polygene/bootstrap/AssemblyVisitor.html" title="interface in org.apache.polygene.bootstrap">AssemblyVisitor</a>&lt;ThrowableType&gt;&nbsp;visitor)</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;
+<div class="block"><span class="deprecationComment">New mechanism is considered, using Java 8 Stream API.</span></div>
+</div>
+</td>
 </tr>
 <tr id="i13" class="rowColor">
 <td class="colFirst"><code><a href="../../../../org/apache/polygene/bootstrap/LayerAssembly.html" title="interface in org.apache.polygene.bootstrap">LayerAssembly</a></code></td>
@@ -237,6 +247,10 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <h4>application</h4>
 <pre><a href="../../../../org/apache/polygene/bootstrap/ApplicationAssembly.html" title="interface in org.apache.polygene.bootstrap">ApplicationAssembly</a>&nbsp;application()</pre>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the <a href="../../../../org/apache/polygene/bootstrap/ApplicationAssembly.html" title="interface in org.apache.polygene.bootstrap"><code>ApplicationAssembly</code></a> that this <code>LayerAssembly</code> belongs to.</dd>
+</dl>
 </li>
 </ul>
 <a name="name--">
@@ -246,6 +260,10 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <h4>name</h4>
 <pre><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name()</pre>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the name of the <code>Layer</code> that is being assembled.</dd>
+</dl>
 </li>
 </ul>
 <a name="setName-java.lang.String-">
@@ -255,6 +273,15 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <h4>setName</h4>
 <pre><a href="../../../../org/apache/polygene/bootstrap/LayerAssembly.html" title="interface in org.apache.polygene.bootstrap">LayerAssembly</a>&nbsp;setName(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</pre>
+<div class="block">Sets the name of the <code>Layer</code> being assembled.
+ By convention, a <code>Layer</code> should include the word "Layer" as the suffix, e.g "DomainLayer", so tooling
+ can use camel-case detection and present the name and not require it to explicitly say that it is a layer.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>name</code> - The name that the Layer should have.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>this <code>LayerAssembly</code> instance to support fluent APIs</dd>
+</dl>
 </li>
 </ul>
 <a name="setMetaInfo-java.lang.Object-">
@@ -264,6 +291,17 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <h4>setMetaInfo</h4>
 <pre><a href="../../../../org/apache/polygene/bootstrap/LayerAssembly.html" title="interface in org.apache.polygene.bootstrap">LayerAssembly</a>&nbsp;setMetaInfo(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;info)</pre>
+<div class="block">Set metadata for the <code>Layer</code>.
+ Any arbitrary object can be attached as metainfo on a <code>Layer</code> that is available in runtime, by calling
+ <a href="../../../../org/apache/polygene/api/structure/MetaInfoHolder.html#metaInfo-java.lang.Class-"><code>MetaInfoHolder.metaInfo(Class)</code></a>. Multiple registrations of the same type is
+ not possible, and the lookup will search registered meta-info objects against the lookup type, prioritizing
+ interfaces over classes and the most sub-typed nterface first.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>info</code> - The meta-info type to be looked up. Typically a type that is explicitly used for meta-info.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>this <code>LayerAssembly</code> instance to support fluent APIs</dd>
+</dl>
 </li>
 </ul>
 <a name="uses-org.apache.polygene.bootstrap.LayerAssembly...-">
@@ -273,6 +311,15 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <h4>uses</h4>
 <pre><a href="../../../../org/apache/polygene/bootstrap/LayerAssembly.html" title="interface in org.apache.polygene.bootstrap">LayerAssembly</a>&nbsp;uses(<a href="../../../../org/apache/polygene/bootstrap/LayerAssembly.html" title="interface in org.apache.polygene.bootstrap">LayerAssembly</a>...&nbsp;layerAssembly)</pre>
+<div class="block">Declaration of which other <code>Layers</code> that this <code>Layer</code> is able to use.
+ This is how architecture reinforcement works. Any composites that are declared
+ <a href="../../../../org/apache/polygene/api/common/Visibility.html#application"><code>Visibility.application</code></a> in a "used" layer can be reached from this Layer.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>layerAssembly</code> - The <code>Layer(s)</code> that this <code>Layer</code> can reach/see.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>this <code>LayerAssembly</code> instance to support fluent APIs</dd>
+</dl>
 </li>
 </ul>
 <a name="withActivators-java.lang.Class...-">
@@ -298,10 +345,18 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <h4>visit</h4>
-<pre>&lt;ThrowableType extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&gt;&nbsp;void&nbsp;visit(<a href="../../../../org/apache/polygene/bootstrap/AssemblyVisitor.html" title="interface in org.apache.polygene.bootstrap">AssemblyVisitor</a>&lt;ThrowableType&gt;&nbsp;visitor)
-                                      throws ThrowableType extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a></pre>
+<pre><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
+&lt;ThrowableType extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&gt;&nbsp;void&nbsp;visit(<a href="../../../../org/apache/polygene/bootstrap/AssemblyVisitor.html" title="interface in org.apache.polygene.bootstrap">AssemblyVisitor</a>&lt;ThrowableType&gt;&nbsp;visitor)
+                                                  throws ThrowableType extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a></pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;<span class="deprecationComment">New mechanism is considered, using Java 8 Stream API.</span></div>
+<div class="block">The visitor pattern to inspect the entire pre-instantiated model.</div>
 <dl>
+<dt><span class="paramLabel">Type Parameters:</span></dt>
+<dd><code>ThrowableType</code> - The exceptions that may be thrown.</dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>visitor</code> - The visitor to be called.</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code>ThrowableType</code> - when there is an underlying problem in the model.</dd>
 <dd><code>ThrowableType extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a></code></dd>
 </dl>
 </li>

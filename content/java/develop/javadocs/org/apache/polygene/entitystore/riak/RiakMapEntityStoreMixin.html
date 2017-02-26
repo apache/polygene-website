@@ -184,26 +184,26 @@ implements <a href="../../../../../org/apache/polygene/api/service/ServiceActiva
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/apache/polygene/entitystore/riak/RiakMapEntityStoreMixin.html#applyChanges-org.apache.polygene.spi.entitystore.helpers.MapEntityStore.MapChanges-">applyChanges</a></span>(<a href="../../../../../org/apache/polygene/spi/entitystore/helpers/MapEntityStore.MapChanges.html" title="interface in org.apache.polygene.spi.entitystore.helpers">MapEntityStore.MapChanges</a>&nbsp;changes)</code>&nbsp;</td>
 </tr>
 <tr id="i2" class="altColor">
-<td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/apache/polygene/entitystore/riak/RiakMapEntityStoreMixin.html#bucket--">bucket</a></span>()</code>&nbsp;</td>
-</tr>
-<tr id="i3" class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html?is-external=true" title="class or interface in java.util.stream">Stream</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/io/Reader.html?is-external=true" title="class or interface in java.io">Reader</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/apache/polygene/entitystore/riak/RiakMapEntityStoreMixin.html#entityStates--">entityStates</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/io/Reader.html?is-external=true" title="class or interface in java.io">Reader</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/apache/polygene/entitystore/riak/RiakMapEntityStoreMixin.html#get-org.apache.polygene.api.entity.EntityReference-">get</a></span>(<a href="../../../../../org/apache/polygene/api/entity/EntityReference.html" title="class in org.apache.polygene.api.entity">EntityReference</a>&nbsp;entityReference)</code>&nbsp;</td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/apache/polygene/entitystore/riak/RiakMapEntityStoreMixin.html#passivateService--">passivateService</a></span>()</code>
 <div class="block">Called before ServiceComposite Passivation.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>com.basho.riak.client.api.RiakClient</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/apache/polygene/entitystore/riak/RiakMapEntityStoreMixin.html#riakClient--">riakClient</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i6" class="altColor">
+<td class="colFirst"><code>com.basho.riak.client.core.query.Namespace</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/apache/polygene/entitystore/riak/RiakMapEntityStoreMixin.html#riakNamespace--">riakNamespace</a></span>()</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -293,16 +293,16 @@ implements <a href="../../../../../org/apache/polygene/api/service/ServiceActiva
 </dl>
 </li>
 </ul>
-<a name="bucket--">
+<a name="riakNamespace--">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>bucket</h4>
-<pre>public&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;bucket()</pre>
+<h4>riakNamespace</h4>
+<pre>public&nbsp;com.basho.riak.client.core.query.Namespace&nbsp;riakNamespace()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../org/apache/polygene/entitystore/riak/RiakAccessors.html#bucket--">bucket</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../org/apache/polygene/entitystore/riak/RiakAccessors.html" title="interface in org.apache.polygene.entitystore.riak">RiakAccessors</a></code></dd>
+<dd><code><a href="../../../../../org/apache/polygene/entitystore/riak/RiakAccessors.html#riakNamespace--">riakNamespace</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../org/apache/polygene/entitystore/riak/RiakAccessors.html" title="interface in org.apache.polygene.entitystore.riak">RiakAccessors</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -312,8 +312,7 @@ implements <a href="../../../../../org/apache/polygene/api/service/ServiceActiva
 <ul class="blockList">
 <li class="blockList">
 <h4>get</h4>
-<pre>public&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/io/Reader.html?is-external=true" title="class or interface in java.io">Reader</a>&nbsp;get(<a href="../../../../../org/apache/polygene/api/entity/EntityReference.html" title="class in org.apache.polygene.api.entity">EntityReference</a>&nbsp;entityReference)
-           throws <a href="../../../../../org/apache/polygene/spi/entitystore/EntityStoreException.html" title="class in org.apache.polygene.spi.entitystore">EntityStoreException</a></pre>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/io/Reader.html?is-external=true" title="class or interface in java.io">Reader</a>&nbsp;get(<a href="../../../../../org/apache/polygene/api/entity/EntityReference.html" title="class in org.apache.polygene.api.entity">EntityReference</a>&nbsp;entityReference)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../org/apache/polygene/spi/entitystore/helpers/MapEntityStore.html#get-org.apache.polygene.api.entity.EntityReference-">get</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../org/apache/polygene/spi/entitystore/helpers/MapEntityStore.html" title="interface in org.apache.polygene.spi.entitystore.helpers">MapEntityStore</a></code></dd>
@@ -321,8 +320,6 @@ implements <a href="../../../../../org/apache/polygene/api/service/ServiceActiva
 <dd><code>entityReference</code> - The reference to the entity that we want to get.</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>Entity state Reader</dd>
-<dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="../../../../../org/apache/polygene/spi/entitystore/EntityStoreException.html" title="class in org.apache.polygene.spi.entitystore">EntityStoreException</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -332,13 +329,10 @@ implements <a href="../../../../../org/apache/polygene/api/service/ServiceActiva
 <ul class="blockList">
 <li class="blockList">
 <h4>applyChanges</h4>
-<pre>public&nbsp;void&nbsp;applyChanges(<a href="../../../../../org/apache/polygene/spi/entitystore/helpers/MapEntityStore.MapChanges.html" title="interface in org.apache.polygene.spi.entitystore.helpers">MapEntityStore.MapChanges</a>&nbsp;changes)
-                  throws <a href="http://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<pre>public&nbsp;void&nbsp;applyChanges(<a href="../../../../../org/apache/polygene/spi/entitystore/helpers/MapEntityStore.MapChanges.html" title="interface in org.apache.polygene.spi.entitystore.helpers">MapEntityStore.MapChanges</a>&nbsp;changes)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../org/apache/polygene/spi/entitystore/helpers/MapEntityStore.html#applyChanges-org.apache.polygene.spi.entitystore.helpers.MapEntityStore.MapChanges-">applyChanges</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../org/apache/polygene/spi/entitystore/helpers/MapEntityStore.html" title="interface in org.apache.polygene.spi.entitystore.helpers">MapEntityStore</a></code></dd>
-<dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
 </dl>
 </li>
 </ul>

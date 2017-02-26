@@ -56,7 +56,7 @@
 <!-- Analytics -->
  <script type="text/javascript">
   var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-89723617-1']);
+  _gaq.push(['_setAccount', 'UA-62007352-1']);
   _gaq.push(['_trackPageview']);
 
   (function() {
@@ -107,6 +107,8 @@ the DataSource properly, see <a class="xref" href="library-sql.html" title="SQL"
         visibleIn( Visibility.application ).
         withConfig( config, Visibility.layer ).
         assemble( module );
+          [...snip...]
+
 }
 </pre><p>Sample DataSource configuration defaults:</p><pre class="programlisting brush: java">#
 #  Licensed to the Apache Software Foundation (ASF) under one
@@ -129,7 +131,6 @@ the DataSource properly, see <a class="xref" href="library-sql.html" title="SQL"
 #
 
 enabled=true
-url=jdbc:postgresql://localhost:5432/jdbc_test_db
 driver=org.postgresql.Driver
 username=jdbc_test_login
 password=password</pre></div><div class="section" title="MySQL and MariaDB"><div class="titlepage"><div><div><h4 class="title"><a id="_mysql_and_mariadb"></a>MySQL and MariaDB</h4></div></div></div><p>Maximum number of entities depends on the choosen storage engine.</p><p>Assembly is done using the provided Assembler:</p><pre class="programlisting brush: java">public void assemble( ModuleAssembly module )
@@ -157,6 +158,8 @@ password=password</pre></div><div class="section" title="MySQL and MariaDB"><div
         visibleIn( Visibility.application ).
         withConfig( config, Visibility.layer ).
         assemble( module );
+          [...snip...]
+
 }
 </pre><p>Sample DataSource configuration defaults:</p><pre class="programlisting brush: java">#
 #  Licensed to the Apache Software Foundation (ASF) under one
@@ -179,7 +182,7 @@ password=password</pre></div><div class="section" title="MySQL and MariaDB"><div
 #
 
 enabled=true
-url=jdbc:mysql://localhost:3306/jdbc_test_db?profileSQL=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC
+#url=jdbc:mysql://localhost:3306/jdbc_test_db?profileSQL=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC
 driver=com.mysql.jdbc.Driver
 username=root
 password=</pre></div><div class="section" title="SQLite"><div class="titlepage"><div><div><h4 class="title"><a id="_sqlite"></a>SQLite</h4></div></div></div><p>Maximum number of entities is unlimited.</p><p>The <a class="ulink" href="http://www.xerial.org/trac/Xerial/wiki/SQLiteJDBC" target="_top">Xerial SQLite JDBC</a> driver is recommended.

@@ -6,9 +6,9 @@
  *  to you under the Apache License, Version 2.0 (the
  *  "License"); you may not use this file except in compliance
  *  with the License.  You may obtain a copy of the License at
- *
+ *  
  *       http://www.apache.org/licenses/LICENSE-2.0
- *
+ *  
  *  Unless required by applicable law or agreed to in writing, software
  *  distributed under the License is distributed on an "AS IS" BASIS,
  *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -76,7 +76,7 @@ $( document ).ready( function($){
         // alert( "Current version is " + currentVersion + "\nCurrent path fragment is: " + currentPathFragment );
         if( currentVersion )
         {
-            var switcher_html ='<p style="margin-top:2em; text-align: center"><select style="font-size: 0.5em">';
+            var switcher_html ='<p style="margin-top:2em; text-align: center"><select style="font-size: 0.5em">';    
             var ifselect = function( candidate )
             {
                 return candidate == currentVersion ? "selected=\"selected\"" : "";
@@ -156,7 +156,7 @@ $( document ).ready( function($){
             // Libraries
             case "Alarms":
                 $dt.attr( "style", "margin-top: 24px" );
-                break;
+                break;            
             // Extensions
             case "Ehcache Cache":
             case "Memory EntityStore":
@@ -164,7 +164,7 @@ $( document ).ready( function($){
             case "Codahale Metrics":
             case "Migration":
                 $dt.attr( "style", "margin-top: 24px" );
-                break;
+                break;            
         }
     } );
 
