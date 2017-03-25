@@ -31,6 +31,7 @@ First, install jekyll: `gem install jekyll`, then:
     jekyll build
     git add --force content src
     git commit -a -m  "polygene: update website"
+    git push
 
 
 ## Directory Structure
