@@ -119,7 +119,7 @@ February 21, 2011
 
 <p>The absence of XML is refreshing. So instead of;</p>
 
-<pre><code>&lt;dependencies&gt;
+<div class="highlighter-rouge"><pre class="codehilite"><code>&lt;dependencies&gt;
   &lt;dependency&gt;
     &lt;groupId&gt;org.qi4j.core.runtime&lt;/groupId&gt;
     &lt;artifactId&gt;qi4j-core-api&lt;/artifactId&gt;
@@ -132,15 +132,15 @@ February 21, 2011
     &lt;scope&gt;test&lt;/scope&gt;
   &lt;/dependency&gt;
 &lt;/dependencies&gt;
-</code></pre>
+</code></pre></div>
 
 <p>The declaration of a dependency is done programmatically in Groovy code, so it can even be conditional and so forth, but the normal way is;</p>
 
-<pre><code>dependencies {
+<div class="highlighter-rouge"><pre class="codehilite"><code>dependencies {
     compile "org.qi4j.core:qi4j-core-api:1.2"
     testRuntime "org.qi4j.core:qi4j-core-runtime:1.2"
 }
-</code></pre>
+</code></pre></div>
 
 <p>And YES, there is a difference between testCompile and testRuntime. 1 line instead of Maven’s 5-6 lines per dependency. And in true Ivy fashion, one can create one’s own scopes, although I doubt we need that in the near future.</p>
 

@@ -29,8 +29,8 @@ First, install jekyll: `gem install jekyll`, then:
 
     cd $PATH_TO_THE_DIRECTORY_THIS_FILE_IS_IN
     jekyll build
-    svn add -q --force .
-    svn commit -m  "polygene: update website"
+    git add --force content src
+    git commit -a -m  "polygene: update website"
 
 
 ## Directory Structure
