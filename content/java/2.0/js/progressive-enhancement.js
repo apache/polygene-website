@@ -1,9 +1,30 @@
+/*
+ *  Licensed to the Apache Software Foundation (ASF) under one
+ *  or more contributor license agreements.  See the NOTICE file
+ *  distributed with this work for additional information
+ *  regarding copyright ownership.  The ASF licenses this file
+ *  to you under the Apache License, Version 2.0 (the
+ *  "License"); you may not use this file except in compliance
+ *  with the License.  You may obtain a copy of the License at
+ *  
+ *       http://www.apache.org/licenses/LICENSE-2.0
+ *  
+ *  Unless required by applicable law or agreed to in writing, software
+ *  distributed under the License is distributed on an "AS IS" BASIS,
+ *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *  See the License for the specific language governing permissions and
+ *  limitations under the License.
+ *
+ *
+ */
 
 
 /**
- * Qi4j Documentation WebSite Progressive Enhancement.
+ * Apache Polygene Documentation WebSite Progressive Enhancement.
  */
 $( document ).ready( function($){
+
+    var atHome = window.location.hostname == "polygene.apache.org"
 
     /**
      * Glossary.
@@ -25,9 +46,7 @@ $( document ).ready( function($){
                 var dt = target.parent();
                 var dd = dt.next();
                 // Scroll
-                $.scrollTo( dt, 200, {
-                    'offset': -96
-                });
+                $.scrollTo( dt, 200, { 'offset': -96 });
                 // Highlight
                 dd.fadeOut(50).fadeIn(200);
             }
@@ -70,13 +89,13 @@ $( document ).ready( function($){
             $( "div.logo" ).append( switcher_html );
             var toURL = function( displayName )
             {
-                if( window.location.hostname == "zest.apache.org" )
+                if( atHome )
                 {
                     return "../" + versions[ displayName ];
                 }
                 else
                 {
-                    return "https://zest.apache.org/qi4j/" + versions[ displayName ];
+                    return "https://polygene.apache.org/java/" + versions[ displayName ];
                 }
             }
             $( "div.logo select" ).change( function()
@@ -90,7 +109,32 @@ $( document ).ready( function($){
         }
     } );
 
-    // Add separator space between tutorials series
+    // Title links to their own anchor
+    $( "body > div.section .title" ).each( function( idx, title ) {
+        var $title = $( title );
+        var id = $title.find( 'a' ).attr( 'id' );
+        if( id ) {
+            $title.click( function() {
+                window.location.hash = id;
+            } );
+        }
+    } );
+
+    // Scroll down a bit on hash change so that target is not hidden under the floating top menu
+    function scrollToHash( hash ) {
+        if( hash ) {
+            var $target = $( hash );
+            if( $target ) {
+                setTimeout( function() { $.scrollTo( $target, 100, { 'offset': -96 }) }, 50 );
+            }
+        }
+    };
+    $( window ).bind( 'hashchange', function() {
+        scrollToHash( window.location.hash );
+    });
+    scrollToHash( window.location.hash );
+
+    // Enhance left nav
     $( "div.sub-nav div.toc dt" ).each( function( idx, dt ) {
         var $dt = $( dt );
         var item = $dt.find( "span.section:first-child" ).text().trim();
