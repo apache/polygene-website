@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>LevelDB EntityStore</title><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /><link rel="home" href="index.html" title="" /><link rel="up" href="extensions.html" title="Extensions" /><link rel="prev" href="extension-es-jdbm.html" title="JDBM EntityStore" /><link rel="next" href="extension-es-mongodb.html" title="MongoDB EntityStore" />
+
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Starter Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/polygene-ng.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<!-- favicon -->
+
+<link rel="shortcut icon" href="http://polygene.apache.org/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="icon" href="http://polygene.apache.org/favicon.ico" type="image/x-icon" />
+
+<!-- style -->
+
+<link href="css/shCore.css" rel="stylesheet" type="text/css" />
+<link href="css/shCoreEclipse.css" rel="stylesheet" type="text/css" />
+<link href="css/shThemeEclipse.css" rel="stylesheet" type="text/css" />
+<!--<link href="css/polygene.css" rel="stylesheet" type="text/css" />-->
+
+<!-- Syntax Highlighter -->
+
+<script type="text/javascript" src="js/shCore.js"></script>
+<script type="text/javascript" src="js/shBrushJava.js"></script>
+<script type="text/javascript" src="js/shBrushScala.js"></script>
+<script type="text/javascript" src="js/shBrushJScript.js"></script>
+<script type="text/javascript" src="js/shBrushBash.js"></script>
+<script type="text/javascript" src="js/shBrushPlain.js"></script>
+<script type="text/javascript" src="js/shBrushXml.js"></script>
+<script type="text/javascript" src="js/shBrushGroovy.js"></script>
+<script type="text/javascript" src="js/shBrushPython.js"></script>
+<script type="text/javascript" src="js/shBrushRuby.js"></script>
+<script type="text/javascript" src="js/shBrushCSharp.js"></script>
+
+<script type="text/javascript">
+  SyntaxHighlighter.defaults['tab-size'] = 4;
+  SyntaxHighlighter.defaults['gutter'] = false;
+  SyntaxHighlighter.defaults['toolbar'] = false;
+  SyntaxHighlighter.all()
+</script>
+
+<!-- JQuery -->
+
+<script type="text/javascript" src="js/jquery-1.6.4.min.js"></script>
+
+<!-- Image Scaler -->
+
+<script type="text/javascript" src="js/imagescaler.js"></script>
+
+<!-- Table Styler -->
+
+<script type="text/javascript" src="js/tablestyler.js"></script>
+
+<!-- Apache Polygene WebSite Progressive Enhancement -->
+
+<link href="css/progressive-enhancement.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.scrollTo-1.4.2.js"></script>
+<script type="text/javascript" src="js/progressive-enhancement.js"></script>
+
+<!-- Analytics -->
+ <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-62007352-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+ </script>
+
+  </head><body><div xmlns="" xmlns:exsl="http://exslt.org/common" class="logo"><a href="index.html"><img src="images/logo-standard.png" /></a></div><nav xmlns="" xmlns:exsl="http://exslt.org/common" class="navbar navbar-inverse navbar-fixed-top"><div class="container"><div class="navbar-header"><a class="navbar-brand" href="#">Apache<br />Polygene
+          </a></div><div id="navbar" class="collapse navbar-collapse"><span class="nav navbar-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl class="toc"><dt><span class="section"><a href="index.html#home">Polygene™</a></span></dt><dt><span class="section"><a href="intro.html">Introduction</a></span></dt><dt><span class="section"><a href="tutorials.html">Tutorials</a></span></dt><dt><span class="section"><a href="javadocs.html">Javadoc</a></span></dt><dt><span class="section"><a href="samples.html">Samples</a></span></dt><dt><span class="section"><a href="core.html">Core</a></span></dt><dt><span class="section"><a href="libraries.html">Libraries</a></span></dt><dt><span class="section"><span xmlns="" href="extensions.html">Extensions</span></span></dt><dt><span class="section"><a href="tools.html">Tools</a></span></dt><dt><span class="section"><a href="glossary.html">Glossary </a></span></dt></dl></div></span></div></div></nav><div xmlns="" xmlns:exsl="http://exslt.org/common" class="sidenav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl class="toc"><dt><span class="section"><a href="extensions.html#_overview_7">Overview</a></span></dt><dt><span class="section"><a href="extension-serialization-javaxjson.html">javax.json serialization</a></span></dt><dt><span class="section"><a href="extension-serialization-javaxxml.html">javax.xml serialization</a></span></dt><dt><span class="section"><a href="extension-serialization-messagepack.html">MessagePack serialization</a></span></dt><dt><span class="section"><a href="extension-es-memory.html">Memory EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-file.html">File EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-geode.html">Geode EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-hazelcast.html">Hazelcast EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-jclouds.html">JClouds EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-jdbm.html">JDBM EntityStore</a></span></dt><dt><span class="section"><span xmlns="" href="extension-es-leveldb.html">LevelDB EntityStore</span></span></dt><dt><span class="section"><a href="extension-es-mongodb.html">MongoDB EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-preferences.html">Preferences EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-redis.html">Redis EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-riak.html">Riak EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-sql.html">SQL EntityStore</a></span></dt><dt><span class="section"><a href="extension-cache-ehcache.html">Ehcache Cache</a></span></dt><dt><span class="section"><a href="extension-cache-memcache.html">Memcache Cache</a></span></dt><dt><span class="section"><a href="extension-index-elasticsearch.html">ElasticSearch Index/Query</a></span></dt><dt><span class="section"><a href="extension-index-rdf.html">OpenRDF Index/Query</a></span></dt><dt><span class="section"><a href="extension-index-solr.html">Apache Solr Index/Query</a></span></dt><dt><span class="section"><a href="extension-indexing-sql.html">SQL Index/Query</a></span></dt><dt><span class="section"><a href="extension-metrics-metrics.html">Codahale Metrics</a></span></dt><dt><span class="section"><a href="extension-migration.html">Migration</a></span></dt><dt><span class="section"><a href="extension-reindexer.html">Reindexer</a></span></dt></dl></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="extension-es-leveldb"></a>LevelDB EntityStore</h3></div></div></div><p class="remark"><em><span class="comment"></span></em></p><p class="devstatus-code-stable">code</p><p class="devstatus-docs-brief">docs</p><p class="devstatus-tests-good">tests</p><p>EntityStore service backed by a <a class="ulink" href="https://code.google.com/p/leveldb/" target="_top">LevelDB</a> embedded database.</p><p>LevelDB is a fast key-value storage library written at Google that provides an ordered mapping from string keys to
+string values.</p><p>By default use the native implementation through JNI bindings and fallback to the pure Java implementation if not
+available on the current platform. Used implementation can be forced in the configuration.</p><p>The LevelDB EntityStore relies on the <a class="xref" href="library-fileconfig.html" title="FileConfig">FileConfig Library</a> to decide where it stores its database.</p><div class="table"><a id="idm6005"></a><p class="title"><strong>Table 57. Artifact</strong></p><div class="table-contents"><table summary="Artifact" border="1"><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /></colgroup><thead><tr><th align="left" valign="top">Group ID</th><th align="left" valign="top">Artifact ID</th><th align="left" valign="top">Version</th></tr></thead><tbody><tr><td align="left" valign="top"><p>org.apache.polygene.extensions</p></td><td align="left" valign="top"><p>org.apache.polygene.extension.entitystore-leveldb</p></td><td align="left" valign="top"><p>0</p></td></tr></tbody></table></div></div><br class="table-break" /><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="_assembly_14"></a>Assembly</h4></div></div></div><p>Assembly is done using the provided Assembler:</p><pre class="programlisting brush: java">public void assemble( ModuleAssembly module )
+    throws AssemblyException
+{
+  [...snip...]
+
+    new LevelDBEntityStoreAssembler()
+        .withConfig( config, Visibility.layer )
+        .identifiedBy( "java-leveldb-entitystore" )
+        .assemble( module );
+          [...snip...]
+
+}
+</pre></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="_configuration_8"></a>Configuration</h4></div></div></div><p>Here are the configuration properties for the LevelDB EntityStore:</p><pre class="programlisting brush: java">public interface LevelDBEntityStoreConfiguration
+    extends ConfigurationComposite
+{
+
+    /**
+     * LevelDB flavour, can be 'java' or 'jni'.
+     * By default, tries 'jni' and fallback to 'java'.
+     */
+    @Optional
+    Property&lt;String&gt; flavour();
+
+    @Optional
+    Property&lt;Integer&gt; blockRestartInterval();
+
+    @Optional
+    Property&lt;Integer&gt; blockSize();
+
+    @Optional
+    Property&lt;Long&gt; cacheSize();
+
+    @Optional
+    Property&lt;Boolean&gt; compression();
+
+    @Optional
+    Property&lt;Integer&gt; maxOpenFiles();
+
+    @Optional
+    Property&lt;Boolean&gt; paranoidChecks();
+
+    @Optional
+    Property&lt;Boolean&gt; verifyChecksums();
+
+    @Optional
+    Property&lt;Integer&gt; writeBufferSize();
+
+}
+</pre><p>All configuration properties are defaulted to the implementation defaults meaning that you can use LevelDB EntityStore
+service without configuration.</p></div></div><footer xmlns="" xmlns:exsl="http://exslt.org/common" class="footer"><div class="container"><p class="text-muted">Copyright © 2017 The Apache Software Foundation, Licensed under the <a href="http://www.apache.org/licenses/" target="_blank">Apache License, Version 2.0</a>.
+          Apache Polygene, Polygene, Apache, the Apache feather logo, and the Apache Polygene project logo are
+          trademarks of The Apache Software Foundation.
+          All other marks mentioned may be trademarks or registered trademarks of their respective owners.
+        </p></div></footer><script xmlns="" xmlns:exsl="http://exslt.org/common" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script><script xmlns="" xmlns:exsl="http://exslt.org/common">window.jQuery || document.write('&lt;script src="js/jquery-1.6.4.min.js"&gt;&lt;/script&gt;')</script><script xmlns="" xmlns:exsl="http://exslt.org/common" src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script><script xmlns="" xmlns:exsl="http://exslt.org/common" src="bootstrap-3.3.7/js/bootstrap.min.js"></script><script xmlns="" xmlns:exsl="http://exslt.org/common" src="js/ie10-viewport-bug-workaround.js"></script></body></html>

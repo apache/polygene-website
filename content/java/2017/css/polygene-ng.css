@@ -1,0 +1,298 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 80px;
+}
+
+.nav {
+    margin-top: 25px;
+}
+
+.nav .section {
+    color: white;
+}
+
+.nav .section a {
+    color: #9acfea;
+}
+
+span.nav div.toc dl.toc dt {
+    display: inline;
+}
+
+.navbar-nav dt {
+    margin-left: 1em;
+}
+
+nav > div {
+    text-align: left;
+}
+
+.sidenav {
+    position: absolute;
+    top: 300px;
+    left: 1em;
+}
+
+.logo {
+    margin-top: 40px;
+}
+
+body > div.section {
+    margin-left: 300px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    background-color: #f5f5f5;
+}
+
+.devstatus-code-none {
+    border: solid black 2px;
+    margin-right: 5px !important;
+    display: block;
+    float: right;
+    width: 4em;
+    font-size: 10pt !important;
+    font-weight: bolder;
+    font-family: "Courier New", "Courier", monospace !important;
+    background-color: #f08080;
+    text-align: center;
+    text-shadow: none  !important;
+}
+
+.devstatus-code-early {
+    border: solid black 2px;
+    margin-right: 5px !important;
+    display: block;
+    float: right;
+    width: 4em;
+    font-size: 10pt !important;
+    font-weight: bolder;
+    font-family: "Courier New", "Courier", monospace !important;
+    background-color: orange;
+    text-align: center;
+    text-shadow: none  !important;
+}
+.devstatus-code-beta {
+    border: solid black 2px;
+    margin-right: 5px !important;
+    display: block;
+    float: right;
+    width: 4em;
+    font-size: 10pt !important;
+    font-weight: bold;
+    font-family: "Courier New", "Courier", monospace !important;
+    background-color: yellow;
+    text-align: center;
+    text-shadow: none  !important;
+}
+.devstatus-code-stable {
+    border: solid black 2px;
+    margin-right: 5px !important;
+    display: block;
+    float: right;
+    width: 4em;
+    font-size: 10pt !important;
+    font-weight: bolder;
+    font-family: "Courier New", "Courier", monospace !important;
+    background-color: #adff2f;
+    text-align: center;
+    text-shadow: none  !important;
+}
+.devstatus-code-mature {
+    border: solid black 2px;
+    margin-right: 5px !important;
+    display: block;
+    float: right;
+    width: 4em;
+    font-size: 10pt !important;
+    font-weight: bolder;
+    font-family: "Courier New", "Courier", monospace !important;
+    background-color: #7cfc00;
+    text-align: center;
+    text-shadow: none  !important;
+}
+
+.devstatus-docs-none {
+    border: solid black 2px;
+    margin-right: 5px !important;
+    display: block;
+    float: right;
+    width: 4em;
+    font-size: 10pt !important;
+    font-weight: bolder;
+    font-family: "Courier New", "Courier", monospace !important;
+    background-color: #f08080;
+    text-align: center;
+    text-shadow: none  !important;
+}
+
+.devstatus-docs-brief {
+    border: solid black 2px;
+    margin-right: 5px !important;
+    display: block;
+    float: right;
+    width: 4em;
+    font-size: 10pt !important;
+    font-weight: bolder;
+    font-family: "Courier New", "Courier", monospace !important;
+    background-color: yellow;
+    text-align: center;
+    text-shadow: none  !important;
+}
+.devstatus-docs-good {
+    border: solid black 2px;
+    margin-right: 5px !important;
+    display: block;
+    float: right;
+    width: 4em;
+    font-size: 10pt !important;
+    font-weight: bolder;
+    font-family: "Courier New", "Courier", monospace !important;
+    background-color: #adff2f;
+    text-align: center;
+    text-shadow: none  !important;
+}
+.devstatus-docs-complete {
+    border: solid black 2px;
+    margin-right: 5px !important;
+    display: block;
+    float: right;
+    width: 4em;
+    font-size: 10pt !important;
+    font-weight: bolder;
+    font-family: "Courier New", "Courier", monospace !important;
+    background-color: #7cfc00;
+    text-align: center;
+    text-shadow: none  !important;
+}
+
+.devstatus-tests-none {
+    border: solid black 2px;
+    margin-right: 5px !important;
+    display: block;
+    float: right;
+    width: 4em;
+    font-size: 10pt !important;
+    font-weight: bolder;
+    font-family: "Courier New", "Courier", monospace !important;
+    background-color: #f08080;
+    text-align: center;
+    text-shadow: none  !important;
+}
+
+.devstatus-tests-some {
+    border: solid black 2px;
+    margin-right: 5px !important;
+    display: block;
+    float: right;
+    width: 4em;
+
+    font-size: 10pt !important;
+    font-weight: bolder;
+    font-family: "Courier New", "Courier", monospace !important;
+    background-color: yellow;
+    text-align: center;
+    text-shadow: none  !important;
+}
+.devstatus-tests-good {
+    border: solid black 2px;
+    margin-right: 5px !important;
+    display: block;
+    float: right;
+    width: 4em;
+    font-size: 10pt !important;
+    font-weight: bolder;
+    font-family: "Courier New", "Courier", monospace !important;
+    background-color: #adff2f;
+    text-align: center;
+    text-shadow: none  !important;
+}
+
+.devstatus-tests-complete {
+    border: solid black 2px;
+    margin-right: 5px !important;
+    display: block;
+    float: right;
+    width: 4em;
+    font-size: 10pt !important;
+    font-weight: bolder;
+    font-family: "Courier New", "Courier", monospace !important;
+    background-color: #7cfc00;
+    text-align: center;
+    text-shadow: none  !important;
+}
+
+/* BEGIN SIDE NOTES */
+div.important, div.info, div.tip, div.note,
+div.warning, div.caution
+{
+    float: right;
+    max-width: 20em;
+    margin: 1em 0 1em 1em !important;
+    padding: 1em !important;
+    font-size: 0.9em;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+div.important, div.info, div.tip, div.note
+{
+    background-color:  rgba(11, 117, 188, 0.1) !important;
+    border: 1px solid #0b75bc;
+}
+div.warning
+{
+    background-color:  rgba(188, 117, 11, 0.1) !important;
+    border: 1px solid #bc750b;
+}
+div.caution
+{
+    background-color:  rgba(188, 11, 11, 0.1) !important;
+    border: 1px solid #bc0b0b;
+}
+div.important h3, div.info h3, div.tip h3, div.note h3,
+div.warning h3, div.caution h3
+{
+    margin: 0 0 0.5em 0 !important;
+    line-height: 50px;
+    padding-right: 55px;
+    background-position: top right !important;
+    background-repeat: no-repeat !important;
+}
+div.important h3
+{
+    background-image: url("important.png");
+}
+div.info h3, div.tip h3
+{
+    background-image: url("tip.png");
+}
+div.note h3
+{
+    background-image: url("note.png");
+}
+div.warning h3
+{
+    background-image: url("warning.png");
+    color: #bc750b;
+}
+div.caution h3
+{
+    background-image: url("caution.png");
+    color: #bc0b0b;
+}
+div.important p, div.info p, div.tip p, div.note p,
+div.warning p, div.caution p
+{
+    margin: 0 0 0.5em 0 !important;
+}
+/* END SIDE NOTES */

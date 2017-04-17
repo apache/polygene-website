@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>SQL</title><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /><link rel="home" href="index.html" title="" /><link rel="up" href="libraries.html" title="Libraries" /><link rel="prev" href="library-spring.html" title="Spring Integration" /><link rel="next" href="library-uid.html" title="UID" />
+
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Starter Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/polygene-ng.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<!-- favicon -->
+
+<link rel="shortcut icon" href="http://polygene.apache.org/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="icon" href="http://polygene.apache.org/favicon.ico" type="image/x-icon" />
+
+<!-- style -->
+
+<link href="css/shCore.css" rel="stylesheet" type="text/css" />
+<link href="css/shCoreEclipse.css" rel="stylesheet" type="text/css" />
+<link href="css/shThemeEclipse.css" rel="stylesheet" type="text/css" />
+<!--<link href="css/polygene.css" rel="stylesheet" type="text/css" />-->
+
+<!-- Syntax Highlighter -->
+
+<script type="text/javascript" src="js/shCore.js"></script>
+<script type="text/javascript" src="js/shBrushJava.js"></script>
+<script type="text/javascript" src="js/shBrushScala.js"></script>
+<script type="text/javascript" src="js/shBrushJScript.js"></script>
+<script type="text/javascript" src="js/shBrushBash.js"></script>
+<script type="text/javascript" src="js/shBrushPlain.js"></script>
+<script type="text/javascript" src="js/shBrushXml.js"></script>
+<script type="text/javascript" src="js/shBrushGroovy.js"></script>
+<script type="text/javascript" src="js/shBrushPython.js"></script>
+<script type="text/javascript" src="js/shBrushRuby.js"></script>
+<script type="text/javascript" src="js/shBrushCSharp.js"></script>
+
+<script type="text/javascript">
+  SyntaxHighlighter.defaults['tab-size'] = 4;
+  SyntaxHighlighter.defaults['gutter'] = false;
+  SyntaxHighlighter.defaults['toolbar'] = false;
+  SyntaxHighlighter.all()
+</script>
+
+<!-- JQuery -->
+
+<script type="text/javascript" src="js/jquery-1.6.4.min.js"></script>
+
+<!-- Image Scaler -->
+
+<script type="text/javascript" src="js/imagescaler.js"></script>
+
+<!-- Table Styler -->
+
+<script type="text/javascript" src="js/tablestyler.js"></script>
+
+<!-- Apache Polygene WebSite Progressive Enhancement -->
+
+<link href="css/progressive-enhancement.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.scrollTo-1.4.2.js"></script>
+<script type="text/javascript" src="js/progressive-enhancement.js"></script>
+
+<!-- Analytics -->
+ <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-62007352-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+ </script>
+
+  </head><body><div xmlns="" xmlns:exsl="http://exslt.org/common" class="logo"><a href="index.html"><img src="images/logo-standard.png" /></a></div><nav xmlns="" xmlns:exsl="http://exslt.org/common" class="navbar navbar-inverse navbar-fixed-top"><div class="container"><div class="navbar-header"><a class="navbar-brand" href="#">Apache<br />Polygene
+          </a></div><div id="navbar" class="collapse navbar-collapse"><span class="nav navbar-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl class="toc"><dt><span class="section"><a href="index.html#home">Polygene™</a></span></dt><dt><span class="section"><a href="intro.html">Introduction</a></span></dt><dt><span class="section"><a href="tutorials.html">Tutorials</a></span></dt><dt><span class="section"><a href="javadocs.html">Javadoc</a></span></dt><dt><span class="section"><a href="samples.html">Samples</a></span></dt><dt><span class="section"><a href="core.html">Core</a></span></dt><dt><span class="section"><span xmlns="" href="libraries.html">Libraries</span></span></dt><dt><span class="section"><a href="extensions.html">Extensions</a></span></dt><dt><span class="section"><a href="tools.html">Tools</a></span></dt><dt><span class="section"><a href="glossary.html">Glossary </a></span></dt></dl></div></span></div></div></nav><div xmlns="" xmlns:exsl="http://exslt.org/common" class="sidenav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl class="toc"><dt><span class="section"><a href="libraries.html#_overview_5">Overview</a></span></dt><dt><span class="section"><a href="scripting.html">Scripting</a></span></dt><dt><span class="section"><a href="library-alarm.html">Alarms</a></span></dt><dt><span class="section"><a href="library-circuitbreaker.html">Circuit Breaker</a></span></dt><dt><span class="section"><a href="library-constraints.html">Constraints</a></span></dt><dt><span class="section"><a href="library-fileconfig.html">FileConfig</a></span></dt><dt><span class="section"><a href="library-http.html">HTTP</a></span></dt><dt><span class="section"><a href="library-invocation-cache.html">Invocation Cache</a></span></dt><dt><span class="section"><a href="library-jmx.html">JMX</a></span></dt><dt><span class="section"><a href="library-locking.html">Locking</a></span></dt><dt><span class="section"><a href="library-logging.html">Logging</a></span></dt><dt><span class="section"><a href="library-osgi.html">OSGi</a></span></dt><dt><span class="section"><a href="library-rdf.html">RDF</a></span></dt><dt><span class="section"><a href="library-rest-client.html">ReST Client</a></span></dt><dt><span class="section"><a href="library-rest-client-primer.html">ReST - HATEOAS Primer</a></span></dt><dt><span class="section"><a href="library-rest-common.html">ReST Common</a></span></dt><dt><span class="section"><a href="library-rest-server.html">ReST Server</a></span></dt><dt><span class="section"><a href="library-restlet.html">Restlet Support</a></span></dt><dt><span class="section"><a href="library-servlet.html">Servlet</a></span></dt><dt><span class="section"><a href="library-shiro.html">Shiro Security</a></span></dt><dt><span class="section"><a href="library-shiro-web.html">Shiro Web Security</a></span></dt><dt><span class="section"><a href="library-spring.html">Spring Integration</a></span></dt><dt><span class="section"><span xmlns="" href="library-sql.html">SQL</span></span></dt><dt><span class="section"><a href="library-uid.html">UID</a></span></dt><dt><span class="section"><a href="library-uowfile.html">UoWFile</a></span></dt></dl></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="library-sql"></a>SQL</h3></div></div></div><p class="remark"><em><span class="comment"></span></em></p><p class="devstatus-code-stable">code</p><p class="devstatus-docs-good">docs</p><p class="devstatus-tests-good">tests</p><p>The SQL Library provides facilities for working with SQL databases.</p><p>The center piece is the DataSource support that comes with
+<a class="xref" href="library-circuitbreaker.html" title="Circuit Breaker">Circuit Breaker Library</a> and <a class="xref" href="library-jmx.html" title="JMX"> JMX Library</a> support.</p><div class="tip" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Tip</h3><p>See the <a class="xref" href="sample-sql-support.html" title="SQL Support Sample">SQL Support Sample</a> that demonstrate combined use of <a class="xref" href="library-sql.html" title="SQL">SQL Library</a>, <a class="xref" href="extension-es-sql.html" title="SQL EntityStore"> SQL EntityStore</a> and
+<a class="xref" href="extension-indexing-sql.html" title="SQL Index/Query">SQL Index/Query</a>.</p></div><p>Moreover, supplementary libraries helps dealing with different connection pool implementations and schema migrations.
+None of theses libraries depends on an actual JDBC driver, you are free to use the one that suits your needs.</p><div class="table"><a id="idm5360"></a><p class="title"><strong>Table 42. Artifact</strong></p><div class="table-contents"><table summary="Artifact" border="1"><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /></colgroup><thead><tr><th align="left" valign="top">Group ID</th><th align="left" valign="top">Artifact ID</th><th align="left" valign="top">Version</th></tr></thead><tbody><tr><td align="left" valign="top"><p>org.apache.polygene.libraries</p></td><td align="left" valign="top"><p>org.apache.polygene.library.sql</p></td><td align="left" valign="top"><p>0</p></td></tr></tbody></table></div></div><br class="table-break" /><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="_datasource_and_connection_pools"></a>DataSource and connection pools</h4></div></div></div><p>DataSource support comes in three flavors:</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+using the <a class="ulink" href="http://jolbox.com/" target="_top">BoneCP</a> connection pool
+</li><li class="listitem">
+using the <a class="ulink" href="http://commons.apache.org/dbcp/" target="_top">Apache DBCP</a> connection pool
+</li><li class="listitem">
+importing an existing DataSource provided at assembly time
+</li></ul></div><div class="section"><div class="titlepage"><div><div><h5 class="title"><a id="_connection_pools"></a>Connection Pools</h5></div></div></div><p>Connection Pools support is provided by supplementary libraries.</p><p><span class="strong"><strong>BoneCP</strong></span></p><p class="remark"><em><span class="comment"></span></em></p><p class="devstatus-code-stable">code</p><p class="devstatus-docs-good">docs</p><p class="devstatus-tests-good">tests</p><div class="table"><a id="idm5400"></a><p class="title"><strong>Table 43. Artifact</strong></p><div class="table-contents"><table summary="Artifact" border="1"><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /></colgroup><thead><tr><th align="left" valign="top">Group ID</th><th align="left" valign="top">Artifact ID</th><th align="left" valign="top">Version</th></tr></thead><tbody><tr><td align="left" valign="top"><p>org.apache.polygene.libraries</p></td><td align="left" valign="top"><p>org.apache.polygene.library.sql-bonecp</p></td><td align="left" valign="top"><p>0</p></td></tr></tbody></table></div></div><br class="table-break" /><p>BoneCP support resides in the <span class="strong"><strong>sql-bonecp</strong></span> module.</p><pre class="programlisting brush: java">// Assemble the BoneCP based Service Importer
+new BoneCPDataSourceServiceAssembler().
+    identifiedBy( DS_SERVICE_ID ).
+    visibleIn( Visibility.module ).
+    withConfig( config, Visibility.layer ).
+    assemble( module );
+</pre><p><span class="strong"><strong>Apache DBCP</strong></span></p><p class="remark"><em><span class="comment"></span></em></p><p class="devstatus-code-stable">code</p><p class="devstatus-docs-good">docs</p><p class="devstatus-tests-good">tests</p><div class="table"><a id="idm5428"></a><p class="title"><strong>Table 44. Artifact</strong></p><div class="table-contents"><table summary="Artifact" border="1"><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /></colgroup><thead><tr><th align="left" valign="top">Group ID</th><th align="left" valign="top">Artifact ID</th><th align="left" valign="top">Version</th></tr></thead><tbody><tr><td align="left" valign="top"><p>org.apache.polygene.libraries</p></td><td align="left" valign="top"><p>org.apache.polygene.library.sql-dbcp</p></td><td align="left" valign="top"><p>0</p></td></tr></tbody></table></div></div><br class="table-break" /><pre class="programlisting brush: java">// Assemble the Apache DBCP based Service Importer
+new DBCPDataSourceServiceAssembler().
+    identifiedBy( DS_SERVICE_ID ).
+    visibleIn( Visibility.module ).
+    withConfig( config, Visibility.layer ).
+    assemble( module );
+</pre></div><div class="section"><div class="titlepage"><div><div><h5 class="title"><a id="_datasource"></a>DataSource</h5></div></div></div><p><span class="strong"><strong>Assembly</strong></span></p><pre class="programlisting brush: java">// Assemble a DataSource
+new DataSourceAssembler().
+    withDataSourceServiceIdentity( DS_SERVICE_ID ).
+    identifiedBy( DS_ID ).
+    visibleIn( Visibility.module ).
+    assemble( module );
+// Another DataSource managed by the same C3P0 connection pool
+new DataSourceAssembler().
+    withDataSourceServiceIdentity( DS_SERVICE_ID ).
+    identifiedBy( OTHER_DS_ID ).
+    visibleIn( Visibility.module ).
+    assemble( module );
+</pre><p>Assembled DataSources must be visible from the connection pool importer service.</p><p><span class="strong"><strong>Configuration</strong></span></p><p>You need to provide a DataSource Configuration Entity per assembled DataSource.
+See <a class="xref" href="howto-configure-service.html" title="Configure a Service">Configure a Service</a>.</p><pre class="programlisting brush: java">public interface DataSourceConfigurationState
+        extends Enabled
+{
+    Property&lt;String&gt; driver();
+    Property&lt;String&gt; url();
+    @UseDefaults Property&lt;String&gt; username();
+    @UseDefaults Property&lt;String&gt; password();
+    @Optional Property&lt;Integer&gt; minPoolSize();
+    @Optional Property&lt;Integer&gt; maxPoolSize();
+    @Optional Property&lt;Integer&gt; loginTimeoutSeconds();
+    @Optional Property&lt;Integer&gt; maxConnectionAgeSeconds();
+    @Optional Property&lt;String&gt; validationQuery();
+    @UseDefaults Property&lt;String&gt; properties();
+}
+</pre><p>Sample DataSource configuration defaults:</p><pre class="programlisting brush: plain">#
+#  Licensed to the Apache Software Foundation (ASF) under one
+#  or more contributor license agreements.  See the NOTICE file
+#  distributed with this work for additional information
+#  regarding copyright ownership.  The ASF licenses this file
+#  to you under the Apache License, Version 2.0 (the
+#  "License"); you may not use this file except in compliance
+#  with the License.  You may obtain a copy of the License at
+#
+#       http://www.apache.org/licenses/LICENSE-2.0
+#
+#  Unless required by applicable law or agreed to in writing, software
+#  distributed under the License is distributed on an "AS IS" BASIS,
+#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#  See the License for the specific language governing permissions and
+#  limitations under the License.
+#
+#
+#
+
+enabled=true
+url=jdbc:derby:memory:testdb;create=true
+driver=org.apache.derby.jdbc.EmbeddedDriver
+username=
+password=</pre></div><div class="section"><div class="titlepage"><div><div><h5 class="title"><a id="_importing_an_existing_datasource"></a>Importing an existing DataSource</h5></div></div></div><p>Importing an existing DataSource at assembly time is usefull when your Polygene
+Application runs in an environment where DataSource are already provided.</p><pre class="programlisting brush: java">new ExternalDataSourceAssembler( externalDataSource ).
+        visibleIn( Visibility.module ).
+        identifiedBy( "datasource-external-id" ).
+        withCircuitBreaker( DataSources.newDataSourceCircuitBreaker() ).
+        assemble( module );
+</pre><p>This mechanism is provided as an integration convenience and using the embedded
+connection pools described above is recommended.</p></div></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="_circuit_breaker"></a>Circuit Breaker</h4></div></div></div><p>Assemblers for managed and external DataSource takes an optional
+CircuitBreaker and set it as <a class="xref" href="glossary.html#def-metainfo">MetaInfo</a> of the DataSource.</p><pre class="programlisting brush: java">CircuitBreaker circuitBreaker = newDataSourceCircuitBreaker( 5 /* threshold */,
+                                                             1000 * 60 * 5 /* 5min timeout */ );
+new DataSourceAssembler().
+    withDataSourceServiceIdentity( DS_SERVICE_ID ).
+    identifiedBy( DS_ID ).
+    visibleIn( Visibility.layer ).
+    withCircuitBreaker( circuitBreaker ).
+    assemble( module );
+</pre><p>Then, when you gets injected or lookup a DataSource it will be automatically wrapped
+by a CircuitBreaker proxy.</p><pre class="programlisting brush: java">@Service
+DataSource dataSource; // Wrapped with a CircuitBreaker proxy
+</pre></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="_jmx"></a>JMX</h4></div></div></div><p>Thanks to the <a class="xref" href="library-jmx.html" title="JMX"> JMX Library</a> the Configuration of DataSources is exposed
+through JMX.</p><pre class="programlisting brush: java">new DataSourceJMXAssembler().visibleIn( Visibility.module ).assemble( module );
+</pre><p>Every DataSource visible from the DataSourceConfigurationManager Service
+will get its Configuration available using a JMX client.</p><p>Note that the JMX support does not apply to existing DataSource imported as
+described above.</p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="_schema_migration"></a>Schema migration</h4></div></div></div><p>Database schema migration can be delegated to <a class="ulink" href="http://www.liquibase.org/" target="_top">Liquibase</a>.</p><p class="remark"><em><span class="comment"></span></em></p><p class="devstatus-code-stable">code</p><p class="devstatus-docs-good">docs</p><p class="devstatus-tests-good">tests</p><div class="table"><a id="idm5488"></a><p class="title"><strong>Table 45. Artifact</strong></p><div class="table-contents"><table summary="Artifact" border="1"><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /></colgroup><thead><tr><th align="left" valign="top">Group ID</th><th align="left" valign="top">Artifact ID</th><th align="left" valign="top">Version</th></tr></thead><tbody><tr><td align="left" valign="top"><p>org.apache.polygene.libraries</p></td><td align="left" valign="top"><p>org.apache.polygene.library.sql-liquibase</p></td><td align="left" valign="top"><p>0</p></td></tr></tbody></table></div></div><br class="table-break" /><p><span class="strong"><strong>Assembly</strong></span></p><pre class="programlisting brush: java">new LiquibaseAssembler()
+    .withConfig( configModule, Visibility.layer )
+    .applyChangelogOnStartup()
+    .assemble( module );
+</pre><p>The LiquibaseService is activated on Application startup and if enabled it
+applies the configured changelog.</p><p><span class="strong"><strong>Configuration</strong></span></p><pre class="programlisting brush: java">public interface LiquibaseConfiguration
+{
+    @UseDefaults
+    Property&lt;String&gt; changeLog();
+
+    @UseDefaults
+    Property&lt;String&gt; contexts();
+}
+</pre><p>For the Liquibase service to be enabled you must set it’s Configuration
+<code class="literal">enabled</code> Property to TRUE. <span class="strong"><strong>contexts</strong></span> and <span class="strong"><strong>changeLog</strong></span> are optional.</p></div></div><footer xmlns="" xmlns:exsl="http://exslt.org/common" class="footer"><div class="container"><p class="text-muted">Copyright © 2017 The Apache Software Foundation, Licensed under the <a href="http://www.apache.org/licenses/" target="_blank">Apache License, Version 2.0</a>.
+          Apache Polygene, Polygene, Apache, the Apache feather logo, and the Apache Polygene project logo are
+          trademarks of The Apache Software Foundation.
+          All other marks mentioned may be trademarks or registered trademarks of their respective owners.
+        </p></div></footer><script xmlns="" xmlns:exsl="http://exslt.org/common" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script><script xmlns="" xmlns:exsl="http://exslt.org/common">window.jQuery || document.write('&lt;script src="js/jquery-1.6.4.min.js"&gt;&lt;/script&gt;')</script><script xmlns="" xmlns:exsl="http://exslt.org/common" src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script><script xmlns="" xmlns:exsl="http://exslt.org/common" src="bootstrap-3.3.7/js/bootstrap.min.js"></script><script xmlns="" xmlns:exsl="http://exslt.org/common" src="js/ie10-viewport-bug-workaround.js"></script></body></html>
