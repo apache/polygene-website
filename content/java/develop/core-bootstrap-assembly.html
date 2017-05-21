@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Core Bootstrap</title><link rel="stylesheet" type="text/css" href="css/style.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.76.1" /><link rel="home" href="index.html" title="" /><link rel="up" href="core.html" title="Core" /><link rel="prev" href="core-api.html" title="Core API" /><link rel="next" href="core-testsupport.html" title="Core Test Support" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Core Bootstrap</title><link rel="stylesheet" type="text/css" href="css/style.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.79.1" /><link rel="home" href="index.html" title="" /><link rel="up" href="core.html" title="Core" /><link rel="prev" href="core-api.html" title="Core API" /><link rel="next" href="core-testsupport.html" title="Core Test Support" />
 
 
 <!-- favicon -->
@@ -66,7 +66,7 @@
   })();
  </script>
 
-  </head><body><div xmlns="" xmlns:exsl="http://exslt.org/common" class="logo"><a href="index.html"><img src="images/logo-standard.png" /></a></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="top-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl><dt><span class="section"><a href="index.html#home">Polygene™</a></span></dt><dt><span class="section"><a href="intro.html">Introduction</a></span></dt><dt><span class="section"><a href="tutorials.html">Tutorials</a></span></dt><dt><span class="section"><a href="javadocs.html">Javadoc</a></span></dt><dt><span class="section"><a href="samples.html">Samples</a></span></dt><dt><span class="section"><span xmlns="" href="core.html">Core</span></span></dt><dt><span class="section"><a href="libraries.html">Libraries</a></span></dt><dt><span class="section"><a href="extensions.html">Extensions</a></span></dt><dt><span class="section"><a href="tools.html">Tools</a></span></dt><dt><span class="section"><a href="glossary.html">Glossary </a></span></dt></dl></div></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="sub-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl><dt><span class="section"><a href="core.html#_overview_3">Overview</a></span></dt><dt><span class="section"><a href="core-api.html">Core API</a></span></dt><dt><span class="section"><span xmlns="" href="core-bootstrap-assembly.html">Core Bootstrap</span></span></dt><dt><span class="section"><a href="core-testsupport.html">Core Test Support</a></span></dt><dt><span class="section"><a href="core-spi.html">Core Extension SPI</a></span></dt><dt><span class="section"><a href="core-runtime.html">Core Runtime</a></span></dt></dl></div></div><div class="section" title="Core Bootstrap"><div class="titlepage"><div><div><h3 class="title"><a id="core-bootstrap-assembly"></a>Core Bootstrap</h3></div></div></div><p class="remark"><em><span class="comment"></span></em></p><p class="devstatus-code-stable">code</p><p class="devstatus-docs-brief">docs</p><p class="devstatus-tests-good">tests</p><p>Polygene™ has a distinct bootstrap phase, also known as the <span class="emphasis"><em>Assembly</em></span> of an application, where the applications structure
+  </head><body><div xmlns="" xmlns:exsl="http://exslt.org/common" class="logo"><a href="index.html"><img src="images/logo-standard.png" /></a></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="top-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl class="toc"><dt><span class="section"><a href="index.html#home">Polygene™</a></span></dt><dt><span class="section"><a href="intro.html">Introduction</a></span></dt><dt><span class="section"><a href="tutorials.html">Tutorials</a></span></dt><dt><span class="section"><a href="javadocs.html">Javadoc</a></span></dt><dt><span class="section"><a href="samples.html">Samples</a></span></dt><dt><span class="section"><span xmlns="" href="core.html">Core</span></span></dt><dt><span class="section"><a href="libraries.html">Libraries</a></span></dt><dt><span class="section"><a href="extensions.html">Extensions</a></span></dt><dt><span class="section"><a href="tools.html">Tools</a></span></dt><dt><span class="section"><a href="glossary.html">Glossary </a></span></dt></dl></div></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="sub-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl class="toc"><dt><span class="section"><a href="core.html#_overview_3">Overview</a></span></dt><dt><span class="section"><a href="core-api.html">Core API</a></span></dt><dt><span class="section"><span xmlns="" href="core-bootstrap-assembly.html">Core Bootstrap</span></span></dt><dt><span class="section"><a href="core-testsupport.html">Core Test Support</a></span></dt><dt><span class="section"><a href="core-spi.html">Core Extension SPI</a></span></dt><dt><span class="section"><a href="core-runtime.html">Core Runtime</a></span></dt></dl></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="core-bootstrap-assembly"></a>Core Bootstrap</h3></div></div></div><p class="remark"><em><span class="comment"></span></em></p><p class="devstatus-code-stable">code</p><p class="devstatus-docs-brief">docs</p><p class="devstatus-tests-good">tests</p><p>Polygene™ has a distinct bootstrap phase, also known as the <span class="emphasis"><em>Assembly</em></span> of an application, where the applications structure
 is defined programmatically. Once all the layers, modules and all the composite types in each module have been defined
 the model is instantiated into an application. This enables the entire <span class="emphasis"><em>structure</em></span> system in Polygene, where types "belongs"
 to a module and visibility rules define default behaviors, enforcement of architectural integrity and much more.</p><p>The <span class="emphasis"><em>assembly</em></span> is preceeded by the creation of the <span class="emphasis"><em>Polygene Runtime</em></span>. The <span class="emphasis"><em>assembly</em></span> can be declared fully by defining
@@ -75,7 +75,7 @@ convenience assemblies, one for a <span class="emphasis"><em>pancake</em></span>
 in a single layer, useful for small applications, spikes and tests. The <code class="literal">bootstrap</code> system has several ways to acheive
 this, and they are listed below in <a class="xref" href="core-bootstrap-assembly.html#core-bootstrap-assembly-layered" title="Layered Application Assembler (RECOMMENDED!)">Layered Application Assembler</a>.</p><p>During <span class="emphasis"><em>assembly</em></span>, the application (JVM level) architecture and the application model is defined. You define which
 layers exist and how they relate to each other. For each layer, you define which modules it contains. And for each
-module, you define which composites are in it, and what are the visibility rules for each of these composites.</p><p>You can also;</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
+module, you define which composites are in it, and what are the visibility rules for each of these composites.</p><p>You can also;</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 Define default values for properties.
 </li><li class="listitem">
 Add additional interfaces to composites dynamically.
@@ -87,43 +87,43 @@ Set <span class="emphasis"><em>meta information</em></span> on defined types.
 Import external services to be available as Polygene™ services.
 </li><li class="listitem">
 Tag services with markers
-</li></ul></div><div class="section" title="Defining Objects"><div class="titlepage"><div><div><h4 class="title"><a id="_defining_objects"></a>Defining Objects</h4></div></div></div><pre class="programlisting brush: java">@Override
+</li></ul></div><div class="table"><a id="idm447727172640"></a><p class="title"><strong>Table 15. Artifact</strong></p><div class="table-contents"><table class="table" summary="Artifact" border="1"><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /></colgroup><thead><tr><th align="left" valign="top">Group ID</th><th align="left" valign="top">Artifact ID</th><th align="left" valign="top">Version</th></tr></thead><tbody><tr><td align="left" valign="top"><p>org.apache.polygene.core</p></td><td align="left" valign="top"><p>org.apache.polygene.core.bootstrap</p></td><td align="left" valign="top"><p>3.0.0-SNAPSHOT</p></td></tr></tbody></table></div></div><br class="table-break" /><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="_defining_objects"></a>Defining Objects</h4></div></div></div><pre class="programlisting brush: java">@Override
 public void assemble( ModuleAssembly module )
         throws AssemblyException
 {
     module.objects( MyObject.class ).visibleIn( Visibility.layer );
 }
-</pre></div><div class="section" title="Defining Transients"><div class="titlepage"><div><div><h4 class="title"><a id="_defining_transients"></a>Defining Transients</h4></div></div></div><pre class="programlisting brush: java">@Override
+</pre></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="_defining_transients"></a>Defining Transients</h4></div></div></div><pre class="programlisting brush: java">@Override
 public void assemble( ModuleAssembly module )
         throws AssemblyException
 {
     module.transients( MyTransient.class ).visibleIn( Visibility.layer );
 }
-</pre></div><div class="section" title="Defining Values"><div class="titlepage"><div><div><h4 class="title"><a id="_defining_values"></a>Defining Values</h4></div></div></div><pre class="programlisting brush: java">@Override
+</pre></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="_defining_values"></a>Defining Values</h4></div></div></div><pre class="programlisting brush: java">@Override
 public void assemble( ModuleAssembly module )
         throws AssemblyException
 {
     module.values( MyValue.class ).visibleIn( Visibility.layer );
 }
-</pre></div><div class="section" title="Defining Entities"><div class="titlepage"><div><div><h4 class="title"><a id="_defining_entities"></a>Defining Entities</h4></div></div></div><pre class="programlisting brush: java">@Override
+</pre></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="_defining_entities"></a>Defining Entities</h4></div></div></div><pre class="programlisting brush: java">@Override
 public void assemble( ModuleAssembly module )
         throws AssemblyException
 {
     module.entities( MyEntity.class ).visibleIn( Visibility.layer );
 }
-</pre></div><div class="section" title="Defining Services"><div class="titlepage"><div><div><h4 class="title"><a id="_defining_services"></a>Defining Services</h4></div></div></div><pre class="programlisting brush: java">@Override
+</pre></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="_defining_services"></a>Defining Services</h4></div></div></div><pre class="programlisting brush: java">@Override
 public void assemble( ModuleAssembly module )
         throws AssemblyException
 {
     module.services( MyService.class ).visibleIn( Visibility.layer );
 }
-</pre><div class="section" title="Tagging Services"><div class="titlepage"><div><div><h5 class="title"><a id="_tagging_services"></a>Tagging Services</h5></div></div></div><pre class="programlisting brush: java">@Override
+</pre><div class="section"><div class="titlepage"><div><div><h5 class="title"><a id="_tagging_services"></a>Tagging Services</h5></div></div></div><pre class="programlisting brush: java">@Override
 public void assemble( ModuleAssembly module )
     throws AssemblyException
 {
     module.services( MyService.class ).taggedWith( "foo", "bar" );
 }
-</pre></div><div class="section" title="Importing external Services"><div class="titlepage"><div><div><h5 class="title"><a id="_importing_external_services"></a>Importing external Services</h5></div></div></div><pre class="programlisting brush: java">@Override
+</pre></div><div class="section"><div class="titlepage"><div><div><h5 class="title"><a id="_importing_external_services"></a>Importing external Services</h5></div></div></div><pre class="programlisting brush: java">@Override
 public void assemble( ModuleAssembly module )
     throws AssemblyException
 {
@@ -137,7 +137,7 @@ public void assemble( ModuleAssembly module )
     module.importedServices( MyService.class ).
         importedBy( NewObjectImporter.class );
 }
-</pre></div></div><div class="section" title="Defining default values for Properties"><div class="titlepage"><div><div><h4 class="title"><a id="_defining_default_values_for_properties"></a>Defining default values for Properties</h4></div></div></div><pre class="programlisting brush: java">@Override
+</pre></div></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="_defining_default_values_for_properties"></a>Defining default values for Properties</h4></div></div></div><pre class="programlisting brush: java">@Override
 public void assemble( ModuleAssembly module )
     throws AssemblyException
 {
@@ -149,7 +149,7 @@ public void assemble( ModuleAssembly module )
     MyEntity myEntityDefaults = module.forMixin( MyEntity.class ).declareDefaults();
     myEntityDefaults.cathedral().set( "bazar" );
 }
-</pre></div><div class="section" title="Adding additional interfaces to composites"><div class="titlepage"><div><div><h4 class="title"><a id="_adding_additional_interfaces_to_composites"></a>Adding additional interfaces to composites</h4></div></div></div></div><div class="section" title="Adding concerns, mixins, constraints and side effects"><div class="titlepage"><div><div><h4 class="title"><a id="_adding_concerns_mixins_constraints_and_side_effects"></a>Adding concerns, mixins, constraints and side effects</h4></div></div></div></div><div class="section" title="Setting meta information on assembled types"><div class="titlepage"><div><div><h4 class="title"><a id="_setting_meta_information_on_assembled_types"></a>Setting meta information on assembled types</h4></div></div></div></div><div class="section" title="Using Assemblers"><div class="titlepage"><div><div><h4 class="title"><a id="_using_assemblers"></a>Using Assemblers</h4></div></div></div><p>Many <a class="link" href="libraries.html" title="Libraries">libraries</a> and <a class="link" href="extensions.html" title="Extensions">extensions</a> provides a cookie-cutter <span class="emphasis"><em>Assembler</em></span>, to simplify the set up
+</pre></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="_adding_additional_interfaces_to_composites"></a>Adding additional interfaces to composites</h4></div></div></div></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="_adding_concerns_mixins_constraints_and_side_effects"></a>Adding concerns, mixins, constraints and side effects</h4></div></div></div></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="_setting_meta_information_on_assembled_types"></a>Setting meta information on assembled types</h4></div></div></div></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="_using_assemblers"></a>Using Assemblers</h4></div></div></div><p>Many <a class="link" href="libraries.html" title="Libraries">libraries</a> and <a class="link" href="extensions.html" title="Extensions">extensions</a> provides a cookie-cutter <span class="emphasis"><em>Assembler</em></span>, to simplify the set up
 of such component. Often these are suitable, but sometimes they won’t fit the application in hand, in which case the
 source code at least provides information of what is needed for the component to be used.</p><p>Assemblers are typically just instantiated and then call the assemble() method with the ModuleAssembly instance,
 such as;</p><pre class="programlisting brush: java">@Override
@@ -159,7 +159,7 @@ public void assemble( ModuleAssembly module )
     RestServerAssembler assembler = new RestServerAssembler();
     assembler.assemble( module );
 }
-</pre></div><div class="section" title="Defining an Entity Store"><div class="titlepage"><div><div><h4 class="title"><a id="_defining_an_entity_store"></a>Defining an Entity Store</h4></div></div></div><p>Defining an <span class="emphasis"><em>Entity Store</em></span> is in principle as simple as defining a ServiceComposite implementing the EntityStore
+</pre></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="_defining_an_entity_store"></a>Defining an Entity Store</h4></div></div></div><p>Defining an <span class="emphasis"><em>Entity Store</em></span> is in principle as simple as defining a ServiceComposite implementing the EntityStore
 interface. The problem is that most Entity Stores require <a class="xref" href="core-api.html#core-api-service-configuration" title="Service Configuration">Service Configuration</a>, and configuration requires an
 Entity Store. This chicken-and-egg problem is resolved by having an entity store available that does not require any
 <a class="xref" href="core-api.html#core-api-service-configuration" title="Service Configuration">Service Configuration</a>. Many <span class="emphasis"><em>Assemblers</em></span> for entity store implementations uses the MemoryEntityStore, and
@@ -176,12 +176,12 @@ public void assemble( ModuleAssembly module )
 {
     new JdbmEntityStoreAssembler().assemble( module );
 }
-</pre></div><div class="section" title="Layered Application Assembler (RECOMMENDED!)"><div class="titlepage"><div><div><h4 class="title"><a id="core-bootstrap-assembly-layered"></a>Layered Application Assembler (RECOMMENDED!)</h4></div></div></div><p>In 2.1, a new way to instantiate Polygene™ applications was introduced. It starts with subclassing the
+</pre></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="core-bootstrap-assembly-layered"></a>Layered Application Assembler (RECOMMENDED!)</h4></div></div></div><p>In 2.1, a new way to instantiate Polygene™ applications was introduced. It starts with subclassing the
 <code class="literal">LayeredApplicationAssembler</code>, and implementing the <code class="literal">assembleLayers()</code> method.</p><p>In the <code class="literal">assembleLayers()</code> method, one is epected to either call the <code class="literal">createLayer()</code> method in the super class
 with the Class of the LayerAssembler,</p><pre class="programlisting brush: java">    LayerAssembly domainLayer = createLayer( DomainLayer.class );</pre><p>OR manually instantiate and call the LayerAssembler.</p><pre class="programlisting brush: java">    LayerAssembly infraLayer = new InfrastructureLayer( configModule ).assemble( assembly.layer( InfrastructureLayer.NAME  ));</pre><p>This is to make the normal case as simple as possible, yet allow the special needs that occssionally surfaces.</p><p>Each LayerAssembler implementation may optionally extend the <code class="literal">LayeredLayerAssembler</code>, to get access to the
 <code class="literal">createModule()</code> method, which again simplifies the creation of modules in the <code class="literal">assemble()</code> method.</p><pre class="programlisting brush: java">    createModule( layer, InvoicingModule.class );</pre><p><code class="literal">ModuleAssembler</code> implementations typically use <code class="literal">Assembler</code> classes to put together, or call the <code class="literal">entities()</code>,
 <code class="literal">values()</code> methods described elsewhere on this page. There is no superclass to use.</p><p><code class="literal">ModuleAssembler</code> implementations should have a name ending with "Module" and the naming will insert a human-readable
-space within the module name, e.g. <code class="literal">InvoicingModule</code> will be named "Invoicing Module".</p><p>For example code, see the tutorial <a class="xref" href="howto-assemble-application.html" title="Assemble an Application">Assemble an Application</a>.</p></div><div class="section" title="Singleton Assembler"><div class="titlepage"><div><div><h4 class="title"><a id="_singleton_assembler"></a>Singleton Assembler</h4></div></div></div><p>Every Polygene™ runtime instance consist of One Application, with one or more Layers and one or more Modules in each Layer.
+space within the module name, e.g. <code class="literal">InvoicingModule</code> will be named "Invoicing Module".</p><p>For example code, see the tutorial <a class="xref" href="howto-assemble-application.html" title="Assemble an Application">Assemble an Application</a>.</p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="_singleton_assembler"></a>Singleton Assembler</h4></div></div></div><p>Every Polygene™ runtime instance consist of One Application, with one or more Layers and one or more Modules in each Layer.
 So the minimal application is still one layer with one module. This is not recommended other than for testing purposes
 and really trivial applications.</p><p>Let’s take a closer look at how it is put together.</p><pre class="programlisting brush: java">SingletonAssembler assembler = new SingletonAssembler()
 {
@@ -199,10 +199,10 @@ and really trivial applications.</p><p>Let’s take a closer look at how it is p
 Module module = assembler.module();
 Stuff stuff = module.newObject( Stuff.class );
 </pre><p>Once the SingletonAssembler constructor returns, the Polygene™ application is up and running.</p><p>The SingletonAssembler also makes common system resources available from the bootstrap code, such as
-Module, UnitOfWorkFactory and others. This is possible since there is only one Module.</p></div><div class="section" title="Application Builder"><div class="titlepage"><div><div><h4 class="title"><a id="_application_builder"></a>Application Builder</h4></div></div></div><p>Some applications has no need for runtime determination of the exact application structure, and no need for
+Module, UnitOfWorkFactory and others. This is possible since there is only one Module.</p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="_application_builder"></a>Application Builder</h4></div></div></div><p>Some applications has no need for runtime determination of the exact application structure, and no need for
 advanced alterations to a staright-forward layered application structure. By using the <code class="literal">ApplicationBuilder</code>
 it is possible to define the application structure from a JSON document, AND call the provided <code class="literal">main()</code> class,
-taking the JSON document as input on <code class="literal">System.in</code>.</p><p>The format of the JSON document, directly reflects the application structure, such as</p><pre class="programlisting brush: json">{
+taking the JSON document as input on <code class="literal">System.in</code>.</p><p>The format of the JSON document, directly reflects the application structure, such as</p><pre class="programlisting brush: javascript">{
     "name": "Build from JSON test.",
     "layers": [
         { "name": "service", "uses": [ "domain", "config"] },
@@ -220,7 +220,7 @@ taking the JSON document as input on <code class="literal">System.in</code>.</p>
         }
     ]
 }</pre><p>At the moment, the JSON format only support <code class="literal">Assembler</code> classes to do the work.</p><p>Another way to use the <code class="literal">ApplicationBuilder</code> is to subclass it, optionally use the <code class="literal">configureFromJSON()</code> method,
-and then programmatically enhance the structure before calling <code class="literal">newApplication()</code>.</p></div><div class="section" title="Pancake Assembly"><div class="titlepage"><div><div><h4 class="title"><a id="_pancake_assembly"></a>Pancake Assembly</h4></div></div></div><p>There is one case that stands out as a common case, and forms a reasonable middle-ground. It is where each layer sits
+and then programmatically enhance the structure before calling <code class="literal">newApplication()</code>.</p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="_pancake_assembly"></a>Pancake Assembly</h4></div></div></div><p>There is one case that stands out as a common case, and forms a reasonable middle-ground. It is where each layer sits
 exactly on top of each other layer, like pancakes. Each layer will only use the layer directly below and only that
 layer. For this case we have a convenience setup. You create an Assembler[][][], where the outer-most array is each
 layer, the middle array is the modules in each layer, and the last array is a set of assemblers needed to put the
@@ -286,7 +286,7 @@ private static ApplicationDescriptor newApplication( final Assembler[][][] assem
 
     } );
 }
-</pre></div><div class="section" title="Full Assembly"><div class="titlepage"><div><div><h4 class="title"><a id="_full_assembly"></a>Full Assembly</h4></div></div></div><p>Full Assembly means that you have the opportunity to create any layer/module hierarchy that are within the rules of the
+</pre></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="_full_assembly"></a>Full Assembly</h4></div></div></div><p>Full Assembly means that you have the opportunity to create any layer/module hierarchy that are within the rules of the
 Polygene™ runtime. It requires more support in your code to be useful, and the example below is by no means a recommended way
 to organize large application assemblies.</p><p>In principle, you first start the Polygene™ runtime, call newApplication with an ApplicationAssembler instance and call
 activate() on the returned application. The ApplicationAssembler instance will be called with an

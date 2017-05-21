@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Polygene Generator</title><link rel="stylesheet" type="text/css" href="css/style.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.76.1" /><link rel="home" href="index.html" title="" /><link rel="up" href="tools.html" title="Tools" /><link rel="prev" href="tools.html" title="Tools" /><link rel="next" href="tools-envisage.html" title="Envisage" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Polygene Generator</title><link rel="stylesheet" type="text/css" href="css/style.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.79.1" /><link rel="home" href="index.html" title="" /><link rel="up" href="tools.html" title="Tools" /><link rel="prev" href="tools.html" title="Tools" /><link rel="next" href="tools-envisage.html" title="Envisage" />
 
 
 <!-- favicon -->
@@ -66,37 +66,237 @@
   })();
  </script>
 
-  </head><body><div xmlns="" xmlns:exsl="http://exslt.org/common" class="logo"><a href="index.html"><img src="images/logo-standard.png" /></a></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="top-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl><dt><span class="section"><a href="index.html#home">Polygene™</a></span></dt><dt><span class="section"><a href="intro.html">Introduction</a></span></dt><dt><span class="section"><a href="tutorials.html">Tutorials</a></span></dt><dt><span class="section"><a href="javadocs.html">Javadoc</a></span></dt><dt><span class="section"><a href="samples.html">Samples</a></span></dt><dt><span class="section"><a href="core.html">Core</a></span></dt><dt><span class="section"><a href="libraries.html">Libraries</a></span></dt><dt><span class="section"><a href="extensions.html">Extensions</a></span></dt><dt><span class="section"><span xmlns="" href="tools.html">Tools</span></span></dt><dt><span class="section"><a href="glossary.html">Glossary </a></span></dt></dl></div></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="sub-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl><dt><span class="section"><a href="tools.html#_overview_8">Overview</a></span></dt><dt><span class="section"><span xmlns="" href="tools-shell.html">Polygene Generator</span></span></dt><dt><span class="section"><a href="tools-envisage.html">Envisage</a></span></dt></dl></div></div><div class="section" title="Polygene Generator"><div class="titlepage"><div><div><h3 class="title"><a id="tools-shell"></a>Polygene Generator</h3></div></div></div><p>Apache Polygene comes with a Yeoman code generator, to quickly set up a development
-environment for Polygene applications.</p><p>The current list of commands are;</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
-<a class="xref" href="tools-shell.html#tools-yeoman-create-project" title="Create Project">Create Project Script</a>
-</li></ul></div><div class="section" title="Create Project"><div class="titlepage"><div><div><h4 class="title"><a id="tools-yeoman-create-project"></a>Create Project</h4></div></div></div><p>This command creates a brand new project, in current directory. The generator
-will ask a lot of questions. If you are new to Polygene and only want to try
-it out, it is safe to hit ENTER on all questions.</p><pre class="screen">yo polygene create-project</pre><p>A directory called <span class="emphasis"><em>name</em></span> will be created in the current directory, and all
-the necessary structure for a Polygene project using Gradle will be created.</p><p>The exact layout of the project depends on the <span class="emphasis"><em>type</em></span> argument and currently the
-following types exists;</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
-<a class="xref" href="tools-shell.html#tools-shell-create-project-null" title="Create Null Project Template">Create Null Project</a> - Creates the build system and directory structure.
-</li><li class="listitem">
-<a class="xref" href="tools-shell.html#tools-shell-create-project-singleton" title="Create Singleton Project Template">Create Singleton Project</a> - Creates a small application around the <code class="literal">SingletonAssembler</code>
-</li><li class="listitem">
-<a class="xref" href="tools-shell.html#tools-shell-create-project-default" title="Create Default Project Template">Create Default Project</a> - Creates a 4 layer, Configuration, Infrastructure, Domain and Connectivity, command line application.
-</li><li class="listitem">
-<a class="xref" href="tools-shell.html#tools-shell-create-project-restapp" title="Create Rest Application Project Template">Create Rest Application Project</a> - Creates the same 4 layer application as <span class="emphasis"><em>default</em></span>, but also sets it up as a Restful application, ready to deploy on a web application container.
-</li></ul></div><p>The <span class="emphasis"><em>package</em></span> defines the root package name to be used, e.g. <code class="literal">org.apache.polygene.coolapp</code>. The <code class="literal">create-project</code> program
-will create additional packages under this, according to its template.</p><div class="section" title="Create Null Project Template"><div class="titlepage"><div><div><h5 class="title"><a id="tools-shell-create-project-null"></a>Create Null Project Template</h5></div></div></div><p>This templates only creates the build system for a single module application. Neither Java files nor other resources
-are created, and the developer has to set everything up from scratch.</p></div><div class="section" title="Create Singleton Project Template"><div class="titlepage"><div><div><h5 class="title"><a id="tools-shell-create-project-singleton"></a>Create Singleton Project Template</h5></div></div></div><p>This template creates a so called Singleton application. That is an application with a single Layer and a single
-Module in that layer. In Polygene, all applications must have at least one Layer and one Module.</p><p>This is useful for really small applications or demos, not expected to become large in the future. It is
-also currently required that the infrastructure is configuration free, otherwise it is not possible to set up.</p><p>The template will configure the File EntityStore and RDF Indexing subsystems, hardcoded to the <code class="literal">polygene/store</code> and
-<code class="literal">polygene/index</code> respectively in the current directory where the application is started. This may not be suitable, in
-which case you should look at the <a class="xref" href="tools-shell.html#tools-shell-create-project-default" title="Create Default Project Template">Create Default Project</a> template.</p></div><div class="section" title="Create Default Project Template"><div class="titlepage"><div><div><h5 class="title"><a id="tools-shell-create-project-default"></a>Create Default Project Template</h5></div></div></div><p>This template sets up a 4 layer, Configuration, Infrastructure, Domain, Connectivity, command line application.</p><p>The template includes a small sample domain model, <code class="literal">Order</code>, <code class="literal">OrderItem</code>, <code class="literal">Customer</code>, but there is no functionality
-added to it.</p><p>A <code class="literal">SecurityRepository</code> is also created, with a simple hardcoded implementation (<code class="literal">HardCodedSecurityRepositoryMixin</code>).</p></div><div class="section" title="Create Rest Application Project Template"><div class="titlepage"><div><div><h5 class="title"><a id="tools-shell-create-project-restapp"></a>Create Rest Application Project Template</h5></div></div></div><p>This template sets up a 4 layer, Configuration, Infrastructure, Domain, Connectivity, restful application. This
-application will use the <a class="xref" href="library-restlet.html" title="Restlet Support"> Restlet Library</a> to create a full web application, ready to deploy on a servlet
-container, such as Tomcat or Jetty.</p><p>The template includes a small sample domain model, <code class="literal">Order</code>, <code class="literal">OrderItem</code>, <code class="literal">Customer</code>, and have the CRUD operations
-for these already wired up to the restful <code class="literal">EndPoint</code>. Full HATEOAS is provided, so clients don’t need to construct
-URLs, but simply follow links and use forms.</p><p>The template also creates a simple SecurityRepository and attaches the mechanisms in the underlying Restlet
-implementation to do Authentication and Authorization (see SimpleEnroler and SimpleVerifier). There are two
-hardcoded users with two hardcoded roles.</p><pre class="screen"># name     password     roles
-  user       123        user
-  admin     secret      admin</pre></div></div></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="footer"><p>
+  </head><body><div xmlns="" xmlns:exsl="http://exslt.org/common" class="logo"><a href="index.html"><img src="images/logo-standard.png" /></a></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="top-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl class="toc"><dt><span class="section"><a href="index.html#home">Polygene™</a></span></dt><dt><span class="section"><a href="intro.html">Introduction</a></span></dt><dt><span class="section"><a href="tutorials.html">Tutorials</a></span></dt><dt><span class="section"><a href="javadocs.html">Javadoc</a></span></dt><dt><span class="section"><a href="samples.html">Samples</a></span></dt><dt><span class="section"><a href="core.html">Core</a></span></dt><dt><span class="section"><a href="libraries.html">Libraries</a></span></dt><dt><span class="section"><a href="extensions.html">Extensions</a></span></dt><dt><span class="section"><span xmlns="" href="tools.html">Tools</span></span></dt><dt><span class="section"><a href="glossary.html">Glossary </a></span></dt></dl></div></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="sub-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl class="toc"><dt><span class="section"><a href="tools.html#_overview_8">Overview</a></span></dt><dt><span class="section"><span xmlns="" href="tools-shell.html">Polygene Generator</span></span></dt><dt><span class="section"><a href="tools-envisage.html">Envisage</a></span></dt></dl></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="tools-shell"></a>Polygene Generator</h3></div></div></div><p>Apache Polygene comes with a Yeoman code generator, to quickly set up a development
+environment for Polygene applications.</p><pre class="programlisting brush: shell">mkdir projectdirname
+cd projectdirname
+yo polygene</pre><p>It will ask a lot of questions. For choice questions, you operate up and down, and with multi-choice, you
+select with space bar.</p><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="_first_trial"></a>First Trial</h4></div></div></div><div class="section"><div class="titlepage"><div><div><h5 class="title"><a id="_project_name"></a>Project Name</h5></div></div></div><p>It starts with the Project name. This will be the project name in Gradle and any gradle driven naming of the
+project such as in IDEs. It defaults to current directory with initial uppercase letter.</p><pre class="programlisting brush: shell">? Your project name</pre></div><div class="section"><div class="titlepage"><div><div><h5 class="title"><a id="_java_package_name"></a>Java Package Name</h5></div></div></div><p>This is the root of the package names in the multi-module, multi-package project.</p><pre class="programlisting brush: shell">? Java package name</pre></div><div class="section"><div class="titlepage"><div><div><h5 class="title"><a id="_application_type"></a>Application Type</h5></div></div></div><p>The Application Type that you want to create.</p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>Command Line is currently not implemented correctly, and the Rest API is still not complete.</p></div><pre class="programlisting brush: shell">? what type of application do you want to create?
+  Command Line
+❯ Rest API</pre></div><div class="section"><div class="titlepage"><div><div><h5 class="title"><a id="_entity_store"></a>Entity Store</h5></div></div></div><p>Polygene has built-in persistence, and that is backed by entity store plugins. There are currently a fair
+number of implementations to choose from. Not that "memory" is not persistent, but looses the content on shutdown.</p><pre class="programlisting brush: shell">? Which entity store do you want to use?
+  Cassandra
+  File
+  DerbySQL
+  Geode
+  H2SQL
+  Hazelcast
+  JClouds
+  Jdbm
+  LevelDB
+&gt; Memory
+  MongoDB
+  MySQL
+  Preferences
+  Redis
+  Riak
+  PostgreSQL
+  SQLite</pre></div><div class="section"><div class="titlepage"><div><div><h5 class="title"><a id="_indexing_query_system"></a>Indexing/Query system</h5></div></div></div><p>Select of a pluggable Indexing and Query subsystem.</p><p>In Polygene, the indexing/query system is separated from store and retrieve. This allows us to optimize direct
+fetches for navigating object graphs. In practical Polygene applications, we find that querying is not nearly as
+common as in, say, JPA applications. The query layout in the underlying indexing system is also very different
+from the document-oriented approach of most entity stores.</p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>Not all indexing subsystems support all of the specified Indexing/Query SPI.</p></div><pre class="programlisting brush: shell">? Which indexing system do you want to use?
+&gt; Rdf
+  ElasticSearch
+  Solr
+  SQL</pre></div><div class="section"><div class="titlepage"><div><div><h5 class="title"><a id="_caching_system"></a>Caching System</h5></div></div></div><p>Some of the entity stores rely on a Polygene level caching SPI. This caching subsystem is pluggable and
+will be used by any of the entity stores that uses the internal MapEntityStore SPI</p><pre class="programlisting brush: shell">? Which caching system do you want to use?
+&gt; None
+  Memcache
+  EhCache</pre></div><div class="section"><div class="titlepage"><div><div><h5 class="title"><a id="_serialization_system"></a>Serialization system</h5></div></div></div><p>Serialization is a key concept in business applications, and in Polygene that is a pluggable subsystem.</p><p>? Which serialization system do you want to use?</p><pre class="programlisting brush: shell">&gt; JavaxJson
+  JavaxXml
+  MessagePack</pre></div><div class="section"><div class="titlepage"><div><div><h5 class="title"><a id="_metrics_system"></a>Metrics System</h5></div></div></div><p>Metrics is the SPI for measuring the performance and health of an Polygene application. Currently only
+one implementation is available.</p><p>? Which metrics capturing system do you want to use?</p><pre class="programlisting brush: shell">&gt; None
+  Codahale</pre></div><div class="section"><div class="titlepage"><div><div><h5 class="title"><a id="_other_features"></a>Other Features</h5></div></div></div><p>JMX feature installs the MBean server and registers all Services with it, in the application structure defined.</p><p>Mixin Scripting is allowing Mixin methods to be implemented in other languages parallel to Java.</p><p>Security installs Apache Shiro and binds Users, Groups and Roles to entity store.</p><pre class="programlisting brush: shell">? Other features?
+ ◯ jmx
+ ◯ mixin scripting
+ ◯ security</pre></div><div class="section"><div class="titlepage"><div><div><h5 class="title"><a id="_example_3"></a>Example</h5></div></div></div><pre class="programlisting brush: shell">~/dev/sensetif/sink$ yo polygene
+? Your project name Sink
+? Java package name com.sensetif.sink
+? what type of application do you want to create? Rest API
+? Which entity store do you want to use? Cassandra
+? Which indexing system do you want to use? Rdf
+? Which caching system do you want to use? None
+? Which serialization system do you want to use? JavaxJson
+? Which metrics capturing system do you want to use? Codahale
+? Other features? jmx, security
+app name Sink
+Entity Stores: Cassandra
+Indexing: Rdf
+Caching: None
+Serialization: JavaxJson
+Features: [ 'jmx', 'security' ]
+   create bootstrap/src/main/java/com/sensetif/sink/bootstrap/config/ConfigurationLayer.java
+   create bootstrap/src/main/java/com/sensetif/sink/bootstrap/infrastructure/InfrastructureLayer.java
+   create bootstrap/src/main/java/com/sensetif/sink/bootstrap/domain/DomainLayer.java
+   create bootstrap/src/main/java/com/sensetif/sink/bootstrap/connectivity/ConnectivityLayer.java
+   create app/src/main/webapp/WEB-INF/web.xml
+   create app/build.gradle
+   create bootstrap/build.gradle
+   create model/build.gradle
+   create rest/build.gradle
+   create build.gradle
+   create settings.gradle
+   create gradlew
+   create gradlew.bat
+   create gradle/wrapper/gradle-wrapper.jar
+   create gradle/wrapper/gradle-wrapper.properties
+   create bootstrap/src/main/java/com/sensetif/sink/bootstrap/config/ConfigModule.java
+   create bootstrap/src/main/java/com/sensetif/sink/bootstrap/infrastructure/FileConfigurationModule.java
+   create bootstrap/src/main/java/com/sensetif/sink/bootstrap/infrastructure/RdfIndexingModule.java
+   create bootstrap/src/main/java/com/sensetif/sink/bootstrap/infrastructure/CodahaleMetricsModule.java
+   create bootstrap/src/main/java/com/sensetif/sink/bootstrap/infrastructure/JavaxJsonSerializationModule.java
+   create bootstrap/src/main/java/com/sensetif/sink/bootstrap/infrastructure/CassandraStorageModule.java
+   create bootstrap/src/main/java/com/sensetif/sink/bootstrap/domain/CrudModule.java
+   create bootstrap/src/main/java/com/sensetif/sink/bootstrap/domain/JmxModule.java
+   create bootstrap/src/main/java/com/sensetif/sink/bootstrap/domain/SecurityModule.java
+   create model/src/main/java/com/sensetif/sink/model/security/CryptoConfiguration.java
+   create model/src/main/java/com/sensetif/sink/model/security/CryptoException.java
+   create model/src/main/java/com/sensetif/sink/model/security/CryptoService.java
+   create model/src/main/java/com/sensetif/sink/model/security/EncryptedStringPropertyConcern.java
+   create model/src/main/java/com/sensetif/sink/model/security/Group.java
+   create model/src/main/java/com/sensetif/sink/model/security/RealmService.java
+   create model/src/main/java/com/sensetif/sink/model/security/SecurityRepository.java
+   create model/src/main/java/com/sensetif/sink/model/security/User.java
+   create model/src/main/java/com/sensetif/sink/model/security/UserFactory.java
+   create bootstrap/src/main/java/com/sensetif/sink/bootstrap/connectivity/RestApiModule.java
+   create rest/src/main/java/com/sensetif/sink/rest/security/DefaultEnroler.java
+   create rest/src/main/java/com/sensetif/sink/rest/security/DefaultVerifier.java</pre></div></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="_command_line_options"></a>Command Line Options</h4></div></div></div><pre class="programlisting brush: shell">--import=&lt;modelfile&gt;   Imports the model from a JSON file and creates a project descibed therein.
+--export=&lt;modelfile&gt;   Exports the generated model to a JSON file in the same format as the import model.
+--noPrompt             If this option is not provided for --import-model, the user can still
+                       input answers, which will override the values in the imported model</pre><div class="section"><div class="titlepage"><div><div><h5 class="title"><a id="_example_4"></a>Example</h5></div></div></div><p>If we run the following,</p><pre class="programlisting brush: shell">$ yo polygene --import=../model.json --noPrompt</pre><p>where the content of the <code class="literal">../model.json</code> is as follows,</p><pre class="programlisting brush: plain">{
+  "name": "Sink",
+  "packageName": "com.sensetif.sink",
+  "applicationtype": "Rest API",
+  "features": [
+    "security"
+  ],
+  "entitystore": "MongoDB",
+  "indexing": "SQL",
+  "caching": "Memcache",
+  "serialization": "JavaxJson",
+  "metrics": "Codahale",
+  "modules": {
+    "user": {
+      "cruds": [
+        { "name": "Users" },
+        {"name": "Roles"},
+        {"name": "User"},
+        {"name": "Role"},
+        {"name": "Permission"},
+        {"name": "Group"},
+        {"name": "Groups"}
+      ],
+      "services": [
+        {
+          "name": "AuthService",
+          "visibility": "application",
+          "configuration" : [
+            { "name": "backend", "type": "java.lang.String" },
+            { "name": "connectString", "type": "java.lang.String" }
+          ]
+        }
+      ]
+    },
+    "organization": {
+      "cruds": [
+        {"name": "Organizations"},
+        {
+          "name": "Organization",
+          "properties": [
+            { "name": "name", "type": "java.lang.String" },
+            { "name": "created", "type": "java.time.Instant" }
+          ]
+        },
+        { "name": "Project" }
+      ],
+      "entities": [
+        { "name": "Invoice" }
+      ],
+      "values": [
+        {
+          "name": "CreditLimit",
+          "properties" : [
+            { "name" : "amount", "type" : "java.math.BigDecimal" },
+            { "name" : "currency", "type" : "java.lang.String" }
+          ]
+        }
+      ],
+      "transients": [
+        { "name": "OrderConfirmation" }
+      ],
+      "objects": [
+        { "name": "PaypalNotification" }
+      ]
+    },
+    "sensor": {
+      "cruds": [
+        { "name": "SensorData" }
+      ],
+      "entities": [
+        { "name": "Sensor" },
+        { "name": "PollSchedule" }
+      ]
+    }
+  }
+}</pre><p>we will create a complete project, like this</p><pre class="programlisting brush: shell">  create bootstrap/src/main/java/com/sensetif/sink/bootstrap/config/ConfigurationLayer.java
+   create bootstrap/src/main/java/com/sensetif/sink/bootstrap/infrastructure/InfrastructureLayer.java
+   create bootstrap/src/main/java/com/sensetif/sink/bootstrap/domain/DomainLayer.java
+   create bootstrap/src/main/java/com/sensetif/sink/bootstrap/connectivity/ConnectivityLayer.java
+   create app/src/main/webapp/WEB-INF/web.xml
+   create app/build.gradle
+   create bootstrap/build.gradle
+   create model/build.gradle
+   create rest/build.gradle
+   create build.gradle
+   create settings.gradle
+   create gradlew
+   create gradlew.bat
+   create gradle/wrapper/gradle-wrapper.jar
+   create gradle/wrapper/gradle-wrapper.properties
+   create bootstrap/src/main/java/com/sensetif/sink/bootstrap/config/ConfigModule.java
+   create bootstrap/src/main/java/com/sensetif/sink/bootstrap/infrastructure/MemcacheCachingModule.java
+   create bootstrap/src/main/java/com/sensetif/sink/bootstrap/infrastructure/FileConfigurationModule.java
+   create bootstrap/src/main/java/com/sensetif/sink/bootstrap/infrastructure/SQLIndexingModule.java
+   create bootstrap/src/main/java/com/sensetif/sink/bootstrap/infrastructure/CodahaleMetricsModule.java
+   create bootstrap/src/main/java/com/sensetif/sink/bootstrap/infrastructure/JavaxJsonSerializationModule.java
+   create bootstrap/src/main/java/com/sensetif/sink/bootstrap/infrastructure/CassandraStorageModule.java
+   create bootstrap/src/main/java/com/sensetif/sink/bootstrap/domain/CrudModule.java
+   create bootstrap/src/main/java/com/sensetif/sink/bootstrap/domain/UserModule.java
+   create model/src/main/java/com/sensetif/sink/model/user/Users.java
+   create model/src/main/java/com/sensetif/sink/model/user/Roles.java
+   create model/src/main/java/com/sensetif/sink/model/user/User.java
+   create model/src/main/java/com/sensetif/sink/model/user/Role.java
+   create model/src/main/java/com/sensetif/sink/model/user/Permission.java
+   create model/src/main/java/com/sensetif/sink/model/user/Group.java
+   create model/src/main/java/com/sensetif/sink/model/user/Groups.java
+   create model/src/main/java/com/sensetif/sink/model/user/AuthService.java
+   create model/src/main/java/com/sensetif/sink/model/user/AuthConfiguration.java
+   create model/src/main/resources/com/sensetif/sink/model/user/AuthConfiguration.yaml
+   create bootstrap/src/main/java/com/sensetif/sink/bootstrap/domain/OrganizationModule.java
+   create model/src/main/java/com/sensetif/sink/model/organization/Organizations.java
+   create model/src/main/java/com/sensetif/sink/model/organization/Organization.java
+   create model/src/main/java/com/sensetif/sink/model/organization/Project.java
+   create model/src/main/java/com/sensetif/sink/model/organization/Invoice.java
+   create model/src/main/java/com/sensetif/sink/model/organization/CreditLimit.java
+   create model/src/main/java/com/sensetif/sink/model/organization/OrderConfirmation.java
+   create model/src/main/java/com/sensetif/sink/model/organization/PaypalNotification.java
+   create bootstrap/src/main/java/com/sensetif/sink/bootstrap/domain/SensorModule.java
+   create model/src/main/java/com/sensetif/sink/model/sensor/SensorData.java
+   create model/src/main/java/com/sensetif/sink/model/sensor/Sensor.java
+   create model/src/main/java/com/sensetif/sink/model/sensor/PollSchedule.java
+   create bootstrap/src/main/java/com/sensetif/sink/bootstrap/domain/SecurityModule.java
+   create model/src/main/java/com/sensetif/sink/model/security/CryptoConfiguration.java
+   create model/src/main/java/com/sensetif/sink/model/security/CryptoException.java
+   create model/src/main/java/com/sensetif/sink/model/security/CryptoService.java
+   create model/src/main/java/com/sensetif/sink/model/security/EncryptedStringPropertyConcern.java
+   create model/src/main/java/com/sensetif/sink/model/security/Group.java
+   create model/src/main/java/com/sensetif/sink/model/security/RealmService.java
+   create model/src/main/java/com/sensetif/sink/model/security/SecurityRepository.java
+   create model/src/main/java/com/sensetif/sink/model/security/User.java
+   create model/src/main/java/com/sensetif/sink/model/security/UserFactory.java
+   create bootstrap/src/main/java/com/sensetif/sink/bootstrap/connectivity/RestApiModule.java
+   create rest/src/main/java/com/sensetif/sink/rest/security/DefaultEnroler.java
+   create rest/src/main/java/com/sensetif/sink/rest/security/DefaultVerifier.java</pre></div></div></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="footer"><p>
         Copyright © 2015 The Apache Software Foundation, Licensed under the <a href="http://www.apache.org/licenses/" target="_blank">Apache License, Version 2.0</a>.
         <br /><small>
             Apache Polygene, Polygene, Apache, the Apache feather logo, and the Apache Polygene project logo are trademarks of The Apache Software Foundation.<br />

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>OpenRDF Index/Query</title><link rel="stylesheet" type="text/css" href="css/style.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.76.1" /><link rel="home" href="index.html" title="" /><link rel="up" href="extensions.html" title="Extensions" /><link rel="prev" href="extension-index-elasticsearch.html" title="ElasticSearch Index/Query" /><link rel="next" href="extension-index-solr.html" title="Apache Solr Index/Query" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>OpenRDF Index/Query</title><link rel="stylesheet" type="text/css" href="css/style.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.79.1" /><link rel="home" href="index.html" title="" /><link rel="up" href="extensions.html" title="Extensions" /><link rel="prev" href="extension-index-elasticsearch.html" title="ElasticSearch Index/Query" /><link rel="next" href="extension-index-solr.html" title="Apache Solr Index/Query" />
 
 
 <!-- favicon -->
@@ -66,9 +66,9 @@
   })();
  </script>
 
-  </head><body><div xmlns="" xmlns:exsl="http://exslt.org/common" class="logo"><a href="index.html"><img src="images/logo-standard.png" /></a></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="top-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl><dt><span class="section"><a href="index.html#home">Polygene™</a></span></dt><dt><span class="section"><a href="intro.html">Introduction</a></span></dt><dt><span class="section"><a href="tutorials.html">Tutorials</a></span></dt><dt><span class="section"><a href="javadocs.html">Javadoc</a></span></dt><dt><span class="section"><a href="samples.html">Samples</a></span></dt><dt><span class="section"><a href="core.html">Core</a></span></dt><dt><span class="section"><a href="libraries.html">Libraries</a></span></dt><dt><span class="section"><span xmlns="" href="extensions.html">Extensions</span></span></dt><dt><span class="section"><a href="tools.html">Tools</a></span></dt><dt><span class="section"><a href="glossary.html">Glossary </a></span></dt></dl></div></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="sub-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl><dt><span class="section"><a href="extensions.html#_overview_7">Overview</a></span></dt><dt><span class="section"><a href="extension-vs-orgjson.html">org.json ValueSerialization</a></span></dt><dt><span class="section"><a href="extension-vs-jackson.html">Jackson ValueSerialization</a></span></dt><dt><span class="section"><a href="extension-vs-stax.html">StAX ValueSerialization</a></span></dt><dt><span class="section"><a href="extension-cache-ehcache.html">Ehcache Cache</a></span></dt><dt><span class="section"><a href="extension-cache-memcache.html">Memcache Cache</a></span></dt><dt><span class="section"><a href="extension-es-memory.html">Memory EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-file.html">File EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-geode.html">Geode EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-hazelcast.html">Hazelcast EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-jclouds.html">JClouds EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-jdbm.html">JDBM EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-leveldb.html">LevelDB EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-mongodb.html">MongoDB EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-preferences.html">Preferences EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-redis.html">Redis EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-riak.html">Riak EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-sql.html">SQL EntityStore</a></span></dt><dt><span class="section"><a href="extension-index-elasticsearch.html">ElasticSearch Index/Query</a></span></dt><dt><span class="section"><span xmlns="" href="extension-index-rdf.html">OpenRDF Index/Query</span></span></dt><dt><span class="section"><a href="extension-index-solr.html">Apache Solr Index/Query</a></span></dt><dt><span class="section"><a href="extension-indexing-sql.html">SQL Index/Query</a></span></dt><dt><span class="section"><a href="extension-metrics-metrics.html">Codahale Metrics</a></span></dt><dt><span class="section"><a href="extension-migration.html">Migration</a></span></dt><dt><span class="section"><a href="extension-reindexer.html">Reindexer</a></span></dt></dl></div></div><div class="section" title="OpenRDF Index/Query"><div class="titlepage"><div><div><h3 class="title"><a id="extension-index-rdf"></a>OpenRDF Index/Query</h3></div></div></div><p class="remark"><em><span class="comment"></span></em></p><p class="devstatus-code-stable">code</p><p class="devstatus-docs-brief">docs</p><p class="devstatus-tests-good">tests</p><p>Index/Query services backed by <a class="ulink" href="http://www.openrdf.org/" target="_top">OpenRDF Sesame</a> framework for processing RDF data.</p><div class="section" title="In Memory"><div class="titlepage"><div><div><h4 class="title"><a id="_in_memory"></a>In Memory</h4></div></div></div><p>Assembly is done using the provided Assembler:</p><pre class="programlisting brush: java">new RdfMemoryStoreAssembler().assemble( module );
-</pre><p>No configuration needed.</p></div><div class="section" title="On Filesystem"><div class="titlepage"><div><div><h4 class="title"><a id="_on_filesystem"></a>On Filesystem</h4></div></div></div><div class="section" title="Assembly"><div class="titlepage"><div><div><h5 class="title"><a id="_assembly_23"></a>Assembly</h5></div></div></div><p>Assembly is done using the provided Assembler:</p><pre class="programlisting brush: java">new RdfNativeSesameStoreAssembler().assemble( module );
-</pre></div><div class="section" title="Configuration"><div class="titlepage"><div><div><h5 class="title"><a id="_configuration_18"></a>Configuration</h5></div></div></div><p>Here are the configuration properties for the Native RDF Index/Query:</p><pre class="programlisting brush: java">public interface NativeConfiguration extends ConfigurationComposite
+  </head><body><div xmlns="" xmlns:exsl="http://exslt.org/common" class="logo"><a href="index.html"><img src="images/logo-standard.png" /></a></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="top-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl class="toc"><dt><span class="section"><a href="index.html#home">Polygene™</a></span></dt><dt><span class="section"><a href="intro.html">Introduction</a></span></dt><dt><span class="section"><a href="tutorials.html">Tutorials</a></span></dt><dt><span class="section"><a href="javadocs.html">Javadoc</a></span></dt><dt><span class="section"><a href="samples.html">Samples</a></span></dt><dt><span class="section"><a href="core.html">Core</a></span></dt><dt><span class="section"><a href="libraries.html">Libraries</a></span></dt><dt><span class="section"><span xmlns="" href="extensions.html">Extensions</span></span></dt><dt><span class="section"><a href="tools.html">Tools</a></span></dt><dt><span class="section"><a href="glossary.html">Glossary </a></span></dt></dl></div></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="sub-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl class="toc"><dt><span class="section"><a href="extensions.html#_overview_7">Overview</a></span></dt><dt><span class="section"><a href="extension-serialization-javaxjson.html">javax.json serialization</a></span></dt><dt><span class="section"><a href="extension-serialization-javaxxml.html">javax.xml serialization</a></span></dt><dt><span class="section"><a href="extension-serialization-messagepack.html">MessagePack serialization</a></span></dt><dt><span class="section"><a href="extension-es-memory.html">Memory EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-file.html">File EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-geode.html">Geode EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-hazelcast.html">Hazelcast EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-jclouds.html">JClouds EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-jdbm.html">JDBM EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-leveldb.html">LevelDB EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-mongodb.html">MongoDB EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-preferences.html">Preferences EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-redis.html">Redis EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-riak.html">Riak EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-sql.html">SQL EntityStore</a></span></dt><dt><span class="section"><a href="extension-cache-ehcache.html">Ehcache Cache</a></span></dt><dt><span class="section"><a href="extension-cache-memcache.html">Memcache Cache</a></span></dt><dt><span class="section"><a href="extension-index-elasticsearch.html">ElasticSearch Index/Query</a></span></dt><dt><span class="section"><span xmlns="" href="extension-index-rdf.html">OpenRDF Index/Query</span></span></dt><dt><span class="section"><a href="extension-index-solr.html">Apache Solr Index/Query</a></span></dt><dt><span class="section"><a href="extension-indexing-sql.html">SQL Index/Query</a></span></dt><dt><span class="section"><a href="extension-metrics-metrics.html">Codahale Metrics</a></span></dt><dt><span class="section"><a href="extension-migration.html">Migration</a></span></dt><dt><span class="section"><a href="extension-reindexer.html">Reindexer</a></span></dt></dl></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="extension-index-rdf"></a>OpenRDF Index/Query</h3></div></div></div><p class="remark"><em><span class="comment"></span></em></p><p class="devstatus-code-stable">code</p><p class="devstatus-docs-brief">docs</p><p class="devstatus-tests-good">tests</p><p>Index/Query services backed by <a class="ulink" href="http://www.openrdf.org/" target="_top">OpenRDF Sesame</a> framework for processing RDF data.</p><div class="table"><a id="idm447725104512"></a><p class="title"><strong>Table 66. Artifact</strong></p><div class="table-contents"><table class="table" summary="Artifact" border="1"><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /></colgroup><thead><tr><th align="left" valign="top">Group ID</th><th align="left" valign="top">Artifact ID</th><th align="left" valign="top">Version</th></tr></thead><tbody><tr><td align="left" valign="top"><p>org.apache.polygene.extensions</p></td><td align="left" valign="top"><p>org.apache.polygene.extension.indexing-rdf</p></td><td align="left" valign="top"><p>3.0.0-SNAPSHOT</p></td></tr></tbody></table></div></div><br class="table-break" /><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="_in_memory"></a>In Memory</h4></div></div></div><p>Assembly is done using the provided Assembler:</p><pre class="programlisting brush: java">new RdfMemoryStoreAssembler().assemble( module );
+</pre><p>No configuration needed.</p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="_on_filesystem"></a>On Filesystem</h4></div></div></div><div class="section"><div class="titlepage"><div><div><h5 class="title"><a id="_assembly_23"></a>Assembly</h5></div></div></div><p>Assembly is done using the provided Assembler:</p><pre class="programlisting brush: java">new RdfNativeSesameStoreAssembler().assemble( module );
+</pre></div><div class="section"><div class="titlepage"><div><div><h5 class="title"><a id="_configuration_18"></a>Configuration</h5></div></div></div><p>Here are the configuration properties for the Native RDF Index/Query:</p><pre class="programlisting brush: java">public interface NativeConfiguration extends ConfigurationComposite
 {
     @Optional @Matches( "([spoc][spoc][spoc][spoc],?)*" ) Property&lt;String&gt; tripleIndexes();
 
@@ -76,179 +76,179 @@
 
     @UseDefaults Property&lt;Boolean&gt; forceSync();
 }
-</pre></div></div><div class="section" title="In a RDBMS"><div class="titlepage"><div><div><h4 class="title"><a id="_in_a_rdbms"></a>In a RDBMS</h4></div></div></div><div class="section" title="Assembly"><div class="titlepage"><div><div><h5 class="title"><a id="_assembly_24"></a>Assembly</h5></div></div></div><p>Assembly is done using the provided Assembler:</p><pre class="programlisting brush: java">new RdfRdbmsSesameStoreAssembler().assemble( module );
-</pre></div><div class="section" title="Configuration"><div class="titlepage"><div><div><h5 class="title"><a id="_configuration_19"></a>Configuration</h5></div></div></div><p>Here are the configuration properties for the RDBMS based RDF Index/Query:</p><pre class="programlisting brush: java">public interface RdbmsRepositoryConfiguration
+</pre></div></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="_in_a_rdbms"></a>In a RDBMS</h4></div></div></div><div class="section"><div class="titlepage"><div><div><h5 class="title"><a id="_assembly_24"></a>Assembly</h5></div></div></div><p>Assembly is done using the provided Assembler:</p><pre class="programlisting brush: java">new RdfRdbmsSesameStoreAssembler().assemble( module );
+</pre></div><div class="section"><div class="titlepage"><div><div><h5 class="title"><a id="_configuration_19"></a>Configuration</h5></div></div></div><p>Here are the configuration properties for the RDBMS based RDF Index/Query:</p><pre class="programlisting brush: java">public interface RdbmsRepositoryConfiguration
 {
     Property&lt;String&gt; jdbcDriver();
     Property&lt;String&gt; jdbcUrl();
     Property&lt;String&gt; user();
     Property&lt;String&gt; password();
 }
-</pre></div></div><div class="section" title="Named RDF Queries"><div class="titlepage"><div><div><h4 class="title"><a id="_named_rdf_queries"></a>Named RDF Queries</h4></div></div></div><p>RDF queries are rather difficult to create manually. Not only do you need to learn a difficult language and a new
+</pre></div></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="_named_rdf_queries"></a>Named RDF Queries</h4></div></div></div><p>RDF queries are rather difficult to create manually. Not only do you need to learn a difficult language and a new
 syntax, but also need to understand the indexing model that happens in Apache Polygene RDF indexing system.</p><p>Below follows a large set of working queries, which can be used as a starting point. See the testcases for
 details of the Entity model that is being indexed.</p><pre class="programlisting brush: java">"PREFIX ns0: &lt;urn:polygene:type:org.apache.polygene.api.identity.HasIdentity#&gt; \n"
     + "PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; \n"
     + "PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; \n" + "SELECT DISTINCT ?reference\n"
-    + "WHERE {\n" + "?entityType rdfs:subClassOf &lt;urn:polygene:type:org.apache.polygene.test.indexing.model.Person&gt;. \n"
+    + "WHERE {\n" + "?entityType rdfs:subClassOf &lt;urn:polygene:type:org.apache.polygene.test.model.Person&gt;. \n"
     + "?entity rdf:type ?entityType. \n" + "?entity ns0:identity ?reference. \n" + "\n" + "}", // script01
-</pre><pre class="programlisting brush: java">"PREFIX ns1: &lt;urn:polygene:type:org.apache.polygene.test.indexing.model.Nameable#&gt; \n"
+</pre><pre class="programlisting brush: java">"PREFIX ns1: &lt;urn:polygene:type:org.apache.polygene.test.model.Nameable#&gt; \n"
     + "PREFIX ns0: &lt;urn:polygene:type:org.apache.polygene.api.identity.HasIdentity#&gt; \n"
     + "PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; \n"
     + "PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; \n" + "SELECT DISTINCT ?reference\n"
-    + "WHERE {\n" + "?entityType rdfs:subClassOf &lt;urn:polygene:type:org.apache.polygene.test.indexing.model.Domain&gt;. \n"
+    + "WHERE {\n" + "?entityType rdfs:subClassOf &lt;urn:polygene:type:org.apache.polygene.test.model.Domain&gt;. \n"
     + "?entity rdf:type ?entityType. \n" + "?entity ns0:identity ?reference. \n" + "?entity ns1:name ?v0. \n"
     + "FILTER (?v0 = \"Gaming\")\n" + "}", // script02
 </pre><pre class="programlisting brush: java">"PREFIX ns0: &lt;urn:polygene:type:org.apache.polygene.api.identity.HasIdentity#&gt; \n"
     + "PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; \n"
     + "PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; \n" + "SELECT DISTINCT ?reference\n"
-    + "WHERE {\n" + "?entityType rdfs:subClassOf &lt;urn:polygene:type:org.apache.polygene.test.indexing.model.Nameable&gt;. \n"
+    + "WHERE {\n" + "?entityType rdfs:subClassOf &lt;urn:polygene:type:org.apache.polygene.test.model.Nameable&gt;. \n"
     + "?entity rdf:type ?entityType. \n" + "?entity ns0:identity ?reference. \n" + "\n" + "}", // script03
-</pre><pre class="programlisting brush: java">"PREFIX ns1: &lt;urn:polygene:type:org.apache.polygene.test.indexing.model.Person#&gt; \n"
-    + "PREFIX ns2: &lt;urn:polygene:type:org.apache.polygene.test.indexing.model.Nameable#&gt; \n"
+</pre><pre class="programlisting brush: java">"PREFIX ns1: &lt;urn:polygene:type:org.apache.polygene.test.model.Person#&gt; \n"
+    + "PREFIX ns2: &lt;urn:polygene:type:org.apache.polygene.test.model.Nameable#&gt; \n"
     + "PREFIX ns0: &lt;urn:polygene:type:org.apache.polygene.api.identity.HasIdentity#&gt; \n"
     + "PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; \n"
     + "PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; \n" + "SELECT DISTINCT ?reference\n"
-    + "WHERE {\n" + "?entityType rdfs:subClassOf &lt;urn:polygene:type:org.apache.polygene.test.indexing.model.Person&gt;. \n"
+    + "WHERE {\n" + "?entityType rdfs:subClassOf &lt;urn:polygene:type:org.apache.polygene.test.model.Person&gt;. \n"
     + "?entity rdf:type ?entityType. \n" + "?entity ns0:identity ?reference. \n"
     + "?entity ns1:placeOfBirth ?v0. \n" + "?v0 ns2:name ?v1. \n" + "FILTER (?v1 = \"Kuala Lumpur\")\n" + "}", // script04
-</pre><pre class="programlisting brush: java">"PREFIX ns1: &lt;urn:polygene:type:org.apache.polygene.test.indexing.model.Person#&gt; \n"
-    + "PREFIX ns2: &lt;urn:polygene:type:org.apache.polygene.test.indexing.model.Nameable#&gt; \n"
+</pre><pre class="programlisting brush: java">"PREFIX ns1: &lt;urn:polygene:type:org.apache.polygene.test.model.Person#&gt; \n"
+    + "PREFIX ns2: &lt;urn:polygene:type:org.apache.polygene.test.model.Nameable#&gt; \n"
     + "PREFIX ns0: &lt;urn:polygene:type:org.apache.polygene.api.identity.HasIdentity#&gt; \n"
     + "PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; \n"
     + "PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; \n" + "SELECT DISTINCT ?reference\n"
-    + "WHERE {\n" + "?entityType rdfs:subClassOf &lt;urn:polygene:type:org.apache.polygene.test.indexing.model.Person&gt;. \n"
+    + "WHERE {\n" + "?entityType rdfs:subClassOf &lt;urn:polygene:type:org.apache.polygene.test.model.Person&gt;. \n"
     + "?entity rdf:type ?entityType. \n" + "?entity ns0:identity ?reference. \n" + "?entity ns1:mother ?v0. \n"
     + "?v0 ns1:placeOfBirth ?v1. \n" + "?v1 ns2:name ?v2. \n" + "FILTER (?v2 = \"Kuala Lumpur\")\n" + "}", // script05
-</pre><pre class="programlisting brush: java">"PREFIX ns1: &lt;urn:polygene:type:org.apache.polygene.test.indexing.model.Person#&gt; \n"
+</pre><pre class="programlisting brush: java">"PREFIX ns1: &lt;urn:polygene:type:org.apache.polygene.test.model.Person#&gt; \n"
     + "PREFIX ns0: &lt;urn:polygene:type:org.apache.polygene.api.identity.HasIdentity#&gt; \n"
     + "PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; \n"
     + "PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; \n" + "SELECT DISTINCT ?reference\n"
-    + "WHERE {\n" + "?entityType rdfs:subClassOf &lt;urn:polygene:type:org.apache.polygene.test.indexing.model.Person&gt;. \n"
+    + "WHERE {\n" + "?entityType rdfs:subClassOf &lt;urn:polygene:type:org.apache.polygene.test.model.Person&gt;. \n"
     + "?entity rdf:type ?entityType. \n" + "?entity ns0:identity ?reference. \n"
     + "?entity ns1:yearOfBirth ?v0. \n" + "FILTER (?v0 &gt;= \"1973\")\n" + "}", // script06
-</pre><pre class="programlisting brush: java">"PREFIX ns1: &lt;urn:polygene:type:org.apache.polygene.test.indexing.model.Person#&gt; \n"
-    + "PREFIX ns2: &lt;urn:polygene:type:org.apache.polygene.test.indexing.model.Nameable#&gt; \n"
+</pre><pre class="programlisting brush: java">"PREFIX ns1: &lt;urn:polygene:type:org.apache.polygene.test.model.Person#&gt; \n"
+    + "PREFIX ns2: &lt;urn:polygene:type:org.apache.polygene.test.model.Nameable#&gt; \n"
     + "PREFIX ns0: &lt;urn:polygene:type:org.apache.polygene.api.identity.HasIdentity#&gt; \n"
     + "PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; \n"
     + "PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; \n" + "SELECT DISTINCT ?reference\n"
-    + "WHERE {\n" + "?entityType rdfs:subClassOf &lt;urn:polygene:type:org.apache.polygene.test.indexing.model.Nameable&gt;. \n"
+    + "WHERE {\n" + "?entityType rdfs:subClassOf &lt;urn:polygene:type:org.apache.polygene.test.model.Nameable&gt;. \n"
     + "?entity rdf:type ?entityType. \n" + "?entity ns0:identity ?reference. \n"
     + "?entity ns1:yearOfBirth ?v0. \n" + "?entity ns1:placeOfBirth ?v1. \n" + "?v1 ns2:name ?v2. \n"
     + "FILTER ((?v0 &gt;= \"1900\") &amp;&amp; (?v2 = \"Penang\"))\n" + "}", // script07
-</pre><pre class="programlisting brush: java">"PREFIX ns1: &lt;urn:polygene:type:org.apache.polygene.test.indexing.model.Person#&gt; \n"
+</pre><pre class="programlisting brush: java">"PREFIX ns1: &lt;urn:polygene:type:org.apache.polygene.test.model.Person#&gt; \n"
     + "PREFIX ns0: &lt;urn:polygene:type:org.apache.polygene.api.identity.HasIdentity#&gt; \n"
     + "PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; \n"
     + "PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; \n" + "SELECT DISTINCT ?reference\n"
-    + "WHERE {\n" + "?entityType rdfs:subClassOf &lt;urn:polygene:type:org.apache.polygene.test.indexing.model.Person&gt;. \n"
+    + "WHERE {\n" + "?entityType rdfs:subClassOf &lt;urn:polygene:type:org.apache.polygene.test.model.Person&gt;. \n"
     + "?entity rdf:type ?entityType. \n" + "?entity ns0:identity ?reference. \n"
     + "?entity ns1:yearOfBirth ?v0. \n" + "FILTER ((?v0 = \"1970\") || (?v0 = \"1975\"))\n" + "}", // script08
-</pre><pre class="programlisting brush: java">"PREFIX ns1: &lt;urn:polygene:type:org.apache.polygene.test.indexing.model.Person#&gt; \n"
+</pre><pre class="programlisting brush: java">"PREFIX ns1: &lt;urn:polygene:type:org.apache.polygene.test.model.Person#&gt; \n"
     + "PREFIX ns0: &lt;urn:polygene:type:org.apache.polygene.api.identity.HasIdentity#&gt; \n"
     + "PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; \n"
     + "PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; \n" + "SELECT DISTINCT ?reference\n"
-    + "WHERE {\n" + "?entityType rdfs:subClassOf &lt;urn:polygene:type:org.apache.polygene.test.indexing.model.Female&gt;. \n"
+    + "WHERE {\n" + "?entityType rdfs:subClassOf &lt;urn:polygene:type:org.apache.polygene.test.model.Female&gt;. \n"
     + "?entity rdf:type ?entityType. \n" + "?entity ns0:identity ?reference. \n"
     + "?entity ns1:yearOfBirth ?v0. \n" + "FILTER ((?v0 = \"1970\") || (?v0 = \"1975\"))\n" + "}", // script09
-</pre><pre class="programlisting brush: java">"PREFIX ns1: &lt;urn:polygene:type:org.apache.polygene.test.indexing.model.Person#&gt; \n"
+</pre><pre class="programlisting brush: java">"PREFIX ns1: &lt;urn:polygene:type:org.apache.polygene.test.model.Person#&gt; \n"
     + "PREFIX ns0: &lt;urn:polygene:type:org.apache.polygene.api.identity.HasIdentity#&gt; \n"
     + "PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; \n"
     + "PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; \n" + "SELECT DISTINCT ?reference\n"
-    + "WHERE {\n" + "?entityType rdfs:subClassOf &lt;urn:polygene:type:org.apache.polygene.test.indexing.model.Person&gt;. \n"
+    + "WHERE {\n" + "?entityType rdfs:subClassOf &lt;urn:polygene:type:org.apache.polygene.test.model.Person&gt;. \n"
     + "?entity rdf:type ?entityType. \n" + "?entity ns0:identity ?reference. \n"
     + "?entity ns1:yearOfBirth ?v0. \n" + "FILTER (!(?v0 = \"1975\"))\n" + "}", // script10
-</pre><pre class="programlisting brush: java">"PREFIX ns1: &lt;urn:polygene:type:org.apache.polygene.test.indexing.model.Person#&gt; \n"
+</pre><pre class="programlisting brush: java">"PREFIX ns1: &lt;urn:polygene:type:org.apache.polygene.test.model.Person#&gt; \n"
     + "PREFIX ns0: &lt;urn:polygene:type:org.apache.polygene.api.identity.HasIdentity#&gt; \n"
     + "PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; \n"
     + "PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; \n" + "SELECT DISTINCT ?reference\n"
-    + "WHERE {\n" + "?entityType rdfs:subClassOf &lt;urn:polygene:type:org.apache.polygene.test.indexing.model.Person&gt;. \n"
+    + "WHERE {\n" + "?entityType rdfs:subClassOf &lt;urn:polygene:type:org.apache.polygene.test.model.Person&gt;. \n"
     + "?entity rdf:type ?entityType. \n" + "?entity ns0:identity ?reference. \n"
     + "OPTIONAL {?entity ns1:email ?v0}. \n" + "FILTER (bound(?v0))\n" + "}", // script11
-</pre><pre class="programlisting brush: java">"PREFIX ns1: &lt;urn:polygene:type:org.apache.polygene.test.indexing.model.Person#&gt; \n"
+</pre><pre class="programlisting brush: java">"PREFIX ns1: &lt;urn:polygene:type:org.apache.polygene.test.model.Person#&gt; \n"
     + "PREFIX ns0: &lt;urn:polygene:type:org.apache.polygene.api.identity.HasIdentity#&gt; \n"
     + "PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; \n"
     + "PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; \n" + "SELECT DISTINCT ?reference\n"
-    + "WHERE {\n" + "?entityType rdfs:subClassOf &lt;urn:polygene:type:org.apache.polygene.test.indexing.model.Person&gt;. \n"
+    + "WHERE {\n" + "?entityType rdfs:subClassOf &lt;urn:polygene:type:org.apache.polygene.test.model.Person&gt;. \n"
     + "?entity rdf:type ?entityType. \n" + "?entity ns0:identity ?reference. \n"
     + "OPTIONAL {?entity ns1:email ?v0}. \n" + "FILTER (! bound(?v0))\n" + "}", // script12
 </pre><pre class="programlisting brush: java">"PREFIX ns0: &lt;urn:polygene:type:org.apache.polygene.api.identity.HasIdentity#&gt; \n"
     + "PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; \n"
-    + "PREFIX ns1: &lt;urn:polygene:type:org.apache.polygene.test.indexing.model.Male#&gt; \n"
+    + "PREFIX ns1: &lt;urn:polygene:type:org.apache.polygene.test.model.Male#&gt; \n"
     + "PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; \n" + "SELECT DISTINCT ?reference\n"
-    + "WHERE {\n" + "?entityType rdfs:subClassOf &lt;urn:polygene:type:org.apache.polygene.test.indexing.model.Person&gt;. \n"
+    + "WHERE {\n" + "?entityType rdfs:subClassOf &lt;urn:polygene:type:org.apache.polygene.test.model.Person&gt;. \n"
     + "?entity rdf:type ?entityType. \n" + "?entity ns0:identity ?reference. \n"
     + "OPTIONAL {?entity ns1:wife ?v0}. \n" + "FILTER (bound(?v0))\n" + "}", // script13
 </pre><pre class="programlisting brush: java">"PREFIX ns0: &lt;urn:polygene:type:org.apache.polygene.api.identity.HasIdentity#&gt; \n"
     + "PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; \n"
-    + "PREFIX ns1: &lt;urn:polygene:type:org.apache.polygene.test.indexing.model.Male#&gt; \n"
+    + "PREFIX ns1: &lt;urn:polygene:type:org.apache.polygene.test.model.Male#&gt; \n"
     + "PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; \n" + "SELECT DISTINCT ?reference\n"
-    + "WHERE {\n" + "?entityType rdfs:subClassOf &lt;urn:polygene:type:org.apache.polygene.test.indexing.model.Male&gt;. \n"
+    + "WHERE {\n" + "?entityType rdfs:subClassOf &lt;urn:polygene:type:org.apache.polygene.test.model.Male&gt;. \n"
     + "?entity rdf:type ?entityType. \n" + "?entity ns0:identity ?reference. \n"
     + "OPTIONAL {?entity ns1:wife ?v0}. \n" + "FILTER (! bound(?v0))\n" + "}", // script14
 </pre><pre class="programlisting brush: java">"PREFIX ns0: &lt;urn:polygene:type:org.apache.polygene.api.identity.HasIdentity#&gt; \n"
     + "PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; \n"
-    + "PREFIX ns1: &lt;urn:polygene:type:org.apache.polygene.test.indexing.model.Male#&gt; \n"
+    + "PREFIX ns1: &lt;urn:polygene:type:org.apache.polygene.test.model.Male#&gt; \n"
     + "PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; \n" + "SELECT DISTINCT ?reference\n"
-    + "WHERE {\n" + "?entityType rdfs:subClassOf &lt;urn:polygene:type:org.apache.polygene.test.indexing.model.Person&gt;. \n"
+    + "WHERE {\n" + "?entityType rdfs:subClassOf &lt;urn:polygene:type:org.apache.polygene.test.model.Person&gt;. \n"
     + "?entity rdf:type ?entityType. \n" + "?entity ns0:identity ?reference. \n"
     + "OPTIONAL {?entity ns1:wife ?v0}. \n" + "FILTER (! bound(?v0))\n" + "}", // script15
-</pre><pre class="programlisting brush: java">"PREFIX ns1: &lt;urn:polygene:type:org.apache.polygene.test.indexing.model.Nameable#&gt; \n"
+</pre><pre class="programlisting brush: java">"PREFIX ns1: &lt;urn:polygene:type:org.apache.polygene.test.model.Nameable#&gt; \n"
     + "PREFIX ns0: &lt;urn:polygene:type:org.apache.polygene.api.identity.HasIdentity#&gt; \n"
     + "PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; \n"
     + "PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; \n" + "SELECT DISTINCT ?reference\n"
-    + "WHERE {\n" + "?entityType rdfs:subClassOf &lt;urn:polygene:type:org.apache.polygene.test.indexing.model.Nameable&gt;. \n"
+    + "WHERE {\n" + "?entityType rdfs:subClassOf &lt;urn:polygene:type:org.apache.polygene.test.model.Nameable&gt;. \n"
     + "?entity rdf:type ?entityType. \n" + "?entity ns0:identity ?reference. \n" + "?entity ns1:name ?v0. \n"
     + "\n" + "}", // script16
-</pre><pre class="programlisting brush: java">"PREFIX ns1: &lt;urn:polygene:type:org.apache.polygene.test.indexing.model.Nameable#&gt; \n"
+</pre><pre class="programlisting brush: java">"PREFIX ns1: &lt;urn:polygene:type:org.apache.polygene.test.model.Nameable#&gt; \n"
     + "PREFIX ns0: &lt;urn:polygene:type:org.apache.polygene.api.identity.HasIdentity#&gt; \n"
     + "PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; \n"
     + "PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; \n" + "SELECT DISTINCT ?reference\n"
-    + "WHERE {\n" + "?entityType rdfs:subClassOf &lt;urn:polygene:type:org.apache.polygene.test.indexing.model.Nameable&gt;. \n"
+    + "WHERE {\n" + "?entityType rdfs:subClassOf &lt;urn:polygene:type:org.apache.polygene.test.model.Nameable&gt;. \n"
     + "?entity rdf:type ?entityType. \n" + "?entity ns0:identity ?reference. \n" + "?entity ns1:name ?v0. \n"
     + "\n" + "} ", // script17
-</pre><pre class="programlisting brush: java">"PREFIX ns1: &lt;urn:polygene:type:org.apache.polygene.test.indexing.model.Nameable#&gt; \n"
+</pre><pre class="programlisting brush: java">"PREFIX ns1: &lt;urn:polygene:type:org.apache.polygene.test.model.Nameable#&gt; \n"
     + "PREFIX ns0: &lt;urn:polygene:type:org.apache.polygene.api.identity.HasIdentity#&gt; \n"
     + "PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; \n"
     + "PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; \n" + "SELECT DISTINCT ?reference\n"
-    + "WHERE {\n" + "?entityType rdfs:subClassOf &lt;urn:polygene:type:org.apache.polygene.test.indexing.model.Nameable&gt;. \n"
+    + "WHERE {\n" + "?entityType rdfs:subClassOf &lt;urn:polygene:type:org.apache.polygene.test.model.Nameable&gt;. \n"
     + "?entity rdf:type ?entityType. \n" + "?entity ns0:identity ?reference. \n" + "?entity ns1:name ?v0. \n"
     + "\n" + "}\n", // script18
-</pre><pre class="programlisting brush: java">"PREFIX ns1: &lt;urn:polygene:type:org.apache.polygene.test.indexing.model.Nameable#&gt; \n"
+</pre><pre class="programlisting brush: java">"PREFIX ns1: &lt;urn:polygene:type:org.apache.polygene.test.model.Nameable#&gt; \n"
     + "PREFIX ns0: &lt;urn:polygene:type:org.apache.polygene.api.identity.HasIdentity#&gt; \n"
     + "PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; \n"
     + "PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; \n" + "SELECT DISTINCT ?reference\n"
-    + "WHERE {\n" + "?entityType rdfs:subClassOf &lt;urn:polygene:type:org.apache.polygene.test.indexing.model.Nameable&gt;. \n"
+    + "WHERE {\n" + "?entityType rdfs:subClassOf &lt;urn:polygene:type:org.apache.polygene.test.model.Nameable&gt;. \n"
     + "?entity rdf:type ?entityType. \n" + "?entity ns0:identity ?reference. \n" + "?entity ns1:name ?v0. \n"
     + "FILTER (?v0 &gt; \"D\")\n" + "} ", // script19
-</pre><pre class="programlisting brush: java">"PREFIX ns1: &lt;urn:polygene:type:org.apache.polygene.test.indexing.model.Person#&gt; \n"
-    + "PREFIX ns2: &lt;urn:polygene:type:org.apache.polygene.test.indexing.model.Nameable#&gt; \n"
+</pre><pre class="programlisting brush: java">"PREFIX ns1: &lt;urn:polygene:type:org.apache.polygene.test.model.Person#&gt; \n"
+    + "PREFIX ns2: &lt;urn:polygene:type:org.apache.polygene.test.model.Nameable#&gt; \n"
     + "PREFIX ns0: &lt;urn:polygene:type:org.apache.polygene.api.identity.HasIdentity#&gt; \n"
     + "PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; \n"
     + "PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; \n" + "SELECT DISTINCT ?reference\n"
-    + "WHERE {\n" + "?entityType rdfs:subClassOf &lt;urn:polygene:type:org.apache.polygene.test.indexing.model.Person&gt;. \n"
+    + "WHERE {\n" + "?entityType rdfs:subClassOf &lt;urn:polygene:type:org.apache.polygene.test.model.Person&gt;. \n"
     + "?entity rdf:type ?entityType. \n" + "?entity ns0:identity ?reference. \n"
     + "?entity ns1:yearOfBirth ?v0. \n" + "?entity ns2:name ?v1. \n" + "FILTER (?v0 &gt; \"1973\")\n" + "}\n"
     , // script20
-</pre><pre class="programlisting brush: java">"PREFIX ns1: &lt;urn:polygene:type:org.apache.polygene.test.indexing.model.Person#&gt; \n"
-    + "PREFIX ns2: &lt;urn:polygene:type:org.apache.polygene.test.indexing.model.Nameable#&gt; \n"
+</pre><pre class="programlisting brush: java">"PREFIX ns1: &lt;urn:polygene:type:org.apache.polygene.test.model.Person#&gt; \n"
+    + "PREFIX ns2: &lt;urn:polygene:type:org.apache.polygene.test.model.Nameable#&gt; \n"
     + "PREFIX ns0: &lt;urn:polygene:type:org.apache.polygene.api.identity.HasIdentity#&gt; \n"
     + "PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; \n"
     + "PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; \n" + "SELECT DISTINCT ?reference\n"
-    + "WHERE {\n" + "?entityType rdfs:subClassOf &lt;urn:polygene:type:org.apache.polygene.test.indexing.model.Person&gt;. \n"
+    + "WHERE {\n" + "?entityType rdfs:subClassOf &lt;urn:polygene:type:org.apache.polygene.test.model.Person&gt;. \n"
     + "?entity rdf:type ?entityType. \n" + "?entity ns0:identity ?reference. \n"
     + "?entity ns1:placeOfBirth ?v0. \n" + "?v0 ns2:name ?v1. \n" + "?entity ns1:yearOfBirth ?v2. \n" + "\n"
     + "}", // script21
-</pre><pre class="programlisting brush: java">"PREFIX ns1: &lt;urn:polygene:type:org.apache.polygene.test.indexing.model.Nameable#&gt; \n"
+</pre><pre class="programlisting brush: java">"PREFIX ns1: &lt;urn:polygene:type:org.apache.polygene.test.model.Nameable#&gt; \n"
     + "PREFIX ns0: &lt;urn:polygene:type:org.apache.polygene.api.identity.HasIdentity#&gt; \n"
     + "PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; \n"
     + "PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; \n" + "SELECT DISTINCT ?reference\n"
-    + "WHERE {\n" + "?entityType rdfs:subClassOf &lt;urn:polygene:type:org.apache.polygene.test.indexing.model.Nameable&gt;. \n"
+    + "WHERE {\n" + "?entityType rdfs:subClassOf &lt;urn:polygene:type:org.apache.polygene.test.model.Nameable&gt;. \n"
     + "?entity rdf:type ?entityType. \n" + "?entity ns0:identity ?reference. \n" + "?entity ns1:name ?v0. \n"
     + "FILTER regex(?v0,\"J.*Doe\")\n" + "}", // script22
-</pre><pre class="programlisting brush: java">"PREFIX ns1: &lt;urn:polygene:type:org.apache.polygene.test.indexing.model.Nameable#&gt; \n"
+</pre><pre class="programlisting brush: java">"PREFIX ns1: &lt;urn:polygene:type:org.apache.polygene.test.model.Nameable#&gt; \n"
     + "PREFIX ns0: &lt;urn:polygene:type:org.apache.polygene.api.identity.HasIdentity#&gt; \n"
     + "PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; \n"
     + "PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; \n" + "SELECT DISTINCT ?reference\n"
-    + "WHERE {\n" + "?entityType rdfs:subClassOf &lt;urn:polygene:type:org.apache.polygene.test.indexing.model.Domain&gt;. \n"
+    + "WHERE {\n" + "?entityType rdfs:subClassOf &lt;urn:polygene:type:org.apache.polygene.test.model.Domain&gt;. \n"
     + "?entity rdf:type ?entityType. \n" + "?entity ns0:identity ?reference. \n" + "?entity ns1:name ?v0. \n"
     + "FILTER (?v0 = ?domain)\n" + "}" // script24
 </pre></div></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="footer"><p>
