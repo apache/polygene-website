@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Core Test Support</title><link rel="stylesheet" type="text/css" href="css/style.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.76.1" /><link rel="home" href="index.html" title="" /><link rel="up" href="core.html" title="Core" /><link rel="prev" href="core-bootstrap-assembly.html" title="Core Bootstrap" /><link rel="next" href="core-spi.html" title="Core Extension SPI" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Core Test Support</title><link rel="stylesheet" type="text/css" href="css/style.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.79.1" /><link rel="home" href="index.html" title="" /><link rel="up" href="core.html" title="Core" /><link rel="prev" href="core-bootstrap-assembly.html" title="Core Bootstrap" /><link rel="next" href="core-spi.html" title="Core Extension SPI" />
 
 
 <!-- favicon -->
@@ -66,10 +66,10 @@
   })();
  </script>
 
-  </head><body><div xmlns="" xmlns:exsl="http://exslt.org/common" class="logo"><a href="index.html"><img src="images/logo-standard.png" /></a></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="top-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl><dt><span class="section"><a href="index.html#home">Polygene™</a></span></dt><dt><span class="section"><a href="intro.html">Introduction</a></span></dt><dt><span class="section"><a href="tutorials.html">Tutorials</a></span></dt><dt><span class="section"><a href="javadocs.html">Javadoc</a></span></dt><dt><span class="section"><a href="samples.html">Samples</a></span></dt><dt><span class="section"><span xmlns="" href="core.html">Core</span></span></dt><dt><span class="section"><a href="libraries.html">Libraries</a></span></dt><dt><span class="section"><a href="extensions.html">Extensions</a></span></dt><dt><span class="section"><a href="tools.html">Tools</a></span></dt><dt><span class="section"><a href="glossary.html">Glossary </a></span></dt></dl></div></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="sub-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl><dt><span class="section"><a href="core.html#_overview_3">Overview</a></span></dt><dt><span class="section"><a href="core-api.html">Core API</a></span></dt><dt><span class="section"><a href="core-bootstrap-assembly.html">Core Bootstrap</a></span></dt><dt><span class="section"><span xmlns="" href="core-testsupport.html">Core Test Support</span></span></dt><dt><span class="section"><a href="core-spi.html">Core Extension SPI</a></span></dt><dt><span class="section"><a href="core-runtime.html">Core Runtime</a></span></dt></dl></div></div><div class="section" title="Core Test Support"><div class="titlepage"><div><div><h3 class="title"><a id="core-testsupport"></a>Core Test Support</h3></div></div></div><p class="remark"><em><span class="comment"></span></em></p><p class="devstatus-code-stable">code</p><p class="devstatus-docs-brief">docs</p><p class="devstatus-tests-none">tests</p><p>Polygene™ comes with classes to help with testing. For general development, only a couple of classes are of interest as the
+  </head><body><div xmlns="" xmlns:exsl="http://exslt.org/common" class="logo"><a href="index.html"><img src="images/logo-standard.png" /></a></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="top-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl class="toc"><dt><span class="section"><a href="index.html#home">Polygene™</a></span></dt><dt><span class="section"><a href="intro.html">Introduction</a></span></dt><dt><span class="section"><a href="tutorials.html">Tutorials</a></span></dt><dt><span class="section"><a href="javadocs.html">Javadoc</a></span></dt><dt><span class="section"><a href="samples.html">Samples</a></span></dt><dt><span class="section"><span xmlns="" href="core.html">Core</span></span></dt><dt><span class="section"><a href="libraries.html">Libraries</a></span></dt><dt><span class="section"><a href="extensions.html">Extensions</a></span></dt><dt><span class="section"><a href="tools.html">Tools</a></span></dt><dt><span class="section"><a href="glossary.html">Glossary </a></span></dt></dl></div></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="sub-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl class="toc"><dt><span class="section"><a href="core.html#_overview_3">Overview</a></span></dt><dt><span class="section"><a href="core-api.html">Core API</a></span></dt><dt><span class="section"><a href="core-bootstrap-assembly.html">Core Bootstrap</a></span></dt><dt><span class="section"><span xmlns="" href="core-testsupport.html">Core Test Support</span></span></dt><dt><span class="section"><a href="core-spi.html">Core Extension SPI</a></span></dt><dt><span class="section"><a href="core-runtime.html">Core Runtime</a></span></dt></dl></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="core-testsupport"></a>Core Test Support</h3></div></div></div><p class="remark"><em><span class="comment"></span></em></p><p class="devstatus-code-stable">code</p><p class="devstatus-docs-brief">docs</p><p class="devstatus-tests-none">tests</p><p>Polygene™ comes with classes to help with testing. For general development, only a couple of classes are of interest as the
 others are mostly for EntityStore and Index/Query SPI implementations. There is also some mocking support, to allow
 some of Polygene’s unique aspects to be mocked, but since Polygene™ is so flexible at a fine-granular level, we have found that
-mocking is seldom, if ever, needed.</p><div class="section" title="Your First Testcase"><div class="titlepage"><div><div><h4 class="title"><a id="_your_first_testcase"></a>Your First Testcase</h4></div></div></div><p>In most cases, you will probably use the AbstractPolygeneTest class to simplify starting a Polygene™ test instance.</p><pre class="programlisting brush: java">public class HelloTest extends AbstractPolygeneTest
+mocking is seldom, if ever, needed.</p><div class="table"><a id="idm447727077024"></a><p class="title"><strong>Table 16. Artifact</strong></p><div class="table-contents"><table class="table" summary="Artifact" border="1"><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /></colgroup><thead><tr><th align="left" valign="top">Group ID</th><th align="left" valign="top">Artifact ID</th><th align="left" valign="top">Version</th></tr></thead><tbody><tr><td align="left" valign="top"><p>org.apache.polygene.core</p></td><td align="left" valign="top"><p>org.apache.polygene.core.testsupport</p></td><td align="left" valign="top"><p>3.0.0-SNAPSHOT</p></td></tr></tbody></table></div></div><br class="table-break" /><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="_your_first_testcase"></a>Your First Testcase</h4></div></div></div><p>In most cases, you will probably use the AbstractPolygeneTest class to simplify starting a Polygene™ test instance.</p><pre class="programlisting brush: java">public class HelloTest extends AbstractPolygeneTest
 {
   [...snip...]
 
@@ -77,16 +77,15 @@ mocking is seldom, if ever, needed.</p><div class="section" title="Your First Te
 </pre><p>This will do all the initialization of a Polygene™ runtime instance and create a single layer with a single module in it.
 What goes into that module is declared in the assembly() method;</p><pre class="programlisting brush: java">@Override
 public void assemble( ModuleAssembly module )
-    throws AssemblyException
 {
     module.values( Hello.class );
 }
 </pre><p>In this case we declare that we have a ValueComposite of type org.apache.polygene.tutorials.hello.Hello which looks like</p><pre class="programlisting brush: java">
 /**
- * This Composite interface declares a simple "Hello World" interface with a single say() method. What is being
- * said is defined in the HelloWorldState interface, which is a private mixin.
+ * This Composite interface declares a simple "Hello World" interface with a single say() method.
+ * What is being said is defined in the HelloWorldState interface, which is a private mixin.
  */
-@Mixins( { Hello.HelloWorldMixin.class } )
+@Mixins( Hello.HelloWorldMixin.class )
 public interface Hello
 {
     String say();
@@ -94,10 +93,11 @@ public interface Hello
     /**
      * This is the implementation of the say() method.
      */
-    public abstract class HelloWorldMixin
+    class HelloWorldMixin
         implements Hello
     {
-        // @This reference the composite itself, and since HelloWorldState is not part of the public interface,
+        // @This reference the composite itself,
+        // and since HelloWorldState is not part of the public interface,
         // it is a private mixin.
         @This
         private State state;
@@ -112,14 +112,12 @@ public interface Hello
     /**
      * This interface contains only the state of the HelloWorld object.
      */
-    public interface State
+    interface State
     {
         @NotEmpty
-        @UseDefaults
         Property&lt;String&gt; phrase();
 
         @NotEmpty
-        @UseDefaults
         Property&lt;String&gt; name();
     }
 }

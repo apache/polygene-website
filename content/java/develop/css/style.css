@@ -79,7 +79,6 @@ h2.title
     margin: 0;
     margin-top: -7px;
     padding: 0;
-    height: 40px;
 }
 
 .top-nav .toc dl
@@ -162,7 +161,7 @@ h2.title
 {
 }
 
-.sub-nav .toc
+.sub-nav div.toc
 {
     position: absolute;
     top: 65px;
