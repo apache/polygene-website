@@ -11,4 +11,4 @@
     Software Foundation umbrella.<br/>
     To keep backward compatiblity, this version still use <code>org.qi4j.*</code> Java packages and Maven
     coordinates.<br/>
-    <strong>Please note that this will change in 3.0.</strong>
+    <strong>Please note that this will change in 3.0.0.</strong>

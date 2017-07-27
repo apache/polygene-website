@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Core Runtime</title><link rel="stylesheet" type="text/css" href="css/style.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.76.1" /><link rel="home" href="index.html" title="" /><link rel="up" href="core.html" title="Core" /><link rel="prev" href="core-spi.html" title="Core Extension SPI" /><link rel="next" href="libraries.html" title="Libraries" />
+
+
+<!-- favicon -->
+
+<link rel="shortcut icon" href="http://polygene.apache.org/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="icon" href="http://polygene.apache.org/favicon.ico" type="image/x-icon" />
+
+<!-- style -->
+
+<link href="css/shCore.css" rel="stylesheet" type="text/css" />
+<link href="css/shCoreEclipse.css" rel="stylesheet" type="text/css" />
+<link href="css/shThemeEclipse.css" rel="stylesheet" type="text/css" />
+<link href="css/polygene.css" rel="stylesheet" type="text/css" />
+
+<!-- Syntax Highlighter -->
+
+<script type="text/javascript" src="js/shCore.js"></script>
+<script type="text/javascript" src="js/shBrushJava.js"></script>
+<script type="text/javascript" src="js/shBrushScala.js"></script>
+<script type="text/javascript" src="js/shBrushJScript.js"></script>
+<script type="text/javascript" src="js/shBrushBash.js"></script>
+<script type="text/javascript" src="js/shBrushPlain.js"></script>
+<script type="text/javascript" src="js/shBrushXml.js"></script>
+<script type="text/javascript" src="js/shBrushGroovy.js"></script>
+<script type="text/javascript" src="js/shBrushPython.js"></script>
+<script type="text/javascript" src="js/shBrushRuby.js"></script>
+<script type="text/javascript" src="js/shBrushCSharp.js"></script>
+
+<script type="text/javascript">
+  SyntaxHighlighter.defaults['tab-size'] = 4;
+  SyntaxHighlighter.defaults['gutter'] = false;
+  SyntaxHighlighter.defaults['toolbar'] = false;
+  SyntaxHighlighter.all()
+</script>
+
+<!-- JQuery -->
+
+<script type="text/javascript" src="js/jquery-1.6.4.min.js"></script>
+
+<!-- Image Scaler -->
+
+<script type="text/javascript" src="js/imagescaler.js"></script>
+
+<!-- Table Styler -->
+
+<script type="text/javascript" src="js/tablestyler.js"></script>
+
+<!-- Apache Polygene WebSite Progressive Enhancement -->
+
+<link href="css/progressive-enhancement.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.scrollTo-1.4.2.js"></script>
+<script type="text/javascript" src="js/progressive-enhancement.js"></script>
+
+<!-- Analytics -->
+ <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-62007352-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+ </script>
+
+  </head><body><div xmlns="" xmlns:exsl="http://exslt.org/common" class="logo"><a href="index.html"><img src="images/logo-standard.png" /></a></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="top-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl><dt><span class="section"><a href="index.html#home">Polygene™</a></span></dt><dt><span class="section"><a href="intro.html">Introduction</a></span></dt><dt><span class="section"><a href="tutorials.html">Tutorials</a></span></dt><dt><span class="section"><a href="javadocs.html">Javadoc</a></span></dt><dt><span class="section"><a href="samples.html">Samples</a></span></dt><dt><span class="section"><span xmlns="" href="core.html">Core</span></span></dt><dt><span class="section"><a href="libraries.html">Libraries</a></span></dt><dt><span class="section"><a href="extensions.html">Extensions</a></span></dt><dt><span class="section"><a href="tools.html">Tools</a></span></dt><dt><span class="section"><a href="glossary.html">Glossary </a></span></dt></dl></div></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="sub-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl><dt><span class="section"><a href="core.html#_overview_3">Overview</a></span></dt><dt><span class="section"><a href="core-api.html">Core API</a></span></dt><dt><span class="section"><a href="core-bootstrap-assembly.html">Core Bootstrap</a></span></dt><dt><span class="section"><a href="core-testsupport.html">Core Test Support</a></span></dt><dt><span class="section"><a href="core-spi.html">Core Extension SPI</a></span></dt><dt><span class="section"><span xmlns="" href="core-runtime.html">Core Runtime</span></span></dt></dl></div></div><div class="section" title="Core Runtime"><div class="titlepage"><div><div><h3 class="title"><a id="core-runtime"></a>Core Runtime</h3></div></div></div><p class="remark"><em><span class="comment"></span></em></p><p class="devstatus-code-stable">code</p><p class="devstatus-docs-brief">docs</p><p class="devstatus-tests-good">tests</p><p>First of all, your code should never, ever, have a dependency on Core Runtime. If you think you need this, you should
+probably contact <a class="ulink" href="mailto:users@polygene.apache.org" target="_top">users@polygene.apache.org</a> mailing list and see if your usecase can either be solved in a existing way or
+perhaps that a new Core SPI Extension is needed.</p><div class="table"><a id="idm522920222768"></a><p class="title"><strong>Table 18. Artifact</strong></p><div class="table-contents"><table summary="Artifact" border="1"><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /></colgroup><thead><tr><th align="left" valign="top">Group ID</th><th align="left" valign="top">Artifact ID</th><th align="left" valign="top">Version</th></tr></thead><tbody><tr><td align="left" valign="top"><p>org.apache.polygene.core</p></td><td align="left" valign="top"><p>org.apache.polygene.core.runtime</p></td><td align="left" valign="top"><p>3.0.0</p></td></tr></tbody></table></div></div><br class="table-break" /><p>Let’s repeat that; <span class="strong"><strong>Never, never, ever depend on Core Runtime</strong></span>. Make sure that the compile dependency does NOT include
+the <code class="literal">org.apache.polygene.core.runtime</code> jar.</p><div class="section" title="Custom AssemblyHelper"><div class="titlepage"><div><div><h4 class="title"><a id="_custom_assemblyhelper"></a>Custom AssemblyHelper</h4></div></div></div><p>BUT, there are super-rare cases, where a custom AssemblyHelper might be needed. One known use-case is to introduce
+an alternative bytecode generation algorithm, either better than the one we have, or for a different system, such
+as Dalvik.</p><p>To do this, add the <code class="literal">AssemblyHelper</code> implementation instance as <code class="literal">metaInfo</code> to the <code class="literal">ApplicationAssembly</code></p><p>We think this is so rare, that the <code class="literal">AssemblyHelper</code> class will remain in the <code class="literal">core/runtime</code> module and has not
+been promoted to the <code class="literal">core/bootstrap</code> module. If you plan to use this feature, please contact the Polygene development
+team at <code class="literal">dev@polygene.apache.org</code> to ensure we can make this a better supported, backed by real usecases.</p><p>Fictitious example of using a hypothetical Dalvik capable classloader;</p><pre class="programlisting brush: java">private static Energy4Java polygene;
+
+private static Application application;
+
+public static void main( String[] args )
+    throws Exception
+{
+    // Create a Polygene Runtime
+    polygene = new Energy4Java();
+    // Create the application
+    application = polygene.newApplication( factory -&gt; {
+        ApplicationAssembly assembly = factory.newApplicationAssembly();
+        assembly.setMetaInfo( new DalvikAssemblyHelper() );
+          [...snip...]
+
+        return assembly;
+    } );
+    // Activate the application
+    application.activate();
+}
+
+public static class DalvikAssemblyHelper extends AssemblyHelper
+{
+    @Override
+    protected FragmentClassLoader instantiateFragmentClassLoader( ClassLoader parent )
+    {
+        return new DalvikFragmentClassLoader( parent );
+    }
+}
+
+public static class DalvikFragmentClassLoader extends FragmentClassLoader
+{
+
+    public DalvikFragmentClassLoader( ClassLoader parent )
+    {
+        super( parent );
+    }
+}
+</pre></div></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="footer"><p>
+        Copyright © 2015 The Apache Software Foundation, Licensed under the <a href="http://www.apache.org/licenses/" target="_blank">Apache License, Version 2.0</a>.
+        <br /><small>
+            Apache Polygene, Polygene, Apache, the Apache feather logo, and the Apache Polygene project logo are trademarks of The Apache Software Foundation.<br />
+            All other marks mentioned may be trademarks or registered trademarks of their respective owners.
+        </small></p></div></body></html>

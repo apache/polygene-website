@@ -46,14 +46,13 @@ layout: default
             It is recommended that (when possible) a <a href="https://www.apache.org/dev/release-signing#web-of-trust">web of trust</a> is used to confirm the identity of these keys.
         </div>
 
-        {% if !site.data.releases %}
-        <h3>Apache Polygene™ (Java Edition)</h3>
-        <p>The Apache Polygene™ project has not released any version with its new name yet.</p>
-        {% endif %}
         {% for release in site.data.releases %}
-        {% if release.announcement %}
+        {% if release.published %}
         <h3>Apache Polygene™ (Java Edition) {{ release.version }}</h3>
-        <p>Signed by {{ release.signer }}, PGP ID: <code>{{ release.pgpId }}</code>, <a href="{{ release.announcement }}.html">Announcement and Release-Notes</a></p>
+        <p>
+            Signed by {{ release.signer }}, PGP ID: <code>{{ release.pgpId }}</code>
+            {% if release.announcement %}- <a href="{{ release.announcement }}.html">Announcement and Release-Notes</a>{% endif %}
+        </p>
         {% if release.warning %} <div class="alert warning">{{ release.warning }}</div>{% endif %}
         <h4>Source Distribution</h4>
         <table class="table table-striped">
@@ -68,21 +67,6 @@ layout: default
                 <td><a href="https://www.apache.org/dist/polygene/apache-polygene-java-{{ release.version }}-src.tgz.MD5"><small>(MD5)</small></a></td>
                 <td><a href="https://www.apache.org/dist/polygene/apache-polygene-java-{{ release.version }}-src.tgz.SHA-512"><small>(SHA-512)</small></a></td>
                 <td><a href="https://www.apache.org/dist/polygene/apache-polygene-java-{{ release.version }}-src.tgz.asc"><small>(OpenPGP asc)</small></a></td>
-            </tr>
-        </table>
-        <h4>Binary Distribution</h4>
-        <table class="table table-striped">
-            <tr>
-                <td><a href="https://www.apache.org/dyn/closer.lua/polygene/apache-polygene-java-{{ release.version }}-bin.zip"><i class="icon-download"></i> apache-polygene-java-{{ release.version }}-bin.zip</a></td>
-                <td><a href="https://www.apache.org/dist/polygene/apache-polygene-java-{{ release.version }}-bin.zip.MD5"><small>(MD5)</small></a></td>
-                <td><a href="https://www.apache.org/dist/polygene/apache-polygene-java-{{ release.version }}-bin.zip.SHA-512"><small>(SHA-512)</small></a></td>
-                <td><a href="https://www.apache.org/dist/polygene/apache-polygene-java-{{ release.version }}-bin.zip.asc"><small>(OpenPGP asc)</small></a></td>
-            </tr>
-            <tr>
-                <td><a href="https://www.apache.org/dyn/closer.lua/polygene/apache-polygene-java-{{ release.version }}-bin.tgz"><i class="icon-download"></i> apache-polygene-java-{{ release.version }}-bin.tgz</a></td>
-                <td><a href="https://www.apache.org/dist/polygene/apache-polygene-java-{{ release.version }}-bin.tgz.MD5"><small>(MD5)</small></a></td>
-                <td><a href="https://www.apache.org/dist/polygene/apache-polygene-java-{{ release.version }}-bin.tgz.SHA-512"><small>(SHA-512)</small></a></td>
-                <td><a href="https://www.apache.org/dist/polygene/apache-polygene-java-{{ release.version }}-bin.tgz.asc"><small>(OpenPGP asc)</small></a></td>
             </tr>
         </table>
         {% endif %}

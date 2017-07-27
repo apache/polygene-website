@@ -66,10 +66,11 @@
                                 <ul class="dropdown-menu" role="menu">
                                     <li role="menuitem"><a href="/java/latest/index.html"><i class="icon-caret-right"></i> Latest release</a></li>
                                     {% for release in site.data.releases %}
-                                    {% if release.announcement %}
+                                    {% if release.published %}
                                     <li role="menuitem"><a href="/java/{{ release.version }}/index.html"><i class="icon-caret-right"></i> {{ release.version }}</a></li>
                                     {% endif %}
                                     {% endfor %}
+                                    <li role="menuitem"><a href="/java/2.1/index.html"><i class="icon-caret-right"></i> 2.1</a></li>
                                     <li role="menuitem"><a href="/java/2.0/index.html"><i class="icon-caret-right"></i> 2.0</a></li>
                                     <li role="menuitem"><a href="/java/1.4/index.html"><i class="icon-caret-right"></i> &lt;=1.4.x</a></li>
                                     <li class="divider"></li>
