@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Core API</title><link rel="stylesheet" type="text/css" href="css/style.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.79.1" /><link rel="home" href="index.html" title="" /><link rel="up" href="core.html" title="Core" /><link rel="prev" href="core.html" title="Core" /><link rel="next" href="core-bootstrap-assembly.html" title="Core Bootstrap" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Core API</title><link rel="stylesheet" type="text/css" href="css/style.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.76.1" /><link rel="home" href="index.html" title="" /><link rel="up" href="core.html" title="Core" /><link rel="prev" href="core.html" title="Core" /><link rel="next" href="core-bootstrap-assembly.html" title="Core Bootstrap" />
 
 
 <!-- favicon -->
@@ -66,23 +66,27 @@
   })();
  </script>
 
-  </head><body><div xmlns="" xmlns:exsl="http://exslt.org/common" class="logo"><a href="index.html"><img src="images/logo-standard.png" /></a></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="top-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl class="toc"><dt><span class="section"><a href="index.html#home">Polygene™</a></span></dt><dt><span class="section"><a href="intro.html">Introduction</a></span></dt><dt><span class="section"><a href="tutorials.html">Tutorials</a></span></dt><dt><span class="section"><a href="javadocs.html">Javadoc</a></span></dt><dt><span class="section"><a href="samples.html">Samples</a></span></dt><dt><span class="section"><span xmlns="" href="core.html">Core</span></span></dt><dt><span class="section"><a href="libraries.html">Libraries</a></span></dt><dt><span class="section"><a href="extensions.html">Extensions</a></span></dt><dt><span class="section"><a href="tools.html">Tools</a></span></dt><dt><span class="section"><a href="glossary.html">Glossary </a></span></dt></dl></div></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="sub-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl class="toc"><dt><span class="section"><a href="core.html#_overview_3">Overview</a></span></dt><dt><span class="section"><span xmlns="" href="core-api.html">Core API</span></span></dt><dt><span class="section"><a href="core-bootstrap-assembly.html">Core Bootstrap</a></span></dt><dt><span class="section"><a href="core-testsupport.html">Core Test Support</a></span></dt><dt><span class="section"><a href="core-spi.html">Core Extension SPI</a></span></dt><dt><span class="section"><a href="core-runtime.html">Core Runtime</a></span></dt></dl></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="core-api"></a>Core API</h3></div></div></div><p class="remark"><em><span class="comment"></span></em></p><p class="devstatus-code-stable">code</p><p class="devstatus-docs-good">docs</p><p class="devstatus-tests-good">tests</p><p>The Polygene™ Core API is the primary interface for client application code during the main execution phase, i.e. after the
-application has been activated.</p><div class="table"><a id="idm447785063232"></a><p class="title"><strong>Table 14. Artifact</strong></p><div class="table-contents"><table class="table" summary="Artifact" border="1"><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /></colgroup><thead><tr><th align="left" valign="top">Group ID</th><th align="left" valign="top">Artifact ID</th><th align="left" valign="top">Version</th></tr></thead><tbody><tr><td align="left" valign="top"><p>org.apache.polygene.core</p></td><td align="left" valign="top"><p>org.apache.polygene.core.api</p></td><td align="left" valign="top"><p>3.0.0-SNAPSHOT</p></td></tr></tbody></table></div></div><br class="table-break" /><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-composition"></a>Composition</h4></div></div></div><p>Composition is at the heart of COP, and refers to two different levels of constructs;</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
+  </head><body><div xmlns="" xmlns:exsl="http://exslt.org/common" class="logo"><a href="index.html"><img src="images/logo-standard.png" /></a></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="top-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl><dt><span class="section"><a href="index.html#home">Polygene™</a></span></dt><dt><span class="section"><a href="intro.html">Introduction</a></span></dt><dt><span class="section"><a href="tutorials.html">Tutorials</a></span></dt><dt><span class="section"><a href="javadocs.html">Javadoc</a></span></dt><dt><span class="section"><a href="samples.html">Samples</a></span></dt><dt><span class="section"><span xmlns="" href="core.html">Core</span></span></dt><dt><span class="section"><a href="libraries.html">Libraries</a></span></dt><dt><span class="section"><a href="extensions.html">Extensions</a></span></dt><dt><span class="section"><a href="tools.html">Tools</a></span></dt><dt><span class="section"><a href="glossary.html">Glossary </a></span></dt></dl></div></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="sub-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl><dt><span class="section"><a href="core.html#_overview_3">Overview</a></span></dt><dt><span class="section"><span xmlns="" href="core-api.html">Core API</span></span></dt><dt><span class="section"><a href="core-bootstrap-assembly.html">Core Bootstrap</a></span></dt><dt><span class="section"><a href="core-testsupport.html">Core Test Support</a></span></dt><dt><span class="section"><a href="core-spi.html">Core Extension SPI</a></span></dt><dt><span class="section"><a href="core-runtime.html">Core Runtime</a></span></dt></dl></div></div><div class="section" title="Core API"><div class="titlepage"><div><div><h3 class="title"><a id="core-api"></a>Core API</h3></div></div></div><p class="remark"><em><span class="comment"></span></em></p><p class="devstatus-code-stable">code</p><p class="devstatus-docs-good">docs</p><p class="devstatus-tests-good">tests</p><p>The Polygene™ Core API is the primary interface for client application code during the main execution phase, i.e. after the
+application has been activated.</p><div class="table"><a id="idm229755724160"></a><p class="title"><strong>Table 14. Artifact</strong></p><div class="table-contents"><table summary="Artifact" border="1"><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /></colgroup><thead><tr><th align="left" valign="top">Group ID</th><th align="left" valign="top">Artifact ID</th><th align="left" valign="top">Version</th></tr></thead><tbody><tr><td align="left" valign="top"><p>org.apache.polygene.core</p></td><td align="left" valign="top"><p>org.apache.polygene.core.api</p></td><td align="left" valign="top"><p>3.1.0-SNAPSHOT</p></td></tr></tbody></table></div></div><br class="table-break" /><div class="section" title="Composition"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-composition"></a>Composition</h4></div></div></div><p>Composition is at the heart of COP, and refers to two different levels of constructs;</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
 the ability to assemble (compose) objects from smaller pieces, called Fragments.
 </li><li class="listitem">
 the construction of applications by assembling Composites into Modules and Modules into Layers.
 </li></ol></div><p>In Polygene, we use the term Assembly for the second case of composition. See separate chapter.</p><p>Composition will allow library authors a new level of flexibility in how functionality is provided to client code. More
-on that later.</p><div class="section"><div class="titlepage"><div><div><h5 class="title"><a id="_fragments"></a>Fragments</h5></div></div></div><p>There are 4 types of Fragments in Polygene;</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+on that later.</p><div class="section" title="Fragment"><div class="titlepage"><div><div><h5 class="title"><a id="core-api-fragment"></a>Fragment</h5></div></div></div><p>Composites should be perceived as single units, although they consist of many Java classes and instances. Some of
+those Java instances are not even belonging to a particular instance in runtime, but such details can and should
+be ignored by the developer. Developers should think of the Composite as a single concept, and not be concerned
+about its internal structure.</p><p>The Composite is composed by declaring the parts it forms in the Composite Type interface declaration. Technically
+speaking, Composite Type is the only Fragment that is required to exist. The other Fragments are optional.</p><p>There are 4 types of Fragments in Polygene;</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
 <a class="xref" href="core-api.html#core-api-mixin" title="Mixin">Mixin</a> - The state carrying part of a Composite.
 </li><li class="listitem">
 <a class="xref" href="core-api.html#core-api-constraint" title="Constraint">Constraint</a> - Rules for in and out arguments, typically used for validation.
 </li><li class="listitem">
 <a class="xref" href="core-api.html#core-api-concern" title="Concern">Concern</a> - Interceptor of method calls. General purpose use, often for cross-cutting behaviors.
 </li><li class="listitem">
-<a class="xref" href="core-api.html#core-api-sideeffect" title="SideEffect">SideEffect</a> - Executed after the method call has been completed, and unable to influence the
-    outcome of the method call.
-</li></ul></div></div><div class="section"><div class="titlepage"><div><div><h5 class="title"><a id="_composites"></a>Composites</h5></div></div></div><p>There are 4 Composite meta types. Each of these have very different characteristics and it is important to understand
-these, so the right meta type is used for the right purpose.</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+<a class="xref" href="core-api.html#core-api-sideeffect" title="SideEffect">SideEffect</a> - Executed after the method call has been completed, and unable to influence the outcome of the method call.
+</li></ul></div><p>There are one very important thing to know about Fragments;</p><p><span class="strong"><strong>ONLY Mixins can maintain inter-method state.</strong></span></p><p>That means that Concerns, Constraints and Side Effects can not assume that Java fields between method invocations
+are preserved. These Fragments must rely on either Mixins or external services for additional state.</p></div><div class="section" title="Composites"><div class="titlepage"><div><div><h5 class="title"><a id="_composites"></a>Composites</h5></div></div></div><p>There are 4 Composite meta types. Each of these have very different characteristics and it is important to understand
+these, so the right meta type is used for the right purpose.</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
 Entity - Classic meaning. Has an Identity. Is persistable and can be referenced by the Identity. Can act as
       Aggregate. Entity supports Lifecycle interface. Equals is defined by the Identity.
 </li><li class="listitem">
@@ -110,7 +114,7 @@ public interface BankAccount
 {
     module.entities( BankAccount.class );
 }
-</pre></div></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-structure"></a>Structure</h4></div></div></div><p>Polygene™ promotes a conventional view of application structure, that computer science has been using for decades.</p><p>The definition is as follows;</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+</pre></div></div><div class="section" title="Structure"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-structure"></a>Structure</h4></div></div></div><p>Polygene™ promotes a conventional view of application structure, that computer science has been using for decades.</p><p>The definition is as follows;</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
 One Application per Polygene™ runtime instance.
 </li><li class="listitem">
 One or more Layers per Application.
@@ -121,27 +125,276 @@ Zero, one or more Assemblies per Module.
 </li></ul></div><p>The principle of this Structure is to assist the programmer to create well modularized applications, that are easily
 extended and maintained. Polygene™ will restrict access between Modules, so that code can only reach Composites and Objects
 in Modules (including itself) of the same or lower Layers.</p><p>Each Layer has to be declared which lower Layer(s) it uses, and it is not allowed that a lower Layer uses a higher
-Layer, i.e. cyclic references.</p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-application"></a>Application</h4></div></div></div><p>Every Polygene™ runtime has <span class="emphasis"><em>one and only one</em></span> Application in it. It is possible to run multiple Polygene™ runtimes in the same
-JVM, and it is even possible to embed a Polygene™ runtime within a Polygene™ Application, but there can only be one Application
-in a Polygene™ runtime.</p><p>An Application is then broken into layers and modules are placed within those layers. Composites are placed within
-modules. This forms the Application Structure and is enforced by the Polygene™ runtime.</p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-layer"></a>Layer</h4></div></div></div><p>A Polygene™ Application must consist of at least one layer. More layers are common, often dividing the application along the
+Layer, i.e. cyclic references.</p></div><div class="section" title="Application"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-application"></a>Application</h4></div></div></div><p>There is one and only one Application instance per Polygene™ runtime instance. But there is nothing preventing code to
+create additional Polygene™ Runtime instances inside the same JVM. However, these runtimes are isolated from each other.</p><p>The main purpose of the Application structure artifact is to keep everything in the same box, and allowing us to
+navigate the Structure. So, from a client code perspective, the Application is of no use, other than being part of
+bring Polygene™ to life. Polygene™ doesn’t start automatically and can be run in most environments, by requiring that the
+bootstrapping of Polygene™ is done by client code. We call this the Bootstrap Phase. The code in the custom bootstrapper
+will need to access additional Jars from the regular domain code, and we strongly recommend that you make this
+separation in your project as well.</p><div class="section" title="Assembly"><div class="titlepage"><div><div><h5 class="title"><a id="_assembly_2"></a>Assembly</h5></div></div></div><p><a class="xref" href="core-bootstrap-assembly.html" title="Core Bootstrap">Assembly</a> is the part of the bootstrap phase where the application Structure is declared (programmatically). The
+Assembly will be consumed by the ApplicationBuilder, which produces an ApplicationInstance. This instance does not
+contain any custom objects, and is fully serializable. All the application structure has been built, all the layers
+and modules been wired up, and all the sub-composite structures are in place to quickly instantiate the various parts
+of the application.</p><p>At this point, where an ApplicationInstance exists, it is possible to initialize the application components with
+instances created in, data computed in or received from, the controlling bootstrap code.</p><p>Once the initialization phase is complete, the bootstrap controller will call the ApplicationInstance.activate()
+method to start things up.</p><p>Recap of sequence;</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
+Create, obtain or lookup Assemblers.
+</li><li class="listitem">
+Establish the application structures.
+</li><li class="listitem">
+Create a Polygene™ Runtime instance.
+</li><li class="listitem">
+Create an ApplicationAssemblyFactory.
+</li><li class="listitem">
+Create an ApplicationFactory.
+</li><li class="listitem">
+Call ApplicationFactory.newApplication() to create an ApplicationContext.
+</li><li class="listitem">
+Call ApplicationContext.newApplicationInstance() to create an ApplicationInstance.
+</li><li class="listitem">
+Do the initialization of the application.
+</li><li class="listitem">
+Call activate() on the ApplicationInstance.
+</li></ul></div></div><div class="section" title="Singleton Assembler"><div class="titlepage"><div><div><h5 class="title"><a id="_singleton_assembler"></a>Singleton Assembler</h5></div></div></div><p>For really small applications, demos, testcases and so forth, it doesn’t make sense to create a elaborate Application
+structure. For this purpose, there is a convenient short-cut to establish a single Layer, single Module application.
+The full code looks like this;</p><pre class="programlisting brush: java">SingletonAssembler polygene = new SingletonAssembler(
+    module -&gt; module.values( MyStuffValueComposite.class )
+);
+</pre></div></div><div class="section" title="Single Module Layering"><div class="titlepage"><div><div><h4 class="title"><a id="_single_module_layering"></a>Single Module Layering</h4></div></div></div><p>Behind the scenes of the SingletonAssembler a little bit more elaborate bootstrap sequence is happening. The code below
+shows what is the actual required sequence to start up Polygene.</p><pre class="programlisting brush: java">    polygene = new Energy4Java();
+    applicationInstance = createApplicationInstance();
+    activateApplication();
+      [...snip...]
+
+private Application createApplicationInstance()
+{
+    return polygene.newApplication(
+        applicationFactory -&gt; applicationFactory.newApplicationAssembly( SingletonAssembler.this )
+    );
+}
+
+private void activateApplication()
+    throws ActivationException
+{
+    try
+    {
+        beforeActivation( applicationInstance );
+        applicationInstance.activate();
+    }
+    catch( Exception e )
+    {
+        if( e instanceof ActivationException )
+        {
+            throw ( (ActivationException) e );
+        }
+        throw new ActivationException( "Could not activate application", e );
+    }
+}
+</pre><p>In the above example we are only creating an Application with a single Layer and a single Module in that Layer. This is
+derived from the fact that the factory.newApplicationAssembly() method takes a single Assembler argument.</p><p>The Assembler.assemble( ModuleAssembly assembly ) method is called when the Polygene™ Runtime needs to populate the
+ModuleAssembly with its Composites, Objects, Services and other information.</p><div class="section" title="&quot;Pancake&quot; Layering"><div class="titlepage"><div><div><h5 class="title"><a id="_pancake_layering"></a>"Pancake" Layering</h5></div></div></div><p>Another standard setup is applications consisting of a small number of Layers that are directly on top of each other
+(with out bypassing, forking and converging Layers), you can supply a Assembler[][][], with Layer in the first index,
+Module in the second index and any number of Assembler instances in the last index. This will look like;</p><pre class="programlisting brush: java">final Assembler[][][] assemblers =
+    {
+        { // web layer
+          { // Customer Module
+            customerListEditAssembler,
+            customerEditAssembler,
+            customerSearchAssembler
+          },
+          { // Accounts Module
+            accountsListEditAssembler,
+            accountsEditAssembler,
+            accountsSearchAssembler
+          }
+        },
+        { // domain layer
+          { // Customer Module
+            customerDomainAssembler,
+          },
+          { // Accounts Module
+            accountsDomainAssembler,
+          }
+        }
+    };
+Energy4Java polygene = new Energy4Java();
+Application app = polygene.newApplication( factory -&gt; factory.newApplicationAssembly( assemblers ) );
+app.activate();
+</pre><p>The array initialization feature in Java is used to give us a semi-visual idea of the actual application structure. It
+has been commented to highlight this further. Also note that one can pass any number of Assembler instances to each
+Module. This is an important aspect of subsystem creation and re-use.</p></div><div class="section" title="Full Layering"><div class="titlepage"><div><div><h5 class="title"><a id="_full_layering"></a>Full Layering</h5></div></div></div><p>Finally, we can assemble the Application by manually building up the Modules and Layers. This allow for a totally
+free structure, as long as the rules for no cyclic reference of the Layers are kept.</p><pre class="programlisting brush: java">    private static Energy4Java polygene;
+
+    public static void main( String[] args )
+        throws Exception
+    {
+        polygene = new Energy4Java();
+        ApplicationDescriptor model = polygene.newApplicationModel( factory -&gt; createAssembly( factory ) );
+        Application application = model.newInstance( polygene.spi() );
+    }
+
+    private static ApplicationAssembly createAssembly( ApplicationAssemblyFactory factory )
+        throws AssemblyException
+    {
+        String applicationName = "Example Application";
+        ApplicationAssembly app = factory.newApplicationAssembly();
+        app.setName( applicationName );
+        LayerAssembly webLayer = createWebLayer( app );
+        LayerAssembly domainLayer = createDomainLayer( app );
+        LayerAssembly infraLayer = createInfrastructureLayer( app );
+        webLayer.uses( domainLayer );
+        webLayer.uses( infraLayer );  // Accesses the WebService
+        domainLayer.uses( infraLayer ); // For persistence
+        return app;
+    }
+
+    private static LayerAssembly createWebLayer(
+        ApplicationAssembly application
+    )
+    {
+        LayerAssembly layer = application.layer( "Web Layer" );
+        createCustomerWebModule( layer );
+        return layer;
+    }
+
+    private static LayerAssembly createDomainLayer(
+        ApplicationAssembly application
+    )
+    {
+        LayerAssembly layer = application.layer( "Domain Layer" );
+        createCustomerDomainModule( layer );
+        // :
+        // :
+        return layer;
+    }
+
+    private static LayerAssembly createInfrastructureLayer(
+        ApplicationAssembly application
+    )
+        throws AssemblyException
+    {
+        LayerAssembly layer = application.layer( "Infrastructure Layer" );
+        createWebServiceModule( layer );
+        createPersistenceModule( layer );
+        return layer;
+    }
+
+    private static void createCustomerWebModule( LayerAssembly layer )
+    {
+        ModuleAssembly assembly = layer.module( "Customer Web Module" );
+        assembly.transients( CustomerViewComposite.class );
+        assembly.transients( CustomerEditComposite.class );
+        assembly.transients( CustomerListViewComposite.class );
+        assembly.transients( CustomerSearchComposite.class );
+    }
+
+    private static void createCustomerDomainModule( LayerAssembly layer )
+    {
+        ModuleAssembly assembly = layer.module( "Customer Domain Module" );
+        assembly.entities( CustomerEntity.class );
+        assembly.entities( CountryEntity.class );
+        assembly.transients( AddressComposite.class );
+    }
+
+    private static void createWebServiceModule( LayerAssembly layer )
+        throws AssemblyException
+    {
+        ModuleAssembly assembly = layer.module( "Web Service Module" );
+        // Someone has created an assembler for a Jetty Web Service.
+        JettyAssembler jetty = new JettyAssembler( 8080 );
+        jetty.assemble( assembly );
+    }
+
+    private static void createPersistenceModule( LayerAssembly layer )
+        throws AssemblyException
+    {
+        ModuleAssembly assembly = layer.module( "Persistence Module" );
+        // Someone has created an assembler for the Neo EntityStore
+        NeoAssembler neo = new NeoAssembler( "./neostore" );
+        neo.assemble( assembly );
+    }
+      [...snip...]
+
+
+    public static class CustomerViewComposite
+    {
+
+    }
+    public static class CustomerEditComposite
+    {
+
+    }
+    public static class CustomerListViewComposite
+    {
+
+    }
+    public static class CustomerSearchComposite
+    {
+
+    }
+
+
+    public static class CustomerEntity
+    {
+
+    }
+    public static class CountryEntity
+    {
+
+    }
+    public static class AddressComposite
+    {
+
+    }
+
+    public static class JettyAssembler
+        implements Assembler
+    {
+
+        public JettyAssembler( int port )
+        {
+        }
+
+        @Override
+        public void assemble( ModuleAssembly module )
+            throws AssemblyException
+        {
+        }
+    }
+    public static class NeoAssembler
+        implements Assembler
+    {
+
+        public NeoAssembler( String s )
+        {
+        }
+
+        @Override
+        public void assemble( ModuleAssembly module )
+            throws AssemblyException
+        {
+        }
+    }
+}
+
+</pre></div></div><div class="section" title="Layer"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-layer"></a>Layer</h4></div></div></div><p>A Polygene™ Application must consist of at least one layer. More layers are common, often dividing the application along the
 common architectural diagrams used on whiteboards, perhaps with a UI layer at the top, followed by a service or application
 layer, then with a domain layer and finally some persistence layer at the bottom.</p><p>Polygene™ enforces this layering by requiring the <a class="xref" href="core-bootstrap-assembly.html" title="Core Bootstrap">Assembly</a> to declare which layer uses which other layer. And
-<a class="xref" href="core-api.html#core-api-visibility" title="Visibility">Visibility</a> rules define that layers below can not locate composites in layers above. Also, defining that
-"Layer1 uses Layer2" and "Layer2 uses Layer3" does NOT imply that Layer1 has <a class="xref" href="core-api.html#core-api-visibility" title="Visibility">Visibility</a> to Layer3. If that
-is wanted, then it must be declared explicitly.</p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-module"></a>Module</h4></div></div></div><p>Modules are logical compartments to assist developers in creating and maintaining well modularized code. A Module only
-belongs to a single Layer, but many Modules can exist in the same Layer. Composite access is limited to;</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+<a class="xref" href="">???</a> rules define that layers below can not locate composites in layers above. Also, defining that
+"Layer1 uses Layer2" and "Layer2 uses Layer3" does NOT imply that Layer1 has <a class="xref" href="">???</a> to Layer3. If that
+is wanted, then it must be declared explicitly.</p></div><div class="section" title="Module"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-module"></a>Module</h4></div></div></div><p>Modules are logical compartments to assist developers in creating and maintaining well modularized code. A Module only
+belongs to a single Layer, but many Modules can exist in the same Layer. Composite access is limited to;</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
 Composites within the same Module, with Visibility set to Visibility.module (default).
 </li><li class="listitem">
 Composites from Modules in the same Layer, with Visibility set to Visibility.layer
 </li><li class="listitem">
 Composites from Modules in Layers below, with Visibility set to Visibility.application
-</li></ul></div><p>Modules contains a lot of the Polygene™ infrastructure, which are the enforcers of these wise modularization principles.</p><p>It is not possible to modify the Modules, their resolution nor binding in any way after the application starts.</p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-visibility"></a>Visibility</h4></div></div></div></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-value"></a>ValueComposite</h4></div></div></div><p>Usage of value objects is one of the most ignored and best return-on-investment the programmer can do. Values are
+</li></ul></div><p>Modules contains a lot of the Polygene™ infrastructure, which are the enforcers of these wise modularization principles.</p><p>It is not possible to modify the Modules, their resolution nor binding in any way after the application starts.</p></div><div class="section" title="ValueComposite"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-value"></a>ValueComposite</h4></div></div></div><p>Usage of value objects is one of the most ignored and best return-on-investment the programmer can do. Values are
 immutable and can be compared by value instead of memory reference. Concurrency is suddenly not an issue, since either
 the value exists or it doesn’t, no need for synchronization. Values are typically very easy to test and very robust to
 refactoring.</p><p>Polygene™ defines values as a primary meta type through the ValueComposite, as we think the benefits of values are great.
 The ValueComposite is very light-weight compared to the EntityComposite, and its value can still be persisted as part
-of an EntityComposite via a Property.</p><p>The characteristics of a ValueComposite compared to other Composite meta types are;</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+of an EntityComposite via a Property.</p><p>The characteristics of a ValueComposite compared to other Composite meta types are;</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
 It is Immutable.
 </li><li class="listitem">
 Its equals/hashCode works on both the descriptor and the values of the ValueComposite.
@@ -149,7 +402,7 @@ Its equals/hashCode works on both the descriptor and the values of the ValueComp
 Can be used as Property types.
 </li><li class="listitem">
 Can be serialized and deserialized, see <a class="xref" href="core-api.html#core-api-serialization" title="Serialization">Serialization</a>.
-</li></ul></div></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-service"></a>Service Composite</h4></div></div></div><p>Any service added, via the ModuleAssembly.addServices(), ModuleAssembly.services() and ModuleAssembly.importServices()
+</li></ul></div></div><div class="section" title="Service Composite"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-service"></a>Service Composite</h4></div></div></div><p>Any service added, via the ModuleAssembly.addServices(), ModuleAssembly.services() and ModuleAssembly.importServices()
 methods, will have the ServiceComposite meta type added to it. In Polygene, when we speak of <span class="emphasis"><em>Services</em></span> we mean instances
 of <span class="emphasis"><em>ServiceComposite</em></span>.</p><p>Most programmers are familiar with the term "Service", and after the failure of Object Oriented Programming’s promise
 to encapsulate all the behavior together with the object’s state, programmers learned that the only way to deal with
@@ -157,7 +410,7 @@ decoupling and re-use was to make the objects into data containers and deploy se
 containers. Very much what functions did on structs back in the C and Pascal days.</p><p>Polygene™ will bring a lot of the behavior back to the Composite itself, but we still need Services for cross-composite
 functionality. The Polygene™ Service model is fairly simple, yet powerful and flexible enough to accommodate most
 service-oriented patterns and ability to integrate well with external systems whether they are in-JVM or remote,
-such as Spring, OSGi, WS-*, Rest and others.</p><p>The characteristics of a ServiceComposite compared to other Composite meta types are;</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+such as Spring, OSGi, WS-*, Rest and others.</p><p>The characteristics of a ServiceComposite compared to other Composite meta types are;</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
 It is one singleton per declaration in bootstrap.
 </li><li class="listitem">
 It has an identity defined in bootstrap.
@@ -169,7 +422,7 @@ It has an optional Configuration.
 of the same service type, but they can not be created on the fly in runtime, but has to be explicitly defined during
 <a class="xref" href="core-bootstrap-assembly.html" title="Core Bootstrap">Assembly</a>.</p><p>By default, <span class="emphasis"><em>Services</em></span> are not instantiated until they are used. This means that the <span class="emphasis"><em>ServiceComposite</em></span> instance itself
 will not exist until someone calls a method. If a <span class="emphasis"><em>Service</em></span> needs to be instantiated when the <span class="emphasis"><em>Module</em></span> is activated, one
-need to declare/call the instantiateOnStartup() method on the <span class="emphasis"><em>ServiceDescriptor</em></span> during the bootstrap.</p><div class="section"><div class="titlepage"><div><div><h5 class="title"><a id="_service_configuration"></a>Service Configuration</h5></div></div></div><p>The configuration for a service is well supported in Polygene. See the <a class="xref" href="core-api.html#core-api-service-configuration" title="Service Configuration">Service Configuration</a> chapter for details.</p></div><div class="section"><div class="titlepage"><div><div><h5 class="title"><a id="_service_activation"></a>Service Activation</h5></div></div></div><p>Services are activated (injected and instantiated) either on application start-up, or upon first use. This is controlled
+need to declare/call the instantiateOnStartup() method on the <span class="emphasis"><em>ServiceDescriptor</em></span> during the bootstrap.</p><div class="section" title="Service Configuration"><div class="titlepage"><div><div><h5 class="title"><a id="_service_configuration"></a>Service Configuration</h5></div></div></div><p>The configuration for a service is well supported in Polygene. See the <a class="xref" href="core-api.html#core-api-service-configuration" title="Service Configuration">Service Configuration</a> chapter for details.</p></div><div class="section" title="Service Activation"><div class="titlepage"><div><div><h5 class="title"><a id="_service_activation"></a>Service Activation</h5></div></div></div><p>Services are activated (injected and instantiated) either on application start-up, or upon first use. This is controlled
 by calling instantiateOnStartup(), this way;</p><pre class="programlisting brush: java">@Override
 public void assemble( ModuleAssembly module )
     throws AssemblyException
@@ -234,7 +487,7 @@ public void assemble( ModuleAssembly module )
 ServiceComposite activation and their <code class="literal">beforePassivation</code> and <code class="literal">afterPassivation</code> around the ServiceComposite
 passivation.
 Member injection and constructor initialization occur during the activation. The ServiceComposite can be used from the
-<code class="literal">afterActivation</code> to the <code class="literal">beforePassivation</code> method.</p></div><div class="section"><div class="titlepage"><div><div><h5 class="title"><a id="_identity_and_tags"></a>Identity and Tags</h5></div></div></div><p>Services has an Identity, which drives the <a class="xref" href="core-api.html#core-api-service-configuration" title="Service Configuration">Service Configuration</a> system and can be used to lookup a particular service
+<code class="literal">afterActivation</code> to the <code class="literal">beforePassivation</code> method.</p></div><div class="section" title="Identity and Tags"><div class="titlepage"><div><div><h5 class="title"><a id="_identity_and_tags"></a>Identity and Tags</h5></div></div></div><p>Services has an Identity, which drives the <a class="xref" href="core-api.html#core-api-service-configuration" title="Service Configuration">Service Configuration</a> system and can be used to lookup a particular service
 instance. Services can also be arbitrarily tagged, via the ServiceDescriptor. Example;</p><pre class="programlisting brush: java">@Override
 public void assemble( ModuleAssembly module )
     throws AssemblyException
@@ -258,7 +511,7 @@ public MyDemoService locateImportantService()
     }
     return null;
 }
-</pre></div></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-service-configuration"></a>Service Configuration</h4></div></div></div><p>Configuration in Polygene™ is for Polygene™ <a class="xref" href="core-api.html#core-api-service" title="Service Composite">ServiceComposite</a> only. The Configuration is stored in a visible Entity
+</pre></div></div><div class="section" title="Service Configuration"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-service-configuration"></a>Service Configuration</h4></div></div></div><p>Configuration in Polygene™ is for Polygene™ <a class="xref" href="core-api.html#core-api-service" title="Service Composite">ServiceComposite</a> only. The Configuration is stored in a visible Entity
 Store and is therefor runtime modifiable and not static in properties or XML files as in most other dependency
 injection frameworks.</p><p>The Configuration system itself will handle all the details with interfacing with reading and writing the configuration.
 The normal UnitOfWork management is used, but handled internally by the configuration system.</p><p>In Polygene, Configuration are strongly typed and refactoring-friendly. Configuration is read from the entity store, but if
@@ -272,7 +525,7 @@ JSON
 YAML
 </li><li class="listitem">
 XML
-</li></ol></div><div class="section"><div class="titlepage"><div><div><h5 class="title"><a id="_defining_a_configuration_type"></a>Defining a Configuration Type</h5></div></div></div><p>The Configuration type is simply listing the properties that are available. The standard rules on @UseDefaults and
+</li></ol></div><div class="section" title="Defining a Configuration Type"><div class="titlepage"><div><div><h5 class="title"><a id="_defining_a_configuration_type"></a>Defining a Configuration Type</h5></div></div></div><p>The Configuration type is simply listing the properties that are available. The standard rules on @UseDefaults and
 @Optional applies.
 Example;</p><pre class="programlisting brush: java">public interface MailServiceConfiguration extends ConfigurationComposite
 {
@@ -280,16 +533,16 @@ Example;</p><pre class="programlisting brush: java">public interface MailService
 
     Property&lt;Integer&gt; port();
 }
-</pre></div><div class="section"><div class="titlepage"><div><div><h5 class="title"><a id="_default_configuration_formats"></a>Default Configuration formats</h5></div></div></div><p>The default configuration read will happen if the Entity Store backing the Configuration system does not contain the
+</pre></div><div class="section" title="Default Configuration formats"><div class="titlepage"><div><div><h5 class="title"><a id="_default_configuration_formats"></a>Default Configuration formats</h5></div></div></div><p>The default configuration read will happen if the Entity Store backing the Configuration system does not contain the
 identifiable configuration. That will trigger the reading attempts of the supported configuration formats. Once the
 configuration is parsed from the file system it is written to the Entity Store, and if the Entity Store is not
 ephemeral, then on the next start, any changes to the configuration will NOT be detected, and will simply be ignored.</p><p>To be able to read JSON, YAML and XML configuration, you must configure a Serialization system that supports
-the configuration format that you want to use.</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+the configuration format that you want to use.</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
 extension/serialization-javaxjson supports JSON
 </li><li class="listitem">
 extension/serialization-javaxxml supports XML
-</li></ul></div></div><div class="section"><div class="titlepage"><div><div><h5 class="title"><a id="_support_for_complex_types"></a>Support for Complex Types</h5></div></div></div><p>Since the regular Value Serialization platform is used, for JSON, YAML and XML, the configuration can contain
-arbitrary composite types. This is not true for the Java properties file format.</p></div><div class="section"><div class="titlepage"><div><div><h5 class="title"><a id="_using_a_configuration_type"></a>Using a Configuration Type</h5></div></div></div><p>It is important to remember that Configuration is not static values that are set prior to application start-up and
+</li></ul></div></div><div class="section" title="Support for Complex Types"><div class="titlepage"><div><div><h5 class="title"><a id="_support_for_complex_types"></a>Support for Complex Types</h5></div></div></div><p>Since the regular Value Serialization platform is used, for JSON, YAML and XML, the configuration can contain
+arbitrary composite types. This is not true for the Java properties file format.</p></div><div class="section" title="Using a Configuration Type"><div class="titlepage"><div><div><h5 class="title"><a id="_using_a_configuration_type"></a>Using a Configuration Type</h5></div></div></div><p>It is important to remember that Configuration is not static values that are set prior to application start-up and
 therefor applications should not cache the values retrieved forever, but consciously know when the configuration should
 be re-read.</p><p>Configuration is injected via the @This injection scope. One reasonable strategy is to read the configuration on service
 activation, so by deactivating/reactivating a service, the user have a well-defined behavior to know how configuration
@@ -306,7 +559,7 @@ public void sendMail( @Email String to, @MinLength( 8 ) String subject, String b
       [...snip...]
 
 }
-</pre></div><div class="section"><div class="titlepage"><div><div><h5 class="title"><a id="_modifying_configuration"></a>Modifying Configuration</h5></div></div></div><p>Configuration is modifiable, and after the modifications have been made, the save() method on the Configuration type
+</pre></div><div class="section" title="Modifying Configuration"><div class="titlepage"><div><div><h5 class="title"><a id="_modifying_configuration"></a>Modifying Configuration</h5></div></div></div><p>Configuration is modifiable, and after the modifications have been made, the save() method on the Configuration type
 must be called. Example;</p><pre class="programlisting brush: java">    void changeExternalMailService( String hostName, int port );
       [...snip...]
 
@@ -322,7 +575,7 @@ must be called. Example;</p><pre class="programlisting brush: java">    void cha
 
     }
 }
-</pre></div></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-entity"></a>EntityComposite</h4></div></div></div><p>Entities are common in the object oriented programming world, but has never reached the stardom of Class and Object.
+</pre></div></div><div class="section" title="EntityComposite"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-entity"></a>EntityComposite</h4></div></div></div><p>Entities are common in the object oriented programming world, but has never reached the stardom of Class and Object.
 Instead we have seen many attempts at creating Entities on top of Java, such as EJB (3 incompatible versions), Java
 Data Objects (JDO, 2 somewhat compatible versions), Java Persistence Architecture (JPA, 2 somewhat compatible versions),
 Hibernate (4+ somewhat incompatible versions) and many other less known. This seems to suggest that the topic of
@@ -332,7 +585,7 @@ makes Entities a central part of the whole system. And likewise, we are convince
 domain-knowledge-rich applications without a conscious and well-defined strategy on Entities. So, instead of spending
 endless hours trying to get Hibernate mapping to do the right thing, we introduce a Composite meta type called
 EntityComposite, which all entities must derive from, and by doing so automatically become persistable, searchable,
-have a lifecycle and support nested undoable modifications.</p><p>The characteristics of an EntityComposite compared to other Composite meta types are;</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+have a lifecycle and support nested undoable modifications.</p><p>The characteristics of an EntityComposite compared to other Composite meta types are;</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
 It has an Identity.
 </li><li class="listitem">
 It has a LifeCycle.
@@ -342,9 +595,9 @@ It is typically persisted.
 It can only be referenced by an Association or ManyAssociation.
 </li><li class="listitem">
 Its CRUD operations are bound by a UnitOfWork.
-</li></ul></div></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-unitofwork"></a>Unit Of Work</h4></div></div></div><p>A UnitOfWork is a bounded group of operations performed, typically on entities, where these operations are not visible
+</li></ul></div></div><div class="section" title="Unit Of Work"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-unitofwork"></a>Unit Of Work</h4></div></div></div><p>A UnitOfWork is a bounded group of operations performed, typically on entities, where these operations are not visible
 to other threads until the UnitOfWork is completed. It is also possible to discard these operations, as if they were
-never executed.</p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>UnitOfWork has many similarities with the Transaction concept used with RDBMSes. But since Polygene™ introduced several deviations to the common definitions of Transactions, we chose to use a different term.</p></div><p>There are several key characteristics of UnitOfWork;</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+never executed.</p><div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>UnitOfWork has many similarities with the Transaction concept used with RDBMSes. But since Polygene™ introduced several deviations to the common definitions of Transactions, we chose to use a different term.</p></div><p>There are several key characteristics of UnitOfWork;</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
 They are limited to a single thread.
 </li><li class="listitem">
 They have an associated use-case.
@@ -355,23 +608,23 @@ They have a notification mechanism (used to trigger Indexing for instance).
 </li><li class="listitem">
 They can be long-running, as they don’t tie up underlying transactions or other expensive resources.
 </li></ul></div><p>At the moment, they are exclusively used to manipulate <a class="xref" href="core-api.html#core-api-entity" title="EntityComposite">EntityComposite</a> composites. All entity operations MUST be
-done via UnitOfWork, and in fact it is not possible to get this wrong.</p><div class="section"><div class="titlepage"><div><div><h5 class="title"><a id="_unitofwork_propagation"></a>UnitOfWork Propagation</h5></div></div></div><p>UnitOfWork is associated with a thread, and can only be transferred to another thread by a relatively complex operation
+done via UnitOfWork, and in fact it is not possible to get this wrong.</p><div class="section" title="UnitOfWork Propagation"><div class="titlepage"><div><div><h5 class="title"><a id="_unitofwork_propagation"></a>UnitOfWork Propagation</h5></div></div></div><p>UnitOfWork is associated with a thread, and can only be transferred to another thread by a relatively complex operation
 of pausing a UnitOfWork in one thread, then hand over the UnitOfWork to the other thread and resume it there. Don’t do it!</p><p>UnitOfWork is available from the <span class="emphasis"><em><a class="xref" href="core-api.html#core-api-module" title="Module">Module</a>, and from the Module you request either a new UnitOfWork or asking
 for the _current</em></span> one. <span class="emphasis"><em>Current UnitOfWork</em></span> means the UnitOfWork that was created earlier within the same thread. So,
 typically most entity manipulation code only request the current UnitOfWork and the management of creating, completing
 and aborting the UnitOfWork is handled by the transaction boundary, often in the so called application layer (see
 <a class="xref" href="core-api.html#core-api-layer" title="Layer">Layer</a>)</p><p>Since it is very common to have all, or nearly all, methods in the <span class="emphasis"><em>transaction boundary</em></span> to handle the creation and
 completion, possibly with retry, in the same class, module or even layer, Polygene™ provides annotations to easily declare
-UnitOfWork concern: @UnitOfWorkPropagation, @UnitOfWorkDiscardOn and @UnitOfWorkRetry</p></div></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-transient"></a>TransientComposite</h4></div></div></div><p>TransientComposite is a Composite meta type for all other cases. The main characteristics are;</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+UnitOfWork concern: @UnitOfWorkPropagation, @UnitOfWorkDiscardOn and @UnitOfWorkRetry</p></div></div><div class="section" title="TransientComposite"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-transient"></a>TransientComposite</h4></div></div></div><p>TransientComposite is a Composite meta type for all other cases. The main characteristics are;</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
 It can not be serialized nor persisted.
 </li><li class="listitem">
 hashcode/equals are not treated specially and will be delegated to fragment(s) implementing those methods.
 </li><li class="listitem">
 It can not be used as a Property type.
-</li></ul></div></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-object"></a>Objects</h4></div></div></div><p>There are times when Apache Polygene needs to interoperate with other systems, which
+</li></ul></div></div><div class="section" title="Objects"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-object"></a>Objects</h4></div></div></div><p>There are times when Apache Polygene needs to interoperate with other systems, which
 does not have interfaces as their abstraction. Polygene has a notion of
 Objects, which are Polygene-managed classes and can still be injected with
-the Polygene runtime model, such as @Structure and @Service.</p><p>The characteristics of an Object compared to Composite meta types are;</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+the Polygene runtime model, such as @Structure and @Service.</p><p>The characteristics of an Object compared to Composite meta types are;</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
 It is a Class, not an interface.
 </li><li class="listitem">
 It can have injections applied to it after it has been created.
@@ -381,20 +634,122 @@ No Mixins, Concerns or SideEffects.
 No Constraints.
 </li><li class="listitem">
 Can not have Property instances managed by the Polygene runtime.
-</li></ul></div><div class="section"><div class="titlepage"><div><div><h5 class="title"><a id="_serialization"></a>Serialization</h5></div></div></div><p>Objects can be serialized and deserialized using the Serialization API, if and only
+</li></ul></div><div class="section" title="Serialization"><div class="titlepage"><div><div><h5 class="title"><a id="_serialization"></a>Serialization</h5></div></div></div><p>Objects can be serialized and deserialized using the Serialization API, if and only
 if they are used as types in Properties in Values or Entities. It depends on the
 Serialization implementation on how the objects are serialized, and
 what the requirements are to allow for deserialization. In general, the Spring
 POJO setter/getter approach will always work, a default constructor is needed, and
-to be safe, make it into <code class="literal">java.io.Serializable</code>.</p></div><div class="section"><div class="titlepage"><div><div><h5 class="title"><a id="_usage"></a>Usage</h5></div></div></div><p>Objects are instantiated either by calling <code class="literal">ObjectFactory.newObject( type, … )</code> or
+to be safe, make it into <code class="literal">java.io.Serializable</code>.</p></div><div class="section" title="Usage"><div class="titlepage"><div><div><h5 class="title"><a id="_usage"></a>Usage</h5></div></div></div><p>Objects are instantiated either by calling <code class="literal">ObjectFactory.newObject( type, … )</code> or
 instantiating it in some other fashion and then call <code class="literal">ObjectFactory.injectInto(…)</code>
-to populate the fields.</p></div></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-mixin"></a>Mixin</h4></div></div></div><p>Mixins are the state-carrying part of a Composite instance. The other Fragments can not retain state between method
-invocations as they are shared across Composite instances.</p><div class="section"><div class="titlepage"><div><div><h5 class="title"><a id="_mixin_type"></a>Mixin Type</h5></div></div></div><p>The Mixin Type is the interface that declares the Mixin methods. Each Mixin implementation (the classes defined in
+to populate the fields.</p></div></div><div class="section" title="Dependency Injection"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-dependency-injection"></a>Dependency Injection</h4></div></div></div><p>Polygene has a rather sophisticated dependency injection system, which is based around the <a class="xref" href="">???</a>
+and <a class="xref" href="">???</a> concepts. The dependency injection system also need help to keep the injection scopes
+separated. The following injection scopes exists, some more common than others;</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
+<code class="literal">@This</code> - injection of fragment from the same Composite instance.
+</li><li class="listitem">
+<code class="literal">@Structure</code> - injection of <a class="xref" href="core-api.html#core-api-structure" title="Structure">Structure</a> organized types.
+</li><li class="listitem">
+<code class="literal">@Service</code> - injection of services.
+</li><li class="listitem">
+<code class="literal">@Uses</code> - injection of construction injected objects
+</li><li class="listitem">
+<code class="literal">@Invocation</code> - injection of parts related to the current method invocation.
+</li><li class="listitem">
+<code class="literal">@State</code> - injection of state of the composite instance
+</li><li class="listitem">
+Custom injection scopes - managed through <code class="literal">@AppliesTo</code> and <code class="literal">AppliesToFilter</code> declarations.
+</li></ul></div><div class="section" title="@This"><div class="titlepage"><div><div><h5 class="title"><a id="core-api-this"></a>@This</h5></div></div></div><p><code class="literal">@This</code> is equivalent to the <code class="literal">this</code> pointer in the Java language, but refers to any part of the current
+<a class="xref" href="">???</a>. This can either be a declared mixin type, or if not declared will be a <a class="xref" href="glossary.html#def-private-mixin">Private Mixin</a>.</p><p>We can simply request the injection of any type of the composite that we belong to, such as;</p><pre class="programlisting brush: java">@Mixins( { OrderMixin.class, ShippingMixin.class } )
+public interface Order extends HasShippingInformation
+{
+   :
+}
+
+public abstract class OrderMixin
+    implements Order
+{
+    @This
+    private HasShippingInformation shipping;
+}</pre><p>But we can have <a class="xref" href="glossary.html#def-private-mixin">Private Mixin</a> instead, where the injected mixin type will be automatically added to the
+composite.</p><pre class="programlisting brush: java">@MIxins( OrderMixin.class )
+public interface Order
+{
+   :
+}
+
+public class OrderMixin
+    implements Order
+{
+    @This
+    private DiscountRate discount;</pre></div><div class="section" title="@Structure"><div class="titlepage"><div><div><h5 class="title"><a id="core-api-structure-injection"></a>@Structure</h5></div></div></div><p>The <code class="literal">@Structure</code> injection scope is all about the types involved in the Application <a class="xref" href="core-api.html#core-api-structure" title="Structure">Structure</a> system.
+The possible types are;</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
+Application
+</li><li class="listitem">
+ApplicationDescriptor
+</li><li class="listitem">
+Layer
+</li><li class="listitem">
+LayerDescriptor
+</li><li class="listitem">
+Module
+</li><li class="listitem">
+ModuleDescriptor
+</li><li class="listitem">
+ModuleSPI
+</li><li class="listitem">
+UnitOfWorkFactory
+</li><li class="listitem">
+EntityBuilderFactory
+</li><li class="listitem">
+ValueBuilderFactory
+</li><li class="listitem">
+TransientBuilderFactory
+</li><li class="listitem">
+ObjectFactory
+</li><li class="listitem">
+QueryBuilderFactory
+</li><li class="listitem">
+ServiceFinder
+</li><li class="listitem">
+PolygeneAPI
+</li><li class="listitem">
+PolygeneSPI
+</li></ul></div></div><div class="section" title="@Service"><div class="titlepage"><div><div><h5 class="title"><a id="core-api-service"></a>@Service</h5></div></div></div><p>Services are injected either in a number of ways, either direct, via List or via ServiceReference types. The following
+combinations are allowed;</p><pre class="programlisting brush: java">    @Service
+    private MyService service;
+
+    @Service
+    private Iterable&lt;MyService&gt; services;
+
+    @Service
+    private ServiceReference&lt;MyService&gt; service;
+
+    @Service
+    private Iterable&lt;ServiceReference&lt;MyService&gt;&gt; services;</pre><p>If service is not declared <code class="literal">instantiateOnStartup</code> during assembly, then the service will be activated on first
+method invocation, and not on injection. This means that any reflection on the injected instance, may result in
+unexpected behavior.</p></div><div class="section" title="@Uses"><div class="titlepage"><div><div><h5 class="title"><a id="core-api-uses"></a>@Uses</h5></div></div></div><p><a class="xref" href="glossary.html#def-object">Object</a> and <a class="xref" href="glossary.html#def-valuecomposite">ValueComposite</a> can be created with <code class="literal">uses()</code> declarations. This allows injection of
+arbitrary types to these meta types. Only type matching will occur, so for instance only one String can be injected
+this way.</p><p>If a <code class="literal">@Uses</code> declaration can not be satisfied from the injected objects via <code class="literal">uses()</code> builder method, then
+if the <code class="literal">@Uses</code> injection is not <code class="literal">@Optional</code> the Polygene runtime will attempt to (in this order)</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
+Instantiate a visible <a class="xref" href="glossary.html#def-transientcomposite">TransientComposite</a>
+</li><li class="listitem">
+Instantiate a visible <a class="xref" href="glossary.html#def-object">Object</a>
+</li><li class="listitem">
+Instantiate a plain object with this Composite instance as a single constructor argument.
+</li></ul></div><p>If the <code class="literal">@Uses</code> is <code class="literal">@Optional</code> then no implict object creation will take place.</p></div><div class="section" title="@Invocation"><div class="titlepage"><div><div><h5 class="title"><a id="core-api-invocation"></a>@Invocation</h5></div></div></div><p><code class="literal">@Invocation</code> injection scope is all about the current method call. It is possible to inject the following types;</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
+The <code class="literal">Method</code> being executed.
+</li><li class="listitem">
+Any annotation type that the method is annotated with.
+</li><li class="listitem">
+An <code class="literal">Iterable</code> of either of the above
+</li></ul></div></div><div class="section" title="@State"><div class="titlepage"><div><div><h5 class="title"><a id="core-api-state"></a>@State</h5></div></div></div><p>This injection scope can inject either a <code class="literal">StateHolder</code> which allows inspection of current state of the Composite,
+or it can inject any declared <a class="xref" href="glossary.html#def-property">Property</a>, <a class="xref" href="">???</a>, <a class="xref" href="glossary.html#def-manyassociation">ManyAssociation</a> or
+<a class="xref" href="glossary.html#def-namedassociation">NamedAssociation</a>.</p></div><div class="section" title="Custom Injection Scopes"><div class="titlepage"><div><div><h5 class="title"><a id="core-api-custom-injection"></a>Custom Injection Scopes</h5></div></div></div></div></div><div class="section" title="Mixin"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-mixin"></a>Mixin</h4></div></div></div><p>Mixins are the state-carrying part of a Composite instance. The other Fragments can not retain state between method
+invocations as they are shared across Composite instances.</p><div class="section" title="Mixin Type"><div class="titlepage"><div><div><h5 class="title"><a id="_mixin_type"></a>Mixin Type</h5></div></div></div><p>The Mixin Type is the interface that declares the Mixin methods. Each Mixin implementation (the classes defined in
 the @Mixins annotation of a Composite declaration) implements one or more methods from one or more Mixin Types.</p><p>Mixin Type can be very simple, like;</p><pre class="programlisting brush: java">public interface BankAccount
 {
     Money checkBalance();
 }
-</pre><p>Or contain hundreds of methods, subclassed from dozens of super interfaces.</p><p>The Mixin Types of a Composite are ;</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+</pre><p>Or contain hundreds of methods, subclassed from dozens of super interfaces.</p><p>The Mixin Types of a Composite are ;</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
 all the aggregated interfaces of the Composite Type, minus Composite meta-type interfaces, and
 </li><li class="listitem">
 all private mixin referenced types.
@@ -402,7 +757,7 @@ all private mixin referenced types.
 less of one over the other. That is because a Mixin implementation can implement less than one, one, or more than one
 Mixin Type.</p><p>It is also entirely possible that multiple implementation methods exists for a Mixin Type method. The mixin method
 resolution algorithm will provide a deterministic behavior of which implementation of a method is chosen. The algorithm
-is as follows;</p><p>For each declared method of all Mixin Types of a Composite;</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+is as follows;</p><p>For each declared method of all Mixin Types of a Composite;</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
 Iterate all Mixin types declared from left to right in the declaration,
 </li><li class="listitem">
 Iterate all Mixin types of super-interfaces from left to right in the <span class="emphasis"><em>extends</em></span> clause,
@@ -416,7 +771,7 @@ Iterate all Typed Mixin implementations of all super-interfaces, before repeatin
 </li></ul></div><p>This means that one Mixin implementation can <span class="emphasis"><em>override</em></span> a single method that a larger mixin implementation implements
 together with many other methods. So, just because a mixin implements MixinTypeA.method1() and has an implementation
 of MixinTypeA.method2(), doesn’t mean that method2() is mapped to that mixin. This is very important to remember. The
-Envisage tool is capable of visualizing how Mixin Type methods are mapped to implementations.</p></div><div class="section"><div class="titlepage"><div><div><h5 class="title"><a id="_public_mixins"></a>Public Mixins</h5></div></div></div><p>Mixins are the state holders of the composite instance. Public Mixins are the mixins that are exposed to the outside
+Envisage tool is capable of visualizing how Mixin Type methods are mapped to implementations.</p></div><div class="section" title="Public Mixins"><div class="titlepage"><div><div><h5 class="title"><a id="_public_mixins"></a>Public Mixins</h5></div></div></div><p>Mixins are the state holders of the composite instance. Public Mixins are the mixins that are exposed to the outside
 world via the CompositeType interface.</p><p><span class="strong"><strong>Each method in the CompositeType interface MUST be backed by a mixin class.</strong></span></p><p>Mixins are declared as annotations on the composite interface.</p><pre class="programlisting brush: java">@Mixins( SomethingMixin.class )
 public interface Something
 {}
@@ -478,7 +833,7 @@ public interface Car extends Startable, Vehicle
 
 </pre><p>Above the SpeedMixin only implements the accelerate() method, and Polygene™ will only map that method to this mixin. The
 other method of the SpeedLocation interface is not satisfied as the example is written and will generate a runtime
-exception.</p></div><div class="section"><div class="titlepage"><div><div><h5 class="title"><a id="_private_mixins"></a>Private Mixins</h5></div></div></div><p>Public mixins expose their methods in the composite interface, and this is not always desirable. Polygene™ supports
+exception.</p></div><div class="section" title="Private Mixins"><div class="titlepage"><div><div><h5 class="title"><a id="_private_mixins"></a>Private Mixins</h5></div></div></div><p>Public mixins expose their methods in the composite interface, and this is not always desirable. Polygene™ supports
 <span class="emphasis"><em>Private Mixins</em></span>, which are only visible within the composite itself. That means that other fragments in the composite
 can see/use it, but it is not visible to the clients of the composite.</p><p>Private Mixins are handled automatically. When Polygene™ detects a <code class="literal">@This</code> annotation referring to a type that is not defined
 in the Composite interface, then that is a Private Mixin. The Mixin implementation class, however, must exist in the
@@ -526,7 +881,7 @@ probably do something like;</p><pre class="programlisting brush: java">public ab
 }
 
 </pre><p>So, in this typical case, we don’t need to declare the Mixin for the CargoState, as it only defines Property methods,
-which are handled by the standard PropertyMixin always present.</p></div><div class="section"><div class="titlepage"><div><div><h5 class="title"><a id="_typed_mixin_vs_generic_mixin_implementations"></a>Typed Mixin vs Generic Mixin implementations</h5></div></div></div><p>Mixins, Concerns and SideEffects can either be "typed" or "generic". A Typed Mixin implementation implements one or
+which are handled by the standard PropertyMixin always present.</p></div><div class="section" title="Typed Mixin vs Generic Mixin implementations"><div class="titlepage"><div><div><h5 class="title"><a id="_typed_mixin_vs_generic_mixin_implementations"></a>Typed Mixin vs Generic Mixin implementations</h5></div></div></div><p>Mixins, Concerns and SideEffects can either be "typed" or "generic". A Typed Mixin implementation implements one or
 more Mixin Type interfaces, and one or more of the methods of those interfaces. A Generic Mixin implementation
 implements java.lang.reflect.InvocationHandler, and can therefor be matched to any method of any interface.
 Typically, AppliesTo annotation is used to filter the methods that such Generic Mixin implementation is mapped against,
@@ -561,7 +916,7 @@ public final class PropertyMixin
         }
     }
 }
-</pre><p>Other examples that we have come across;</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+</pre><p>Other examples that we have come across;</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
 Mapping from Property&lt;type&gt; to POJO style "properties".
 </li><li class="listitem">
 Remote Service delegation.
@@ -571,15 +926,15 @@ Scripting delegation, where a script will implement the Mixin Type.
 the IDE as well, for navigation, find usage, refactoring and many other common tasks. This is one of the main
 advantages of the Polygene™ way of doing AOP compared to AspectJ et al, where "weaving" is something bolted onto an
 application’s classes via regular expressions and known naming conventions, which can change in an instance by a
-developer being unaware of which PointCuts applies to his code.</p></div></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-concern"></a>Concern</h4></div></div></div><p>Concerns are the equivalent of "around advice" in Aspect Oriented Programming. They are chained into an invocation
+developer being unaware of which PointCuts applies to his code.</p></div></div><div class="section" title="Concern"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-concern"></a>Concern</h4></div></div></div><p>Concerns are the equivalent of "around advice" in Aspect Oriented Programming. They are chained into an invocation
 stack for each Mixin Type method and invoked after the Constraints have been executed. Since they are sitting "around"
 the Mixin implementation method, they also have a chance to modify the returned result, and even skip calling the
-underlying Mixin method implementation altogether.</p><p>To create a concern, you need to create a class that,</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+underlying Mixin method implementation altogether.</p><p>To create a concern, you need to create a class that,</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
 implements the Mixin Type (Typed Concerns) or java.lang.reflect.InvocationHandler (Generic Concerns),
 </li><li class="listitem">
 extend ConcernOf (Typed Concerns) or GenericConcern (Generic Concerns) [1]
 </li></ul></div><p>You are allowed to modify both the in-arguments as well as the returned value, including throw exceptions if that is
-suitable, perhaps for post condition checks.</p><div class="section"><div class="titlepage"><div><div><h5 class="title"><a id="_applicability"></a>Applicability</h5></div></div></div><p>Concerns are applied to composite types in several ways;</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+suitable, perhaps for post condition checks.</p><div class="section" title="Applicability"><div class="titlepage"><div><div><h5 class="title"><a id="_applicability"></a>Applicability</h5></div></div></div><p>Concerns are applied to composite types in several ways;</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
 @Concerns annotation on the Mixin Type.
 </li><li class="listitem">
 withConcerns() assembly instruction at bootstrap.
@@ -587,14 +942,14 @@ withConcerns() assembly instruction at bootstrap.
 In custom annotations to be applied to either Mixin Types or methods on Mixin Types.
 </li><li class="listitem">
 @Concerns annotation directly on a method.
-</li></ul></div></div><div class="section"><div class="titlepage"><div><div><h5 class="title"><a id="_typed_concern_2"></a>Typed Concern</h5></div></div></div><p>As mentioned above, concerns that implements the <span class="emphasis"><em>Mixin Type</em></span> are called <span class="strong"><strong>Typed Concerns</strong></span>. They are more common in the
+</li></ul></div></div><div class="section" title="Typed Concern"><div class="titlepage"><div><div><h5 class="title"><a id="_typed_concern_2"></a>Typed Concern</h5></div></div></div><p>As mentioned above, concerns that implements the <span class="emphasis"><em>Mixin Type</em></span> are called <span class="strong"><strong>Typed Concerns</strong></span>. They are more common in the
 business domain, and can be used for many important things in the domain model, such as checking post conditions (i.e.
 ensure that the state in the entire composite is valid), coordinating services, handling events and much more.</p><p>Typed Concerns doesn’t have to implement all the methods in the Mixin Type. By making the class abstract and only
 implementing the methods of interest, Polygene™ runtime will subclass the concern (otherwise not valid for the JVM), but the
-generated methods will never be invoked.</p></div><div class="section"><div class="titlepage"><div><div><h5 class="title"><a id="_generic_concern_2"></a>Generic Concern</h5></div></div></div><p>In classic AOP, all advice are effectively <span class="emphasis"><em>generic</em></span>. There is no type information in the advice implementation and the
+generated methods will never be invoked.</p></div><div class="section" title="Generic Concern"><div class="titlepage"><div><div><h5 class="title"><a id="_generic_concern_2"></a>Generic Concern</h5></div></div></div><p>In classic AOP, all advice are effectively <span class="emphasis"><em>generic</em></span>. There is no type information in the advice implementation and the
 pointcut can be defined anywhere in the code, and the implementation uses proxy InvocationHandlers. Polygene™ supports this
 construct as well, and we call it <span class="strong"><strong>Generic Concern</strong></span>.</p><p>Generic Concerns will be added to all methods that the AppliesToFilter evaluates to true. By default, that is all methods.</p><p>AppliesToFilters is a mechanism to limit, or direct, which methods that the concern should be added to. You have full
-control over this selection process, via several mechanisms.</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+control over this selection process, via several mechanisms.</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
 @AppliesTo annotation can be put on the concern, with either;
 </li><li class="listitem">
 an interface for which the methods should be wrapped, or
@@ -657,10 +1012,10 @@ public class AuditConcern extends GenericConcern
 public @interface Audited
 {
 }
-</pre><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>Even if a method fulfills the requirement for the concern, if the concern is not declared for the Composite then the concern will NOT be applied.</p></div></div><div class="section"><div class="titlepage"><div><div><h5 class="title"><a id="_invocation_order"></a>Invocation Order</h5></div></div></div><p>The concerns are invoked AFTER all <a class="xref" href="core-api.html#core-api-constraint" title="Constraint">Constraint</a> have been checked. The concerns are executed before the
+</pre><div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>Even if a method fulfills the requirement for the concern, if the concern is not declared for the Composite then the concern will NOT be applied.</p></div></div><div class="section" title="Invocation Order"><div class="titlepage"><div><div><h5 class="title"><a id="_invocation_order"></a>Invocation Order</h5></div></div></div><p>The concerns are invoked AFTER all <a class="xref" href="core-api.html#core-api-constraint" title="Constraint">Constraint</a> have been checked. The concerns are executed before the
 <a class="xref" href="core-api.html#core-api-sideeffect" title="SideEffect">SideEffect</a> are executed in the return path.</p><p>The order of execution is defined by the declaration order, interface hierarchy, whether the concern is generic or typed
 and if they are declared in the interface or declared in the <a class="xref" href="core-bootstrap-assembly.html" title="Core Bootstrap">Assembly</a>.</p><p>From the perspective of incoming call, i.e. after the &lt;core-api-constraint&gt;&gt; have been checked, the following rules
-are in place;</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+are in place;</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
 Typed concerns are invoked AFTER Generic concerns.
 </li><li class="listitem">
 Concern declared to the LEFT are executed BEFORE concerns to the RIGHT.
@@ -672,15 +1027,15 @@ Concerns in super-interfaces are executed breadth BEFORE depth.
 Concerns in different super-interfaces at the same "level" are executed with the concerns declared in super-interfaces left of other super-interfaces first. (TODO: Strange explanation)
 </li><li class="listitem">
 Concerns declared in interfaces are executed AFTER concerns declared in <a class="xref" href="core-bootstrap-assembly.html" title="Core Bootstrap">Assembly</a>.
-</li></ul></div></div></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-constraint"></a>Constraint</h4></div></div></div></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-sideeffect"></a>SideEffect</h4></div></div></div><p>SideEffects have no equivalent in Aspect Oriented Programming. They are executed AFTER the method invocation, and
+</li></ul></div></div></div><div class="section" title="Constraint"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-constraint"></a>Constraint</h4></div></div></div></div><div class="section" title="SideEffect"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-sideeffect"></a>SideEffect</h4></div></div></div><p>SideEffects have no equivalent in Aspect Oriented Programming. They are executed AFTER the method invocation, and
 they are potentially concurrent with the method invocation itself. The SideEffect receives the incoming method arguments
 and can query the result of the method call by accessing the <code class="literal">next</code> field. SideEffects can NOT influence the method
-call in any way, and both return values from the SideEffect, as well as any exceptions thrown, will be ignored.</p><p>To create a sideeffect, you need to create a class that,</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+call in any way, and both return values from the SideEffect, as well as any exceptions thrown, will be ignored.</p><p>To create a sideeffect, you need to create a class that,</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
 implements the Mixin Type (Typed SideEffects) or java.lang.reflect.InvocationHandler (Generic SideEffects),
 </li><li class="listitem">
 extend SideEffectOf (Typed Concerns) or GenericSideEffect (Generic SideEffects) [1]
 </li></ul></div><p>You are allowed to modify both the in-arguments as well as the returned value, including throw exceptions if that is
-suitable, perhaps for post condition checks.</p><div class="section"><div class="titlepage"><div><div><h5 class="title"><a id="_applicability_2"></a>Applicability</h5></div></div></div><p>SideEffects are applied to composite types in several ways;</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+suitable, perhaps for post condition checks.</p><div class="section" title="Applicability"><div class="titlepage"><div><div><h5 class="title"><a id="_applicability_2"></a>Applicability</h5></div></div></div><p>SideEffects are applied to composite types in several ways;</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
 @SideEffects annotation on the Mixin Type.
 </li><li class="listitem">
 withSideEffects() assembly instruction at bootstrap.
@@ -688,12 +1043,12 @@ withSideEffects() assembly instruction at bootstrap.
 @SideEffects annotation of custom annotations to be applied to either Mixin Types or methods on Mixin Types.
 </li><li class="listitem">
 @SideEffects annotation directly on a method.
-</li></ul></div></div><div class="section"><div class="titlepage"><div><div><h5 class="title"><a id="_typed_sideeffect_2"></a>Typed SideEffect</h5></div></div></div><p>As mentioned above, side effects that implements the <span class="emphasis"><em>Mixin Type</em></span> are called <span class="strong"><strong>Typed SideEffects</strong></span>.</p><p>A Typed SideEffect doesn’t have to implement all the methods in the Mixin Type. By making the class abstract and only
+</li></ul></div></div><div class="section" title="Typed SideEffect"><div class="titlepage"><div><div><h5 class="title"><a id="_typed_sideeffect_2"></a>Typed SideEffect</h5></div></div></div><p>As mentioned above, side effects that implements the <span class="emphasis"><em>Mixin Type</em></span> are called <span class="strong"><strong>Typed SideEffects</strong></span>.</p><p>A Typed SideEffect doesn’t have to implement all the methods in the Mixin Type. By making the class abstract and only
 implementing the methods of interest, Polygene™ runtime will subclass the side effect (otherwise not valid for the
-JVM/compiler), but the generated methods will never be invoked.</p></div><div class="section"><div class="titlepage"><div><div><h5 class="title"><a id="_generic_sideeffect_2"></a>Generic SideEffect</h5></div></div></div><p>Generic SideEffects implement the <code class="literal">java.lang.reflect.InvocationHandler</code> and can potentially serve any method it is
+JVM/compiler), but the generated methods will never be invoked.</p></div><div class="section" title="Generic SideEffect"><div class="titlepage"><div><div><h5 class="title"><a id="_generic_sideeffect_2"></a>Generic SideEffect</h5></div></div></div><p>Generic SideEffects implement the <code class="literal">java.lang.reflect.InvocationHandler</code> and can potentially serve any method it is
 applied to. Generic SideEffects will be added to all methods that the AppliesToFilter evaluates to true. By default,
 that is all methods.</p><p>AppliesToFilters is a mechanism to limit, or direct, which methods that the concern should be added to. You have full
-control over this selection process, via several mechanisms.</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+control over this selection process, via several mechanisms.</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
 @AppliesTo annotation can be put on the side effect, with either;
 </li><li class="listitem">
 an interface for which the methods should be wrapped, or
@@ -711,15 +1066,15 @@ on any method of the Composite Type, or
 on an annotation that is in turn declared on a Composite Type method
 </li><li class="listitem">
 during assembly in the withSideEffects() method.
-</li></ul></div></div><div class="section"><div class="titlepage"><div><div><h5 class="title"><a id="_invocation_order_2"></a>Invocation Order</h5></div></div></div><p>The invocation order of SideEffects is UNDEFINED, and one MUST NOT rely on SideEffects executing in any particular order.
+</li></ul></div></div><div class="section" title="Invocation Order"><div class="titlepage"><div><div><h5 class="title"><a id="_invocation_order_2"></a>Invocation Order</h5></div></div></div><p>The invocation order of SideEffects is UNDEFINED, and one MUST NOT rely on SideEffects executing in any particular order.
 They MAY be concurrent and outside the thread that executed the method, so the SideEffect can also not depend on
 the UnitOfWork that may be observed as present.</p><p>To be clear; the method call to the SideEffect is NOT its own Polygene-controlled invocation stack, and any annotations
 on the SideEffect methods will be ignored (or it is a bug). That means that IF the SideEffect needs a UnitOfWork it
-either needs to manage one explicitly or call out to a service that has the @UnitOfWorkPropagation annotation.</p></div></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-decoratormixin"></a>DecoratorMixin</h4></div></div></div><p>A little known feature is the DecoratorMixin, which allows any object to become a Mixin. This is useful when for instance
+either needs to manage one explicitly or call out to a service that has the @UnitOfWorkPropagation annotation.</p></div></div><div class="section" title="DecoratorMixin"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-decoratormixin"></a>DecoratorMixin</h4></div></div></div><p>A little known feature is the DecoratorMixin, which allows any object to become a Mixin. This is useful when for instance
 the initialization of the object to act as a Mixin is complex, or maybe an instance is shared across many Composites.
 This functionality is only relevant in Transients, and therefor not available in other Composite meta types.</p><p>This is done by declaring the DecoratorMixin on the interface, and add the object to be used via the use() method on
 the TransientBuilder.</p><p>The DecoratorMixin will optimize the invocation for generic mixins, to avoid additional cost of reflection. But otherwise
-the DecoratorMixin is fairly simple</p><div class="section"><div class="titlepage"><div><div><h5 class="title"><a id="_example"></a>Example</h5></div></div></div><p>Let’s say that we have a model, FooModel, whose implementation is simply a POJO. Several different views shares this
+the DecoratorMixin is fairly simple</p><div class="section" title="Example"><div class="titlepage"><div><div><h5 class="title"><a id="_example_2"></a>Example</h5></div></div></div><p>Let’s say that we have a model, FooModel, whose implementation is simply a POJO. Several different views shares this
 the same model instance, so any changes to the model will notify the views.</p><p>We start with the FooModel interface;</p><pre class="programlisting brush: java">public interface FooModel
 {
     String getBar();
@@ -777,8 +1132,8 @@ public void testDecoration()
     assertThat( view1.bar(), equalTo( "New Value" ) );
     assertThat( view2.bar(), equalTo( "New Value" ) );
 }
-</pre></div></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-serialization"></a>Serialization</h4></div></div></div><p>State can be serialized and deserialized using the Serialization API which is a Service API implemented
-by SPI and extensions.</p><div class="tip" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Tip</h3><p><code class="literal">Serialization extends Serializer, Deserializer</code>. See the <a class="xref" href="javadocs.html" title="Javadoc"> JavaDocs</a> for interfaces detail.</p></div><p>The Serialization mechanism apply to the following object types :</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+</pre></div></div><div class="section" title="Serialization"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-serialization"></a>Serialization</h4></div></div></div><p>State can be serialized and deserialized using the Serialization API which is a Service API implemented
+by SPI and extensions.</p><div class="tip" title="Tip" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Tip</h3><p><code class="literal">Serialization extends Serializer, Deserializer</code>. See the <a class="xref" href="javadocs.html" title="Javadoc"> JavaDocs</a> for interfaces detail.</p></div><p>The Serialization mechanism apply to the following object types :</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
 ValueComposite,
 </li><li class="listitem">
 EntityReference &amp; Identity,
@@ -789,7 +1144,7 @@ Map,
 </li><li class="listitem">
 Plain Values.
 </li></ul></div><p>Nested Plain Values, EntityReferences, Identities, Arrays, Iterables, Streams, Maps, ValueComposites are supported.
-EntityComposites and EntityReferences are serialized as their identity string.</p><p>Plain Values can be one of :</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+EntityComposites and EntityReferences are serialized as their identity string.</p><p>Plain Values can be one of :</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
 String,
 </li><li class="listitem">
 Character or char,
@@ -813,7 +1168,7 @@ BigInteger,
 BigDecimal,
 </li><li class="listitem">
 java.time types.
-</li></ul></div><div class="tip" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Tip</h3><p>Serialization behaviour can be tuned with options.
+</li></ul></div><div class="tip" title="Tip" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Tip</h3><p>Serialization behaviour can be tuned with options.
 Every <code class="literal">Serializer</code> methods can take a <code class="literal">Serializer.Options</code> object that contains flags to change how some
 values are serialized. See the <a class="xref" href="javadocs.html" title="Javadoc"> JavaDocs</a> for more details.</p></div><p>Values of unknown types and all arrays are considered as <code class="literal">java.io.Serializable</code> and by so are (de)serialized to (from)
 base64 encoded bytes using pure Java serialization. If it happens that the value is not Serializable or the input to
@@ -828,14 +1183,19 @@ circumvent <code class="literal">AmbiguousTypeException</code> when deserializin
 public void assemble( ModuleAssembly module )
 {
     module.values( SomeValue.class ); // (2)
+      [...snip...]
+
+    module.defaultServices(); // (3)
+      [...snip...]
+
 }
   [...snip...]
 
 public void defaultSerialization()
 {
-    SomeValue someValue = someNewValueInstance(); // (3)
-    String json = someValue.toString(); // (4)
-    SomeValue someNewValue = valueBuilderFactory.newValueFromSerializedState( SomeValue.class, json ); // (5)
+    SomeValue someValue = someNewValueInstance(); // (4)
+    String json = someValue.toString(); // (5)
+    SomeValue someNewValue = valueBuilderFactory.newValueFromSerializedState( SomeValue.class, json ); // (6)
       [...snip...]
 
 }
@@ -844,6 +1204,8 @@ public void defaultSerialization()
 declare a ValueComposite,
 </li><li class="listitem">
 assemble it,
+</li><li class="listitem">
+assemble default services including default <code class="literal">Serialization</code>,
 </li><li class="listitem">
 create a new Value instance,
 </li><li class="listitem">
@@ -863,6 +1225,11 @@ Serialization Service is visible.</p><p>Let’s see how to use the Serialization
 public void assemble( ModuleAssembly module )
 {
     module.values( SomeValue.class ); // (2)
+      [...snip...]
+
+    new JavaxJsonSerializationAssembler().assemble( module ); // (3)
+      [...snip...]
+
 }
   [...snip...]
 
@@ -895,30 +1262,30 @@ create a new Value instance,
 use the <code class="literal">Serializer#serialize()</code> method to get a JSON representation of the Value,
 </li><li class="listitem">
 and finally, use the <code class="literal">Deserializer#deserialize()</code> method to create a new Value instance from the JSON state.
-</li></ol></div></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-type-lookup"></a>Composite Types Lookup</h4></div></div></div><p>Composite Types Lookup can occurs when you explicitely lookup for a Composite by Type
+</li></ol></div></div><div class="section" title="Composite Types Lookup"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-type-lookup"></a>Composite Types Lookup</h4></div></div></div><p>Composite Types Lookup can occurs when you explicitely lookup for a Composite by Type
 (ex. ServiceFinder.findService(..) methods), when you ask for an injection or when you create a new composite instance.</p><p>All theses type lookup start from a Module, are lazy, cached and obey the Polygene™ Visibility rules. Type Lookup works
-equally accross Composite Types with some subtle differences when it comes to Services and Entities.</p><div class="section"><div class="titlepage"><div><div><h5 class="title"><a id="_object_transient_and_value_types_lookup"></a>Object, Transient and Value Types Lookup</h5></div></div></div><p>When creating or injecting Objects, Transients or Values the Type Lookup does the following:</p><p>First, if Object/Transient/Value Models exactly match the given type, the closest one (Visibility then Assembly order)
+equally accross Composite Types with some subtle differences when it comes to Services and Entities.</p><div class="section" title="Object, Transient and Value Types Lookup"><div class="titlepage"><div><div><h5 class="title"><a id="_object_transient_and_value_types_lookup"></a>Object, Transient and Value Types Lookup</h5></div></div></div><p>When creating or injecting Objects, Transients or Values the Type Lookup does the following:</p><p>First, if Object/Transient/Value Models exactly match the given type, the closest one (Visibility then Assembly order)
 is returned. Multiple <span class="strong"><strong>exact</strong></span> matches with the same Visibility are <span class="strong"><strong>forbidden</strong></span> and result in an
 AmbiguousTypeException.</p><p>Second, if Object/Transient/Value Models match a type assignable to the given type, the closest one (Visibility then
 Assembly order) is returned. Multiple <span class="strong"><strong>assignable</strong></span> matches with the same Visibility are <span class="strong"><strong>forbidden</strong></span> and result in an
-AmbiguousTypeException.</p></div><div class="section"><div class="titlepage"><div><div><h5 class="title"><a id="_entity_types_lookup"></a>Entity Types Lookup</h5></div></div></div><p>Entity Types Lookup is splitted in two use cases famillies: Creational usecases and Non-Creational usecases.</p><p><span class="strong"><strong>Creational Entity Types Lookup</strong></span></p><p>This Type Lookup takes place when creating new Entity instances from a UnitOfWork and behave exactly like
+AmbiguousTypeException.</p></div><div class="section" title="Entity Types Lookup"><div class="titlepage"><div><div><h5 class="title"><a id="_entity_types_lookup"></a>Entity Types Lookup</h5></div></div></div><p>Entity Types Lookup is splitted in two use cases famillies: Creational usecases and Non-Creational usecases.</p><p><span class="strong"><strong>Creational Entity Types Lookup</strong></span></p><p>This Type Lookup takes place when creating new Entity instances from a UnitOfWork and behave exactly like
 Object/Transient/Value Types Lookups.</p><p><span class="strong"><strong>Non-Creational Entity Types Lookup</strong></span></p><p>This Type Lookup takes place when fetching Entities from an EntityStore or writing queries using the Query API. The Type
-Lookup is different here to allow polymorphic use of Entities and Queries.</p><p>First difference is that this Type Lookup returns an ordered collection instead of a single match.</p><p>Returned collection contains, in order, Entity Models that:</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+Lookup is different here to allow polymorphic use of Entities and Queries.</p><p>First difference is that this Type Lookup returns an ordered collection instead of a single match.</p><p>Returned collection contains, in order, Entity Models that:</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
 exactly match the given type, in Visibility then Assembly order ;
 </li><li class="listitem">
 match a type assignable to the given type, in Visibility then Assembly order.
-</li></ul></div><p>Multiple <span class="strong"><strong>exact</strong></span> matches with the same Visibility are <span class="strong"><strong>forbidden</strong></span> and result in an AmbiguousTypeException.</p><p>Multiple <span class="strong"><strong>assignable</strong></span> matches are <span class="strong"><strong>allowed</strong></span> to enable polymorphic fetches and queries.</p></div><div class="section"><div class="titlepage"><div><div><h5 class="title"><a id="_service_types_lookup"></a>Service Types Lookup</h5></div></div></div><p>Service Types Lookup works as follow:</p><p>Returned collection contains, in order, ServiceReferences that:</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+</li></ul></div><p>Multiple <span class="strong"><strong>exact</strong></span> matches with the same Visibility are <span class="strong"><strong>forbidden</strong></span> and result in an AmbiguousTypeException.</p><p>Multiple <span class="strong"><strong>assignable</strong></span> matches are <span class="strong"><strong>allowed</strong></span> to enable polymorphic fetches and queries.</p></div><div class="section" title="Service Types Lookup"><div class="titlepage"><div><div><h5 class="title"><a id="_service_types_lookup"></a>Service Types Lookup</h5></div></div></div><p>Service Types Lookup works as follow:</p><p>Returned collection contains, in order, ServiceReferences that:</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
 exactly match the given type, in Visibility then Assembly order ;
 </li><li class="listitem">
 match a type assignable to the given type, in Visibility then Assembly order.
-</li></ul></div><p>Multiple <span class="strong"><strong>exact</strong></span> matches with the same Visibility are <span class="strong"><strong>allowed</strong></span> to enable polymorphic lookup/injection.</p><p>Multiple <span class="strong"><strong>assignable</strong></span> matches with the same Visibility are <span class="strong"><strong>allowed</strong></span> for the very same reason.</p></div></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-metrics"></a>Metrics API</h4></div></div></div><p>The Polygene™ platform defines an advanced Metrics SPI to capture runtime metrics of Polygene’s internals as well be used by
+</li></ul></div><p>Multiple <span class="strong"><strong>exact</strong></span> matches with the same Visibility are <span class="strong"><strong>allowed</strong></span> to enable polymorphic lookup/injection.</p><p>Multiple <span class="strong"><strong>assignable</strong></span> matches with the same Visibility are <span class="strong"><strong>allowed</strong></span> for the very same reason.</p></div></div><div class="section" title="Metrics API"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-metrics"></a>Metrics API</h4></div></div></div><p>The Polygene™ platform defines an advanced Metrics SPI to capture runtime metrics of Polygene’s internals as well be used by
 application code (via this API) to provide production metrics for operations personnel, ensuring healthy state of
-the applications.</p><div class="section"><div class="titlepage"><div><div><h5 class="title"><a id="_metricsprovider"></a>MetricsProvider</h5></div></div></div><p>There are quite a lot of different Metrics components available, which are instantiated via factories. There is one
+the applications.</p><div class="section" title="MetricsProvider"><div class="titlepage"><div><div><h5 class="title"><a id="_metricsprovider"></a>MetricsProvider</h5></div></div></div><p>There are quite a lot of different Metrics components available, which are instantiated via factories. There is one
 factory for each component type, to allow for additional components to be created in the future without breaking
 compatibility in the existing implementations.</p><p>The MetricsProvider is a standard Polygene™ Service and simply acquired via the @Service annotation on a field or
 constructor argument.</p><pre class="programlisting brush: java">@Service
 private MetricsProvider provider;
-</pre></div><div class="section"><div class="titlepage"><div><div><h5 class="title"><a id="_gauge"></a>Gauge</h5></div></div></div><p>A Gauge is the simplest form of Metric. It is a value that the application sets, which is polled upon request. The
+</pre></div><div class="section" title="Gauge"><div class="titlepage"><div><div><h5 class="title"><a id="_gauge"></a>Gauge</h5></div></div></div><p>A Gauge is the simplest form of Metric. It is a value that the application sets, which is polled upon request. The
 application need to provide the implementation of the <span class="emphasis"><em>value()</em></span> method. Gauges are genericized for type-safe value
 handling.</p><p>A Gauge can represent anything, for instance, thread pool levels, queue sizes and other resource allocations. It is
 useful to have separate gauges for percentage (%) and absolute numbers of the same resource. Operations are mainly
@@ -928,23 +1295,23 @@ track of.</p><p>To create a Gauge, you do something like;</p><pre class="program
 
 MetricsGaugeFactory gaugeFactory = provider.createFactory( MetricsGaugeFactory.class );
 MetricsGauge&lt;Integer&gt; gauge = gaugeFactory.registerGauge( "Sample Gauge", () -&gt; queue.size() );
-</pre></div><div class="section"><div class="titlepage"><div><div><h5 class="title"><a id="_counter"></a>Counter</h5></div></div></div><p>Often we want to track the many counters in a system. This might be "number of HTTP requests" or
+</pre></div><div class="section" title="Counter"><div class="titlepage"><div><div><h5 class="title"><a id="_counter"></a>Counter</h5></div></div></div><p>Often we want to track the many counters in a system. This might be "number of HTTP requests" or
 "filesystem access frequency". By creating a <span class="emphasis"><em>Counter</em></span> metrics, it is simply a matter of calling the <span class="emphasis"><em>increment</em></span>
 or <span class="emphasis"><em>decrement</em></span> on that metric. This will track both number of counts/steps as well as the rate (per second), and
 many visualization platforms. such as Kibana, Graphite and Grafana, are made to handle this particular metric very well.</p><pre class="programlisting brush: java">MetricsCounterFactory counterFactory = provider.createFactory( MetricsCounterFactory.class );
 MetricsCounter counter = counterFactory.createCounter( "Sample Counter" );
-</pre></div><div class="section"><div class="titlepage"><div><div><h5 class="title"><a id="_histogram"></a>Histogram</h5></div></div></div><p>Histograms is about computing the running standard deviations and variances. Please see
+</pre></div><div class="section" title="Histogram"><div class="titlepage"><div><div><h5 class="title"><a id="_histogram"></a>Histogram</h5></div></div></div><p>Histograms is about computing the running standard deviations and variances. Please see
 <a class="ulink" href="http://www.johndcook.com/standard_deviation.html" target="_top">"Accurately computing running variance"</a> for more detailed information.</p><pre class="programlisting brush: java">MetricsHistogramFactory histoFactory = provider.createFactory( MetricsHistogramFactory.class );
 MetricsHistogram histogram = histoFactory.createHistogram( "Sample Histogram" );
-</pre></div><div class="section"><div class="titlepage"><div><div><h5 class="title"><a id="_meter"></a>Meter</h5></div></div></div><p>The <span class="emphasis"><em>Meter</em></span> is a more advanced <span class="emphasis"><em>Counter</em></span>, which measures mean throughput and one-, five-, and fifteen-minute
+</pre></div><div class="section" title="Meter"><div class="titlepage"><div><div><h5 class="title"><a id="_meter"></a>Meter</h5></div></div></div><p>The <span class="emphasis"><em>Meter</em></span> is a more advanced <span class="emphasis"><em>Counter</em></span>, which measures mean throughput and one-, five-, and fifteen-minute
 exponentially-weighted moving average throughputs.</p><p>Wikipedia has a section
 <a class="ulink" href="http://en.wikipedia.org/wiki/Moving_average#Exponential_moving_average" target="_top">"Exponential moving average"</a> in the
 "Moving Average" article.</p><pre class="programlisting brush: java">MetricsMeterFactory meterFactory = provider.createFactory( MetricsMeterFactory.class );
 MetricsMeter meter = meterFactory.createMeter( "Sample Meter" );
-</pre></div><div class="section"><div class="titlepage"><div><div><h5 class="title"><a id="_timer"></a>Timer</h5></div></div></div><p>Timers capture both the length of some execution as well as rate of calls. They can be used to time method calls, or
+</pre></div><div class="section" title="Timer"><div class="titlepage"><div><div><h5 class="title"><a id="_timer"></a>Timer</h5></div></div></div><p>Timers capture both the length of some execution as well as rate of calls. They can be used to time method calls, or
 critical sections, or even HTTP requests duration and similar.</p><pre class="programlisting brush: java">MetricsTimerFactory timerFactory = provider.createFactory( MetricsTimerFactory.class );
 MetricsTimer timer = timerFactory.createTimer( "Sample Timer" );
-</pre></div><div class="section"><div class="titlepage"><div><div><h5 class="title"><a id="_healthcheck"></a>HealthCheck</h5></div></div></div><p>HealthCheck is a metric to report the health of a system or component. The HealthCheck metric will be called upon
+</pre></div><div class="section" title="HealthCheck"><div class="titlepage"><div><div><h5 class="title"><a id="_healthcheck"></a>HealthCheck</h5></div></div></div><p>HealthCheck is a metric to report the health of a system or component. The HealthCheck metric will be called upon
 regularly to report its status, which is then forwarded to the monitoring system.</p><pre class="programlisting brush: java">MetricsHealthCheckFactory healthFactory = provider.createFactory( MetricsHealthCheckFactory.class );
 MetricsHealthCheck healthCheck = healthFactory.registerHealthCheck( "Sample Healthcheck", () -&gt;
 {
@@ -959,15 +1326,15 @@ MetricsHealthCheck healthCheck = healthFactory.registerHealthCheck( "Sample Heal
     }
     return MetricsHealthCheck.Result.unhealthy(message);
 } );
-</pre></div></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="_timing_capture"></a>Timing Capture</h4></div></div></div><p>A lot of metrics are around the time it takes to execute something and Polygene supports this at its core.</p><div class="section"><div class="titlepage"><div><div><h5 class="title"><a id="_usage_2"></a>Usage</h5></div></div></div><p>There are currently the following possibilities available;</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+</pre></div></div><div class="section" title="Timing Capture"><div class="titlepage"><div><div><h4 class="title"><a id="_timing_capture"></a>Timing Capture</h4></div></div></div><p>A lot of metrics are around the time it takes to execute something and Polygene supports this at its core.</p><div class="section" title="Usage"><div class="titlepage"><div><div><h5 class="title"><a id="_usage_2"></a>Usage</h5></div></div></div><p>There are currently the following possibilities available;</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
 @TimingCapture - capture timing on a single method
 </li><li class="listitem">
 TimingCaptureAll - capture timing on all methods of a composite
 </li></ul></div><p>Before looking at the details of these, we need to point out that there are some pre-conditions for Metrics to be
 working. First of all, you need to install a Metrics Extensions, most likely the
 <a class="link" href="">Codahale Metrics Extension</a>. See your chosen extension for details on how to do that.</p><p>Once the Metrics extension is installed, you will also need a suitable backend to gather all the data out of a
-production plant and likewise a good front-end to view this. See your chosen Metrics Extension for this as well.</p></div><div class="section"><div class="titlepage"><div><div><h5 class="title"><a id="_timingcaptureall"></a>TimingCaptureAll</h5></div></div></div><p>There is a TimingCaptureAllConcern, which when added to a composite will install a <span class="emphasis"><em>Timer</em></span> for every method call
-in the composite.</p></div><div class="section"><div class="titlepage"><div><div><h5 class="title"><a id="_timingcapture"></a>@TimingCapture</h5></div></div></div><p>The <code class="literal">@TimingCapture</code> annotation can be placed on any method of the composite, to indicate that
+production plant and likewise a good front-end to view this. See your chosen Metrics Extension for this as well.</p></div><div class="section" title="TimingCaptureAll"><div class="titlepage"><div><div><h5 class="title"><a id="_timingcaptureall"></a>TimingCaptureAll</h5></div></div></div><p>There is a TimingCaptureAllConcern, which when added to a composite will install a <span class="emphasis"><em>Timer</em></span> for every method call
+in the composite.</p></div><div class="section" title="@TimingCapture"><div class="titlepage"><div><div><h5 class="title"><a id="_timingcapture"></a>@TimingCapture</h5></div></div></div><p>The <code class="literal">@TimingCapture</code> annotation can be placed on any method of the composite, to indicate that
 a Timer is wanted on that method.</p><p>Example;</p><pre class="programlisting brush: java">public interface Router
 {
     @TimingCapture
@@ -1008,7 +1375,7 @@ public class RouterAlgorithm2
         }
     }
 }
-</pre></div><div class="section"><div class="titlepage"><div><div><h5 class="title"><a id="_which_method"></a>Which method?</h5></div></div></div><p>It is valid to annotate either the composite interface methods or the mixin implementation methods.
+</pre></div><div class="section" title="Which method?"><div class="titlepage"><div><div><h5 class="title"><a id="_which_method"></a>Which method?</h5></div></div></div><p>It is valid to annotate either the composite interface methods or the mixin implementation methods.
 Any of the method declarations should work. From the testcases we have the following example;</p><pre class="programlisting brush: java">public interface Country extends TransientComposite
 {
     @Optional

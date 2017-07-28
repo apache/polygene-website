@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Geode EntityStore</title><link rel="stylesheet" type="text/css" href="css/style.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.79.1" /><link rel="home" href="index.html" title="" /><link rel="up" href="extensions.html" title="Extensions" /><link rel="prev" href="extension-es-file.html" title="File EntityStore" /><link rel="next" href="extension-es-hazelcast.html" title="Hazelcast EntityStore" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Geode EntityStore</title><link rel="stylesheet" type="text/css" href="css/style.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.76.1" /><link rel="home" href="index.html" title="" /><link rel="up" href="extensions.html" title="Extensions" /><link rel="prev" href="extension-es-file.html" title="File EntityStore" /><link rel="next" href="extension-es-hazelcast.html" title="Hazelcast EntityStore" />
 
 
 <!-- favicon -->
@@ -66,64 +66,19 @@
   })();
  </script>
 
-  </head><body><div xmlns="" xmlns:exsl="http://exslt.org/common" class="logo"><a href="index.html"><img src="images/logo-standard.png" /></a></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="top-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl class="toc"><dt><span class="section"><a href="index.html#home">Polygene™</a></span></dt><dt><span class="section"><a href="intro.html">Introduction</a></span></dt><dt><span class="section"><a href="tutorials.html">Tutorials</a></span></dt><dt><span class="section"><a href="javadocs.html">Javadoc</a></span></dt><dt><span class="section"><a href="samples.html">Samples</a></span></dt><dt><span class="section"><a href="core.html">Core</a></span></dt><dt><span class="section"><a href="libraries.html">Libraries</a></span></dt><dt><span class="section"><span xmlns="" href="extensions.html">Extensions</span></span></dt><dt><span class="section"><a href="tools.html">Tools</a></span></dt><dt><span class="section"><a href="glossary.html">Glossary </a></span></dt></dl></div></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="sub-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl class="toc"><dt><span class="section"><a href="extensions.html#_overview_7">Overview</a></span></dt><dt><span class="section"><a href="extension-serialization-javaxjson.html">javax.json serialization</a></span></dt><dt><span class="section"><a href="extension-serialization-javaxxml.html">javax.xml serialization</a></span></dt><dt><span class="section"><a href="extension-serialization-messagepack.html">MessagePack serialization</a></span></dt><dt><span class="section"><a href="extension-es-memory.html">Memory EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-file.html">File EntityStore</a></span></dt><dt><span class="section"><span xmlns="" href="extension-es-geode.html">Geode EntityStore</span></span></dt><dt><span class="section"><a href="extension-es-hazelcast.html">Hazelcast EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-jclouds.html">JClouds EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-jdbm.html">JDBM EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-leveldb.html">LevelDB EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-mongodb.html">MongoDB EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-preferences.html">Preferences EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-redis.html">Redis EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-riak.html">Riak EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-sql.html">SQL EntityStore</a></span></dt><dt><span class="section"><a href="extension-cache-ehcache.html">Ehcache Cache</a></span></dt><dt><span class="section"><a href="extension-cache-memcache.html">Memcache Cache</a></span></dt><dt><span class="section"><a href="extension-index-elasticsearch.html">ElasticSearch Index/Query</a></span></dt><dt><span class="section"><a href="extension-index-rdf.html">OpenRDF Index/Query</a></span></dt><dt><span class="section"><a href="extension-index-solr.html">Apache Solr Index/Query</a></span></dt><dt><span class="section"><a href="extension-indexing-sql.html">SQL Index/Query</a></span></dt><dt><span class="section"><a href="extension-metrics-metrics.html">Codahale Metrics</a></span></dt><dt><span class="section"><a href="extension-migration.html">Migration</a></span></dt><dt><span class="section"><a href="extension-reindexer.html">Reindexer</a></span></dt></dl></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="extension-es-geode"></a>Geode EntityStore</h3></div></div></div><p class="remark"><em><span class="comment"></span></em></p><p class="devstatus-code-stable">code</p><p class="devstatus-docs-brief">docs</p><p class="devstatus-tests-good">tests</p><p>EntityStore service backed by the <a class="ulink" href="https://geode.incubator.apache.org/" target="_top">Apache Geode</a> data grid.</p><div class="table"><a id="idm447727577120"></a><p class="title"><strong>Table 53. Artifact</strong></p><div class="table-contents"><table class="table" summary="Artifact" border="1"><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /></colgroup><thead><tr><th align="left" valign="top">Group ID</th><th align="left" valign="top">Artifact ID</th><th align="left" valign="top">Version</th></tr></thead><tbody><tr><td align="left" valign="top"><p>org.apache.polygene.extensions</p></td><td align="left" valign="top"><p>org.apache.polygene.extension.entitystore-geode</p></td><td align="left" valign="top"><p>3.0.0-SNAPSHOT</p></td></tr></tbody></table></div></div><br class="table-break" /><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="_assembly_10"></a>Assembly</h4></div></div></div><p>Assembly is done using the provided Assembler:</p><pre class="programlisting brush: java">public void assemble( ModuleAssembly module )
+  </head><body><div xmlns="" xmlns:exsl="http://exslt.org/common" class="logo"><a href="index.html"><img src="images/logo-standard.png" /></a></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="top-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl><dt><span class="section"><a href="index.html#home">Polygene™</a></span></dt><dt><span class="section"><a href="intro.html">Introduction</a></span></dt><dt><span class="section"><a href="tutorials.html">Tutorials</a></span></dt><dt><span class="section"><a href="javadocs.html">Javadoc</a></span></dt><dt><span class="section"><a href="samples.html">Samples</a></span></dt><dt><span class="section"><a href="core.html">Core</a></span></dt><dt><span class="section"><a href="libraries.html">Libraries</a></span></dt><dt><span class="section"><span xmlns="" href="extensions.html">Extensions</span></span></dt><dt><span class="section"><a href="tools.html">Tools</a></span></dt><dt><span class="section"><a href="glossary.html">Glossary </a></span></dt></dl></div></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="sub-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl><dt><span class="section"><a href="extensions.html#_overview_7">Overview</a></span></dt><dt><span class="section"><a href="extension-serialization-javaxjson.html">javax.json serialization</a></span></dt><dt><span class="section"><a href="extension-serialization-javaxxml.html">javax.xml serialization</a></span></dt><dt><span class="section"><a href="extension-serialization-messagepack.html">MessagePack serialization</a></span></dt><dt><span class="section"><a href="extension-es-memory.html">Memory EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-file.html">File EntityStore</a></span></dt><dt><span class="section"><span xmlns="" href="extension-es-geode.html">Geode EntityStore</span></span></dt><dt><span class="section"><a href="extension-es-hazelcast.html">Hazelcast EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-jclouds.html">JClouds EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-jdbm.html">JDBM EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-leveldb.html">LevelDB EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-mongodb.html">MongoDB EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-preferences.html">Preferences EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-redis.html">Redis EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-riak.html">Riak EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-sqlkv.html">SQL Key/Value EntityStore</a></span></dt><dt><span class="section"><a href="extension-cache-ehcache.html">Ehcache Cache</a></span></dt><dt><span class="section"><a href="extension-cache-memcache.html">Memcache Cache</a></span></dt><dt><span class="section"><a href="extension-index-elasticsearch.html">ElasticSearch Index/Query</a></span></dt><dt><span class="section"><a href="extension-index-rdf.html">OpenRDF Index/Query</a></span></dt><dt><span class="section"><a href="extension-index-solr.html">Apache Solr Index/Query</a></span></dt><dt><span class="section"><a href="extension-indexing-sql.html">SQL Index/Query</a></span></dt><dt><span class="section"><a href="extension-metrics-metrics.html">Codahale Metrics</a></span></dt><dt><span class="section"><a href="extension-migration.html">Migration</a></span></dt><dt><span class="section"><a href="extension-reindexer.html">Reindexer</a></span></dt></dl></div></div><div class="section" title="Geode EntityStore"><div class="titlepage"><div><div><h3 class="title"><a id="extension-es-geode"></a>Geode EntityStore</h3></div></div></div><p class="remark"><em><span class="comment"></span></em></p><p class="devstatus-code-stable">code</p><p class="devstatus-docs-brief">docs</p><p class="devstatus-tests-good">tests</p><p>EntityStore service backed by the <a class="ulink" href="https://geode.incubator.apache.org/" target="_top">Apache Geode</a> data grid.</p><div class="table"><a id="idm229753750496"></a><p class="title"><strong>Table 53. Artifact</strong></p><div class="table-contents"><table summary="Artifact" border="1"><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /></colgroup><thead><tr><th align="left" valign="top">Group ID</th><th align="left" valign="top">Artifact ID</th><th align="left" valign="top">Version</th></tr></thead><tbody><tr><td align="left" valign="top"><p>org.apache.polygene.extensions</p></td><td align="left" valign="top"><p>org.apache.polygene.extension.entitystore-geode</p></td><td align="left" valign="top"><p>3.1.0-SNAPSHOT</p></td></tr></tbody></table></div></div><br class="table-break" /><div class="section" title="Assembly"><div class="titlepage"><div><div><h4 class="title"><a id="_assembly_11"></a>Assembly</h4></div></div></div><p>Assembly is done using the provided Assembler:</p><pre class="programlisting brush: java">public void assemble( ModuleAssembly module )
     throws AssemblyException
 {
   [...snip...]
 
     new GeodeEntityStoreAssembler().withConfig( config, Visibility.layer ).assemble( module );
 }
-</pre></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="_configuration_4"></a>Configuration</h4></div></div></div><p>Here are the configuration properties for the Geode EntityStore:</p><pre class="programlisting brush: java">public interface GeodeConfiguration
-{
-    /**
-     * Geode Topology.
-     * Defaults to {@literal EMBEDDED}, see {@link GeodeTopology}.
-     *
-     * @return Geode Topology
-     */
-    @UseDefaults
-    Property&lt;GeodeTopology&gt; topology();
-
-    /**
-     * Geode Cache Name.
-     *
-     * @return Geode Cache Name
-     */
-    @UseDefaults( "polygene:cache" )
-    Property&lt;String&gt; cacheName();
-
-    /**
-     * Cache properties path, loaded from the classpath.
-     *
-     * @return Cache properties path
-     */
-    @Optional
-    Property&lt;String&gt; cachePropertiesPath();
-
-    /**
-     * Cache Region Shortcut.
-     *
-     * In {@literal EMBEDDED} {@link #topology()}, defaults to  {@literal LOCAL},
-     * see {@link org.apache.geode.cache.RegionShortcut}.
-     *
-     * In {@literal CLIENT_SERVER} {@link #topology()}, defaults to {@literal PROXY},
-     * see {@link org.apache.geode.cache.client.ClientRegionShortcut}.
-     *
-     * @return Cache Region Shortcut
-     */
-    @Optional
-    Property&lt;String&gt; regionShortcut();
-
-    /**
-     * Geode Region Name.
-     *
-     * Region names may only be alphanumeric and may contain hyphens or underscores.
-     *
-     * @return Geode Region Name
-     */
-    @UseDefaults( "polygene-entitystore-region" )
-    Property&lt;String&gt; regionName();
-}
+</pre></div><div class="section" title="Configuration"><div class="titlepage"><div><div><h4 class="title"><a id="_configuration_4"></a>Configuration</h4></div></div></div><p>Here are the configuration properties for the Geode EntityStore:</p><pre class="programlisting brush: java">Traceback (most recent call last):
+  File "/Users/paul/.asciidoc/filters/snippet/snippet.py", line 100, in &lt;module&gt;
+    for line in snippet(**configuration(indata)):
+  File "/Users/paul/.asciidoc/filters/snippet/snippet.py", line 51, in snippet
+    sourceFile = open(PATH_PATTERN % locals())
+IOError: [Errno 2] No such file or directory: 'extensions/entitystore-geode/src/main/java/org/apache/polygene/entitystore/geode/GeodeConfiguration.java'
 </pre></div></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="footer"><p>
         Copyright © 2015 The Apache Software Foundation, Licensed under the <a href="http://www.apache.org/licenses/" target="_blank">Apache License, Version 2.0</a>.
         <br /><small>
