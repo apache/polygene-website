@@ -7,8 +7,8 @@ https://polygene.apache.org/download-qi4j-legacy.html
 https://polygene.apache.org/download.html
 https://polygene.apache.org/community/get_help.html
 https://polygene.apache.org/.htaccess
-https://polygene.apache.org/index.html
-https://polygene.apache.org/community/index.html
+https://polygene.apache.org/community/
+https://polygene.apache.org/
 https://polygene.apache.org/community/licensing_faq.html
 https://polygene.apache.org/community/maturity.html
 https://polygene.apache.org/news.html
@@ -16,6 +16,7 @@ https://polygene.apache.org/community/participate.html
 https://polygene.apache.org/community/playing_field.html
 https://polygene.apache.org/sitemap.txt
 
+https://polygene.apache.org/2017/07/28/apache-polygene-java-3.0.0.html
 https://polygene.apache.org/2017/01/07/rename-to-apache-polygene.html
 https://polygene.apache.org/2015/07/31/apache-zest-java-2.1.html
 https://polygene.apache.org/2013/04/28/qi4j-2.0.html

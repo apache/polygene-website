@@ -3,7 +3,7 @@
 
 - version: 3.0.0
   published: true
-  // announcement: 2017/07/26/apache-polygene-java-3.0.0
+  announcement: 2017/07/28/apache-polygene-java-3.0.0
   signer: Paul Merlin
   pgpId: 7D0391AC
   warning: >
