@@ -1,8 +1,11 @@
 
 # Apache Polygene Releases
-# Releases with no announcement are not rendered
 
-- version: 3.0
-  // announcement: 2017/12/31/apache-polygene-java-3.0
+- version: 3.0.0
+  published: true
+  // announcement: 2017/07/26/apache-polygene-java-3.0.0
   signer: Paul Merlin
   pgpId: 7D0391AC
+  warning: >
+    <strong>Apache Polygene (Java Edition) 3.0.0</strong> is the first release that uses
+    <code>org.apache.polygene.*</code> Java packages and Maven coordinates.

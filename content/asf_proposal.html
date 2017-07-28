@@ -69,7 +69,10 @@ Composite Oriented Programming allows developers to work with 'fragments', small
                                     <li role="menuitem"><a href="/java/latest/index.html"><i class="icon-caret-right"></i> Latest release</a></li>
                                     
                                     
+                                    <li role="menuitem"><a href="/java/3.0.0/index.html"><i class="icon-caret-right"></i> 3.0.0</a></li>
                                     
+                                    
+                                    <li role="menuitem"><a href="/java/2.1/index.html"><i class="icon-caret-right"></i> 2.1</a></li>
                                     <li role="menuitem"><a href="/java/2.0/index.html"><i class="icon-caret-right"></i> 2.0</a></li>
                                     <li role="menuitem"><a href="/java/1.4/index.html"><i class="icon-caret-right"></i> &lt;=1.4.x</a></li>
                                     <li class="divider"></li>
@@ -110,8 +113,8 @@ Composite Oriented Programming allows developers to work with 'fragments', small
 
 <h1 id="abstract">Abstract</h1>
 
-<div class="highlighter-rouge"><pre class="codehilite"><code>qi4j = new Energy4Java();
-</code></pre></div>
+<pre><code>qi4j = new Energy4Java();
+</code></pre>
 
 <p>That is how to create the Qi4j runtime, and it captures the essence of its spirit.
 Qi4j is a platform to develop Composite Oriented Programming applications in Java in a new, exciting and productive manner.</p>
@@ -152,7 +155,7 @@ Additionally, Qi4j will remain as the Java implementation of the composite orien
 <p>Composite oriented programming is a term coined in the early days of Qi4j, to capture the notion of using another paradigm for creating applications, than the prevalent object oriented programming one.
 It comprises of the ability to write smaller parts of code than regular classes, and compose these so called fragments into a larger “Composite”. It is similar to aspect-oriented programming, but we take it one step further, there is no base class. The Composite consists of fragments, but no fragment has higher significance than any other fragment. However, there are explicit types of fragments, namely Composite Types, Constraints, Mixins, Concerns and Side-effects, to clearly communicate “Intent”. The macro level composition takes the form of Applications has Layers which contains Modules in which the Composite Types are declared.</p>
 
-<p>Qi4j also evangelizes strong typing, so the equivalent of Around-Advice in AOP, which is called Concerns, can be made type-safe or like AOP be generic (using <code class="highlighter-rouge">java.lang.reflect.InvocationHandler</code> interface). Composites can either be hard coded using annotations, or assembled dynamically during the bootstrap phase.</p>
+<p>Qi4j also evangelizes strong typing, so the equivalent of Around-Advice in AOP, which is called Concerns, can be made type-safe or like AOP be generic (using <code>java.lang.reflect.InvocationHandler</code> interface). Composites can either be hard coded using annotations, or assembled dynamically during the bootstrap phase.</p>
 
 <p>Qi4j is a whole new way to write Java applications, where focus lies on structures and interfaces, where classes are ‘mere’ implementation details.</p>
 
@@ -308,7 +311,7 @@ But Qi4j also defines Extension mechanisms, such as storage, indexing, serializa
 <h1 id="initial-source">Initial Source</h1>
 
 <p>As mentioned earlier, Qi4j started out at OPS4J community, and the codebase was initially on Subversion, then moved to OPS4J operated GIT repositories and finally we moved to GitHub. We tried to preserve history the best we could, with reasonable effort.
-So, <code class="highlighter-rouge">https://github.com/Qi4j</code> contains the repositories that are relevant for the Incubator. In practice, only the <code class="highlighter-rouge">qi4j-sdk</code> is current. We suggest that the <code class="highlighter-rouge">qi4j-core</code>, <code class="highlighter-rouge">qi4j-libraries</code> and <code class="highlighter-rouge">qi4j-extensions</code> are imported but made read-only. <code class="highlighter-rouge">qi4j-sandbox</code> is imported. <code class="highlighter-rouge">qi4j.github.com</code> contains the current website, but the sources for that resides primarily inside the <code class="highlighter-rouge">qi4j-sdk</code> repository.</p>
+So, <code>https://github.com/Qi4j</code> contains the repositories that are relevant for the Incubator. In practice, only the <code>qi4j-sdk</code> is current. We suggest that the <code>qi4j-core</code>, <code>qi4j-libraries</code> and <code>qi4j-extensions</code> are imported but made read-only. <code>qi4j-sandbox</code> is imported. <code>qi4j.github.com</code> contains the current website, but the sources for that resides primarily inside the <code>qi4j-sdk</code> repository.</p>
 
 <h1 id="source-and-intellectual-property-submission-plan">Source and Intellectual Property Submission Plan</h1>
 
@@ -337,28 +340,28 @@ Without an extensive check of all 100+ optional dependencies, Apache Shiro stand
 
 <h2 id="mailing-lists">Mailing lists</h2>
 
-<div class="highlighter-rouge"><pre class="codehilite"><code>private@zest.apache.org
+<pre><code>private@zest.apache.org
 dev@zest.apache.org
 commits@zest.apache.org
-</code></pre></div>
+</code></pre>
 
 <h2 id="git-repositories">Git Repositories</h2>
 
 <p>We understand that Apache operates its own Git repositories, as well as having a large number of read-only mirrors at GitHub under Apache organization.</p>
 
-<div class="highlighter-rouge"><pre class="codehilite"><code>https://git-wip-us.apache.org/repos/asf/qi4j.git
+<pre><code>https://git-wip-us.apache.org/repos/asf/qi4j.git
 https://git-wip-us.apache.org/repos/asf/qi4j-legacy-core.git
 https://git-wip-us.apache.org/repos/asf/qi4j-legacy-libraries.git
 https://git-wip-us.apache.org/repos/asf/qi4j-legacy-extensions.git
 https://git-wip-us.apache.org/repos/asf/qi4j-sandbox.git
-</code></pre></div>
+</code></pre>
 
 <h2 id="issue-tracking">Issue Tracking</h2>
 
-<p>We also have Jira issues we wish to import from Atlassian operated <code class="highlighter-rouge">https://ops4j1.jira.com/browse/QI</code>, if possible, to</p>
+<p>We also have Jira issues we wish to import from Atlassian operated <code>https://ops4j1.jira.com/browse/QI</code>, if possible, to </p>
 
-<div class="highlighter-rouge"><pre class="codehilite"><code>https://issues.apache.org/jira/browse/ZEST
-</code></pre></div>
+<pre><code>https://issues.apache.org/jira/browse/ZEST
+</code></pre>
 
 <h1 id="initial-pmc">Initial PMC</h1>
 
