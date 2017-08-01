@@ -114,107 +114,92 @@ July 28, 2017
 
 <h3 id="release-notes">Release-notes</h3>
 
-<h4 id="new-feature">New Feature</h4>
-<ul>
-  <li>
-    <p>[ZEST-24]ZEST-24) - Release 2.1</p>
-  </li>
-  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-50">POLYGENE-50</a> - Make the bytecode generation ‘pluggable’</li>
-  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-94">POLYGENE-94</a> - Support for Pluggable Types</li>
-  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-97">POLYGENE-97</a> - UnitOfWork as a Composite</li>
-  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-109">POLYGENE-109</a> - 3.0 Epic</li>
-  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-143">POLYGENE-143</a> - Command line tool to quickly create skeletal Zest applications</li>
-  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-155">POLYGENE-155</a> - Geode EntityStore</li>
-  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-158">POLYGENE-158</a> - Yeoman-power Project Creator</li>
-  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-181">POLYGENE-181</a> - Replace ‘long’ with java.time.Instant</li>
-  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-183">POLYGENE-183</a> - Remove eventsourcing library</li>
-  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-186">POLYGENE-186</a> - Automatically add an UuidIdentityGenerator to a module if none has been defined explicitly.</li>
-  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-187">POLYGENE-187</a> - Auto-add a UnitOfWorkFactory that is not declared explicitly</li>
-  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-225">POLYGENE-225</a> - Cassandra EntityStore</li>
-  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-245">POLYGENE-245</a> - Process for Publish to NPM registry</li>
-  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-248">POLYGENE-248</a> - Add ManyAssociation.clear() &amp; NamedAssociation.clear()</li>
-</ul>
+<h4 id="new-features">New Features</h4>
 
-<h4 id="improvement">Improvement</h4>
 <ul>
+  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-111">POLYGENE-111</a> - Easy to use Restful Library</li>
+  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-155">POLYGENE-155</a> - Apache Geode EntityStore</li>
+  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-225">POLYGENE-225</a> - Apache Cassandra EntityStore</li>
   <li><a href="https://issues.apache.org/jira/browse/POLYGENE-29">POLYGENE-29</a> - Use javax.script for JavaScript/Groovy/++ language integration</li>
-  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-36">POLYGENE-36</a> - Java 8 Predicates to be used for Constraints?</li>
-  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-48">POLYGENE-48</a> - Improved reporting on invalid assembly models</li>
-  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-53">POLYGENE-53</a> - Allow registration of custom (de)serializers on assembly</li>
-  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-102">POLYGENE-102</a> - Custom (de)serialization mapping</li>
-  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-112">POLYGENE-112</a> - Replace Function and Function2 with Java 8 equivalents</li>
-  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-114">POLYGENE-114</a> - Make Constraint Annotations Repeatables</li>
-  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-116">POLYGENE-116</a> - Support multi-instances-applications in SQLEntityStore</li>
-  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-118">POLYGENE-118</a> - Replace Iterable&lt;&gt; usage in Runtime internals with Java 8 Stream API</li>
-  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-124">POLYGENE-124</a> - Replace Joda Time with Java 8 Time API</li>
-  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-130">POLYGENE-130</a> - Re-implementation of Scheduler Library using Quartz</li>
-  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-136">POLYGENE-136</a> - Refactoring of Models and Instances in Runtime</li>
-  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-139">POLYGENE-139</a> - Discard dangling UnitOfWorks on passivation</li>
+  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-133">POLYGENE-133</a> - @Concerns and @SideEffects on methods.</li>
   <li><a href="https://issues.apache.org/jira/browse/POLYGENE-141">POLYGENE-141</a> - UseDefaults annotation with value</li>
-  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-152">POLYGENE-152</a> - Disallow java.util.Date and Joda Time in Property</li>
-  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-153">POLYGENE-153</a> - SQL EntityStore mixes in JSONMapEntityStoreMixin</li>
   <li><a href="https://issues.apache.org/jira/browse/POLYGENE-173">POLYGENE-173</a> - Add a convenience method for converting Associations to Values</li>
   <li><a href="https://issues.apache.org/jira/browse/POLYGENE-174">POLYGENE-174</a> - Add convenience methods for List/Set/Map of values into Associations</li>
-  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-182">POLYGENE-182</a> - Replace Input/Output/Sender/Receiver APIs with Java 8 Streams</li>
-  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-184">POLYGENE-184</a> - Remove use of NullArgumentException</li>
-  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-190">POLYGENE-190</a> - Refine Metrics API/SPI</li>
-  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-192">POLYGENE-192</a> - Create Codahale Metrics extensions to replace outdated Yammer Metrics</li>
-  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-231">POLYGENE-231</a> - Serialization 3.0</li>
-  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-236">POLYGENE-238</a> - javax.json serialization allows to set provider properties at assembly</li>
-  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-239">POLYGENE-239</a> - javax.xml serialization allows to set provider properties at assembly</li>
-  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-240">POLYGENE-240</a> - Serialization converters can be applied on Properties or Value types</li>
-  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-242">POLYGENE-242</a> - Leverage value state serialization in JSONMapEntityStores</li>
-  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-247">POLYGENE-247</a> - Entity state JSON serialization like Value serialization</li>
-  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-262">POLYGENE-262</a> - NoSuchCompositeException is inproper name</li>
+  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-54">POLYGENE-54</a> - Support more use-cases in toEntity/toValue mechanism</li>
+  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-248">POLYGENE-248</a> - Add ManyAssociation.clear() &amp; NamedAssociation.clear()</li>
+  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-53">POLYGENE-53</a> - Allow registration of custom (de)serializers on assembly</li>
+  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-251">POLYGENE-251</a> - Support Java 8 default methods on interfaces</li>
+  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-97">POLYGENE-97</a> - UnitOfWork as a Composite</li>
+  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-50">POLYGENE-50</a> - Make the bytecode generation ‘pluggable’</li>
+  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-48">POLYGENE-48</a> - Improved reporting on invalid assembly models</li>
   <li><a href="https://issues.apache.org/jira/browse/POLYGENE-263">POLYGENE-263</a> - Composite types that are invisible, should be reported in NoSuchCompositeTypeException</li>
   <li><a href="https://issues.apache.org/jira/browse/POLYGENE-264">POLYGENE-264</a> - Make ConstraintViolations more readable</li>
 </ul>
 
-<h4 id="tasks">Tasks</h4>
+<h4 id="improvement">Improvement</h4>
+
 <ul>
-  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-123">POLYGENE-123</a> - Remove Zest Base64Encoder in favor of the Java 8 one.</li>
-  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-133">POLYGENE-133</a> - Document &amp; Test @Concerns and @SideEffects on methods.</li>
-  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-134">POLYGENE-134</a> - Remove org.apache.zest.api.dataset</li>
-  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-156">POLYGENE-156</a> - Remove Scheduler library</li>
-  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-157">POLYGENE-157</a> - Remove support for legacy Map serialization format.</li>
+  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-231">POLYGENE-231</a> - Serialization 3.0</li>
+  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-240">POLYGENE-240</a> - Serialization converters can be applied on Properties or Value types</li>
+  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-236">POLYGENE-238</a> - javax.json serialization allows to set provider properties at assembly</li>
+  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-239">POLYGENE-239</a> - javax.xml serialization allows to set provider properties at assembly</li>
+  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-242">POLYGENE-242</a> - Leverage value state serialization in JSONMapEntityStores</li>
+  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-153">POLYGENE-153</a> - SQL EntityStore mixes in JSONMapEntityStoreMixin</li>
+  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-116">POLYGENE-116</a> - Support multi-instances-applications in SQLEntityStore</li>
+  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-172">POLYGENE-172</a> - MongoDB configuration is not friendly.</li>
   <li><a href="https://issues.apache.org/jira/browse/POLYGENE-176">POLYGENE-176</a> - Rework Riak EntityStore for Riak 2</li>
   <li><a href="https://issues.apache.org/jira/browse/POLYGENE-177">POLYGENE-177</a> - Rework ElasticSearch Index/Query for ElasticSearch 5</li>
   <li><a href="https://issues.apache.org/jira/browse/POLYGENE-178">POLYGENE-178</a> - Rework EhCache Cache for EhCache 3</li>
-  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-188">POLYGENE-188</a> - Remove Scala language support</li>
-  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-191">POLYGENE-191</a> - Remove org.json java library</li>
+  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-136">POLYGENE-136</a> - Refactoring of Models and Instances in Runtime</li>
+  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-186">POLYGENE-186</a> - Automatically add an UuidIdentityGenerator to a module if none has been defined explicitly.</li>
+  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-187">POLYGENE-187</a> - Auto-add a UnitOfWorkFactory that is not declared explicitly</li>
 </ul>
 
-<h4 id="bug-fixes">Bug Fixes</h4>
+<h4 id="potentially-breaking-changes">Potentially breaking changes</h4>
+
+<ul>
+  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-247">POLYGENE-247</a> - Entity state JSON serialization like Value serialization</li>
+  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-190">POLYGENE-190</a> - Refine Metrics API/SPI</li>
+  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-112">POLYGENE-112</a> - Replace Function and Function2 with Java 8 equivalents</li>
+  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-118">POLYGENE-118</a> - Replace Iterable&lt;&gt; usage in Runtime internals with Java 8 Stream API</li>
+  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-182">POLYGENE-182</a> - Replace Input/Output/Sender/Receiver APIs with Java 8 Streams</li>
+  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-181">POLYGENE-181</a> - Replace ‘long’ with java.time.Instant</li>
+  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-124">POLYGENE-124</a> - Replace Joda Time with Java 8 Time API</li>
+  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-152">POLYGENE-152</a> - Disallow java.util.Date and Joda Time in Property</li>
+  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-192">POLYGENE-192</a> - Create Codahale Metrics extensions to replace outdated Yammer Metrics</li>
+  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-183">POLYGENE-183</a> - Remove eventsourcing library</li>
+  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-156">POLYGENE-156</a> - Remove Scheduler library</li>
+  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-188">POLYGENE-188</a> - Remove Scala language support</li>
+  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-222">POLYGENE-222</a> - Remove Indexing-SQL</li>
+  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-191">POLYGENE-191</a> - Remove org.json java library</li>
+  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-134">POLYGENE-134</a> - Remove org.apache.polygene.api.dataset</li>
+  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-123">POLYGENE-123</a> - Remove Base64Encoder in favor of the Java 8 one.</li>
+  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-184">POLYGENE-184</a> - Remove use of NullArgumentException</li>
+  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-262">POLYGENE-262</a> - Rename NoSuchCompositeException to NoSuchCompositeTypeException</li>
+</ul>
+
+<h4 id="bug-fixes">Bug fixes</h4>
+
 <ul>
   <li><a href="https://issues.apache.org/jira/browse/POLYGENE-43">POLYGENE-43</a> - Solr Indexing has dependency on RDF library</li>
-  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-54">POLYGENE-54</a> - Support more use-cases in toEntity/toValue mechanism</li>
   <li><a href="https://issues.apache.org/jira/browse/POLYGENE-105">POLYGENE-105</a> - ValueSerialization Type Lookup is wrong.</li>
-  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-108">POLYGENE-108</a> - Package renaming to org.apache.zest</li>
-  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-111">POLYGENE-111</a> - Easy to use Restful Library</li>
-  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-120">POLYGENE-120</a> - Figure out the semantics for Default Methods in interfaces</li>
   <li><a href="https://issues.apache.org/jira/browse/POLYGENE-126">POLYGENE-126</a> - The forum sample won’t start</li>
   <li><a href="https://issues.apache.org/jira/browse/POLYGENE-127">POLYGENE-127</a> - Servlet assembly DSL in HTTP library prevent 2.0 style usage</li>
   <li><a href="https://issues.apache.org/jira/browse/POLYGENE-137">POLYGENE-137</a> - EntityStateSerializer unable to handle values that are not declared as composites.</li>
   <li><a href="https://issues.apache.org/jira/browse/POLYGENE-138">POLYGENE-138</a> - org.json ValueSerialization of Serializable fail when out of JSON sequence</li>
   <li><a href="https://issues.apache.org/jira/browse/POLYGENE-142">POLYGENE-142</a> - Enum Property in EntityComposite serialization error</li>
-  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-172">POLYGENE-172</a> - MongoDB configuration is not friendly.</li>
   <li><a href="https://issues.apache.org/jira/browse/POLYGENE-193">POLYGENE-193</a> - Fail when composite type has interface static method</li>
-  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-222">POLYGENE-222</a> - Indexing-SQL is broken</li>
   <li><a href="https://issues.apache.org/jira/browse/POLYGENE-224">POLYGENE-224</a> - Initialization race condition in ServiceReferenceInstance</li>
   <li><a href="https://issues.apache.org/jira/browse/POLYGENE-227">POLYGENE-227</a> - Configuration perfTest should resolve in IDEA</li>
   <li><a href="https://issues.apache.org/jira/browse/POLYGENE-233">POLYGENE-233</a> - Rdf Indexer is not using the unifying Assemblers system.</li>
   <li><a href="https://issues.apache.org/jira/browse/POLYGENE-234">POLYGENE-234</a> - Service identity can not be null</li>
   <li><a href="https://issues.apache.org/jira/browse/POLYGENE-236">POLYGENE-236</a> - Unit tests for entitystore-mongodb trigger a Windows Firewall popup window</li>
   <li><a href="https://issues.apache.org/jira/browse/POLYGENE-237">POLYGENE-237</a> - Unit tests for entitystore-mongodb fail on Windows</li>
-  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-251">POLYGENE-251</a> - Support Java 8 default methods on interfaces</li>
   <li><a href="https://issues.apache.org/jira/browse/POLYGENE-254">POLYGENE-254</a> - Source distribution contains Gradle wrapper files including JARs</li>
-  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-256">POLYGENE-256</a> - Cassandra EntityStore do not clear Many/Named Associations</li>
-  <li><a href="https://issues.apache.org/jira/browse/POLYGENE-257">POLYGENE-257</a> - Custom IdentityGenerator or Serialization hidden by default assemblers</li>
   <li><a href="https://issues.apache.org/jira/browse/POLYGENE-259">POLYGENE-259</a> - ConfigurationComposite module is not used for bootstrap serialization</li>
   <li><a href="https://issues.apache.org/jira/browse/POLYGENE-260">POLYGENE-260</a> - NamedAssociation.put() doesn’t mark DefaultEntityState “updated”</li>
   <li><a href="https://issues.apache.org/jira/browse/POLYGENE-261">POLYGENE-261</a> - ManyAssociation does not allow duplicate entries</li>
 </ul>
-
 
     </div>
     <div class="span2"></div>

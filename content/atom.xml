@@ -4,7 +4,7 @@
  <title></title>
  <link href="https://polygene.apache.org/atom.xml" rel="self"/>
  <link href="https://polygene.apache.org"/>
- <updated>2017-07-28T13:13:28+08:00</updated>
+ <updated>2017-08-01T16:53:08+02:00</updated>
  <id>https://polygene.apache.org</id>
  <author>
    <name></name>
@@ -15,120 +15,105 @@
  <entry>
    <title>Apache Polygene™ (Java Edition) Release 3.0.0</title>
    <link href="https://polygene.apache.org/2017/07/28/apache-polygene-java-3.0.0.html"/>
-   <updated>2017-07-28T00:00:00+08:00</updated>
+   <updated>2017-07-28T00:00:00+02:00</updated>
    <id>https://polygene.apache.org/2017/07/28/apache-polygene-java-3.0.0.html</id>
    <content type="html">&lt;h2 id=&quot;apache-polygene-java-edition-release-300&quot;&gt;Apache Polygene™ (Java Edition) Release 3.0.0&lt;/h2&gt;
 
 &lt;h3 id=&quot;release-notes&quot;&gt;Release-notes&lt;/h3&gt;
 
-&lt;h4 id=&quot;new-feature&quot;&gt;New Feature&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;[ZEST-24]ZEST-24) - Release 2.1&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-50&quot;&gt;POLYGENE-50&lt;/a&gt; - Make the bytecode generation ‘pluggable’&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-94&quot;&gt;POLYGENE-94&lt;/a&gt; - Support for Pluggable Types&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-97&quot;&gt;POLYGENE-97&lt;/a&gt; - UnitOfWork as a Composite&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-109&quot;&gt;POLYGENE-109&lt;/a&gt; - 3.0 Epic&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-143&quot;&gt;POLYGENE-143&lt;/a&gt; - Command line tool to quickly create skeletal Zest applications&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-155&quot;&gt;POLYGENE-155&lt;/a&gt; - Geode EntityStore&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-158&quot;&gt;POLYGENE-158&lt;/a&gt; - Yeoman-power Project Creator&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-181&quot;&gt;POLYGENE-181&lt;/a&gt; - Replace ‘long’ with java.time.Instant&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-183&quot;&gt;POLYGENE-183&lt;/a&gt; - Remove eventsourcing library&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-186&quot;&gt;POLYGENE-186&lt;/a&gt; - Automatically add an UuidIdentityGenerator to a module if none has been defined explicitly.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-187&quot;&gt;POLYGENE-187&lt;/a&gt; - Auto-add a UnitOfWorkFactory that is not declared explicitly&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-225&quot;&gt;POLYGENE-225&lt;/a&gt; - Cassandra EntityStore&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-245&quot;&gt;POLYGENE-245&lt;/a&gt; - Process for Publish to NPM registry&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-248&quot;&gt;POLYGENE-248&lt;/a&gt; - Add ManyAssociation.clear() &amp;amp; NamedAssociation.clear()&lt;/li&gt;
-&lt;/ul&gt;
+&lt;h4 id=&quot;new-features&quot;&gt;New Features&lt;/h4&gt;
 
-&lt;h4 id=&quot;improvement&quot;&gt;Improvement&lt;/h4&gt;
 &lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-111&quot;&gt;POLYGENE-111&lt;/a&gt; - Easy to use Restful Library&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-155&quot;&gt;POLYGENE-155&lt;/a&gt; - Apache Geode EntityStore&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-225&quot;&gt;POLYGENE-225&lt;/a&gt; - Apache Cassandra EntityStore&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-29&quot;&gt;POLYGENE-29&lt;/a&gt; - Use javax.script for JavaScript/Groovy/++ language integration&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-36&quot;&gt;POLYGENE-36&lt;/a&gt; - Java 8 Predicates to be used for Constraints?&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-48&quot;&gt;POLYGENE-48&lt;/a&gt; - Improved reporting on invalid assembly models&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-53&quot;&gt;POLYGENE-53&lt;/a&gt; - Allow registration of custom (de)serializers on assembly&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-102&quot;&gt;POLYGENE-102&lt;/a&gt; - Custom (de)serialization mapping&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-112&quot;&gt;POLYGENE-112&lt;/a&gt; - Replace Function and Function2 with Java 8 equivalents&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-114&quot;&gt;POLYGENE-114&lt;/a&gt; - Make Constraint Annotations Repeatables&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-116&quot;&gt;POLYGENE-116&lt;/a&gt; - Support multi-instances-applications in SQLEntityStore&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-118&quot;&gt;POLYGENE-118&lt;/a&gt; - Replace Iterable&amp;lt;&amp;gt; usage in Runtime internals with Java 8 Stream API&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-124&quot;&gt;POLYGENE-124&lt;/a&gt; - Replace Joda Time with Java 8 Time API&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-130&quot;&gt;POLYGENE-130&lt;/a&gt; - Re-implementation of Scheduler Library using Quartz&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-136&quot;&gt;POLYGENE-136&lt;/a&gt; - Refactoring of Models and Instances in Runtime&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-139&quot;&gt;POLYGENE-139&lt;/a&gt; - Discard dangling UnitOfWorks on passivation&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-133&quot;&gt;POLYGENE-133&lt;/a&gt; - @Concerns and @SideEffects on methods.&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-141&quot;&gt;POLYGENE-141&lt;/a&gt; - UseDefaults annotation with value&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-152&quot;&gt;POLYGENE-152&lt;/a&gt; - Disallow java.util.Date and Joda Time in Property&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-153&quot;&gt;POLYGENE-153&lt;/a&gt; - SQL EntityStore mixes in JSONMapEntityStoreMixin&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-173&quot;&gt;POLYGENE-173&lt;/a&gt; - Add a convenience method for converting Associations to Values&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-174&quot;&gt;POLYGENE-174&lt;/a&gt; - Add convenience methods for List/Set/Map of values into Associations&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-182&quot;&gt;POLYGENE-182&lt;/a&gt; - Replace Input/Output/Sender/Receiver APIs with Java 8 Streams&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-184&quot;&gt;POLYGENE-184&lt;/a&gt; - Remove use of NullArgumentException&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-190&quot;&gt;POLYGENE-190&lt;/a&gt; - Refine Metrics API/SPI&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-192&quot;&gt;POLYGENE-192&lt;/a&gt; - Create Codahale Metrics extensions to replace outdated Yammer Metrics&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-231&quot;&gt;POLYGENE-231&lt;/a&gt; - Serialization 3.0&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-236&quot;&gt;POLYGENE-238&lt;/a&gt; - javax.json serialization allows to set provider properties at assembly&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-239&quot;&gt;POLYGENE-239&lt;/a&gt; - javax.xml serialization allows to set provider properties at assembly&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-240&quot;&gt;POLYGENE-240&lt;/a&gt; - Serialization converters can be applied on Properties or Value types&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-242&quot;&gt;POLYGENE-242&lt;/a&gt; - Leverage value state serialization in JSONMapEntityStores&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-247&quot;&gt;POLYGENE-247&lt;/a&gt; - Entity state JSON serialization like Value serialization&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-262&quot;&gt;POLYGENE-262&lt;/a&gt; - NoSuchCompositeException is inproper name&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-54&quot;&gt;POLYGENE-54&lt;/a&gt; - Support more use-cases in toEntity/toValue mechanism&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-248&quot;&gt;POLYGENE-248&lt;/a&gt; - Add ManyAssociation.clear() &amp;amp; NamedAssociation.clear()&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-53&quot;&gt;POLYGENE-53&lt;/a&gt; - Allow registration of custom (de)serializers on assembly&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-251&quot;&gt;POLYGENE-251&lt;/a&gt; - Support Java 8 default methods on interfaces&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-97&quot;&gt;POLYGENE-97&lt;/a&gt; - UnitOfWork as a Composite&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-50&quot;&gt;POLYGENE-50&lt;/a&gt; - Make the bytecode generation ‘pluggable’&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-48&quot;&gt;POLYGENE-48&lt;/a&gt; - Improved reporting on invalid assembly models&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-263&quot;&gt;POLYGENE-263&lt;/a&gt; - Composite types that are invisible, should be reported in NoSuchCompositeTypeException&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-264&quot;&gt;POLYGENE-264&lt;/a&gt; - Make ConstraintViolations more readable&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;tasks&quot;&gt;Tasks&lt;/h4&gt;
+&lt;h4 id=&quot;improvement&quot;&gt;Improvement&lt;/h4&gt;
+
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-123&quot;&gt;POLYGENE-123&lt;/a&gt; - Remove Zest Base64Encoder in favor of the Java 8 one.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-133&quot;&gt;POLYGENE-133&lt;/a&gt; - Document &amp;amp; Test @Concerns and @SideEffects on methods.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-134&quot;&gt;POLYGENE-134&lt;/a&gt; - Remove org.apache.zest.api.dataset&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-156&quot;&gt;POLYGENE-156&lt;/a&gt; - Remove Scheduler library&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-157&quot;&gt;POLYGENE-157&lt;/a&gt; - Remove support for legacy Map serialization format.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-231&quot;&gt;POLYGENE-231&lt;/a&gt; - Serialization 3.0&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-240&quot;&gt;POLYGENE-240&lt;/a&gt; - Serialization converters can be applied on Properties or Value types&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-236&quot;&gt;POLYGENE-238&lt;/a&gt; - javax.json serialization allows to set provider properties at assembly&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-239&quot;&gt;POLYGENE-239&lt;/a&gt; - javax.xml serialization allows to set provider properties at assembly&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-242&quot;&gt;POLYGENE-242&lt;/a&gt; - Leverage value state serialization in JSONMapEntityStores&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-153&quot;&gt;POLYGENE-153&lt;/a&gt; - SQL EntityStore mixes in JSONMapEntityStoreMixin&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-116&quot;&gt;POLYGENE-116&lt;/a&gt; - Support multi-instances-applications in SQLEntityStore&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-172&quot;&gt;POLYGENE-172&lt;/a&gt; - MongoDB configuration is not friendly.&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-176&quot;&gt;POLYGENE-176&lt;/a&gt; - Rework Riak EntityStore for Riak 2&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-177&quot;&gt;POLYGENE-177&lt;/a&gt; - Rework ElasticSearch Index/Query for ElasticSearch 5&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-178&quot;&gt;POLYGENE-178&lt;/a&gt; - Rework EhCache Cache for EhCache 3&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-188&quot;&gt;POLYGENE-188&lt;/a&gt; - Remove Scala language support&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-191&quot;&gt;POLYGENE-191&lt;/a&gt; - Remove org.json java library&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-136&quot;&gt;POLYGENE-136&lt;/a&gt; - Refactoring of Models and Instances in Runtime&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-186&quot;&gt;POLYGENE-186&lt;/a&gt; - Automatically add an UuidIdentityGenerator to a module if none has been defined explicitly.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-187&quot;&gt;POLYGENE-187&lt;/a&gt; - Auto-add a UnitOfWorkFactory that is not declared explicitly&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;bug-fixes&quot;&gt;Bug Fixes&lt;/h4&gt;
+&lt;h4 id=&quot;potentially-breaking-changes&quot;&gt;Potentially breaking changes&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-247&quot;&gt;POLYGENE-247&lt;/a&gt; - Entity state JSON serialization like Value serialization&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-190&quot;&gt;POLYGENE-190&lt;/a&gt; - Refine Metrics API/SPI&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-112&quot;&gt;POLYGENE-112&lt;/a&gt; - Replace Function and Function2 with Java 8 equivalents&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-118&quot;&gt;POLYGENE-118&lt;/a&gt; - Replace Iterable&amp;lt;&amp;gt; usage in Runtime internals with Java 8 Stream API&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-182&quot;&gt;POLYGENE-182&lt;/a&gt; - Replace Input/Output/Sender/Receiver APIs with Java 8 Streams&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-181&quot;&gt;POLYGENE-181&lt;/a&gt; - Replace ‘long’ with java.time.Instant&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-124&quot;&gt;POLYGENE-124&lt;/a&gt; - Replace Joda Time with Java 8 Time API&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-152&quot;&gt;POLYGENE-152&lt;/a&gt; - Disallow java.util.Date and Joda Time in Property&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-192&quot;&gt;POLYGENE-192&lt;/a&gt; - Create Codahale Metrics extensions to replace outdated Yammer Metrics&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-183&quot;&gt;POLYGENE-183&lt;/a&gt; - Remove eventsourcing library&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-156&quot;&gt;POLYGENE-156&lt;/a&gt; - Remove Scheduler library&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-188&quot;&gt;POLYGENE-188&lt;/a&gt; - Remove Scala language support&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-222&quot;&gt;POLYGENE-222&lt;/a&gt; - Remove Indexing-SQL&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-191&quot;&gt;POLYGENE-191&lt;/a&gt; - Remove org.json java library&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-134&quot;&gt;POLYGENE-134&lt;/a&gt; - Remove org.apache.polygene.api.dataset&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-123&quot;&gt;POLYGENE-123&lt;/a&gt; - Remove Base64Encoder in favor of the Java 8 one.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-184&quot;&gt;POLYGENE-184&lt;/a&gt; - Remove use of NullArgumentException&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-262&quot;&gt;POLYGENE-262&lt;/a&gt; - Rename NoSuchCompositeException to NoSuchCompositeTypeException&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;bug-fixes&quot;&gt;Bug fixes&lt;/h4&gt;
+
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-43&quot;&gt;POLYGENE-43&lt;/a&gt; - Solr Indexing has dependency on RDF library&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-54&quot;&gt;POLYGENE-54&lt;/a&gt; - Support more use-cases in toEntity/toValue mechanism&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-105&quot;&gt;POLYGENE-105&lt;/a&gt; - ValueSerialization Type Lookup is wrong.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-108&quot;&gt;POLYGENE-108&lt;/a&gt; - Package renaming to org.apache.zest&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-111&quot;&gt;POLYGENE-111&lt;/a&gt; - Easy to use Restful Library&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-120&quot;&gt;POLYGENE-120&lt;/a&gt; - Figure out the semantics for Default Methods in interfaces&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-126&quot;&gt;POLYGENE-126&lt;/a&gt; - The forum sample won’t start&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-127&quot;&gt;POLYGENE-127&lt;/a&gt; - Servlet assembly DSL in HTTP library prevent 2.0 style usage&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-137&quot;&gt;POLYGENE-137&lt;/a&gt; - EntityStateSerializer unable to handle values that are not declared as composites.&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-138&quot;&gt;POLYGENE-138&lt;/a&gt; - org.json ValueSerialization of Serializable fail when out of JSON sequence&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-142&quot;&gt;POLYGENE-142&lt;/a&gt; - Enum Property in EntityComposite serialization error&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-172&quot;&gt;POLYGENE-172&lt;/a&gt; - MongoDB configuration is not friendly.&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-193&quot;&gt;POLYGENE-193&lt;/a&gt; - Fail when composite type has interface static method&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-222&quot;&gt;POLYGENE-222&lt;/a&gt; - Indexing-SQL is broken&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-224&quot;&gt;POLYGENE-224&lt;/a&gt; - Initialization race condition in ServiceReferenceInstance&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-227&quot;&gt;POLYGENE-227&lt;/a&gt; - Configuration perfTest should resolve in IDEA&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-233&quot;&gt;POLYGENE-233&lt;/a&gt; - Rdf Indexer is not using the unifying Assemblers system.&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-234&quot;&gt;POLYGENE-234&lt;/a&gt; - Service identity can not be null&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-236&quot;&gt;POLYGENE-236&lt;/a&gt; - Unit tests for entitystore-mongodb trigger a Windows Firewall popup window&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-237&quot;&gt;POLYGENE-237&lt;/a&gt; - Unit tests for entitystore-mongodb fail on Windows&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-251&quot;&gt;POLYGENE-251&lt;/a&gt; - Support Java 8 default methods on interfaces&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-254&quot;&gt;POLYGENE-254&lt;/a&gt; - Source distribution contains Gradle wrapper files including JARs&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-256&quot;&gt;POLYGENE-256&lt;/a&gt; - Cassandra EntityStore do not clear Many/Named Associations&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-257&quot;&gt;POLYGENE-257&lt;/a&gt; - Custom IdentityGenerator or Serialization hidden by default assemblers&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-259&quot;&gt;POLYGENE-259&lt;/a&gt; - ConfigurationComposite module is not used for bootstrap serialization&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-260&quot;&gt;POLYGENE-260&lt;/a&gt; - NamedAssociation.put() doesn’t mark DefaultEntityState “updated”&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/POLYGENE-261&quot;&gt;POLYGENE-261&lt;/a&gt; - ManyAssociation does not allow duplicate entries&lt;/li&gt;
 &lt;/ul&gt;
-
 </content>
  </entry>
  
  <entry>
    <title>Apache® Zest™ Renamed to Apache® Polygene™</title>
    <link href="https://polygene.apache.org/2017/01/07/rename-to-apache-polygene.html"/>
-   <updated>2017-01-07T00:00:00+08:00</updated>
+   <updated>2017-01-07T00:00:00+01:00</updated>
    <id>https://polygene.apache.org/2017/01/07/rename-to-apache-polygene.html</id>
    <content type="html">&lt;h2 id=&quot;apache-zest-renamed-to-apache-polygene&quot;&gt;Apache® Zest™ Renamed to Apache® Polygene™&lt;/h2&gt;
 
@@ -151,7 +136,7 @@ and not a new language on top of the JVM.&lt;/p&gt;
  <entry>
    <title>Apache Zest™ (Java Edition) Release 2.1</title>
    <link href="https://polygene.apache.org/2015/07/31/apache-zest-java-2.1.html"/>
-   <updated>2015-07-31T00:00:00+08:00</updated>
+   <updated>2015-07-31T00:00:00+02:00</updated>
    <id>https://polygene.apache.org/2015/07/31/apache-zest-java-2.1.html</id>
    <content type="html">&lt;h2 id=&quot;apache-zest-java-edition-release-21&quot;&gt;Apache Zest™ (Java Edition) Release 2.1&lt;/h2&gt;
 
@@ -236,7 +221,7 @@ Please note that this will change in 3.0.&lt;/p&gt;
  <entry>
    <title>Qi4j SDK Release 2.0</title>
    <link href="https://polygene.apache.org/2013/04/28/qi4j-2.0.html"/>
-   <updated>2013-04-28T00:00:00+08:00</updated>
+   <updated>2013-04-28T00:00:00+02:00</updated>
    <id>https://polygene.apache.org/2013/04/28/qi4j-2.0.html</id>
    <content type="html">&lt;h2 id=&quot;qi4j-sdk-release-20&quot;&gt;Qi4j SDK Release 2.0&lt;/h2&gt;
 
@@ -321,7 +306,7 @@ liberal Apache License 2.0.&lt;/p&gt;
  <entry>
    <title>Qi4j SDK Release 2.0-RC2</title>
    <link href="https://polygene.apache.org/2013/04/15/qi4j-2.0-rc2.html"/>
-   <updated>2013-04-15T00:00:00+08:00</updated>
+   <updated>2013-04-15T00:00:00+02:00</updated>
    <id>https://polygene.apache.org/2013/04/15/qi4j-2.0-rc2.html</id>
    <content type="html">&lt;h2 id=&quot;qi4j-sdk-release-20-rc2&quot;&gt;Qi4j SDK Release 2.0-RC2&lt;/h2&gt;
 
@@ -339,14 +324,14 @@ the long-awaited Qi4j 2.0.&lt;/p&gt;
   &lt;li&gt;Enhanced various unit tests and Core TestSupport&lt;/li&gt;
   &lt;li&gt;Documentation and javadoc enhancements&lt;/li&gt;
   &lt;li&gt;Third party libraries version upgrade&lt;/li&gt;
-  &lt;li&gt;Build System upgraded to use the way faster Gradle 1.5&lt;/li&gt;
+  &lt;li&gt;Build System upgraded to use the way faster Gradle 1.5 &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;The sooner we can vet this release, the sooner we can get to the 2.0 
 and start working on exciting new features, improvements to
 non-release libraries and extensions, among many other things. So, 
 please take some time and try this out, report back anything that is
-not working as expected or other feedback for us to improve on.&lt;/p&gt;
+not working as expected or other feedback for us to improve on. &lt;/p&gt;
 
 </content>
  </entry>
@@ -354,7 +339,7 @@ not working as expected or other feedback for us to improve on.&lt;/p&gt;
  <entry>
    <title>Qi4j SDK Release 2.0-RC1</title>
    <link href="https://polygene.apache.org/2012/12/25/qi4j-2.0-rc1.html"/>
-   <updated>2012-12-25T00:00:00+08:00</updated>
+   <updated>2012-12-25T00:00:00+01:00</updated>
    <id>https://polygene.apache.org/2012/12/25/qi4j-2.0-rc1.html</id>
    <content type="html">&lt;h2 id=&quot;qi4j-sdk-release-20-rc1&quot;&gt;Qi4j SDK Release 2.0-RC1&lt;/h2&gt;
 
@@ -401,7 +386,7 @@ creating the new website.&lt;/p&gt;
  <entry>
    <title>New Qi4j website!</title>
    <link href="https://polygene.apache.org/2012/05/25/new-website.html"/>
-   <updated>2012-05-25T00:00:00+08:00</updated>
+   <updated>2012-05-25T00:00:00+02:00</updated>
    <id>https://polygene.apache.org/2012/05/25/new-website.html</id>
    <content type="html">&lt;h2 id=&quot;new-qi4j-website&quot;&gt;New Qi4j website!&lt;/h2&gt;
 
@@ -430,7 +415,7 @@ Any feedback is welcome, either on GitHub or qi4j-dev forum at Google Groups.&lt
  <entry>
    <title>Qi4j's Future</title>
    <link href="https://polygene.apache.org/2012/05/02/qi4j-future.html"/>
-   <updated>2012-05-02T00:00:00+08:00</updated>
+   <updated>2012-05-02T00:00:00+02:00</updated>
    <id>https://polygene.apache.org/2012/05/02/qi4j-future.html</id>
    <content type="html">&lt;h2 id=&quot;qi4js-future&quot;&gt;Qi4j’s Future&lt;/h2&gt;
 
@@ -453,7 +438,7 @@ Any feedback is welcome, either on GitHub or qi4j-dev forum at Google Groups.&lt
  <entry>
    <title>Qi4j @ JFocus 2012 - ReST</title>
    <link href="https://polygene.apache.org/2012/02/15/jfocus.html"/>
-   <updated>2012-02-15T00:00:00+08:00</updated>
+   <updated>2012-02-15T00:00:00+01:00</updated>
    <id>https://polygene.apache.org/2012/02/15/jfocus.html</id>
    <content type="html">&lt;h2 id=&quot;qi4j--jfokus-2012---rest&quot;&gt;Qi4j @ JFokus 2012 - ReST&lt;/h2&gt;
 
@@ -471,7 +456,7 @@ Any feedback is welcome, either on GitHub or qi4j-dev forum at Google Groups.&lt
  <entry>
    <title>Qi4j SDK Release 1.4</title>
    <link href="https://polygene.apache.org/2011/08/06/qi4j-sdk-1.4.html"/>
-   <updated>2011-08-06T00:00:00+08:00</updated>
+   <updated>2011-08-06T00:00:00+02:00</updated>
    <id>https://polygene.apache.org/2011/08/06/qi4j-sdk-1.4.html</id>
    <content type="html">&lt;h2 id=&quot;qi4j-sdk-release-14&quot;&gt;Qi4j SDK Release 1.4&lt;/h2&gt;
 
@@ -496,7 +481,7 @@ Any feedback is welcome, either on GitHub or qi4j-dev forum at Google Groups.&lt
  <entry>
    <title>Qi4j SDK Release 1.3</title>
    <link href="https://polygene.apache.org/2011/04/15/qi4j-sdk-1.3.html"/>
-   <updated>2011-04-15T00:00:00+08:00</updated>
+   <updated>2011-04-15T00:00:00+02:00</updated>
    <id>https://polygene.apache.org/2011/04/15/qi4j-sdk-1.3.html</id>
    <content type="html">&lt;h2 id=&quot;qi4j-sdk-release-13&quot;&gt;Qi4j SDK Release 1.3&lt;/h2&gt;
 
@@ -615,7 +600,7 @@ Any feedback is welcome, either on GitHub or qi4j-dev forum at Google Groups.&lt
  <entry>
    <title>Qi4j moves to Gradle</title>
    <link href="https://polygene.apache.org/2011/02/21/gradle.html"/>
-   <updated>2011-02-21T00:00:00+08:00</updated>
+   <updated>2011-02-21T00:00:00+01:00</updated>
    <id>https://polygene.apache.org/2011/02/21/gradle.html</id>
    <content type="html">&lt;h2 id=&quot;qi4j-moves-to-gradle&quot;&gt;Qi4j moves to Gradle&lt;/h2&gt;
 
@@ -629,7 +614,7 @@ Any feedback is welcome, either on GitHub or qi4j-dev forum at Google Groups.&lt
 
 &lt;p&gt;The absence of XML is refreshing. So instead of;&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;codehilite&quot;&gt;&lt;code&gt;&amp;lt;dependencies&amp;gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;dependencies&amp;gt;
   &amp;lt;dependency&amp;gt;
     &amp;lt;groupId&amp;gt;org.qi4j.core.runtime&amp;lt;/groupId&amp;gt;
     &amp;lt;artifactId&amp;gt;qi4j-core-api&amp;lt;/artifactId&amp;gt;
@@ -642,15 +627,15 @@ Any feedback is welcome, either on GitHub or qi4j-dev forum at Google Groups.&lt
     &amp;lt;scope&amp;gt;test&amp;lt;/scope&amp;gt;
   &amp;lt;/dependency&amp;gt;
 &amp;lt;/dependencies&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;The declaration of a dependency is done programmatically in Groovy code, so it can even be conditional and so forth, but the normal way is;&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;codehilite&quot;&gt;&lt;code&gt;dependencies {
+&lt;pre&gt;&lt;code&gt;dependencies {
     compile &quot;org.qi4j.core:qi4j-core-api:1.2&quot;
     testRuntime &quot;org.qi4j.core:qi4j-core-runtime:1.2&quot;
 }
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;And YES, there is a difference between testCompile and testRuntime. 1 line instead of Maven’s 5-6 lines per dependency. And in true Ivy fashion, one can create one’s own scopes, although I doubt we need that in the near future.&lt;/p&gt;
 
@@ -668,7 +653,7 @@ Any feedback is welcome, either on GitHub or qi4j-dev forum at Google Groups.&lt
  <entry>
    <title>Qi4j SDK 1.2 Released</title>
    <link href="https://polygene.apache.org/2010/10/23/qi4j-sdk-1.2.html"/>
-   <updated>2010-10-23T00:00:00+08:00</updated>
+   <updated>2010-10-23T00:00:00+02:00</updated>
    <id>https://polygene.apache.org/2010/10/23/qi4j-sdk-1.2.html</id>
    <content type="html">&lt;h2 id=&quot;qi4j-sdk-12-released&quot;&gt;Qi4j SDK 1.2 Released&lt;/h2&gt;
 
@@ -730,7 +715,7 @@ Any feedback is welcome, either on GitHub or qi4j-dev forum at Google Groups.&lt
  <entry>
    <title>Qi4j @ JavaZone 2010 - ReST/DCI</title>
    <link href="https://polygene.apache.org/2010/09/18/javazone.html"/>
-   <updated>2010-09-18T00:00:00+08:00</updated>
+   <updated>2010-09-18T00:00:00+02:00</updated>
    <id>https://polygene.apache.org/2010/09/18/javazone.html</id>
    <content type="html">&lt;h2 id=&quot;qi4j--javazone-2010---restdci&quot;&gt;Qi4j @ JavaZone 2010 - ReST/DCI&lt;/h2&gt;
 
@@ -745,7 +730,7 @@ Any feedback is welcome, either on GitHub or qi4j-dev forum at Google Groups.&lt
  <entry>
    <title>Qi4j @ Apache Roadshow Shanghai</title>
    <link href="https://polygene.apache.org/2010/08/30/apache-roadshow-shanghai.html"/>
-   <updated>2010-08-30T00:00:00+08:00</updated>
+   <updated>2010-08-30T00:00:00+02:00</updated>
    <id>https://polygene.apache.org/2010/08/30/apache-roadshow-shanghai.html</id>
    <content type="html">&lt;h2 id=&quot;qi4j--apache-roadshow-shanghai&quot;&gt;Qi4j @ Apache Roadshow Shanghai&lt;/h2&gt;
 
@@ -756,7 +741,7 @@ Any feedback is welcome, either on GitHub or qi4j-dev forum at Google Groups.&lt
  <entry>
    <title>Qi4j SDK 1.1 is out!</title>
    <link href="https://polygene.apache.org/2010/06/17/qi4j-1.1.html"/>
-   <updated>2010-06-17T00:00:00+08:00</updated>
+   <updated>2010-06-17T00:00:00+02:00</updated>
    <id>https://polygene.apache.org/2010/06/17/qi4j-1.1.html</id>
    <content type="html">&lt;h2 id=&quot;qi4j-sdk-11-is-out&quot;&gt;Qi4j SDK 1.1 is out!&lt;/h2&gt;
 
@@ -784,7 +769,7 @@ Any feedback is welcome, either on GitHub or qi4j-dev forum at Google Groups.&lt
  <entry>
    <title>Qi4j SDK 1.0 has been released!</title>
    <link href="https://polygene.apache.org/2010/01/28/qi4j-1.0.html"/>
-   <updated>2010-01-28T00:00:00+08:00</updated>
+   <updated>2010-01-28T00:00:00+01:00</updated>
    <id>https://polygene.apache.org/2010/01/28/qi4j-1.0.html</id>
    <content type="html">&lt;h2 id=&quot;qi4j-sdk-10-has-been-released&quot;&gt;Qi4j SDK 1.0 has been released!&lt;/h2&gt;
 
@@ -799,7 +784,7 @@ Any feedback is welcome, either on GitHub or qi4j-dev forum at Google Groups.&lt
  <entry>
    <title>Quicker Frameworks</title>
    <link href="https://polygene.apache.org/2010/01/25/quicker-frameworks.html"/>
-   <updated>2010-01-25T00:00:00+08:00</updated>
+   <updated>2010-01-25T00:00:00+01:00</updated>
    <id>https://polygene.apache.org/2010/01/25/quicker-frameworks.html</id>
    <content type="html">&lt;h2 id=&quot;quicker-frameworks&quot;&gt;Quicker Frameworks&lt;/h2&gt;
 
@@ -812,7 +797,7 @@ Any feedback is welcome, either on GitHub or qi4j-dev forum at Google Groups.&lt
  <entry>
    <title>Qi4j @ 0redev 2010 - DCI</title>
    <link href="https://polygene.apache.org/2010/01/25/oredev.html"/>
-   <updated>2010-01-25T00:00:00+08:00</updated>
+   <updated>2010-01-25T00:00:00+01:00</updated>
    <id>https://polygene.apache.org/2010/01/25/oredev.html</id>
    <content type="html">&lt;h2 id=&quot;qi4j--redev-2010---dci&quot;&gt;Qi4j @ Øredev 2010 - DCI&lt;/h2&gt;
 
@@ -825,7 +810,7 @@ Any feedback is welcome, either on GitHub or qi4j-dev forum at Google Groups.&lt
  <entry>
    <title>Qi4j @ JavaZone 2009 - Persistence</title>
    <link href="https://polygene.apache.org/2009/09/03/javazone.html"/>
-   <updated>2009-09-03T00:00:00+08:00</updated>
+   <updated>2009-09-03T00:00:00+02:00</updated>
    <id>https://polygene.apache.org/2009/09/03/javazone.html</id>
    <content type="html">&lt;h2 id=&quot;qi4j--javazone-2009---persistence&quot;&gt;Qi4j @ JavaZone 2009 - Persistence&lt;/h2&gt;
 
@@ -844,7 +829,7 @@ Any feedback is welcome, either on GitHub or qi4j-dev forum at Google Groups.&lt
  <entry>
    <title>Qi4j @ JFocus 2009 - COP / DDD</title>
    <link href="https://polygene.apache.org/2009/05/10/jfocus.html"/>
-   <updated>2009-05-10T00:00:00+08:00</updated>
+   <updated>2009-05-10T00:00:00+02:00</updated>
    <id>https://polygene.apache.org/2009/05/10/jfocus.html</id>
    <content type="html">&lt;h2 id=&quot;qi4j--jfocus-2009---cop--ddd&quot;&gt;Qi4j @ JFocus 2009 - COP / DDD&lt;/h2&gt;
 
@@ -857,7 +842,7 @@ Any feedback is welcome, either on GitHub or qi4j-dev forum at Google Groups.&lt
  <entry>
    <title>Qi4j 0.7 Released</title>
    <link href="https://polygene.apache.org/2009/04/20/qi4j-0.7.html"/>
-   <updated>2009-04-20T00:00:00+08:00</updated>
+   <updated>2009-04-20T00:00:00+02:00</updated>
    <id>https://polygene.apache.org/2009/04/20/qi4j-0.7.html</id>
    <content type="html">&lt;h2 id=&quot;qi4j-07-released&quot;&gt;Qi4j 0.7 Released&lt;/h2&gt;
 
@@ -868,7 +853,7 @@ Any feedback is welcome, either on GitHub or qi4j-dev forum at Google Groups.&lt
  <entry>
    <title>Qi4j 0.6 Released</title>
    <link href="https://polygene.apache.org/2009/02/20/qi4j-0.6.html"/>
-   <updated>2009-02-20T00:00:00+08:00</updated>
+   <updated>2009-02-20T00:00:00+01:00</updated>
    <id>https://polygene.apache.org/2009/02/20/qi4j-0.6.html</id>
    <content type="html">&lt;h2 id=&quot;qi4j-06-released&quot;&gt;Qi4j 0.6 Released&lt;/h2&gt;
 
@@ -881,7 +866,7 @@ Any feedback is welcome, either on GitHub or qi4j-dev forum at Google Groups.&lt
  <entry>
    <title>DDD support in Qi4j explained</title>
    <link href="https://polygene.apache.org/2009/02/19/ddd-in-qi4j-explained.html"/>
-   <updated>2009-02-19T00:00:00+08:00</updated>
+   <updated>2009-02-19T00:00:00+01:00</updated>
    <id>https://polygene.apache.org/2009/02/19/ddd-in-qi4j-explained.html</id>
    <content type="html">&lt;h2 id=&quot;ddd-support-in-qi4j-explained&quot;&gt;DDD support in Qi4j explained&lt;/h2&gt;
 
@@ -892,7 +877,7 @@ Any feedback is welcome, either on GitHub or qi4j-dev forum at Google Groups.&lt
  <entry>
    <title>Qi4j @ Arskonference 2009</title>
    <link href="https://polygene.apache.org/2009/01/10/arskonference.html"/>
-   <updated>2009-01-10T00:00:00+08:00</updated>
+   <updated>2009-01-10T00:00:00+01:00</updated>
    <id>https://polygene.apache.org/2009/01/10/arskonference.html</id>
    <content type="html">&lt;h2 id=&quot;qi4j--rskonference-2009&quot;&gt;Qi4j @ Årskonference 2009&lt;/h2&gt;
 
@@ -910,7 +895,7 @@ Any feedback is welcome, either on GitHub or qi4j-dev forum at Google Groups.&lt
  <entry>
    <title>Qi4j 0.5 Released</title>
    <link href="https://polygene.apache.org/2009/01/09/qi4j-0.5.html"/>
-   <updated>2009-01-09T00:00:00+08:00</updated>
+   <updated>2009-01-09T00:00:00+01:00</updated>
    <id>https://polygene.apache.org/2009/01/09/qi4j-0.5.html</id>
    <content type="html">&lt;h2 id=&quot;qi4j-05-released&quot;&gt;Qi4j 0.5 Released&lt;/h2&gt;
 
@@ -921,7 +906,7 @@ Any feedback is welcome, either on GitHub or qi4j-dev forum at Google Groups.&lt
  <entry>
    <title>Qi4j @ 0redev 2008 - Qi4j</title>
    <link href="https://polygene.apache.org/2008/11/17/oredev-qi4j.html"/>
-   <updated>2008-11-17T00:00:00+08:00</updated>
+   <updated>2008-11-17T00:00:00+01:00</updated>
    <id>https://polygene.apache.org/2008/11/17/oredev-qi4j.html</id>
    <content type="html">&lt;h2 id=&quot;qi4j--0redev-2008---qi4j&quot;&gt;Qi4j @ 0redev 2008 - Qi4j&lt;/h2&gt;
 
@@ -936,7 +921,7 @@ Any feedback is welcome, either on GitHub or qi4j-dev forum at Google Groups.&lt
  <entry>
    <title>Qi4j 0.4 Released</title>
    <link href="https://polygene.apache.org/2008/09/19/qi4j-0.4.html"/>
-   <updated>2008-09-19T00:00:00+08:00</updated>
+   <updated>2008-09-19T00:00:00+02:00</updated>
    <id>https://polygene.apache.org/2008/09/19/qi4j-0.4.html</id>
    <content type="html">&lt;h2 id=&quot;qi4j-04-released&quot;&gt;Qi4j 0.4 Released&lt;/h2&gt;
 
@@ -947,7 +932,7 @@ Any feedback is welcome, either on GitHub or qi4j-dev forum at Google Groups.&lt
  <entry>
    <title>Qi4j @ JavaZone 2008 - Composite Oriented Programming with Qi4j</title>
    <link href="https://polygene.apache.org/2008/09/15/javazone-cop.html"/>
-   <updated>2008-09-15T00:00:00+08:00</updated>
+   <updated>2008-09-15T00:00:00+02:00</updated>
    <id>https://polygene.apache.org/2008/09/15/javazone-cop.html</id>
    <content type="html">&lt;h2 id=&quot;qi4j--javazone-2008---composite-oriented-programming-with-qi4j&quot;&gt;Qi4j @ JavaZone 2008 - Composite Oriented Programming with Qi4j&lt;/h2&gt;
 
@@ -960,7 +945,7 @@ Any feedback is welcome, either on GitHub or qi4j-dev forum at Google Groups.&lt
  <entry>
    <title>Qi4j 0.3 Released</title>
    <link href="https://polygene.apache.org/2008/08/08/qi4j-0.3.html"/>
-   <updated>2008-08-08T00:00:00+08:00</updated>
+   <updated>2008-08-08T00:00:00+02:00</updated>
    <id>https://polygene.apache.org/2008/08/08/qi4j-0.3.html</id>
    <content type="html">&lt;h2 id=&quot;qi4j-03-released&quot;&gt;Qi4j 0.3 Released&lt;/h2&gt;
 
@@ -983,7 +968,7 @@ Any feedback is welcome, either on GitHub or qi4j-dev forum at Google Groups.&lt
  <entry>
    <title>Qi4j 0.2 Released</title>
    <link href="https://polygene.apache.org/2008/06/06/qi4j-0.2.html"/>
-   <updated>2008-06-06T00:00:00+08:00</updated>
+   <updated>2008-06-06T00:00:00+02:00</updated>
    <id>https://polygene.apache.org/2008/06/06/qi4j-0.2.html</id>
    <content type="html">&lt;h2 id=&quot;qi4j-02-released&quot;&gt;Qi4j 0.2 Released&lt;/h2&gt;
 
@@ -994,7 +979,7 @@ Any feedback is welcome, either on GitHub or qi4j-dev forum at Google Groups.&lt
  <entry>
    <title>Qi4j 0.1 Released</title>
    <link href="https://polygene.apache.org/2008/04/14/qi4j-0.1.html"/>
-   <updated>2008-04-14T00:00:00+08:00</updated>
+   <updated>2008-04-14T00:00:00+02:00</updated>
    <id>https://polygene.apache.org/2008/04/14/qi4j-0.1.html</id>
    <content type="html">&lt;h2 id=&quot;qi4j-01-released&quot;&gt;Qi4j 0.1 Released&lt;/h2&gt;
 
@@ -1005,7 +990,7 @@ Any feedback is welcome, either on GitHub or qi4j-dev forum at Google Groups.&lt
  <entry>
    <title>Qi4j @ JFocus 2008 - Composite Oriented Programming</title>
    <link href="https://polygene.apache.org/2008/01/30/jfocus-cop.html"/>
-   <updated>2008-01-30T00:00:00+08:00</updated>
+   <updated>2008-01-30T00:00:00+01:00</updated>
    <id>https://polygene.apache.org/2008/01/30/jfocus-cop.html</id>
    <content type="html">&lt;h2 id=&quot;qi4j--jfocus-2008---composite-oriented-programming&quot;&gt;Qi4j @ JFocus 2008 - Composite Oriented Programming&lt;/h2&gt;
 
@@ -1018,7 +1003,7 @@ Any feedback is welcome, either on GitHub or qi4j-dev forum at Google Groups.&lt
  <entry>
    <title>Qi4j @Øredev 2007 - Composite Oriented Programming</title>
    <link href="https://polygene.apache.org/2007/11/13/oredev-cop.html"/>
-   <updated>2007-11-13T00:00:00+08:00</updated>
+   <updated>2007-11-13T00:00:00+01:00</updated>
    <id>https://polygene.apache.org/2007/11/13/oredev-cop.html</id>
    <content type="html">&lt;h2 id=&quot;qi4j-redev-2007---composite-oriented-programming&quot;&gt;Qi4j @Øredev 2007 - Composite Oriented Programming&lt;/h2&gt;
 
