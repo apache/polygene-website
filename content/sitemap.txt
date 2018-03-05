@@ -7,8 +7,8 @@ https://polygene.apache.org/download-qi4j-legacy.html
 https://polygene.apache.org/download.html
 https://polygene.apache.org/community/get_help.html
 https://polygene.apache.org/.htaccess
-https://polygene.apache.org/index.html
-https://polygene.apache.org/community/index.html
+https://polygene.apache.org/community/
+https://polygene.apache.org/
 https://polygene.apache.org/community/licensing_faq.html
 https://polygene.apache.org/community/maturity.html
 https://polygene.apache.org/news.html
