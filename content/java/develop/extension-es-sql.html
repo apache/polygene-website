@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>SQL EntityStore</title><link rel="stylesheet" type="text/css" href="css/style.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.79.1" /><link rel="home" href="index.html" title="" /><link rel="up" href="extensions.html" title="Extensions" /><link rel="prev" href="extension-es-riak.html" title="Riak EntityStore" /><link rel="next" href="extension-cache-ehcache.html" title="Ehcache Cache" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>SQL EntityStore</title><link rel="stylesheet" type="text/css" href="css/style.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.79.1" /><link rel="home" href="index.html" title="" /><link rel="up" href="extensions.html" title="Extensions" /><link rel="prev" href="extension-es-riak.html" title="Riak EntityStore" /><link rel="next" href="extension-es-sqlkv.html" title="SQL Key/Value EntityStore" />
 
 
 <!-- favicon -->
@@ -66,297 +66,154 @@
   })();
  </script>
 
-  </head><body><div xmlns="" xmlns:exsl="http://exslt.org/common" class="logo"><a href="index.html"><img src="images/logo-standard.png" /></a></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="top-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl class="toc"><dt><span class="section"><a href="index.html#home">Polygene™</a></span></dt><dt><span class="section"><a href="intro.html">Introduction</a></span></dt><dt><span class="section"><a href="tutorials.html">Tutorials</a></span></dt><dt><span class="section"><a href="javadocs.html">Javadoc</a></span></dt><dt><span class="section"><a href="samples.html">Samples</a></span></dt><dt><span class="section"><a href="core.html">Core</a></span></dt><dt><span class="section"><a href="libraries.html">Libraries</a></span></dt><dt><span class="section"><span xmlns="" href="extensions.html">Extensions</span></span></dt><dt><span class="section"><a href="tools.html">Tools</a></span></dt><dt><span class="section"><a href="glossary.html">Glossary </a></span></dt></dl></div></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="sub-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl class="toc"><dt><span class="section"><a href="extensions.html#_overview_7">Overview</a></span></dt><dt><span class="section"><a href="extension-serialization-javaxjson.html">javax.json serialization</a></span></dt><dt><span class="section"><a href="extension-serialization-javaxxml.html">javax.xml serialization</a></span></dt><dt><span class="section"><a href="extension-serialization-messagepack.html">MessagePack serialization</a></span></dt><dt><span class="section"><a href="extension-es-memory.html">Memory EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-file.html">File EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-geode.html">Geode EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-hazelcast.html">Hazelcast EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-jclouds.html">JClouds EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-jdbm.html">JDBM EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-leveldb.html">LevelDB EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-mongodb.html">MongoDB EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-preferences.html">Preferences EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-redis.html">Redis EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-riak.html">Riak EntityStore</a></span></dt><dt><span class="section"><span xmlns="" href="extension-es-sql.html">SQL EntityStore</span></span></dt><dt><span class="section"><a href="extension-cache-ehcache.html">Ehcache Cache</a></span></dt><dt><span class="section"><a href="extension-cache-memcache.html">Memcache Cache</a></span></dt><dt><span class="section"><a href="extension-index-elasticsearch.html">ElasticSearch Index/Query</a></span></dt><dt><span class="section"><a href="extension-index-rdf.html">OpenRDF Index/Query</a></span></dt><dt><span class="section"><a href="extension-index-solr.html">Apache Solr Index/Query</a></span></dt><dt><span class="section"><a href="extension-indexing-sql.html">SQL Index/Query</a></span></dt><dt><span class="section"><a href="extension-metrics-metrics.html">Codahale Metrics</a></span></dt><dt><span class="section"><a href="extension-migration.html">Migration</a></span></dt><dt><span class="section"><a href="extension-reindexer.html">Reindexer</a></span></dt></dl></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="extension-es-sql"></a>SQL EntityStore</h3></div></div></div><p class="remark"><em><span class="comment"></span></em></p><p class="devstatus-code-stable">code</p><p class="devstatus-docs-good">docs</p><p class="devstatus-tests-good">tests</p><p>EntityStore service backed by a SQL database.</p><p>This extension fully leverage the <a class="xref" href="library-sql.html" title="SQL">SQL Library</a> meaning that you must use it to assemble your DataSource and that you
-get <a class="link" href="library-circuitbreaker.html" title="Circuit Breaker">Circuit Breaker</a> and <a class="link" href="library-jmx.html" title="JMX">JMX</a> integration for free.</p><p>The database schema is managed using <a class="xref" href="">???</a>.</p><div class="tip" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Tip</h3><p>See the <a class="xref" href="sample-sql-support.html" title="SQL Support Sample">SQL Support Sample</a> that demonstrate combined use of <a class="xref" href="library-sql.html" title="SQL">SQL Library</a>, <a class="xref" href="extension-es-sql.html" title="SQL EntityStore"> SQL EntityStore</a> and
-<a class="xref" href="extension-indexing-sql.html" title="SQL Index/Query">SQL Index/Query</a>.</p></div><p>The following SQL databases are supported:</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
-<a class="ulink" href="http://www.postgresql.org/" target="_top">PostgreSQL</a>
-</li><li class="listitem">
-<a class="ulink" href="http://www.mysql.com/" target="_top">MySQL</a> and <a class="ulink" href="http://mariadb.org/" target="_top">MariaDB</a>
-</li><li class="listitem">
-<a class="ulink" href="http://www.sqlite.org/" target="_top">SQLite</a>
-</li><li class="listitem">
-<a class="ulink" href="http://www.h2database.com/" target="_top">H2 Database Engine</a>
-</li><li class="listitem">
-<a class="ulink" href="http://db.apache.org/derby/" target="_top">Apache Derby</a> and <a class="ulink" href="http://www.oracle.com/technetwork/java/javadb/overview/index.htm" target="_top">Oracle JavaDB</a>
-</li></ul></div><p>Each entity state is stored as a single row so maximum number of entities is the maximum number of rows per table
-supported by the underlying SQL database.</p><div class="table"><a id="idm447725245360"></a><p class="title"><strong>Table 62. Artifact</strong></p><div class="table-contents"><table class="table" summary="Artifact" border="1"><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /></colgroup><thead><tr><th align="left" valign="top">Group ID</th><th align="left" valign="top">Artifact ID</th><th align="left" valign="top">Version</th></tr></thead><tbody><tr><td align="left" valign="top"><p>org.apache.polygene.extensions</p></td><td align="left" valign="top"><p>org.apache.polygene.extension.entitystore-sql</p></td><td align="left" valign="top"><p>3.0.0-SNAPSHOT</p></td></tr></tbody></table></div></div><br class="table-break" /><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="_configuration_12"></a>Configuration</h4></div></div></div><p>Here are the available configuration properties:</p><pre class="programlisting brush: java">public interface SQLMapEntityStoreConfiguration extends SQLConfiguration
+  </head><body><div xmlns="" xmlns:exsl="http://exslt.org/common" class="logo"><a href="index.html"><img src="images/logo-standard.png" style="width:80%;height:80%; padding-top:20px;" /></a></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="top-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl class="toc"><dt><span class="section"><a href="index.html#home">Polygene™</a></span></dt><dt><span class="section"><a href="intro.html">Introduction</a></span></dt><dt><span class="section"><a href="tutorials.html">Tutorials</a></span></dt><dt><span class="section"><a href="javadocs.html">Javadoc</a></span></dt><dt><span class="section"><a href="samples.html">Samples</a></span></dt><dt><span class="section"><a href="core.html">Core</a></span></dt><dt><span class="section"><a href="libraries.html">Libraries</a></span></dt><dt><span class="section"><span xmlns="" href="extensions.html">Extensions</span></span></dt><dt><span class="section"><a href="tools.html">Tools</a></span></dt><dt><span class="section"><a href="glossary.html">Glossary </a></span></dt></dl></div></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="sub-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl class="toc"><dt><span class="section"><a href="extensions.html#_overview_7">Overview</a></span></dt><dt><span class="section"><a href="extension-serialization-javaxjson.html">javax.json serialization</a></span></dt><dt><span class="section"><a href="extension-serialization-javaxxml.html">javax.xml serialization</a></span></dt><dt><span class="section"><a href="extension-serialization-messagepack.html">MessagePack serialization</a></span></dt><dt><span class="section"><a href="extension-es-memory.html">Memory EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-file.html">File EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-geode.html">Geode EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-hazelcast.html">Hazelcast EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-jclouds.html">JClouds EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-jdbm.html">JDBM EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-leveldb.html">LevelDB EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-mongodb.html">MongoDB EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-preferences.html">Preferences EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-redis.html">Redis EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-riak.html">Riak EntityStore</a></span></dt><dt><span class="section"><span xmlns="" href="extension-es-sql.html">SQL EntityStore</span></span></dt><dt><span class="section"><a href="extension-es-sqlkv.html">SQL Key/Value EntityStore</a></span></dt><dt><span class="section"><a href="extension-cache-ehcache.html">Ehcache Cache</a></span></dt><dt><span class="section"><a href="extension-cache-memcache.html">Memcache Cache</a></span></dt><dt><span class="section"><a href="extension-index-elasticsearch.html">ElasticSearch Index/Query</a></span></dt><dt><span class="section"><a href="extension-index-rdf.html">OpenRDF Index/Query</a></span></dt><dt><span class="section"><a href="extension-index-solr.html">Apache Solr Index/Query</a></span></dt><dt><span class="section"><a href="extension-indexing-sql.html">SQL Index/Query</a></span></dt><dt><span class="section"><a href="extension-metrics-metrics.html">Codahale Metrics</a></span></dt><dt><span class="section"><a href="extension-migration.html">Migration</a></span></dt><dt><span class="section"><a href="extension-reindexer.html">Reindexer</a></span></dt></dl></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="extension-es-sql"></a>SQL EntityStore</h3></div></div></div><p class="remark"><em><span class="comment"></span></em></p><p class="devstatus-code-beta">code</p><p class="devstatus-docs-good">docs</p><p class="devstatus-tests-good">tests</p><p>This entitystore is backed by a SQL server, and maps each mixin type of the Composite into separate tables. This is more
+enterprise-friendly, but comes at the cost of less performance compared to the <a class="xref" href="extension-es-sqlkv.html" title="SQL Key/Value EntityStore"> SQL Key/Value EntityStore</a>.</p><p>This extension fully leverage the <a class="xref" href="library-sql.html" title="SQL">SQL Library</a> meaning that you must use it to assemble your DataSource and that you
+get <a class="link" href="library-circuitbreaker.html" title="Circuit Breaker">Circuit Breaker</a> and <a class="link" href="library-jmx.html" title="JMX">JMX</a> integration for free.</p><div class="table"><a id="idm6336"></a><p class="title"><strong>Table 61. Artifact</strong></p><div class="table-contents"><table class="table" summary="Artifact" border="1"><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /></colgroup><thead><tr><th align="left" valign="top">Group ID</th><th align="left" valign="top">Artifact ID</th><th align="left" valign="top">Version</th></tr></thead><tbody><tr><td align="left" valign="top"><p>org.apache.polygene.extensions</p></td><td align="left" valign="top"><p>org.apache.polygene.extension.entitystore-sql</p></td><td align="left" valign="top"><p>0</p></td></tr></tbody></table></div></div><br class="table-break" /><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="_assembly_20"></a>Assembly</h4></div></div></div><p>Assembly is done using the provided Assembler:</p><pre class="programlisting brush: java">public void assemble( ModuleAssembly module )
+    throws AssemblyException
+{
+  [...snip...]
+
+    // Assemble a DataSource
+    new DataSourceAssembler()
+        .withDataSourceServiceIdentity( "datasource" )
+        .identifiedBy( "ds-h2" )
+        .visibleIn( Visibility.module )
+        .assemble( module );
+
+    // Assemble the Apache DBCP based Service Importer
+    new DBCPDataSourceServiceAssembler()
+        .identifiedBy( "datasource" )
+        .visibleIn( Visibility.module )
+        .withConfig( config, Visibility.layer )
+        .assemble( module );
+
+    new H2SQLEntityStoreAssembler()
+        .withConfig( config, Visibility.layer )
+        .identifiedBy( "sql-entitystore" )
+        .assemble( module );
+          [...snip...]
+
+}
+</pre></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="_configuration_12"></a>Configuration</h4></div></div></div><p>Here are the available configuration properties:</p><pre class="programlisting brush: java">public interface SqlEntityStoreConfiguration
 {
     /**
-     * Name of the database schema to use.
-     * Ignored on SQL databases that don't support schemas.
-     */
-    @UseDefaults( "POLYGENE_ES" )
-    @Override
-    Property&lt;String&gt; schemaName();
-
-    /**
      * Name of the entities table.
+     * &lt;p&gt;
+     * This table contains the Identity and other metadata about each entity instance
+     * &lt;/p&gt;
      */
-    @UseDefaults( "POLYGENE_ENTITIES" )
-    Property&lt;String&gt; entityTableName();
+    @UseDefaults( "ENTITIES" )
+    Property&lt;String&gt; entitiesTableName();
 
     /**
-     * Defines whether the database schema and table should be created if not already present.
+     * Name of the entity types table.
+     * &lt;p&gt;
+     * This table contains the metainfo about each type. Types are versioned according to
+     * application version, to support entity migration over time, and therefor there might
+     * be (but not necessarily) multiple tables for entity types that has evolved beyond
+     * what can be managed within a single table.
+     * &lt;/p&gt;
+     */
+    @UseDefaults( "TYPES" )
+    Property&lt;String&gt; typesTableName();
+
+    /**
+     * Defines whether the database table should be created if not already present.
      */
     @UseDefaults( "true" )
     Property&lt;Boolean&gt; createIfMissing();
+
+    /**
+     * The SQL dialect that is being used.
+     * &lt;p&gt;
+     * Typically that is matching a supporting dialect in JOOQ.
+     * See {@link org.jooq.SQLDialect} for supported values.
+     * &lt;/p&gt;
+     * @return The property with the dialect value.
+     */
+    @UseDefaults( "" )
+    Property&lt;String&gt; dialect();
 }
-</pre><p>The assembly snippets below show the DataSource assembly alongside the SQL EntityStore assembly. Remember to configure
-the DataSource properly, see <a class="xref" href="library-sql.html" title="SQL">SQL Library</a> and <a class="xref" href="howto-configure-service.html" title="Configure a Service">Configure a Service</a>.</p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="_postgresql"></a>PostgreSQL</h4></div></div></div><p>Maximum number of entities is unlimited.</p><p>Assembly is done using the provided Assembler:</p><pre class="programlisting brush: java">public void assemble( ModuleAssembly module )
-    throws AssemblyException
+</pre><p>All authentication related properties are optional.
+By default no authentication is used.
+As soon as you provide a <code class="literal">username</code>, authentication is set up.
+It is also strongly recommended that a connection pool is setup. <a class="xref" href="">???</a> and <a class="xref" href="">???</a> are
+available in Polygene, but you can create your own.</p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="_table_layout"></a>Table Layout</h4></div></div></div><p>The SQL Entity Store will create, if createIfMissing() is true, or expect that the following tables exist.</p><div class="table"><a id="idm6370"></a><p class="title"><strong>Table 62. TYPES Table</strong></p><div class="table-contents"><table class="table" summary="TYPES Table" border="1" width="80%"><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /><col class="col_4" /></colgroup><thead><tr><th align="left" valign="top"><span class="strong"><strong>Field</strong></span> </th><th align="left" valign="top"><span class="strong"><strong>Type</strong></span> </th><th align="left" valign="top"><span class="strong"><strong>Constraint</strong></span> </th><th align="left" valign="top"><span class="strong"><strong>Description</strong></span></th></tr></thead><tbody><tr><td align="left" valign="top"><p>_identity</p></td><td align="left" valign="top"><p>VARCHAR</p></td><td align="left" valign="top"><p>PRIMARY KEY</p></td><td align="left" valign="top"><p>The Java classname of the Entity Type.</p></td></tr><tr><td align="left" valign="top"><p>_table_name</p></td><td align="left" valign="top"><p>VARCHAR</p></td><td align="left" valign="top"><p></p></td><td align="left" valign="top"><p>Chosen name of the Mixin table. This name is the simple name of the class name, unless that table already exists, in which case a sequence number (starting with 0) is added at the end of the name, e.g. Person_0.</p></td></tr><tr><td align="left" valign="top"><p>_created_at</p></td><td align="left" valign="top"><p>TIMESTAMP</p></td><td align="left" valign="top"><p></p></td><td align="left" valign="top"><p>The time of the creation into this table.</p></td></tr><tr><td align="left" valign="top"><p>_modified_at</p></td><td align="left" valign="top"><p>TIMESTAMP</p></td><td align="left" valign="top"><p></p></td><td align="left" valign="top"><p>The time of the last modification of this record. Should never change.</p></td></tr></tbody></table></div></div><br class="table-break" /><p>Or in DDL (assuming default value for SqlEntityStoreConfiguration.typesTableName();</p><pre class="programlisting brush: bash">create table if not exists "TYPES"(
+    "_identity" varchar null,
+    "_table_name" varchar null,
+    "_created_at" timestamp null,
+    "_modified_at" timestamp null,
+    primary key ("_identity")
+)</pre><div class="table"><a id="idm6426"></a><p class="title"><strong>Table 63. ENTITIES Table</strong></p><div class="table-contents"><table class="table" summary="ENTITIES Table" border="1" width="80%"><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /><col class="col_4" /></colgroup><thead><tr><th align="left" valign="top"><span class="strong"><strong>Field</strong></span> </th><th align="left" valign="top"><span class="strong"><strong>Type</strong></span> </th><th align="left" valign="top"><span class="strong"><strong>Constraint</strong></span> </th><th align="left" valign="top"><span class="strong"><strong>Description</strong></span></th></tr></thead><tbody><tr><td align="left" valign="top"><p>_identity</p></td><td align="left" valign="top"><p>VARCHAR</p></td><td align="left" valign="top"><p>PRIMARY KEY</p></td><td align="left" valign="top"><p>The Identity of the entity.</p></td></tr><tr><td align="left" valign="top"><p>_created_at</p></td><td align="left" valign="top"><p>TIMESTAMP</p></td><td align="left" valign="top"><p></p></td><td align="left" valign="top"><p>The time of creation of the entity.</p></td></tr><tr><td align="left" valign="top"><p>_type</p></td><td align="left" valign="top"><p>VARCHAR</p></td><td align="left" valign="top"><p></p></td><td align="left" valign="top"><p>The identity of the type of entity. Linked to the TYPES table _identity field.</p></td></tr><tr><td align="left" valign="top"><p>_app_version</p></td><td align="left" valign="top"><p>VARCHAR</p></td><td align="left" valign="top"><p></p></td><td align="left" valign="top"><p>The Application.version() when the entity was last modified.</p></td></tr><tr><td align="left" valign="top"><p>_version</p></td><td align="left" valign="top"><p>VARCHAR</p></td><td align="left" valign="top"><p></p></td><td align="left" valign="top"><p>The MVCC version of the entity, to ensure consistency with optimistic locking.</p></td></tr><tr><td align="left" valign="top"><p>_modified_at</p></td><td align="left" valign="top"><p>TIMESTAMP</p></td><td align="left" valign="top"><p></p></td><td align="left" valign="top"><p>The time of latest change to the entity.</p></td></tr><tr><td align="left" valign="top"><p>_value_id</p></td><td align="left" valign="top"><p>VARCHAR</p></td><td align="left" valign="top"><p></p></td><td align="left" valign="top"><p>The identity of the values that are stored in the Mixin tables (their _identity field)</p></td></tr></tbody></table></div></div><br class="table-break" /><pre class="programlisting brush: bash">create table if not exists "ENTITIES"(
+    "_identity" varchar null,
+    "_created_at" timestamp null,
+    "_type" varchar null,
+    "_app_version" varchar null,
+    "_version" varchar null,
+    "_modified_at" timestamp null,
+    "_value_id" varchar null,
+    primary key ("_identity")
+)</pre><p>Additionally, for each Mixin type, two tables will be created. One that contains one field per Property and
+one field per Association. The second table will contain a fixed layout that holds all ManyAssociation and all
+NamedAssociarion in a multi-field key-value table (see below).</p><p>The primary Mixin table will be named as the Mixin type’s simple class name, unless there is conflicts, in which
+case a sequence number will be added to the table name. The TYPES table contains the mapping from Mixin type
+(i.e. Java class name) to table name.</p><p>For instance, the following types will end up creating 4 Mixin tables, plus the 4 association tables,</p><pre class="programlisting brush: java">public interface Person extends HasName, HasAddress
 {
-  [...snip...]
-
-    // DataSourceService
-    new DBCPDataSourceServiceAssembler()
-        .identifiedBy( "postgresql-datasource-service" )
-        .visibleIn( Visibility.module )
-        .withConfig( config, Visibility.layer )
-        .assemble( module );
-
-    // DataSource
-    new DataSourceAssembler()
-        .withDataSourceServiceIdentity( "postgresql-datasource-service" )
-        .identifiedBy( "postgresql-datasource" )
-        .visibleIn( Visibility.module )
-        .withCircuitBreaker()
-        .assemble( module );
-
-    // SQL EntityStore
-    new PostgreSQLEntityStoreAssembler()
-        .visibleIn( Visibility.application )
-        .withConfig( config, Visibility.layer )
-        .assemble( module );
-          [...snip...]
-
+    @Optional
+    Association&lt;Person&gt; spouse();
+    ManyAssociation&lt;Person&gt; children();
 }
-</pre><p>Sample DataSource configuration defaults:</p><pre class="programlisting brush: java">#
-#  Licensed to the Apache Software Foundation (ASF) under one
-#  or more contributor license agreements.  See the NOTICE file
-#  distributed with this work for additional information
-#  regarding copyright ownership.  The ASF licenses this file
-#  to you under the Apache License, Version 2.0 (the
-#  "License"); you may not use this file except in compliance
-#  with the License.  You may obtain a copy of the License at
-#
-#       http://www.apache.org/licenses/LICENSE-2.0
-#
-#  Unless required by applicable law or agreed to in writing, software
-#  distributed under the License is distributed on an "AS IS" BASIS,
-#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-#  See the License for the specific language governing permissions and
-#  limitations under the License.
-#
-#
-#
 
-enabled=true
-driver=org.postgresql.Driver
-username=jdbc_test_login
-password=password</pre></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="_mysql_and_mariadb"></a>MySQL and MariaDB</h4></div></div></div><p>Maximum number of entities depends on the choosen storage engine.</p><p>Assembly is done using the provided Assembler:</p><pre class="programlisting brush: java">public void assemble( ModuleAssembly module )
-    throws AssemblyException
+public interface HasName
 {
-  [...snip...]
-
-    // DataSourceService
-    new DBCPDataSourceServiceAssembler()
-        .identifiedBy( "mysql-datasource-service" )
-        .visibleIn( Visibility.module )
-        .withConfig( config, Visibility.layer )
-        .assemble( module );
-
-    // DataSource
-    new DataSourceAssembler()
-        .withDataSourceServiceIdentity( "mysql-datasource-service" )
-        .identifiedBy( "mysql-datasource" )
-        .visibleIn( Visibility.module )
-        .withCircuitBreaker()
-        .assemble( module );
-
-    // SQL EntityStore
-    new MySQLEntityStoreAssembler()
-        .visibleIn( Visibility.application )
-        .withConfig( config, Visibility.layer )
-        .assemble( module );
-          [...snip...]
-
+    Property&lt;String&gt; name();
 }
-</pre><p>Sample DataSource configuration defaults:</p><pre class="programlisting brush: java">#
-#  Licensed to the Apache Software Foundation (ASF) under one
-#  or more contributor license agreements.  See the NOTICE file
-#  distributed with this work for additional information
-#  regarding copyright ownership.  The ASF licenses this file
-#  to you under the Apache License, Version 2.0 (the
-#  "License"); you may not use this file except in compliance
-#  with the License.  You may obtain a copy of the License at
-#
-#       http://www.apache.org/licenses/LICENSE-2.0
-#
-#  Unless required by applicable law or agreed to in writing, software
-#  distributed under the License is distributed on an "AS IS" BASIS,
-#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-#  See the License for the specific language governing permissions and
-#  limitations under the License.
-#
-#
-#
 
-enabled=true
-#url=jdbc:mysql://localhost:3306/jdbc_test_db?profileSQL=false&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC&amp;nullCatalogMeansCurrent=true&amp;nullNamePatternMatchesAll=true
-driver=com.mysql.cj.jdbc.Driver
-username=root
-password=</pre></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="_sqlite"></a>SQLite</h4></div></div></div><p>Maximum number of entities is unlimited.</p><p>The <a class="ulink" href="http://www.xerial.org/trac/Xerial/wiki/SQLiteJDBC" target="_top">Xerial SQLite JDBC</a> driver is recommended.
-It provides native support on Linux, Windows and MaxOSX, pure Java on other OSes.</p><p>Assembly is done using the provided Assembler:</p><pre class="programlisting brush: java">public void assemble( ModuleAssembly module )
-    throws AssemblyException
+public interface HasAddress
 {
-  [...snip...]
-
-    // DataSourceService
-    new DBCPDataSourceServiceAssembler()
-        .identifiedBy( "sqlite-datasource-service" )
-        .visibleIn( Visibility.module )
-        .withConfig( config, Visibility.layer )
-        .assemble( module );
-
-    // DataSource
-    new DataSourceAssembler()
-        .withDataSourceServiceIdentity( "sqlite-datasource-service" )
-        .identifiedBy( "sqlite-datasource" )
-        .visibleIn( Visibility.module )
-        .withCircuitBreaker()
-        .assemble( module );
-
-    // SQL EntityStore
-    new SQLiteEntityStoreAssembler()
-        .visibleIn( Visibility.application )
-        .withConfig( config, Visibility.layer )
-        .assemble( module );
+    Property&lt;String&gt; street1();
+    Property&lt;String&gt; street2();
+    Property&lt;String&gt; zipCode();
+    Association&lt;Country&gt; country();
 }
-</pre><p>Sample DataSource configuration defaults:</p><pre class="programlisting brush: java">#
-#  Licensed to the Apache Software Foundation (ASF) under one
-#  or more contributor license agreements.  See the NOTICE file
-#  distributed with this work for additional information
-#  regarding copyright ownership.  The ASF licenses this file
-#  to you under the Apache License, Version 2.0 (the
-#  "License"); you may not use this file except in compliance
-#  with the License.  You may obtain a copy of the License at
-#
-#       http://www.apache.org/licenses/LICENSE-2.0
-#
-#  Unless required by applicable law or agreed to in writing, software
-#  distributed under the License is distributed on an "AS IS" BASIS,
-#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-#  See the License for the specific language governing permissions and
-#  limitations under the License.
-#
-#
-#
 
-enabled=true
-url=jdbc:sqlite::memory:
-driver=org.sqlite.JDBC
-username=
-password=</pre></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="_h2_database_engine"></a>H2 Database Engine</h4></div></div></div><p>Maximum number of entities is 2^64.</p><p>Assembly is done using the provided Assembler:</p><pre class="programlisting brush: java">public void assemble( ModuleAssembly module )
-    throws AssemblyException
+public interface Country extends HasName
 {
-  [...snip...]
-
-    // DataSourceService
-    new DBCPDataSourceServiceAssembler()
-        .identifiedBy( "h2-datasource-service" )
-        .visibleIn( Visibility.module )
-        .withConfig( config, Visibility.layer )
-        .assemble( module );
-
-    // DataSource
-    new DataSourceAssembler()
-        .withDataSourceServiceIdentity( "h2-datasource-service" )
-        .identifiedBy( "h2-datasource" )
-        .visibleIn( Visibility.module )
-        .withCircuitBreaker()
-        .assemble( module );
-
-    // SQL EntityStore
-    new H2SQLEntityStoreAssembler()
-        .visibleIn( Visibility.application )
-        .withConfig( config, Visibility.layer )
-        .assemble( module );
 }
-</pre><p>Sample DataSource configuration defaults:</p><pre class="programlisting brush: java">#
-#  Licensed to the Apache Software Foundation (ASF) under one
-#  or more contributor license agreements.  See the NOTICE file
-#  distributed with this work for additional information
-#  regarding copyright ownership.  The ASF licenses this file
-#  to you under the Apache License, Version 2.0 (the
-#  "License"); you may not use this file except in compliance
-#  with the License.  You may obtain a copy of the License at
-#
-#       http://www.apache.org/licenses/LICENSE-2.0
-#
-#  Unless required by applicable law or agreed to in writing, software
-#  distributed under the License is distributed on an "AS IS" BASIS,
-#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-#  See the License for the specific language governing permissions and
-#  limitations under the License.
-#
-#
-#
-
-enabled=true
-url=jdbc:h2:mem:test
-driver=org.h2.Driver
-username=
-password=</pre></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="_apache_derby_and_oracle_javadb"></a>Apache Derby and Oracle JavaDB</h4></div></div></div><p>Maximum number of entities is unlimited.</p><p>Assembly is done using the provided Assembler:</p><pre class="programlisting brush: java">public void assemble( ModuleAssembly module )
-    throws AssemblyException
-{
-  [...snip...]
-
-    // DataSourceService
-    new DBCPDataSourceServiceAssembler()
-        .identifiedBy( "derby-datasource-service" )
-        .visibleIn( Visibility.module )
-        .withConfig( config, Visibility.layer )
-        .assemble( module );
-
-    // DataSource
-    new DataSourceAssembler()
-        .withDataSourceServiceIdentity( "derby-datasource-service" )
-        .identifiedBy( "derby-datasource" )
-        .visibleIn( Visibility.module )
-        .withCircuitBreaker()
-        .assemble( module );
-
-    // SQL EntityStore
-    new DerbySQLEntityStoreAssembler()
-        .visibleIn( Visibility.application )
-        .withConfig( config, Visibility.layer )
-        .assemble( module );
-}
-</pre><p>Sample DataSource configuration defaults:</p><pre class="programlisting brush: java">#
-#  Licensed to the Apache Software Foundation (ASF) under one
-#  or more contributor license agreements.  See the NOTICE file
-#  distributed with this work for additional information
-#  regarding copyright ownership.  The ASF licenses this file
-#  to you under the Apache License, Version 2.0 (the
-#  "License"); you may not use this file except in compliance
-#  with the License.  You may obtain a copy of the License at
-#
-#       http://www.apache.org/licenses/LICENSE-2.0
-#
-#  Unless required by applicable law or agreed to in writing, software
-#  distributed under the License is distributed on an "AS IS" BASIS,
-#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-#  See the License for the specific language governing permissions and
-#  limitations under the License.
-#
-#
-#
-
-enabled=true
-url=jdbc:derby:memory:testdb;create=true
-driver=org.apache.derby.jdbc.EmbeddedDriver
-username=
-password=</pre></div></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="footer"><p>
+</pre><p>And the structures will be;</p><div class="table"><a id="idm6513"></a><p class="title"><strong>Table 64. Person</strong></p><div class="table-contents"><table class="table" summary="Person" border="1" width="80%"><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /><col class="col_4" /></colgroup><thead><tr><th align="left" valign="top"><span class="strong"><strong>Field</strong></span> </th><th align="left" valign="top"><span class="strong"><strong>Type</strong></span> </th><th align="left" valign="top"><span class="strong"><strong>Constraint</strong></span> </th><th align="left" valign="top"><span class="strong"><strong>Description</strong></span></th></tr></thead><tbody><tr><td align="left" valign="top"><p>_identity</p></td><td align="left" valign="top"><p>VARCHAR</p></td><td align="left" valign="top"><p>PRIMARY KEY</p></td><td align="left" valign="top"><p>The Identity of the current value, i.e. _value_id from ENTITIES table</p></td></tr><tr><td align="left" valign="top"><p>_created_at</p></td><td align="left" valign="top"><p>TIMESTAMP</p></td><td align="left" valign="top"><p></p></td><td align="left" valign="top"><p>The time of creation of the entity value. It will become possible to choose to keep old values for history/audit purposes, but not yet supported. This field is preparation for that.</p></td></tr><tr><td align="left" valign="top"><p>spouse</p></td><td align="left" valign="top"><p>VARCHAR</p></td><td align="left" valign="top"><p></p></td><td align="left" valign="top"><p>Association&lt;Person&gt; spouse();</p></td></tr></tbody></table></div></div><br class="table-break" /><p>And the corresponding DDL.</p><pre class="programlisting brush: bash">create table "Person" (
+    "_identity" varchar null,
+    "_created_at" timestamp null,
+    "spouse" varchar null,
+    primary key ("_identity")
+)</pre><div class="table"><a id="idm6560"></a><p class="title"><strong>Table 65. HasName</strong></p><div class="table-contents"><table class="table" summary="HasName" border="1" width="80%"><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /><col class="col_4" /></colgroup><thead><tr><th align="left" valign="top"><span class="strong"><strong>Field</strong></span> </th><th align="left" valign="top"><span class="strong"><strong>Type</strong></span> </th><th align="left" valign="top"><span class="strong"><strong>Constraint</strong></span> </th><th align="left" valign="top"><span class="strong"><strong>Description</strong></span></th></tr></thead><tbody><tr><td align="left" valign="top"><p>_identity</p></td><td align="left" valign="top"><p>VARCHAR</p></td><td align="left" valign="top"><p>PRIMARY KEY</p></td><td align="left" valign="top"><p>The Identity of the current value, i.e. _value_id from ENTITIES table</p></td></tr><tr><td align="left" valign="top"><p>_created_at</p></td><td align="left" valign="top"><p>TIMESTAMP</p></td><td align="left" valign="top"><p></p></td><td align="left" valign="top"><p>The time of creation of the entity value. It will become possible to choose to keep old values for history/audit purposes, but not yet supported. This field is preparation for that.</p></td></tr><tr><td align="left" valign="top"><p>name</p></td><td align="left" valign="top"><p>VARCHAR</p></td><td align="left" valign="top"><p></p></td><td align="left" valign="top"><p>Property&lt;String&gt; name();</p></td></tr></tbody></table></div></div><br class="table-break" /><p>And the corresponding DDL.</p><pre class="programlisting brush: bash">create table "HasName" (
+    "_identity" varchar null,
+    "_created_at" timestamp null,
+    "name" varchar null,
+    primary key ("_identity")
+)</pre><div class="table"><a id="idm6607"></a><p class="title"><strong>Table 66. HasAddress</strong></p><div class="table-contents"><table class="table" summary="HasAddress" border="1" width="80%"><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /><col class="col_4" /></colgroup><thead><tr><th align="left" valign="top"><span class="strong"><strong>Field</strong></span> </th><th align="left" valign="top"><span class="strong"><strong>Type</strong></span> </th><th align="left" valign="top"><span class="strong"><strong>Constraint</strong></span> </th><th align="left" valign="top"><span class="strong"><strong>Description</strong></span></th></tr></thead><tbody><tr><td align="left" valign="top"><p>_identity</p></td><td align="left" valign="top"><p>VARCHAR</p></td><td align="left" valign="top"><p>PRIMARY KEY</p></td><td align="left" valign="top"><p>The Identity of the current value, i.e. _value_id from ENTITIES table</p></td></tr><tr><td align="left" valign="top"><p>_created_at</p></td><td align="left" valign="top"><p>TIMESTAMP</p></td><td align="left" valign="top"><p></p></td><td align="left" valign="top"><p>The time of creation of the entity value. It will become possible to choose to keep old values for history/audit purposes, but not yet supported. This field is preparation for that.</p></td></tr><tr><td align="left" valign="top"><p>street1</p></td><td align="left" valign="top"><p>VARCHAR</p></td><td align="left" valign="top"><p></p></td><td align="left" valign="top"><p>Property&lt;String&gt; street1();</p></td></tr><tr><td align="left" valign="top"><p>street2</p></td><td align="left" valign="top"><p>VARCHAR</p></td><td align="left" valign="top"><p></p></td><td align="left" valign="top"><p>Property&lt;String&gt; street2();</p></td></tr><tr><td align="left" valign="top"><p>zipCode</p></td><td align="left" valign="top"><p>VARCHAR</p></td><td align="left" valign="top"><p></p></td><td align="left" valign="top"><p>Property&lt;String&gt; zipCode();</p></td></tr><tr><td align="left" valign="top"><p>country</p></td><td align="left" valign="top"><p>VARCHAR</p></td><td align="left" valign="top"><p></p></td><td align="left" valign="top"><p>Assocication&lt;String&gt; country();  which contains Identity of the Country entity referenced.</p></td></tr></tbody></table></div></div><br class="table-break" /><p>And the corresponding DDL.</p><pre class="programlisting brush: bash">create table "HasName" (
+    "_identity" varchar null,
+    "_created_at" timestamp null,
+    "street1" varchar null,
+    "street2" varchar null,
+    "zipCode" varchar null,
+    "country" varchar null,
+    primary key ("_identity")
+)</pre><div class="table"><a id="idm6681"></a><p class="title"><strong>Table 67. Country</strong></p><div class="table-contents"><table class="table" summary="Country" border="1" width="80%"><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /><col class="col_4" /></colgroup><thead><tr><th align="left" valign="top"><span class="strong"><strong>Field</strong></span> </th><th align="left" valign="top"><span class="strong"><strong>Type</strong></span> </th><th align="left" valign="top"><span class="strong"><strong>Constraint</strong></span> </th><th align="left" valign="top"><span class="strong"><strong>Description</strong></span></th></tr></thead><tbody><tr><td align="left" valign="top"><p>_identity</p></td><td align="left" valign="top"><p>VARCHAR</p></td><td align="left" valign="top"><p>PRIMARY KEY</p></td><td align="left" valign="top"><p>The Identity of the current value, i.e. _value_id from ENTITIES table</p></td></tr><tr><td align="left" valign="top"><p>_created_at</p></td><td align="left" valign="top"><p>TIMESTAMP</p></td><td align="left" valign="top"><p></p></td><td align="left" valign="top"><p>The time of creation of the entity value. It will become possible to choose to keep old values for history/audit purposes, but not yet supported. This field is preparation for that.</p></td></tr></tbody></table></div></div><br class="table-break" /><p>And the corresponding DDL.</p><pre class="programlisting brush: bash">create table "HasName" (
+    "_identity" varchar null,
+    "_created_at" timestamp null,
+    primary key ("_identity")
+)</pre><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>Country has no fields, as the HasName mixin type will be in its own table (above). But the _created_at field,
+indicating latest change time, will be maintained.</p></div><p>And additionally four tables will be created, with identical structures. The names will be
+Person_ASSOCS, HasName_ASSOCS, HasAddress_ASSOCS, Country_ASSOCS and the structure is;</p><div class="table"><a id="idm6722"></a><p class="title"><strong>Table 68. *_ASSOCS</strong></p><div class="table-contents"><table class="table" summary="*_ASSOCS" border="1" width="80%"><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /><col class="col_4" /></colgroup><thead><tr><th align="left" valign="top"><span class="strong"><strong>Field</strong></span> </th><th align="left" valign="top"><span class="strong"><strong>Type</strong></span> </th><th align="left" valign="top"><span class="strong"><strong>Constraint</strong></span> </th><th align="left" valign="top"><span class="strong"><strong>Description</strong></span></th></tr></thead><tbody><tr><td align="left" valign="top"><p>_identity</p></td><td align="left" valign="top"><p>VARCHAR</p></td><td align="left" valign="top"><p></p></td><td align="left" valign="top"><p>The Identity of the current value, i.e. _value_id from ENTITIES table</p></td></tr><tr><td align="left" valign="top"><p>_created_at</p></td><td align="left" valign="top"><p>TIMESTAMP</p></td><td align="left" valign="top"><p></p></td><td align="left" valign="top"><p>The time of creation of the entity value. It will become possible to choose to keep old values for history/audit purposes, but not yet supported. This field is preparation for that.</p></td></tr><tr><td align="left" valign="top"><p>_name</p></td><td align="left" valign="top"><p>VARCHAR</p></td><td align="left" valign="top"><p></p></td><td align="left" valign="top"><p>The name of the ManyAssociation or NamedAssociation in the Mixin type.</p></td></tr><tr><td align="left" valign="top"><p>_index</p></td><td align="left" valign="top"><p>VARCHAR</p></td><td align="left" valign="top"><p></p></td><td align="left" valign="top"><p>For NamedAssociations this is the name of the association, i.e. the key. For ManyAssociation, this is the sequence number within the ordered list.</p></td></tr><tr><td align="left" valign="top"><p>_reference</p></td><td align="left" valign="top"><p>VARCHAR</p></td><td align="left" valign="top"><p></p></td><td align="left" valign="top"><p>The entity identity that the association is pointing to.</p></td></tr></tbody></table></div></div><br class="table-break" /><pre class="programlisting brush: bash">create table if not exists "Person_ASSOCS"(
+    "_identity" varchar null,
+    "_created_at" timestamp null,
+    "_name" varchar null,
+    "_index" varchar null,
+    "_reference" varchar null
+)</pre><p>Additionally, one INDEX will be created for each _ASSOCS table. So the above four will have</p><pre class="programlisting brush: bash">create index "IDX_Person_ASSOCS" on "Person_ASSOCS"("_identity")
+create index "IDX_HasName_ASSOCS" on "HasName_ASSOCS"("_identity")
+create index "IDX_HasAddress_ASSOCS" on "HasAddress_ASSOCS"("_identity")
+create index "IDX_Country_ASSOCS" on "Country_ASSOCS"("_identity")</pre></div></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="footer"><p>
         Copyright © 2015 The Apache Software Foundation, Licensed under the <a href="http://www.apache.org/licenses/" target="_blank">Apache License, Version 2.0</a>.
         <br /><small>
             Apache Polygene, Polygene, Apache, the Apache feather logo, and the Apache Polygene project logo are trademarks of The Apache Software Foundation.<br />

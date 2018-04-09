@@ -1,5 +1,5 @@
 ---
-layout: none
+layout: default
 permalink: .htaccess
 ---
 Redirect 301 /content/ /
