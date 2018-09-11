@@ -2,7 +2,10 @@
 layout: none 
 permalink: .htaccess
 ---
-Redirect / https://polygene.apache.org/
+RewriteEngine On
+RewriteCond %{HTTPS} !=on
+RewriteRule ^/?(.*) https://%{SERVER_NAME}/$1 [R,L]
+
 Redirect 301 /content/ /
 Redirect 301 /1.0/ /java/1.0/
 Redirect 301 /1.2/ /java/1.2/
