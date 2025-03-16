@@ -53,18 +53,6 @@
 <script type="text/javascript" src="js/jquery.scrollTo-1.4.2.js"></script>
 <script type="text/javascript" src="js/progressive-enhancement.js"></script>
 
-<!-- Analytics -->
- <script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-62007352-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
- </script>
 
   </head><body><div xmlns="" xmlns:exsl="http://exslt.org/common" class="logo"><a href="index.html"><img src="images/logo-standard.png" style="width:80%;height:80%; padding-top:20px;" /></a></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="top-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl class="toc"><dt><span class="section"><a href="index.html#home">Polygene™</a></span></dt><dt><span class="section"><a href="intro.html">Introduction</a></span></dt><dt><span class="section"><a href="tutorials.html">Tutorials</a></span></dt><dt><span class="section"><a href="javadocs.html">Javadoc</a></span></dt><dt><span class="section"><span xmlns="" href="samples.html">Samples</span></span></dt><dt><span class="section"><a href="core.html">Core</a></span></dt><dt><span class="section"><a href="libraries.html">Libraries</a></span></dt><dt><span class="section"><a href="extensions.html">Extensions</a></span></dt><dt><span class="section"><a href="tools.html">Tools</a></span></dt><dt><span class="section"><a href="glossary.html">Glossary </a></span></dt></dl></div></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="sub-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl class="toc"><dt><span class="section"><a href="samples.html#_overview_2">Overview</a></span></dt><dt><span class="section"><a href="sample-dci.html">DCI Sample</a></span></dt><dt><span class="section"><a href="sample-forum.html">Forum Sample</a></span></dt><dt><span class="section"><a href="sample-car-rental.html">Car Rental Sample</a></span></dt><dt><span class="section"><span xmlns="" href="sample-sql-support.html">SQL Support Sample</span></span></dt><dt><span class="section"><a href="sample-swing.html">Swing Bindings Sample</a></span></dt></dl></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="sample-sql-support"></a>SQL Support Sample</h3></div></div></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>This sample use PostgreSQL and drop all of its data once run in order to be runnable multiple times.</p></div><p>Sample of how to fully use Polygene™ SQL support : <a class="xref" href="library-sql.html" title="SQL">SQL Library</a>, <a class="xref" href="extension-es-sqlkv.html" title="SQL Key/Value EntityStore"> SQL Key/Value EntityStore</a> and <a class="xref" href="extension-indexing-sql.html" title="SQL Index/Query">SQL Index/Query</a>.</p><p><a class="ulink" href="https://github.com/apache/polygene-java/tree/develop/samples/sql-support" target="_top">Browse Source</a></p><p>Here are the steps needed to setup the database using the <code class="literal">psql</code> utility command:</p><pre class="programlisting brush: bash">user@host $ psql postgres
 postgres=# CREATE USER jdbc_test_login WITH PASSWORD 'password';
